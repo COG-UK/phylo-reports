@@ -15,3 +15,7 @@ Caveats:
 - The date format in the metadata must be yyyy-mm-dd
 
 
+Tree visualisations are undertaken using baltic (https://github.com/evogytis/baltic)
+Shape files for mapping for England, Wales and Scotland were taken from the Global Administrative Database (https://gadm.org/)
+Shape files for mapping Northern Ireland were taken from Open Data NI (https://www.opendatani.gov.uk/dataset?tags=Counties)
+Shape files for mapping the channel islands were taken from https://gist.github.com/markmarkoh

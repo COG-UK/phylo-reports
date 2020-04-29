@@ -305,7 +305,7 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
                 adm2 = toks[11]
                 country = toks[5].split("-")[1]
                 
-                if adm2 not in present_locs and adm2 not in mapping_dictionary.keys():
+                if adm2 not in present_locs and adm2 not in mapping_dictionary.keys() and adm2 != "WALES" and adm2 != "" and adm2 != "OTHER":
                     new_unclean_locs = True
                     fw.write(adm2 + "\n")
 
@@ -316,7 +316,9 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
                     
 
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_dir):
+def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week):
+
+    output_dir = overall_output_dir + "summary_files_" + week + "/"
 
     all_uk = prep_data(input_geojsons, adm2_cleaning_file)
 
@@ -333,7 +335,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_dir):
     plot_missing_sequences(missing_df)
                              
     
-    new_unclean_locs = find_new_locs_cleaning(all_uk, mapping_dictionary, output_dir)
+    new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir)
 
     return new_unclean_locs
 

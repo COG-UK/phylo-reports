@@ -70,7 +70,7 @@ print("There are time lags due to batching, curation and analysis, the most rece
 print("<br/>")
 print(str(count) + " sequences in the UK have been included in this analysis.")
 print(str(len(intro_countries)) + " lineages have been recorded, " + str(singletons_count) + " of which only contain one sequence.")
-print("There are " + str(len(new_lineages)) + " new lineages recorded this week.")
+
 ```
 Note: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 
@@ -82,12 +82,6 @@ print(str(smalls_count) + " are introductions which only contained five sequence
 ```python, echo=False, name='status description', results='tex'
 
 #split = lin_exp.find_splits(intro_alls)
-
-merged_dict, acctran_dict, acctran_to_merge, merge_count = lin_exp.find_merged(intro_alls)
-
-print(str(merge_count) + " lineages have merged since last week, and so have been allocated a new lineage title. For further information, see 'merged_lineages.csv'.")
-
-lineage_object_dict, intro_alls, intro_bigs, intro_smalls, intro_countries, merged_for_df = lin_exp.deal_with_merged(acctran_to_merge, intro_object_dict, unclear_taxa, most_recent_sample, intro_alls, intro_bigs, intro_smalls, intro_countries)
 
 status_counts, reactivated_lineages, continuining_lineages = lin_exp.describe_lineages(intro_bigs)
 
@@ -153,8 +147,7 @@ if continuous > 0:
 The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
-It is also written to "summary_files" as "introduction_summary.tsv" for further use. Furthermore, any lineages which appear to have split or merged are written to file, ready for manual curation.
-
+It is also written to "summary_files" as "introduction_summary.tsv" for further use. 
 ```python, name="dataframe fun", echo=False, results='tex'
 intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
 dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
@@ -163,7 +156,7 @@ print(dataframe.to_markdown())
 ```
 ```python,name="producing summary files", echo=False
 
-writing.write_summary_files(output_directory, dataframe, merged_dict, intro_object_dict, intro_alls, omitted, taxa, new_lineages, week)
+writing.write_summary_files(output_directory, dataframe, omitted, week)
 
 ```
 
@@ -226,14 +219,14 @@ NI_json = "utils/mapping_files/NI_counties.geojson"
 
 input_geojsons = [uk_json, channels, NI_json]
 
-new_uncleans = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory)
+new_uncleans = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
 ```
 ```python, name="hack3", echo=False, results='raw'
 print("![]("+fd+name_stem+"_map_1.png)\\")
 ```
 
 
-```python, name=uncleans, echo=False, results='tex'
+```python, name="uncleans", echo=False, results='tex'
 if new_uncleans:
     print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
 ```
@@ -254,13 +247,4 @@ print("![]("+fd+name_stem+"_map_2.png)\\")
 
 ```python, echo=False, fig=False, name="trees", include=True 
 #intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)
-```
-
-The following table contains information about lineages which have merged this week.
-
-```python, echo=False, name='print merged info', results='tex'
-
-df = lin_exp.make_merged_df(merged_for_df)
-print(df.to_markdown())
-
 ```

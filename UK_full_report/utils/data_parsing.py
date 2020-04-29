@@ -111,45 +111,46 @@ def make_objects(input_dir, current_day, metadata_file):
 
     introduction_int_list = sorted(introduction_int_list)
 
-    for tax in taxa_list: #Assigning taxa to lineages that hasn't been done in the tree
-        if tax.introduction == "":
+    #This should now all be done before the report
+    # for tax in taxa_list: #Assigning taxa to lineages that hasn't been done in the tree
+    #     if tax.introduction == "":
                 
-                possible_intro = acctrans_to_intro[tax.acctrans]
+    #             possible_intro = acctrans_to_intro[tax.acctrans]
                 
-                if len(possible_intro) == 0: #this will be if the introduction is genuinely new
-                    if tax.acctrans not in new_acctrans_to_lineage.keys():
+    #             if len(possible_intro) == 0: #this will be if the introduction is genuinely new
+    #                 if tax.acctrans not in new_acctrans_to_lineage.keys():
                     
-                        introduction_prep = (introduction_int_list[-1] + 1)
-                        introduction = "UK" + str(introduction_prep)
-                        introduction_int_list.append(introduction_prep)
+    #                     introduction_prep = (introduction_int_list[-1] + 1)
+    #                     introduction = "UK" + str(introduction_prep)
+    #                     introduction_int_list.append(introduction_prep)
 
-                        new_acctrans_to_lineage[tax.acctrans] = introduction
+    #                     new_acctrans_to_lineage[tax.acctrans] = introduction
 
-                        tax.introduction = introduction
-                        intros_to_taxa[introduction].append(tax)
-                        intro_countries[introduction].append(tax.country)
-                        intro_acctrans[introduction].add(tax.acctrans)
+    #                     tax.introduction = introduction
+    #                     intros_to_taxa[introduction].append(tax)
+    #                     intro_countries[introduction].append(tax.country)
+    #                     intro_acctrans[introduction].add(tax.acctrans)
                     
-                    else: #if it's not the sequence to be added to a new lineage
+    #                 else: #if it's not the sequence to be added to a new lineage
 
-                        introduction = new_acctrans_to_lineage[tax.acctrans]
+    #                     introduction = new_acctrans_to_lineage[tax.acctrans]
 
-                        tax.introduction = introduction
-                        intros_to_taxa[introduction].append(tax)
-                        intro_countries[introduction].append(tax.country)
-                        intro_acctrans[introduction].add(tax.acctrans)
+    #                     tax.introduction = introduction
+    #                     intros_to_taxa[introduction].append(tax)
+    #                     intro_countries[introduction].append(tax.country)
+    #                     intro_acctrans[introduction].add(tax.acctrans)
 
-                elif len(possible_intro) > 1: #usually a merged or split UK lineage
-                    tax.unclear = True
-                    unclear_taxa.append(tax)
+    #             elif len(possible_intro) > 1: #usually a merged or split UK lineage
+    #                 tax.unclear = True
+    #                 unclear_taxa.append(tax)
                 
-                else: #if it just hasn't been labelled but it's clear it belongs to an existing lineage
-                    introduction = list(possible_intro)[0]
+    #             else: #if it just hasn't been labelled but it's clear it belongs to an existing lineage
+    #                 introduction = list(possible_intro)[0]
                     
-                    tax.introduction = introduction
-                    intros_to_taxa[introduction].append(tax)
-                    intro_countries[introduction].append(tax.country)
-                    intro_acctrans[introduction].add(tax.acctrans)
+    #                 tax.introduction = introduction
+    #                 intros_to_taxa[introduction].append(tax)
+    #                 intro_countries[introduction].append(tax.country)
+    #                 intro_acctrans[introduction].add(tax.acctrans)
                 
 
     intro_alls = []

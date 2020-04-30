@@ -5,15 +5,15 @@
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
+output_directory = "./"
 
-input_directory = "" ##CHANGE
+input_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-04-24_2/phylogenetics/"
 
-metadata_file = "" ##CHANGE
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-04-24_3/cog_gisaid.with_traits.with_updated_lineages.csv"
 
-name_stem="" ##CHANGE
+name_stem = "UK_2020-04-24_3"
 
-week = "" ##CHANGE
+week = "2020-04-24"
 
 fd = output_directory + "figures_" + week + "/"
 
@@ -61,7 +61,7 @@ map = imp.load_source('mapping', 'utils/mapping.py')
 
 current_date = time.make_current_week(week)
 
-intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa = parse.make_objects(current_date, metadata_file)
+intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa = parse.make_objects(input_directory, current_date, metadata_file)
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
 print("This report gives summaries of UK specific lineages for week " + week + ". ")
@@ -246,7 +246,5 @@ print("![]("+fd+name_stem+"_map_2.png)\\")
 ```
 
 ```python, echo=False, fig=False, name="trees", include=True 
-if input_directory != "":
-    print("Trees and associated pie charts have been made and put into the figures folder")
-    intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)
+#intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)
 ```

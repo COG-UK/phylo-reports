@@ -3,7 +3,7 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser(description="Report generator script")
-parser.add_argument("--i", required=True, help="path to tree and annotations inputs as a string")
+parser.add_argument("--i", required=False, help="path to tree and annotations inputs as a string")
 parser.add_argument("--m", required=True, help="path to metadata file")
 parser.add_argument("--w", required=True, help="most recent date included as a string")
 parser.add_argument("--s", default="UK_report", help="output name stem as a string")

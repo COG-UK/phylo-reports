@@ -1,6 +1,7 @@
 from pweave import *
 import sys
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description="Report generator script")
 parser.add_argument("--i", required=False, help="path to tree and annotations inputs as a string")
@@ -25,7 +26,8 @@ fd = output_directory + "figures_" + week
 pmd_file = open(name_stem + ".pmd", 'w')
 pmd_string = name_stem + ".pmd"
 
-with open("UK_report_templatev2.pmd") as f:
+script_dir = os.path.dirname(sys.argv[0])
+with open("%s/UK_report_templatev2.pmd" %script_dir) as f:
     for l in f:
         if "##CHANGE" in l:
             if "output_directory" in l:

@@ -19,7 +19,7 @@ fd = output_directory + "figures_" + week + "/"
 
 scripts_directory = "" ##CHANGE
 
-adm2_cleaning_file = "utils/mapping_files/adm2_cleaning.csv"
+adm2_cleaning_file = scripts_directory+"utils/mapping_files/adm2_cleaning.csv"
 
 ```
 
@@ -214,9 +214,9 @@ print("![]("+fd+"_make_timeline_1.png)\\")
 
 ```python, name="map", include=False, results='tex', echo=False
 
-uk_json = "utils/mapping_files/gadm36_GBR_2.json"
-channels = "utils/mapping_files/channel_islands.json"
-NI_json = "utils/mapping_files/NI_counties.geojson"
+uk_json = scripts_directory+"utils/mapping_files/gadm36_GBR_2.json"
+channels = scripts_directory+"utils/mapping_files/channel_islands.json"
+NI_json = scripts_directory+"utils/mapping_files/NI_counties.geojson"
 
 input_geojsons = [uk_json, channels, NI_json]
 

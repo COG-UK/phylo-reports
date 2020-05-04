@@ -20,6 +20,7 @@ metadata_file = str(args.m)
 name_stem = str(args.s)
 output_directory = str(args.od)
 week = str(args.w)
+scripts_directory = str(args.sd)
 
 fd = output_directory + "figures_" + week
 

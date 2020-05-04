@@ -3,11 +3,11 @@ import os
 
 def write_summary_table(dataframe, output_dir):
 
-    dataframe.to_csv(output_dir + "lineage_summary.tsv", sep="\t")
+    dataframe.to_csv(output_dir + "/lineage_summary.tsv", sep="\t")
 
 def write_splits_file(splits, output_dir):
 
-    fw = open(output_dir + "split_lineages.csv", 'w')
+    fw = open(output_dir + "/split_lineages.csv", 'w')
     fw.write("UK_lineage,Acctrans_designation\n")
 
     for lin in splits:
@@ -18,7 +18,7 @@ def write_splits_file(splits, output_dir):
 
 def write_omitteds(omitted, output_dir):
 
-    fw = open(output_dir + "sequences_not_in_metadata.csv", 'w')
+    fw = open(output_dir + "/sequences_not_in_metadata.csv", 'w')
 
     for i in omitted:
 

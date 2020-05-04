@@ -2,6 +2,7 @@
 # Summary report for UK introductions
 
 ```python, echo=False, name='define_paths'
+import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
@@ -15,7 +16,7 @@ name_stem="" ##CHANGE
 
 week = "" ##CHANGE
 
-fd = output_directory + "figures_" + week + "/"
+fd = os.path.join(output_directory, "figures_" + week)
 
 scripts_directory = "" ##CHANGE
 
@@ -47,15 +48,15 @@ mpl.rcParams['font.size']=20
 
 plt.rcParams.update({'figure.max_open_warning': 0})
 
-descrip = imp.load_source('basic_descriptions', "%s/utils/basic_descriptions.py" % scripts_directory)
-tree_func = imp.load_source('make_uk_introduction_trees', "%s/utils/make_uk_introduction_trees.py" % scripts_directory)
-dp = imp.load_source('descriptive_plots', "%s/utils/descriptive_plots.py" % scripts_directory)
-case_defs = imp.load_source('case_definitions ', "%s/utils/case_definitions.py" % scripts_directory)
-time = imp.load_source('time_functions', "%s/utils/time_functions.py" % scripts_directory)
-parse = imp.load_source('data_parsing',"%s/utils/data_parsing.py" % scripts_directory)
-lin_exp = imp.load_source('lineage_exploration',"%s/utils/lineage_exploration.py" % scripts_directory)
-writing = imp.load_source('writing_summary_files',"%s/utils/writing_summary_files.py" % scripts_directory)
-map = imp.load_source('mapping', "%s/utils/mapping.py" % scripts_directory)
+import UK_full_report.utils.basic_descriptions as descrip
+import UK_full_report.utils.make_uk_introduction_trees as tree_func
+import UK_full_report.utils.descriptive_plots as dp
+import UK_full_report.utils.case_definitions as case_defs
+import UK_full_report.utils.time_functions as time
+import UK_full_report.utils.data_parsing as parse
+import UK_full_report.utils.lineage_exploration as lin_exp
+import UK_full_report.utils.writing_summary_files as writing
+import UK_full_report.utils.mapping as map
 
 ```
 ```python, name='prepping things and prelim info',echo=False, results='tex'

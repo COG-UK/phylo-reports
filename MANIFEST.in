@@ -1,0 +1,5 @@
+include UK_full_report/UK_report_templatev2.pmd
+include UK_full_report/call_pandoc.sh
+include UK_full_report/utils/latex_template/latex_template.latex
+include UK_full_report/utils/mapping_files/*
+include UK_full_report/utils/helveticaneue/*

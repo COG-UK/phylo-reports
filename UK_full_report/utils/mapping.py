@@ -8,6 +8,8 @@ from shapely.ops import cascaded_union
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
+import csv
+
 warnings.filterwarnings("ignore")
 
 
@@ -87,16 +89,14 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
     S = 0
     NI = 0
 
-    with open(metadata) as f:
-        next(f)
-        for l in f:
-            toks = l.strip("\n").split(",")
-            if toks[14] == "UK":
-                adm2 = toks[11]
-                country = toks[5].split("-")[1]
-                seq_name = toks[8]
-                
-                
+    with open(metadata, "r") as f:
+        reader = csv.DictReader(f)
+        in_data = [r for r in reader]
+        for sequence in in_data:
+            if sequence['country'] == "UK":
+                seq_name = sequence['sequence_name']
+                adm2 = sequence['adm2']
+                country = sequence['country']
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
                     if adm2 in mapping_dictionary.keys():
@@ -295,15 +295,14 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
 
     for i in all_uk["NAME_2"]:
         present_locs.append(i.upper())
-        
 
-    with open(metadata) as f:
-        next(f)
-        for l in f:
-            toks = l.strip("\n").split(",")
-            if toks[14] == "UK":
-                adm2 = toks[11]
-                country = toks[5].split("-")[1]
+    with open(metadata, "r") as f:
+        reader = csv.DictReader(f)
+        in_data = [r for r in reader]
+        for sequence in in_data:
+            if sequence['country'] == "UK":
+                adm2 = sequence['adm2']
+                country = sequence['adm1'].split("-")[1]
                 
                 if adm2 not in present_locs and adm2 not in mapping_dictionary.keys() and adm2 != "WALES" and adm2 != "" and adm2 != "OTHER":
                     new_unclean_locs = True

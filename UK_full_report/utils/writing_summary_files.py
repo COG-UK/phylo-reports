@@ -29,7 +29,7 @@ def write_omitteds(omitted, output_dir):
 
 def write_summary_files(overall_output_dir, dataframe, omitted, week):
 
-    output_dir = overall_output_dir + "summary_files_" + week + "/"
+    output_dir = os.path.join(overall_output_dir, "summary_files_" + week)
 
     try:
         os.mkdir(output_dir)

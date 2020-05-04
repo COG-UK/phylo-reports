@@ -1,7 +1,6 @@
 import os
 from matplotlib import font_manager as fm, rcParams
-import imp
-bt = imp.load_source('baltic', 'utils/baltic.py')
+from UK_full_report.utils.baltic import *
 
 from IPython.display import HTML
 import re

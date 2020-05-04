@@ -41,6 +41,8 @@ with open("%s/UK_report_templatev2.pmd" %script_dir) as f:
                 new_l = 'week = "' + week + '"\n'
             elif "metadata_file" in l:
                 new_l = 'metadata_file = "' + metadata_file + '"\n' 
+            elif "scripts_directory" in l:
+                new_l = 'scripts_directory = "' + scripts_directory + '"\n'
             
         else:
             new_l = l

@@ -9,6 +9,7 @@ parser.add_argument("--m", required=True, help="path to metadata file")
 parser.add_argument("--w", required=True, help="most recent date included as a string")
 parser.add_argument("--s", default="UK_report", help="output name stem as a string")
 parser.add_argument("--od", default="./", help="output directory, default is working directory")
+parser.add_argument("--sd", default="./", help="directory in which latex utils are located")
 
 args=parser.parse_args()
 

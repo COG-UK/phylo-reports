@@ -17,6 +17,7 @@ week = "" ##CHANGE
 
 fd = output_directory + "figures_" + week + "/"
 
+scripts_directory = "" ##CHANGE
 
 adm2_cleaning_file = "utils/mapping_files/adm2_cleaning.csv"
 
@@ -36,8 +37,8 @@ warnings.filterwarnings("ignore")
 import matplotlib as mpl
 import matplotlib.font_manager as font_manager
 
-font_list = font_manager.fontManager.addfont('utils/helveticaneue/HelveticaNeue.ttf')
-#font_list = font_manager.fontManager.addfont('utils/helveticaneue/HelveticaNeueBD.ttf')
+font_list = font_manager.fontManager.addfont(scripts_directory+'utils/helveticaneue/HelveticaNeue.ttf')
+#font_list = font_manager.fontManager.addfont(scripts_directory+'utils/helveticaneue/HelveticaNeueBD.ttf')
 
 mpl.rcParams['font.family'] = 'helveticaneue'
 mpl.rcParams['font.weight']=1000
@@ -46,15 +47,15 @@ mpl.rcParams['font.size']=20
 
 plt.rcParams.update({'figure.max_open_warning': 0})
 
-descrip = imp.load_source('basic_descriptions', 'utils/basic_descriptions.py')
-tree_func = imp.load_source('make_uk_introduction_trees', 'utils/make_uk_introduction_trees.py')
-dp = imp.load_source('descriptive_plots', 'utils/descriptive_plots.py')
-case_defs = imp.load_source('case_definitions ', 'utils/case_definitions.py')
-time = imp.load_source('time_functions', 'utils/time_functions.py')
-parse = imp.load_source('data_parsing','utils/data_parsing.py')
-lin_exp = imp.load_source('lineage_exploration','utils/lineage_exploration.py')
-writing = imp.load_source('writing_summary_files','utils/writing_summary_files.py')
-map = imp.load_source('mapping', 'utils/mapping.py')
+descrip = imp.load_source('basic_descriptions', scripts_directory+'utils/basic_descriptions.py')
+tree_func = imp.load_source('make_uk_introduction_trees', scripts_directory+'utils/make_uk_introduction_trees.py')
+dp = imp.load_source('descriptive_plots', scripts_directory+'utils/descriptive_plots.py')
+case_defs = imp.load_source('case_definitions ', scripts_directory+'utils/case_definitions.py')
+time = imp.load_source('time_functions', scripts_directory+'utils/time_functions.py')
+parse = imp.load_source('data_parsing',scripts_directory+'utils/data_parsing.py')
+lin_exp = imp.load_source('lineage_exploration',scripts_directory+'utils/lineage_exploration.py')
+writing = imp.load_source('writing_summary_files',scripts_directory+'utils/writing_summary_files.py')
+map = imp.load_source('mapping', scripts_directory+'utils/mapping.py')
 
 ```
 ```python, name='prepping things and prelim info',echo=False, results='tex'

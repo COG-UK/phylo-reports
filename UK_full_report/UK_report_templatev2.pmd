@@ -36,7 +36,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import matplotlib as mpl
-from matplotlib.font_manager import FontManager
+import matplotlib.font_manager
 
 font_list = matplotlib.font_manager.FontManager.addfont("%s/utils/helveticaneue/HelveticaNeue.ttf" % scripts_directory)
 #font_list = matplotlib.font_manager.FontManager.addfont("%s/utils/helveticaneue/HelveticaNeueBD.ttf" % scripts_directory)

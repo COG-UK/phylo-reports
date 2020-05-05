@@ -1,5 +1,5 @@
 import json
-from geopandas import read_file
+from geopandas import GeoSeries,GeoDataFrame
 import pandas as pd
 from collections import defaultdict
 from collections import Counter

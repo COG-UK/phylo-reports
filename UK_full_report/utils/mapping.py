@@ -96,7 +96,8 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
             if sequence['country'] == "UK":
                 seq_name = sequence['sequence_name']
                 adm2 = sequence['adm2']
-                country = sequence['country']
+                
+                uk_country = sequence['adm1'].split("-")[1]
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
                     if adm2 in mapping_dictionary.keys():
@@ -110,27 +111,29 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
 
                     seq_dict[new].append(seq_name)
 
-                    if country == "WLS":
+                    if uk_country == "WLS":
                         wales.append(seq_name)
-                    elif country == "SCT":
+                    elif uk_country == "SCT":
                         scotland.append(seq_name)
-                    elif country == "ENG":
+                    elif uk_country == "ENG":
                         england.append(seq_name)
-                    else:
+                    elif uk_country == "NIR":
                         ni.append(seq_name)
+                    else:
+                        print("Some sequences with adm2 not assigned to UK country")
 
                 else:
                     
-                    if country == "ENG":
+                    if uk_country == "ENG":
                         E += 1
-                    elif country == "WLS":
+                    elif uk_country == "WLS":
                         W +=1
-                    elif country == "SCT":
+                    elif uk_country == "SCT":
                         S += 1
-                    elif country == "NIR":
+                    elif uk_country == "NIR":
                         NI += 1
                     else:
-                        print(seq_name, country)
+                        print("Some sequences without adm2 not assigned to UK country")
                         
                     missing_adm2["Number of missing sequences"] = [E,W,S,NI]
 

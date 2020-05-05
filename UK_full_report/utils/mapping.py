@@ -1,5 +1,5 @@
 import json
-import geopandas
+from geopandas import read_file
 import pandas as pd
 from collections import defaultdict
 from collections import Counter

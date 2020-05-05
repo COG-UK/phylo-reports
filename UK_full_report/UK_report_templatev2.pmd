@@ -36,10 +36,10 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import matplotlib as mpl
-from matplotlib.font_manager import fontManager
+import matplotlib.font_manager as fm
 
-font_list = mpl.font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeue.ttf" % scripts_directory)
-#font_list = mpl.font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeueBD.ttf" % scripts_directory)
+font_list = fm.FontManager.addfont("%s/utils/helveticaneue/HelveticaNeue.ttf" % scripts_directory)
+#font_list = fm.FontManager.addfont("%s/utils/helveticaneue/HelveticaNeueBD.ttf" % scripts_directory)
 
 mpl.rcParams['font.family'] = 'helveticaneue'
 mpl.rcParams['font.weight']=1000

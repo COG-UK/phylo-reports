@@ -135,7 +135,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
                     else:
                         print("Some sequences without adm2 not assigned to UK country")
                         
-                    if E = 0 and W = 0 and S = 0 and NI = 0:
+                    if E == 0 and W == 0 and S == 0 and NI == 0:
                         missing_sequences = False
                     else:
                         missing_sequences = True

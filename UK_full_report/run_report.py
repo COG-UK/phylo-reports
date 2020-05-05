@@ -53,13 +53,13 @@ def syscall(command, allow_fail=False):
     print(completed_process.stdout)
     return completed_process
 
-def convert_report_to_pdf(name_stem, scripts_directory):
-    call_pandoc = os.path.join(scripts_directory, 'call_pandoc.sh')
-    md_file = name_stem + ".md"
-    latex_template = os.path.join(scripts_directory, 'utils/latex_template/latex_template.latex')
-    pdf_file = name_stem + ".pdf"
-    command = " ".join(["sh", call_pandoc, md_file, latex_template, pdf_file])
-    syscall(command)
+# def convert_report_to_pdf(name_stem, scripts_directory):
+#     call_pandoc = os.path.join(scripts_directory, 'call_pandoc.sh')
+#     md_file = name_stem + ".md"
+#     latex_template = os.path.join(scripts_directory, 'utils/latex_template/latex_template.latex')
+#     pdf_file = name_stem + ".pdf"
+#     command = " ".join(["sh", call_pandoc, md_file, latex_template, pdf_file])
+#     syscall(command)
 
 def main():
     parser = argparse.ArgumentParser(description="Report generator script")

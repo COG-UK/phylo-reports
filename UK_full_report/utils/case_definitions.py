@@ -4,12 +4,7 @@ from collections import Counter
 from collections import OrderedDict
 import os
 from epiweeks import Week,Year
-import imp
-
-
-#import time_functions as time
-
-time = imp.load_source('time_functions', 'utils/time_functions.py')
+from UK_full_report.utils.time_functions import *
 
 class taxon():
     

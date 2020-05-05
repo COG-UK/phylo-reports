@@ -2,11 +2,10 @@
 from collections import defaultdict 
 from epiweeks import Week,Year
 import os
-import imp
+import csv
 
-case_def = imp.load_source("case_definitions", "utils/case_definitions.py")
-time = imp.load_source("time_functions", "utils/time_functions.py")
-
+import UK_full_report.utils.case_definitions as case_def
+import UK_full_report.utils.time_functions as time
 
 def sort_key(obj):
     return obj.mrd
@@ -39,20 +38,19 @@ def make_objects(current_day, metadata_file):
 
     intros_to_taxa = defaultdict(list)
 
-    with open(metadata_file) as f:
-        next(f)
-        for l in f:
-            toks = l.strip("\n").split(",")
-
-            if toks[14] == "UK":
+    with open(metadata_file, "r") as f:
+        reader = csv.DictReader(f)
+        in_data = [r for r in reader]
+        for sequence in in_data:
+            if sequence['country'] == "UK":
                 count += 1
-                seq_name = toks[8]
-                adm2 = toks[11]
-                date = toks[4]
-                epiweek = toks[10]
-                glob_lin = toks[13]
-                intro_name = toks[6]
-                acctrans = toks[15]
+                seq_name = sequence['sequence_name']
+                adm2 = sequence['adm2']
+                date = sequence['sample_date']
+                epiweek = sequence['epi_week']
+                glob_lin = sequence['lineage']
+                intro_name = sequence['uk_lineage']
+                acctrans = sequence['acc_lineage']
 
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
 

@@ -3,10 +3,7 @@ from collections import Counter
 from collections import defaultdict
 import pandas as pd
 from epiweeks import Week, Year
-import imp
-
-case_def = imp.load_source('case_definitions ', 'utils/case_definitions.py')
-
+import UK_full_report.utils.case_definitions as case_def
 
 def find_splits(lineage_objects):
     splits = []

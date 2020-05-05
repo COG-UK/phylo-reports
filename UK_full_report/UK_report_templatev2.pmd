@@ -2,6 +2,7 @@
 # Summary report for UK introductions
 
 ```python, echo=False, name='define_paths'
+import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
@@ -15,10 +16,11 @@ name_stem="" ##CHANGE
 
 week = "" ##CHANGE
 
-fd = output_directory + "figures_" + week + "/"
+fd = os.path.join(output_directory, "figures_" + week)
 
+scripts_directory = "" ##CHANGE
 
-adm2_cleaning_file = "utils/mapping_files/adm2_cleaning.csv"
+adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
 
 ```
 
@@ -36,8 +38,8 @@ warnings.filterwarnings("ignore")
 import matplotlib as mpl
 import matplotlib.font_manager as font_manager
 
-font_list = font_manager.fontManager.addfont('utils/helveticaneue/HelveticaNeue.ttf')
-#font_list = font_manager.fontManager.addfont('utils/helveticaneue/HelveticaNeueBD.ttf')
+font_list = font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeue.ttf" % scripts_directory)
+#font_list = font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeueBD.ttf" % scripts_directory)
 
 mpl.rcParams['font.family'] = 'helveticaneue'
 mpl.rcParams['font.weight']=1000
@@ -46,15 +48,15 @@ mpl.rcParams['font.size']=20
 
 plt.rcParams.update({'figure.max_open_warning': 0})
 
-descrip = imp.load_source('basic_descriptions', 'utils/basic_descriptions.py')
-tree_func = imp.load_source('make_uk_introduction_trees', 'utils/make_uk_introduction_trees.py')
-dp = imp.load_source('descriptive_plots', 'utils/descriptive_plots.py')
-case_defs = imp.load_source('case_definitions ', 'utils/case_definitions.py')
-time = imp.load_source('time_functions', 'utils/time_functions.py')
-parse = imp.load_source('data_parsing','utils/data_parsing.py')
-lin_exp = imp.load_source('lineage_exploration','utils/lineage_exploration.py')
-writing = imp.load_source('writing_summary_files','utils/writing_summary_files.py')
-map = imp.load_source('mapping', 'utils/mapping.py')
+import UK_full_report.utils.basic_descriptions as descrip
+import UK_full_report.utils.make_uk_introduction_trees as tree_func
+import UK_full_report.utils.descriptive_plots as dp
+import UK_full_report.utils.case_definitions as case_defs
+import UK_full_report.utils.time_functions as time
+import UK_full_report.utils.data_parsing as parse
+import UK_full_report.utils.lineage_exploration as lin_exp
+import UK_full_report.utils.writing_summary_files as writing
+import UK_full_report.utils.mapping as map
 
 ```
 ```python, name='prepping things and prelim info',echo=False, results='tex'
@@ -171,7 +173,7 @@ dp.plot_bars(intro_bigs)
 ```
 
 ```python, name="hack_figure", echo=False, results='raw'
-print("![](" +fd+name_stem+ "_stacked_bars_by_country_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_stacked_bars_by_country_1.png)\\")
 ```
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
@@ -180,7 +182,7 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 dp.plot_geog_plot(intro_bigs, False)
 ```
 ```python,name="hack",echo=False,results='raw'
-print("![]("+fd+name_stem+"_geog_plot_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
 ```
 
 The date of first sequence in the cluster is shown below for every cluster with date information.
@@ -189,7 +191,7 @@ The date of first sequence in the cluster is shown below for every cluster with 
 dp.plot_starts(intro_alls)
 ```
 ```python,name="hack",echo=False,results='raw'
-print("![]("+fd+name_stem+"_firsts_plot_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
 ```
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
@@ -197,7 +199,7 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 dp.plot_sequences_over_time(taxa)
 ```
 ```python, name="hack", echo=False, results='raw'
-print("![]("+fd+name_stem+"_seqs_over_time_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
 ```
 
 These introductions are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
@@ -208,21 +210,21 @@ dp.make_timeline(intro_bigs)
 ```
 
 ```python, name="hack2", echo=False, results='raw'
-print("![]("+fd+name_stem+"_make_timeline_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_make_timeline_1.png)\\")
 ```
 
 ```python, name="map", include=False, results='tex', echo=False
 
-uk_json = "utils/mapping_files/gadm36_GBR_2.json"
-channels = "utils/mapping_files/channel_islands.json"
-NI_json = "utils/mapping_files/NI_counties.geojson"
+uk_json = "%s/utils/mapping_files/gadm36_GBR_2.json" % scripts_directory
+channels = "%s/utils/mapping_files/channel_islands.json" % scripts_directory
+NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
 
 input_geojsons = [uk_json, channels, NI_json]
 
 new_uncleans = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
 ```
 ```python, name="hack3", echo=False, results='raw'
-print("![]("+fd+name_stem+"_map_1.png)\\")
+print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
 ```
 
 
@@ -242,7 +244,7 @@ Other results modules for UK introductions can be added in here if required.
 
 The plot below shows the number of sequences from each country that don't have specific enough location data to plot on the map. 
 ```python, name="hack4", echo=False, results='raw'
-print("![]("+fd+name_stem+"_map_2.png)\\")
+print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
 
 ```python, echo=False, fig=False, name="trees", include=True 

@@ -17,7 +17,7 @@ setup(
         "tabulate==0.8.7",
         "pandas==1.0.1",
         "scipy==1.4.1",
-        "requests==2.18.4",
+        "requests==2.20.0",
         "epiweeks==2.1.1",
         "argparse==1.4.0",
         "geopandas==0.7.0",

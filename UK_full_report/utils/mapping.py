@@ -135,6 +135,11 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
                     else:
                         print("Some sequences without adm2 not assigned to UK country")
                         
+                    if E = 0 and W = 0 and S = 0 and NI = 0:
+                        missing_sequences = False
+                    else:
+                        missing_sequences = True
+
                     missing_adm2["Number of missing sequences"] = [E,W,S,NI]
 
     seq_counts = {}
@@ -153,7 +158,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
 
     missing_df = pd.DataFrame(missing_adm2)
 
-    return with_seq_counts, missing_df
+    return with_seq_counts, missing_df, missing_sequences
 
 def make_sequence_groups(with_seq_counts):
 
@@ -326,7 +331,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     merged_locs, mapping_dictionary = clean_locs(adm2_cleaning_file, all_uk)
 
-    with_seq_counts, missing_df = parse_metadata(metadata_file, mapping_dictionary, merged_locs)
+    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs)
 
     with_seq_counts = make_sequence_groups(with_seq_counts)
 
@@ -334,7 +339,10 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     plot_map(england, scotland, wales, n_i, channels, plot_dict)
 
-    plot_missing_sequences(missing_df)
+    if missing_sequences:
+        plot_missing_sequences(missing_df)
+    else:
+        print("All sequences have been assigned clean adm2 data this week.")
                              
     
     new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir)

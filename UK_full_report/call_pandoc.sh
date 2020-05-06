@@ -6,5 +6,5 @@ pandoc "$1" \
     -V monofont="Helvetica Neue" \
     -V fontsize=12pt \
     --template="$2" \
-    --pdf-engine=xelatex \
+    --latex-engine=xelatex \
     -o "$3"

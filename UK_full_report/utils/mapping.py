@@ -1,4 +1,5 @@
 import json
+import geopandas
 from geopandas import GeoSeries,GeoDataFrame
 import pandas as pd
 from collections import defaultdict

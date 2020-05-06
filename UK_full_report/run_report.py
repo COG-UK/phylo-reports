@@ -68,8 +68,10 @@ def main():
     parser.add_argument("--w", required=True, help="most recent date included as a string")
     parser.add_argument("--s", default="UK_report", help="output name stem as a string")
     parser.add_argument("--od", default="./", help="output directory, default is working directory")
+    parser.add_argument("--pdf", action="store_true", help="tries to run pandoc conversion to pdf")
 
     args = parser.parse_args()
 
     make_report(args.i, args.m, args.s, args.od, args.w, scripts_directory)
-    #convert_report_to_pdf(args.s, scripts_directory)
+    if args.pdf:
+        convert_report_to_pdf(args.s, scripts_directory)

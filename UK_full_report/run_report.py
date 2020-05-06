@@ -75,3 +75,6 @@ def main():
     make_report(args.i, args.m, args.s, args.od, args.w, scripts_directory)
     if args.pdf:
         convert_report_to_pdf(args.s, scripts_directory)
+
+if __name__ == "__main__":
+    main()

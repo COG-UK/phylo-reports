@@ -27,7 +27,7 @@ class taxon():
         epiweek_prep = metadata[1]
         if epiweek_prep != "0" and epiweek_prep != "":
             self.epiweek = Week(2020, int(float(epiweek_prep)))
-        elif epiweek_prep == 0:
+        elif epiweek_prep == "0":
             self.epiweek = Week(2019, 52)
         elif epiweek_prep == "":
             self.epiweek = "NA"
@@ -89,7 +89,7 @@ class introduction():
     def get_date_loc_info(self, current_date):
        
         for tax in self.taxa:
-            if tax.date_dt != "NA":
+            if tax.date_dt != "NA": #and tax.epiweek != "NA":
                 self.dates.append(tax.date_dt)
                 self.epiweeks.append(tax.epiweek)
                 self.locations.add(tax.adm2)
@@ -122,7 +122,7 @@ class introduction():
                     
         
     def define_status(self, current_week): 
-
+    
         last_week = current_week - 1
         two_weeks_ago = current_week - 2
         last_two_weeks = [current_week-1, current_week-2]

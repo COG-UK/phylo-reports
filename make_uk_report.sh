@@ -25,7 +25,7 @@ pip install .
 
 echo copying files
 
-scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv UK_full_report/results/$WEEK/report_files
+#scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv UK_full_report/results/$WEEK/report_files
 
 if $TREES
 then
@@ -38,7 +38,8 @@ if $TREES
 then 
 generate_report --m UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv  --w $WEEK --s UK_report_$WEEK --od UK_full_report/results/$WEEK/report_files/ --i UK_full_report/results/$WEEK/tree_files/
 else
-generate_report --m UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv --w $WEEK --s UK_report_$WEEK --od UK_full_report/results/$WEEK/report_files/ 
+#generate_report --m UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv --w $WEEK --s UK_report_$WEEK --od UK_full_report/results/$WEEK/report_files/ 
+generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
 fi
 
 #echo parsing markdown file
@@ -55,8 +56,8 @@ sh UK_full_report/call_pandoc.sh UK_report_$WEEK.md UK_full_report/utils/latex_t
 
 echo copying back to climb
 
-scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/$WEEK2/phylogenetics/reports/
+scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/public/
+echo scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/$WEEK2/phylogenetics/reports/
 
 echo tidying
 

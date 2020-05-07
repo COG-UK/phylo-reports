@@ -13,7 +13,7 @@ def sortkey2(taxon):
     return taxon.date_dt
 
 
-def make_objects(current_day, metadata_file):
+def make_objects(metadata_file):
     count = 0
     taxa_list = []
     tax_with_dates = []

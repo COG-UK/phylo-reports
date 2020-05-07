@@ -1,9 +1,11 @@
 
 #!/bin/bash
 
-WEEK=$1
-TREES=$2
-WEEK2=$3
+CLIMBSTEM=$1
+WEEK=$2
+TREES=$3
+WEEK2=$4
+
 
 
 mkdir UK_full_report/results/$WEEK/report_files
@@ -23,11 +25,11 @@ pip install .
 
 echo copying files
 
-scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$WEEK/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv UK_full_report/results/$WEEK/report_files
+scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv UK_full_report/results/$WEEK/report_files
 
 if $TREES
 then
-scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$WEEK/4/*/trees/* UK_full_report/results/$WEEK/tree_files/
+scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/4/*/trees/* UK_full_report/results/$WEEK/tree_files/
 fi
 
 echo making md file
@@ -53,8 +55,8 @@ sh UK_full_report/call_pandoc.sh UK_report_$WEEK.md UK_full_report/utils/latex_t
 
 echo copying back to climb
 
-#scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$WEEK/publish/phylogenetics/reports/
-#scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/$WEEK2/phylogenetics/reports/
+scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/$WEEK2/phylogenetics/reports/
 
 echo tidying
 

@@ -39,7 +39,7 @@ then
 generate_report --m UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv  --w $WEEK --s UK_report_$WEEK --od UK_full_report/results/$WEEK/report_files/ --i UK_full_report/results/$WEEK/tree_files/
 else
 #generate_report --m UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv --w $WEEK --s UK_report_$WEEK --od UK_full_report/results/$WEEK/report_files/ 
-generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
+generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun2/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
 fi
 
 #echo parsing markdown file

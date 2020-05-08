@@ -17,7 +17,7 @@ class taxon():
         self.acctrans = acctrans
 
         if metadata[0] == "None":
-            self.date = "NA"
+            self.date = None
         else:
             self.date = metadata[0]
 
@@ -30,7 +30,7 @@ class taxon():
         elif epiweek_prep == "0":
             self.epiweek = Week(2019, 52)
         elif epiweek_prep == "":
-            self.epiweek = "NA"
+            self.epiweek = None
 
 
         self.unclear = False
@@ -49,7 +49,7 @@ class taxon():
         if len(date_bits) == 3:
             self.date_dt = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
         else:
-            self.date_dt = "NA"
+            self.date_dt = None
 
             
 class introduction():
@@ -89,7 +89,7 @@ class introduction():
     def get_date_loc_info(self, current_date):
        
         for tax in self.taxa:
-            if tax.date_dt != "NA": #and tax.epiweek != "NA":
+            if tax.date_dt is None and tax.epiweek is None:
                 self.dates.append(tax.date_dt)
                 self.epiweeks.append(tax.epiweek)
                 self.locations.add(tax.adm2)

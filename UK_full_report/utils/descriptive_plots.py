@@ -60,7 +60,7 @@ def make_timeline(intro_bigs):
         
         country_set = set()
         for i in intro.taxa:
-            if i.date_dt != "NA":
+            if i.date_dt is not None:
                 if i.country == "england":
                     colours.append("indianred")
                     country_set.add("england")
@@ -312,7 +312,7 @@ def plot_sequences_over_time(sequences):
     labels = []
 
     for i in sequences:
-        if i.date_dt != "NA":
+        if i.date_dt is not None:
             sequence_dates[i.date_dt].append(i)
 
     for date,tax_list in sequence_dates.items():

@@ -74,7 +74,7 @@ def make_objects(metadata_file):
 
                         introduction_int_list.append(int(intro_name.lstrip("UK")))
 
-                    if new.date_dt != "NA":
+                    if new.date_dt is not None:
                         tax_with_dates.append(new)
 
                 except KeyError: #if it's not in metadata

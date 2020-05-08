@@ -84,6 +84,8 @@ class introduction():
         self.get_global_lineages()
         self.get_date_loc_info(current_day)
         self.define_status(current_week)
+
+        self.mrd = None
         
         
     def get_date_loc_info(self, current_date):

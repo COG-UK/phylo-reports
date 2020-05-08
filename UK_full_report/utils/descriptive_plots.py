@@ -312,7 +312,7 @@ def plot_sequences_over_time(sequences):
     labels = []
 
     for i in sequences:
-        if i.date_dt is not None:
+        if i.date_dt is not None and i.date_dt != "NA":
             sequence_dates[i.date_dt].append(i)
 
     for date,tax_list in sequence_dates.items():

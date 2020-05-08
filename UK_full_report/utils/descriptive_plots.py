@@ -61,6 +61,7 @@ def make_timeline(intro_bigs):
         country_set = set()
         for i in intro.taxa:
             if i.date_dt is not None:
+                print(i.date_dt)
                 if i.country == "england":
                     colours.append("indianred")
                     country_set.add("england")
@@ -75,6 +76,11 @@ def make_timeline(intro_bigs):
                     country_set.add("northern_ireland")
                 else:
                     print(i.country)
+        print(x2)
+        print(y2)
+        print(colours)
+        print(x)
+        print(y)
         
         height.append(count)
         ytick_list.append(intro.id)

@@ -353,8 +353,8 @@ def plot_sequences_over_time(sequences):
     ax.bar(labels, W, width, label='Wales', color='darkseagreen', bottom = E+S)
     ax.bar(labels, NI, width, label='Northern_Ireland', color='skyblue', bottom = E+S+W)
 
-    plt.xticks(rotation=45, size=25, fontweight='heavy')
-    plt.yticks(size=25, fontweight='heavy')
+    plt.xticks(rotation=55, size=25, fontweight='heavy')
+    plt.yticks(size=10, fontweight='heavy')
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Day", size=40, fontweight='bold')

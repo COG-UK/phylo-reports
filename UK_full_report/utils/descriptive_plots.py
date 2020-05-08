@@ -81,7 +81,7 @@ def make_timeline(intro_bigs):
         print(colours)
         print(x)
         print(y)
-        
+
         height.append(count)
         ytick_list.append(intro.id)
         

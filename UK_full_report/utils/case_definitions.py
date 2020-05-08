@@ -88,7 +88,7 @@ class introduction():
     def get_date_loc_info(self, current_date):
        
         for tax in self.taxa:
-            if tax.date_dt is not None and tax.epiweek is not None:
+            if tax.date_dt is not None and tax.date_dt != "NA":# and tax.epiweek is not None:
                 self.dates.append(tax.date_dt)
                 self.epiweeks.append(tax.epiweek)
                 self.locations.add(tax.adm2)

@@ -94,8 +94,7 @@ def make_objects(metadata_file):
     for intro, taxa in intros_to_taxa.items():
         
         i_o = case_def.introduction(intro, taxa, most_recent_sample, current_week)
-        if i_o.mrd is None:
-            continue
+
         #i_o.overall_lineage = taxa[0].overall_lineage
         i_o.acctrans_designations = intro_acctrans[i_o.id]
 

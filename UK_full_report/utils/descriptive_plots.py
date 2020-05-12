@@ -93,7 +93,7 @@ def make_timeline(intro_bigs):
                 plt.scatter(x,y, color=colour_dict[list(country_set)[0]], s=sizes)
         
     plt.yticks(height, ytick_list, size=10)
-    plt.ylim(2, count)
+    plt.ylim(1, count+1)
     plt.xticks(rotation=45)
 
 def plot_bars(intro_bigs):

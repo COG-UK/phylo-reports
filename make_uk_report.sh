@@ -7,7 +7,7 @@ TREES=$3
 WEEK2=$4
 
 
-
+mkdir UK_full_report/results/$WEEK
 mkdir UK_full_report/results/$WEEK/report_files
 
 if $TREES

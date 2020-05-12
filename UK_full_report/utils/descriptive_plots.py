@@ -155,7 +155,7 @@ def plot_bars(intro_bigs):
     plt.yticks(size=25, fontweight='heavy')
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
-    ax.set_xlabel("Introduction number", size=40, fontweight='bold')
+    ax.set_xlabel("Lineage number", size=40, fontweight='bold')
     ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
     ax.legend(fontsize=40)
 

@@ -1,5 +1,5 @@
 
-# Summary report for UK introductions
+# UK lineages summary report
 
 ```python, echo=False, name='define_paths'
 import os
@@ -79,7 +79,7 @@ Note: the size of a lineage may be due to a low amount of transmission of this l
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 ```python, echo=False, results='tex'
-print(str(smalls_count) + " are introductions which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity")
+print(str(smalls_count) + " are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity")
 ```
 ```python, echo=False, name='status description', results='tex'
 
@@ -149,7 +149,7 @@ if continuous > 0:
 The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
-It is also written to "summary_files" as "introduction_summary.tsv" for further use. 
+It is also written to "summary_files" as "lineage_summary.tsv" for further use. 
 ```python, name="dataframe fun", echo=False, results='tex'
 intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
 dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
@@ -202,7 +202,7 @@ dp.plot_sequences_over_time(taxa)
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
 ```
 
-These introductions are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
+These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
 The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
 
 ```python, name="make_timeline", echo=False, results='tex', include=False
@@ -212,6 +212,8 @@ dp.make_timeline(intro_bigs)
 ```python, name="hack2", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_make_timeline_1.png)\\")
 ```
+
+The map below shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
 
 ```python, name="map", include=False, results='tex', echo=False
 
@@ -236,7 +238,7 @@ if new_uncleans:
 
 
 
-Other results modules for UK introductions can be added in here if required.
+Other results modules for UK lineage analysis can be added in here if required.
 
 \pagebreak
 

@@ -157,7 +157,7 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 
 	df_together.columns = new_header_list
 	
-	df_together.index.name = 'Introduction'
+	df_together.index.name = 'Lineage name'
 	tree_order = list(df_together.index)
 
 	return df_together, tree_order

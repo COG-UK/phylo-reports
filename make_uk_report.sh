@@ -4,7 +4,6 @@
 CLIMBSTEM=$1
 WEEK=$2
 TREES=$3
-WEEK2=$4
 
 
 mkdir UK_full_report/results/$WEEK
@@ -58,11 +57,11 @@ echo copying back to climb
 
 scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 scp UK_report_$WEEK.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-scp -r report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/results/$WEEK/report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
 scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
 scp UK_report_$WEEK.md climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
-scp -r report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
+scp -r UK_full_report/results/$WEEK/report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
 
 echo tidying
 

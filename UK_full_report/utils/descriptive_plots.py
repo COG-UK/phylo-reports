@@ -33,7 +33,7 @@ def make_timeline(intro_bigs):
             "scotland":"steelblue",
             "northern_ireland":"skyblue"}
 
-    fig,ax = plt.subplots(figsize=(15,35))
+    fig,ax = plt.subplots(figsize=(15,40))
 
     count = 0
     height = []
@@ -43,7 +43,7 @@ def make_timeline(intro_bigs):
         colours = []
         sizes = []
         sizes2 = []
-        count += 1
+        count += 2
         
         point_one = intro.oldest
         point_two = intro.mrd
@@ -55,7 +55,7 @@ def make_timeline(intro_bigs):
         x2 = list(intro.dates)
         
         for i in x2:
-            sizes2.append((intro.date_counts[i])*50)
+            sizes2.append((intro.date_counts[i])*40)
             y2.append(count)
         
         country_set = set()
@@ -92,7 +92,8 @@ def make_timeline(intro_bigs):
             else:
                 plt.scatter(x,y, color=colour_dict[list(country_set)[0]], s=sizes)
         
-    plt.yticks(height, ytick_list)
+    plt.yticks(height, ytick_list, size=10)
+    plt.ylim(2, count)
     plt.xticks(rotation=45)
 
 def plot_bars(intro_bigs):

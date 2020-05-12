@@ -56,8 +56,13 @@ sh UK_full_report/call_pandoc.sh UK_report_$WEEK.md UK_full_report/utils/latex_t
 
 echo copying back to climb
 
-#scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/public/
-#scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/$WEEK2/phylogenetics/reports/
+scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp UK_report_$WEEK.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+
+scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
+scp UK_report_$WEEK.md climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
+scp -r report_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/
 
 echo tidying
 

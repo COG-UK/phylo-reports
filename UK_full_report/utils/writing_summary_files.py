@@ -7,8 +7,6 @@ def write_summary_table(dataframe, output_dir):
 
 def write_singletons(intro_alls, output_dir):
 
-
-
     fw = open(output_dir + "/singletons.csv", 'w')
     fw.write("UK_lineage,taxon\n")
 
@@ -16,7 +14,7 @@ def write_singletons(intro_alls, output_dir):
         if len(lin.taxa) == 1:
             l = lin.id + "," + lin.taxa[0].id + "\n"
 
-        fw.write(l)
+            fw.write(l)
     
     fw.close()
 

@@ -156,6 +156,7 @@ dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_tot
 
 print(dataframe.to_markdown())
 ```
+
 ```python,name="producing summary files", echo=False
 
 writing.write_summary_files(output_directory, dataframe, omitted, week, intro_alls)

@@ -20,6 +20,7 @@ git pull
 
 conda activate report
 
+
 pip install .
 
 echo copying files

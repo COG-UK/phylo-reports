@@ -27,12 +27,12 @@ This template is then parsed to make the pmd file with inputs, and weaved to cre
 
 To generate the report:
 
-    - Clone this repo
-    - ```cd Reports```
-    - ```pip install .```
-    - If you haven't run it before, make the environment by running ```conda env create -f UK_full_report/environment.yml``` 
-    - Activate the environment by running ```conda activate report```
-    - Run the command: ```generate_report --m path/to/metadata --w relevant_week --s file_name_stem --od path/to/output```
+1. Clone this repo
+2. ```cd Reports```
+3. ```pip install .```
+4. If you haven't run it before, make the environment by running ```conda env create -f UK_full_report/environment.yml``` 
+5. Activate the environment by running ```conda activate report```
+6. Run the command: ```generate_report --m path/to/metadata --w relevant_week --s file_name_stem --od path/to/output```
     
 This will produce a MD file, a PDF and the figures as PNGs. Depending on your output file path, the markdown may not contain the figures, but the PDF will. 
 

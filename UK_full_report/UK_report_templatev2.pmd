@@ -158,7 +158,7 @@ print(dataframe.to_markdown())
 ```
 ```python,name="producing summary files", echo=False
 
-writing.write_summary_files(output_directory, dataframe, omitted, week)
+writing.write_summary_files(output_directory, dataframe, omitted, week, intro_alls)
 
 ```
 

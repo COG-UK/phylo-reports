@@ -96,7 +96,7 @@ def make_timeline(intro_bigs):
     plt.ylim(1, count+1)
     plt.xticks(rotation=45)
 
-def plot_bars(intro_bigs):
+def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already displayed
 	
     labels = []
     E = []
@@ -158,8 +158,7 @@ def plot_bars(intro_bigs):
     ax.set_xlabel("Lineage number", size=40, fontweight='bold')
     ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
     ax.legend(fontsize=40)
-
-    plt.show()
+    
 
 def top_ten_sort(lineage):
     return len(lineage.taxa)

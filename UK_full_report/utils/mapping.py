@@ -68,9 +68,9 @@ def clean_locs(cleaning_file, all_uk):
 
     merged_locs = all_uk.dissolve(by="Multi_loc")
 
-    return merged_locs, mapping_dictionary
+    return merged_locs, mapping_dictionary, multi_loc_dict
 
-def parse_metadata(metadata, mapping_dictionary, merged_locs):
+def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
 
     seq_dict = defaultdict(list)
     missing_adm2 = {}
@@ -102,10 +102,14 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs):
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
                     if adm2 in mapping_dictionary.keys():
-                        if len(mapping_dictionary[adm2]) == 1:
+                        if len(mapping_dictionary[adm2]) == 1:  #if it's a 1:1 and it's just mislabelled
                             new = mapping_dictionary[adm2][0].upper()
-                        else:
+                        else: #if it's a larger one that's merging several small ones
                             new = adm2
+
+                    elif adm2 in multi_loc_dict.keys():
+                        new = multi_loc_dict[adm2]
+
                     else:
                         new = adm2
 
@@ -330,9 +334,9 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     all_uk = prep_data(input_geojsons, adm2_cleaning_file)
 
-    merged_locs, mapping_dictionary = clean_locs(adm2_cleaning_file, all_uk)
+    merged_locs, mapping_dictionary, multi_loc_dict = clean_locs(adm2_cleaning_file, all_uk)
 
-    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs)
+    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict)
 
     with_seq_counts = make_sequence_groups(with_seq_counts)
 

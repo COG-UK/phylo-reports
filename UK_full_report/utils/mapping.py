@@ -354,7 +354,9 @@ def clean_df(df):
     fourth_step.columns = headers
     fourth_step = fourth_step[["Admin2","Country", "Number of sequences", "Sequence group"]]
 
-    return fourth_step
+    final = fourth_step.fillna(0)
+
+    return final
 
 def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week):
 

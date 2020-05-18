@@ -41,15 +41,15 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | Lineage name   | Northern Ireland   | Wales        | Scotland    | England      | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:-------------------|:-------------|:------------|:-------------|:---------------|------------------:|:-----------------|--------------------------------:|
 | UK5            | 3 (0.4%)           | 85 (11.23%)  | 36 (4.76%)  | 633 (83.62%) | Mar-03, Apr-30 |               757 | B.1.1            |                               2 |
-| UK47           | 2 (0.33%)          | 365 (59.35%) | 7 (1.14%)   | 241 (39.19%) | Feb-23, Apr-23 |               615 | B, B.3           |                               9 |
+| UK47           | 2 (0.33%)          | 365 (59.35%) | 7 (1.14%)   | 241 (39.19%) | Feb-23, Apr-23 |               615 | B.3, B           |                               9 |
 | UK17           | 0 (0%)             | 63 (11.52%)  | 74 (13.53%) | 410 (74.95%) | Mar-09, Apr-30 |               547 | B.1.11           |                               2 |
 | UK30           | 1 (0.83%)          | 0 (0%)       | 79 (65.83%) | 40 (33.33%)  | Mar-18, Apr-27 |               120 | B.1              |                               5 |
-| UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1.24, B.1      |                              20 |
+| UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1, B.1.24      |                              20 |
 | UK10           | 0 (0%)             | 86 (91.49%)  | 0 (0%)      | 8 (8.51%)    | Mar-07, Apr-17 |                94 | B.1              |                              15 |
 | UK76           | 0 (0%)             | 0 (0%)       | 90 (98.9%)  | 1 (1.1%)     | Mar-16, Apr-27 |                91 | B.1              |                               5 |
-| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2.4, B.2       |                              12 |
-| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B, B.8           |                               9 |
-| UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2.1, B.2       |                              11 |
+| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2, B.2.4       |                              12 |
+| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B.8, B           |                               9 |
+| UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2, B.2.1       |                              11 |
 | UK4            | 0 (0%)             | 14 (22.58%)  | 0 (0%)      | 48 (77.42%)  | Mar-02, Apr-30 |                62 | B.8              |                               2 |
 | UK4136         | 0 (0%)             | 2 (3.39%)    | 0 (0%)      | 57 (96.61%)  | Mar-19, Apr-18 |                59 | B.1              |                              14 |
 | UK74           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 58 (100.0%)  | Mar-21, Apr-28 |                58 | B.1              |                               4 |
@@ -60,12 +60,12 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK133          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 50 (100.0%)  | Mar-15, Apr-20 |                50 | B.2.1            |                              12 |
 | UK3734         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 49 (100.0%)  | Mar-20, Apr-27 |                49 | B.1              |                               5 |
 | UK9            | 0 (0%)             | 0 (0%)       | 0 (0%)      | 49 (100.0%)  | Feb-24, Apr-19 |                49 | B.1              |                              13 |
-| UK126          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 47 (100.0%)  | Mar-12, Apr-19 |                47 | B.2.1, B.2       |                              13 |
+| UK126          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 47 (100.0%)  | Mar-12, Apr-19 |                47 | B.2, B.2.1       |                              13 |
 | UK159          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 46 (100.0%)  | Mar-21, Apr-29 |                46 | B.1              |                               3 |
 | UK6521         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 44 (100.0%)  | Mar-19, Apr-14 |                44 | B.1              |                              18 |
 | UK142          | 0 (0%)             | 0 (0%)       | 19 (43.18%) | 25 (56.82%)  | Mar-26, May-01 |                44 | B.1              |                               1 |
 | UK41           | 0 (0%)             | 1 (2.27%)    | 43 (97.73%) | 0 (0%)       | Mar-12, Apr-27 |                44 | A.2              |                               5 |
-| UK92           | 0 (0%)             | 0 (0%)       | 43 (100.0%) | 0 (0%)       | Mar-22, May-01 |                43 | B.1.19, B.1      |                               1 |
+| UK92           | 0 (0%)             | 0 (0%)       | 43 (100.0%) | 0 (0%)       | Mar-22, May-01 |                43 | B.1, B.1.19      |                               1 |
 | UK1373         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 41 (100.0%)  | Mar-28, Apr-16 |                41 | B.1              |                              16 |
 | UK51           | 1 (2.44%)          | 1 (2.44%)    | 39 (95.12%) | 0 (0%)       | Mar-17, May-01 |                41 | B                |                               1 |
 | UK20           | 2 (5.0%)           | 2 (5.0%)     | 35 (87.5%)  | 1 (2.5%)     | Mar-13, Apr-10 |                40 | B.2              |                              22 |
@@ -95,7 +95,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3702         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 23 (100.0%)  | Apr-10, Apr-23 |                23 | B.1              |                               9 |
 | UK1970         | 0 (0%)             | 0 (0%)       | 23 (100.0%) | 0 (0%)       | Apr-08, Apr-30 |                23 | B.1.5            |                               2 |
 | UK123          | 0 (0%)             | 5 (21.74%)   | 0 (0%)      | 18 (78.26%)  | Mar-01, Apr-19 |                23 | B.1              |                              13 |
-| UK35           | 0 (0%)             | 8 (34.78%)   | 13 (56.52%) | 2 (8.7%)     | Mar-19, May-01 |                23 | B.1.5, B.1       |                               1 |
+| UK35           | 0 (0%)             | 8 (34.78%)   | 13 (56.52%) | 2 (8.7%)     | Mar-19, May-01 |                23 | B.1, B.1.5       |                               1 |
 | UK173          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 23 (100.0%)  | Mar-16, Apr-19 |                23 | B.1              |                              13 |
 | UK34           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 22 (100.0%)  | Mar-14, Apr-02 |                22 | B.2.1            |                              30 |
 | UK50           | 0 (0%)             | 1 (4.55%)    | 0 (0%)      | 21 (95.45%)  | Mar-13, Apr-05 |                22 | B.2.1            |                              27 |
@@ -117,7 +117,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3707         | 0 (0%)             | 0 (0%)       | 1 (5.26%)   | 18 (94.74%)  | Mar-14, Apr-26 |                19 | B.1              |                               6 |
 | UK36           | 0 (0%)             | 0 (0%)       | 2 (10.53%)  | 17 (89.47%)  | Mar-25, Apr-28 |                19 | B.1              |                               4 |
 | UK153          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-16 |                18 | B.1.5            |                              16 |
-| UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2.1, B.2       |                              28 |
+| UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2, B.2.1       |                              28 |
 | UK131          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-11 |                18 | B.1              |                              21 |
 | UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1.10, B.1      |                              10 |
 | UK1312         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-20, Apr-30 |                17 | B.1              |                               2 |
@@ -150,7 +150,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK184          | 0 (0%)             | 13 (100.0%)  | 0 (0%)      | 0 (0%)       | Mar-28, Apr-13 |                13 | B.1              |                              19 |
 | UK3921         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-29, Apr-27 |                12 | B.1              |                               5 |
 | UK37           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-29, Apr-16 |                12 | B.1.7, B.1       |                              16 |
-| UK291          | 0 (0%)             | 10 (83.33%)  | 0 (0%)      | 2 (16.67%)   | Mar-27, Apr-13 |                12 | B.1.5, B.1       |                              19 |
+| UK291          | 0 (0%)             | 10 (83.33%)  | 0 (0%)      | 2 (16.67%)   | Mar-27, Apr-13 |                12 | B.1, B.1.5       |                              19 |
 | UK38           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-13, Apr-02 |                12 | B.1              |                              30 |
 | UK196          | 0 (0%)             | 3 (25.0%)    | 1 (8.33%)   | 8 (66.67%)   | Mar-26, Apr-18 |                12 | B.1              |                              14 |
 | UK146          | 0 (0%)             | 12 (100.0%)  | 0 (0%)      | 0 (0%)       | Mar-18, Apr-09 |                12 | B.2.2            |                              23 |
@@ -175,16 +175,16 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK118          | 0 (0%)             | 1 (9.09%)    | 2 (18.18%)  | 8 (72.73%)   | Mar-17, Apr-13 |                11 | B.2              |                              19 |
 | UK2572         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-08, Apr-22 |                11 | B.1.11           |                              10 |
 | UK3740         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-28, Apr-17 |                11 | B.1              |                              15 |
-| UK899          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-20, Apr-06 |                11 | B.2.1, B.2       |                              26 |
+| UK899          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-20, Apr-06 |                11 | B.2, B.2.1       |                              26 |
 | UK132          | 0 (0%)             | 0 (0%)       | 11 (100.0%) | 0 (0%)       | Mar-13, Apr-05 |                11 | B.2              |                              27 |
 | UK2270         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-13, Apr-27 |                11 | B.1              |                               5 |
 | UK3774         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-20, Apr-21 |                11 | B.1              |                              11 |
 | UK3760         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Apr-04, Apr-27 |                10 | B.1              |                               5 |
 | UK2038         | 0 (0%)             | 0 (0%)       | 10 (100.0%) | 0 (0%)       | Apr-13, Apr-29 |                10 | B.1.5            |                               3 |
-| UK43           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-13, Apr-13 |                10 | B.2.1, B.2       |                              19 |
+| UK43           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-13, Apr-13 |                10 | B.2, B.2.1       |                              19 |
 | UK3710         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-22, Apr-11 |                10 | B.1              |                              21 |
 | UK690          | 1 (10.0%)          | 0 (0%)       | 0 (0%)      | 9 (90.0%)    | Mar-26, Apr-07 |                10 | B.1              |                              25 |
-| UK720          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-28, Mar-08 |                10 | B.2.1, B.2       |                              55 |
+| UK720          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-28, Mar-08 |                10 | B.2, B.2.1       |                              55 |
 | UK1184         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-15, Apr-08 |                10 | B.1              |                              24 |
 | UK1586         | 0 (0%)             | 0 (0%)       | 10 (100.0%) | 0 (0%)       | Mar-19, Apr-08 |                10 | A.3              |                              24 |
 | UK42           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-26, Mar-15 |                10 | B.1              |                              48 |
@@ -203,7 +203,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3812         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 9 (100.0%)   | Mar-30, Apr-12 |                 9 | B.1              |                              20 |
 | UK59           | 0 (0%)             | 9 (100.0%)   | 0 (0%)      | 0 (0%)       | Mar-14, Apr-08 |                 9 | B.2.1            |                              24 |
 | UK179          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 9 (100.0%)   | Mar-18, Apr-27 |                 9 | B.1.10           |                               5 |
-| UK25           | 0 (0%)             | 1 (11.11%)   | 1 (11.11%)  | 7 (77.78%)   | Mar-10, Apr-08 |                 9 | B.2.2, B.2       |                              24 |
+| UK25           | 0 (0%)             | 1 (11.11%)   | 1 (11.11%)  | 7 (77.78%)   | Mar-10, Apr-08 |                 9 | B.2, B.2.2       |                              24 |
 | UK3755         | 0 (0%)             | 2 (22.22%)   | 0 (0%)      | 7 (77.78%)   | Mar-24, Apr-24 |                 9 | B.1              |                               8 |
 | UK4930         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 9 (100.0%)   | Mar-29, Apr-08 |                 9 | B.2.1            |                              24 |
 | UK104          | 0 (0%)             | 5 (55.56%)   | 0 (0%)      | 4 (44.44%)   | Mar-21, Apr-13 |                 9 | B.1              |                              19 |
@@ -261,7 +261,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK978          | 0 (0%)             | 5 (71.43%)   | 0 (0%)      | 2 (28.57%)   | Mar-20, Apr-09 |                 7 | B.2.1            |                              23 |
 | UK3822         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Apr-02, Apr-16 |                 7 | B.1              |                              16 |
 | UK19           | 0 (0%)             | 5 (71.43%)   | 0 (0%)      | 2 (28.57%)   | Mar-06, Apr-13 |                 7 | B.1              |                              19 |
-| UK130          | 0 (0%)             | 0 (0%)       | 1 (14.29%)  | 6 (85.71%)   | Mar-17, Mar-27 |                 7 | B.2.1, B.2       |                              36 |
+| UK130          | 0 (0%)             | 0 (0%)       | 1 (14.29%)  | 6 (85.71%)   | Mar-17, Mar-27 |                 7 | B.2, B.2.1       |                              36 |
 | UK2910         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Apr-02, Apr-27 |                 7 | B.1              |                               5 |
 | UK23           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Mar-11, Apr-08 |                 7 | B.2.2            |                              24 |
 | UK4932         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Mar-22, Apr-19 |                 7 | B.2.1            |                              13 |
@@ -278,14 +278,14 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK1444         | 0 (0%)             | 4 (66.67%)   | 0 (0%)      | 2 (33.33%)   | Mar-22, Apr-12 |                 6 | B.2              |                              20 |
 | UK2915         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-26, Apr-06 |                 6 | B.1              |                              26 |
 | UK1975         | 0 (0%)             | 0 (0%)       | 6 (100.0%)  | 0 (0%)       | Apr-13, Apr-25 |                 6 | B.1.5            |                               7 |
-| UK5132         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Mar-30 |                 6 | B.2.1, B.2       |                              33 |
+| UK5132         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Mar-30 |                 6 | B.2, B.2.1       |                              33 |
 | UK3844         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Apr-05, Apr-21 |                 6 | B.1              |                              11 |
 | UK4807         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-31, Apr-15 |                 6 | B.1              |                              17 |
 | UK951          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Apr-05 |                 6 | B.1              |                              27 |
 | UK80           | 0 (0%)             | 1 (16.67%)   | 2 (33.33%)  | 3 (50.0%)    | Mar-20, Apr-01 |                 6 | B.1              |                              31 |
 | UK4137         | 0 (0%)             | 6 (100.0%)   | 0 (0%)      | 0 (0%)       | Apr-02, Apr-09 |                 6 | B.1              |                              23 |
 | UK206          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-25, Apr-27 |                 6 | B.1              |                               5 |
-| UK5039         | 0 (0%)             | 0 (0%)       | 1 (16.67%)  | 5 (83.33%)   | Mar-18, Apr-02 |                 6 | B.2.1, B.2       |                              30 |
+| UK5039         | 0 (0%)             | 0 (0%)       | 1 (16.67%)  | 5 (83.33%)   | Mar-18, Apr-02 |                 6 | B.2, B.2.1       |                              30 |
 | UK1075         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-24, Mar-30 |                 6 | B.1              |                              33 |
 | UK620          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-24, Mar-29 |                 6 | B.2.1            |                              34 |
 | UK864          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-13, Apr-13 |                 6 | B.2.1            |                              19 |
@@ -317,7 +317,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK804          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-18, Apr-14 |                 6 | B.1              |                              18 |
 | UK115          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-16, Apr-06 |                 6 | B.8              |                              26 |
 | UK2867         | 0 (0%)             | 6 (100.0%)   | 0 (0%)      | 0 (0%)       | Apr-05, Apr-10 |                 6 | B.1              |                              22 |
-| UK54           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-14, Mar-28 |                 6 | B.2.1, B.2       |                              35 |
+| UK54           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-14, Mar-28 |                 6 | B.2, B.2.1       |                              35 |
 | UK3781         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-31, Apr-21 |                 6 | B.1              |                              11 |
 
 
@@ -553,48 +553,171 @@ The map below shows the number of sequences sampled in each admin2 region in the
 
 
 
----------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-e8eea25fe031> in <module>
-      5 input_geojsons = [uk_json, channels, NI_json]
-      6 
-----> 7 new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/mapping.py in make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir, week)
-    368 
-    369     with_seq_counts = make_sequence_groups(with_seq_counts)
---> 370     cleaned = clean_df(with_seq_counts)
-    371 
-    372     england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/mapping.py in clean_df(df)
-    338             drop_labels.append(index)
-    339 
---> 340     third_step = second_step.drop([newish.index[i] for i in drop_labels])
-    341     new_names = []
-    342 
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/mapping.py in <listcomp>(.0)
-    338             drop_labels.append(index)
-    339 
---> 340     third_step = second_step.drop([newish.index[i] for i in drop_labels])
-    341     new_names = []
-    342 
-NameError: name 'newish' is not defined
-
 
 
 ![](/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output/figures_2020-05-08/UK_report_testingfigs_map_1.png)\
+|     | Admin2                       | Country          |   Number of sequences | Sequence group   |
+|----:|:-----------------------------|:-----------------|----------------------:|:-----------------|
+|   0 | ABERDEEN                     | Scotland         |                    20 | 10-50            |
+|   1 | ABERDEENSHIRE                | Scotland         |                   nan | nan              |
+|   2 | ANGUS                        | Scotland         |                    10 | 1-10             |
+|   3 | ANTRIM                       | Northern Ireland |                    68 | 50-100           |
+|   5 | ARGYLL AND BUTE              | Scotland         |                   nan | nan              |
+|   6 | ARMAGH                       | Northern Ireland |                     6 | 1-10             |
+|   8 | BATH AND NORTH EAST SOMERSET | England          |                   nan | nan              |
+|   9 | BEDFORDSHIRE                 | England          |                   438 | 400-500          |
+|  11 | BERKSHIRE                    | England          |                     6 | 1-10             |
+|  12 | BLACKBURN WITH DARWEN        | England          |                   nan | nan              |
+|  13 | BLACKPOOL                    | England          |                   nan | nan              |
+|  14 | BLAENAU GWENT                | Wales            |                    26 | 10-50            |
+|  15 | BOLTON                       | England          |                   nan | nan              |
+|  16 | BORDERS                      | Scotland         |                   nan | nan              |
+|  17 | BOURNEMOUTH                  | England          |                   nan | nan              |
+|  18 | BRIDGEND                     | Wales            |                    46 | 10-50            |
+|  19 | BRIGHTON AND HOVE            | England          |                   nan | nan              |
+|  20 | BRISTOL                      | England          |                    18 | 1-10             |
+|  21 | BUCKINGHAMSHIRE              | England          |                   326 | 300-400          |
+|  22 | BURY                         | England          |                   nan | nan              |
+|  23 | CAERPHILLY                   | Wales            |                    52 | 50-100           |
+|  24 | CAMARTHENSHIRE               | Wales            |                     1 | 1-10             |
+|  25 | CAMBRIDGESHIRE               | England          |                   595 | >500             |
+|  26 | CARDIFF                      | Wales            |                   171 | 150-200          |
+|  28 | CENTRAL BEDFORDSHIRE         | England          |                   nan | nan              |
+|  29 | CEREDIGION                   | Wales            |                    15 | 1-10             |
+|  30 | CHESHIRE                     | England          |                     8 | 1-10             |
+|  31 | CITY OF LONDON               | England          |                    14 | 1-10             |
+|  32 | CLACKMANNANSHIRE             | Scotland         |                     1 | 1-10             |
+|  33 | CONWY                        | Wales            |                    12 | 1-10             |
+|  34 | CORNWALL                     | England          |                    12 | 1-10             |
+|  35 | COUNTY DURHAM                | England          |                     1 | 1-10             |
+|  36 | CUMBRIA                      | England          |                     5 | 1-10             |
+|  37 | DARLINGTON                   | England          |                   nan | nan              |
+|  38 | DENBIGHSHIRE                 | Wales            |                    26 | 10-50            |
+|  39 | DERBY                        | England          |                   nan | nan              |
+|  40 | DERBYSHIRE                   | England          |                    25 | 10-50            |
+|  42 | DEVON                        | England          |                   141 | 100-150          |
+|  43 | DORSET                       | England          |                   138 | 100-150          |
+|  44 | DOWN                         | Northern Ireland |                    28 | 10-50            |
+|  45 | DUMFRIES AND GALLOWAY        | Scotland         |                    31 | 10-50            |
+|  46 | DUNDEE                       | Scotland         |                    31 | 10-50            |
+|  47 | EAST DUNBARTONSHIRE          | Scotland         |                   nan | nan              |
+|  48 | EAST LOTHIAN                 | Scotland         |                    46 | 10-50            |
+|  49 | EAST RENFREWSHIRE            | Scotland         |                   nan | nan              |
+|  50 | EAST YORKSHIRE               | England          |                     1 | 1-10             |
+|  51 | EDINBURGH                    | Scotland         |                   351 | 300-400          |
+|  52 | ESSEX                        | England          |                  1052 | >500             |
+|  53 | FALKIRK                      | Scotland         |                    34 | 10-50            |
+|  54 | FERMANAGH                    | Northern Ireland |                     2 | 1-10             |
+|  56 | FLINTSHIRE                   | Wales            |                    18 | 1-10             |
+|  57 | GATESHEAD                    | England          |                   nan | nan              |
+|  58 | GLASGOW                      | Scotland         |                   454 | 400-500          |
+|  59 | GLOUCESTERSHIRE              | England          |                   254 | 250-300          |
+|  60 | GREATER MANCHESTER           | England          |                    28 | 10-50            |
+|  61 | GUERNSEY                     | Channel_islands  |                    41 | 10-50            |
+|  62 | GWYNEDD                      | Wales            |                    15 | 1-10             |
+|  63 | HALTON                       | England          |                   nan | nan              |
+|  64 | HAMPSHIRE                    | England          |                    59 | 50-100           |
+|  65 | HARTLEPOOL                   | England          |                   nan | nan              |
+|  66 | HEREFORDSHIRE                | England          |                     1 | 1-10             |
+|  67 | HERTFORDSHIRE                | England          |                   765 | >500             |
+|  68 | INVERCLYDE                   | Scotland         |                   nan | nan              |
+|  69 | INVERNESS                    | Scotland         |                     9 | 1-10             |
+|  70 | ISLE OF ANGLESEY             | Wales            |                    12 | 1-10             |
+|  71 | ISLE OF WIGHT                | England          |                   nan | nan              |
+|  72 | ISLES OF SCILLY              | England          |                   nan | nan              |
+|  73 | JERSEY                       | Channel_islands  |                    74 | 50-100           |
+|  74 | KENT                         | England          |                    21 | 10-50            |
+|  75 | KILMARNOCK                   | Scotland         |                    32 | 10-50            |
+|  76 | KINGSTON UPON HULL           | England          |                   nan | nan              |
+|  77 | KIRKALDY                     | Scotland         |                   nan | nan              |
+|  78 | KIRKWALL                     | Scotland         |                     1 | 1-10             |
+|  79 | LANCASHIRE                   | England          |                     6 | 1-10             |
+|  80 | LEICESTER                    | England          |                   nan | nan              |
+|  81 | LEICESTERSHIRE               | England          |                     5 | 1-10             |
+|  82 | LINCOLNSHIRE                 | England          |                     7 | 1-10             |
+|  84 | LONDONDERRY                  | Northern Ireland |                     6 | 1-10             |
+|  85 | LUTON                        | England          |                   nan | nan              |
+|  86 | MEDWAY                       | England          |                   nan | nan              |
+|  87 | MERSEYSIDE                   | England          |                    55 | 50-100           |
+|  88 | MERTHYR TYDFIL               | Wales            |                    26 | 10-50            |
+|  91 | MIDDLESBROUGH                | England          |                   nan | nan              |
+|  92 | MIDLOTHIAN                   | Scotland         |                   104 | 100-150          |
+|  93 | MILTON KEYNES                | England          |                   nan | nan              |
+|  94 | MONMOUTHSHIRE                | Wales            |                    26 | 10-50            |
+|  95 | MORAY                        | Scotland         |                   nan | nan              |
+|  96 | MOTHERWELL                   | Scotland         |                    63 | 50-100           |
+|  97 | NEATH PORT TALBOT            | Wales            |                    25 | 10-50            |
+|  98 | NEWPORT                      | Wales            |                    73 | 50-100           |
+| 100 | NORFOLK                      | England          |                   182 | 150-200          |
+| 101 | NORTH AYRSHIRE               | Scotland         |                   nan | nan              |
+| 103 | NORTH LINCOLNSHIRE           | England          |                   nan | nan              |
+| 104 | NORTH SOMERSET               | England          |                   nan | nan              |
+| 105 | NORTH YORKSHIRE              | England          |                     4 | 1-10             |
+| 106 | NORTHAMPTONSHIRE             | England          |                    20 | 10-50            |
+| 107 | NORTHUMBERLAND               | England          |                     2 | 1-10             |
+| 108 | NOTTINGHAM                   | England          |                   467 | 400-500          |
+| 109 | OLDHAM                       | England          |                   nan | nan              |
+| 110 | OUTER HEBRIDES               | Scotland         |                     2 | 1-10             |
+| 111 | OXFORDSHIRE                  | England          |                    86 | 50-100           |
+| 112 | PAISLEY                      | Scotland         |                   124 | 100-150          |
+| 113 | PEMBROKESHIRE                | Wales            |                    44 | 10-50            |
+| 114 | PERTH                        | Scotland         |                     2 | 1-10             |
+| 115 | PETERBOROUGH                 | England          |                   nan | nan              |
+| 116 | PLYMOUTH                     | England          |                   nan | nan              |
+| 117 | POOLE                        | England          |                   nan | nan              |
+| 118 | PORTSMOUTH                   | England          |                   nan | nan              |
+| 119 | POWYS                        | Wales            |                    22 | 10-50            |
+| 120 | REDCAR AND CLEVELAND         | England          |                   nan | nan              |
+| 121 | RHONDDA, CYNON, TAFF         | Wales            |                   nan | nan              |
+| 122 | ROCHDALE                     | England          |                   nan | nan              |
+| 123 | RUTLAND                      | England          |                   nan | nan              |
+| 124 | SALFORD                      | England          |                   nan | nan              |
+| 125 | SHETLAND                     | Scotland         |                    14 | 1-10             |
+| 126 | SHROPSHIRE                   | England          |                     1 | 1-10             |
+| 127 | SOMERSET                     | England          |                   228 | 200-250          |
+| 128 | SOUTH AYRSHIRE               | Scotland         |                   nan | nan              |
+| 129 | SOUTH GLOUCESTERSHIRE        | England          |                   nan | nan              |
+| 130 | SOUTH LANARKSHIRE            | Scotland         |                     3 | 1-10             |
+| 131 | SOUTH YORKSHIRE              | England          |                   878 | >500             |
+| 132 | SOUTHAMPTON                  | England          |                   nan | nan              |
+| 133 | SOUTHEND-ON-SEA              | England          |                   nan | nan              |
+| 134 | STAFFORDSHIRE                | England          |                    19 | 1-10             |
+| 135 | STIRLING                     | Scotland         |                   nan | nan              |
+| 136 | STOCKPORT                    | England          |                   nan | nan              |
+| 137 | STOCKTON-ON-TEES             | England          |                   nan | nan              |
+| 138 | STOKE-ON-TRENT               | England          |                   nan | nan              |
+| 139 | SUFFOLK                      | England          |                   353 | 300-400          |
+| 140 | SURREY                       | England          |                    49 | 10-50            |
+| 141 | SUSSEX                       | England          |                     1 | 1-10             |
+| 142 | SUTTON-IN-ASHFIELD           | England          |                    37 | 10-50            |
+| 143 | SWANSEA                      | Wales            |                    89 | 50-100           |
+| 144 | SWINDON                      | England          |                   nan | nan              |
+| 145 | TAMESIDE                     | England          |                   nan | nan              |
+| 146 | TELFORD AND WREKIN           | England          |                   nan | nan              |
+| 147 | THURROCK                     | England          |                   nan | nan              |
+| 148 | TORBAY                       | England          |                   nan | nan              |
+| 149 | TORFAEN                      | Wales            |                    46 | 10-50            |
+| 150 | TRAFFORD                     | England          |                   nan | nan              |
+| 151 | TYNE AND WEAR                | England          |                    37 | 10-50            |
+| 152 | TYRONE                       | Northern Ireland |                     9 | 1-10             |
+| 153 | VALE OF GLAMORGAN            | Wales            |                    73 | 50-100           |
+| 154 | WARRINGTON                   | England          |                   nan | nan              |
+| 155 | WARWICKSHIRE                 | England          |                     8 | 1-10             |
+| 156 | WEST DUNBARTONSHIRE          | Scotland         |                   nan | nan              |
+| 157 | WEST LOTHIAN                 | Scotland         |                    74 | 50-100           |
+| 158 | WEST MIDLANDS                | England          |                    59 | 50-100           |
+| 159 | WEST YORKSHIRE               | England          |                    13 | 1-10             |
+| 160 | WIGAN                        | England          |                   nan | nan              |
+| 161 | WILTSHIRE                    | England          |                   147 | 100-150          |
+| 162 | WORCESTERSHIRE               | England          |                     7 | 1-10             |
+| 163 | WREXHAM                      | Wales            |                    20 | 10-50            |
+| 164 | YORK                         | England          |                   nan | nan              |
 
----------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-5fb8134d5dae> in <module>
-      1 print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
-----> 2 print(mapping_data.to_markdown())
-NameError: name 'mapping_data' is not defined
 
 
 
 
-
-
----------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-b359170a4b6a> in <module>
-----> 1 if new_uncleans:
-      2     print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
-NameError: name 'new_uncleans' is not defined
+There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.
 
 
 

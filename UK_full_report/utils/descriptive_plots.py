@@ -254,16 +254,17 @@ def make_raw_data_geog_plot(y_dict, weeks):
     
     raw_data = defaultdict(list)
 
+    raw_data["Week commencing"] = weeks
+
     for key, value in y_dict.items():
 
         raw_data[key] = value
-    
-    raw_data["Week commencing"] = weeks
 
     raw_df = pd.DataFrame(raw_data)
 
-    return raw_df
+    raw_df.index.name("Week commencing")
 
+    return raw_df
 
 
 def plot_starts(lineages_of_interest):
@@ -314,7 +315,31 @@ def plot_starts(lineages_of_interest):
     plt.xlabel("Week commencing", size=30)
     plt.ylabel("Number of earliest sequences", size=30)
     plt.legend()
-    plt.show()
+
+    return ordered_dates, single_ordered
+
+def raw_data_starts(singles, non_singles):
+
+    raw_dict = defaultdict(list)
+
+    for day, count in singles.items():
+        raw_dict["Day"].append(day)
+        raw_dict["Number of singleton starts"].append(count)
+    
+    for count2 in non_singles.values():
+        raw_dict["Number of non-singleton starts"].append(count2)
+
+    for i,j in zip(raw_dict["Number of singleton starts"], raw_dict["Number of non-singleton starts"]):
+        raw_dict["Total"].append(i+j)
+
+    raw_df = pd.DataFrame(raw_dict)
+
+    raw_df.index.name("Day")
+
+    return raw_df
+
+
+
 
 def plot_sequences_over_time(sequences):
 

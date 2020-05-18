@@ -261,8 +261,7 @@ def make_raw_data_geog_plot(y_dict, weeks):
         raw_data[key] = value
 
     raw_df = pd.DataFrame(raw_data)
-
-    raw_df.index.name = "Week commencing"
+    raw_df.set_index("Week commencing")
 
     return raw_df
 
@@ -334,7 +333,7 @@ def raw_data_starts(singles, non_singles):
 
     raw_df = pd.DataFrame(raw_dict)
 
-    raw_df.index.name = "Day"
+    raw_df.set_index("Day")
 
     return raw_df
 
@@ -401,12 +400,24 @@ def plot_sequences_over_time(sequences):
     ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
     ax.legend(fontsize=40)
 
-    plt.show()
+    return labels, E, S, W, NI    
 
-    # x = list(seq_counts.keys())
-    # y = list(seq_counts.values())
+def raw_data_seqs_over_time(days, E, S, W, NI):
 
-    # ax.bar(x,y)
+    raw_dict = defaultdict(list)
+
+    for d,e,s,w,ni in zip(days, E, S, W, NI):
+
+        raw_dict["Day"].append(d)
+        raw_dict["England"].append(e)
+        raw_dict["Scotland"].append(s)
+        raw_dict["Wales"].append(w)
+        raw_dict["Northern Ireland"].append(ni)
+
+    raw_df = pd.DataFrame(raw_dict)
+    raw_df.set_index("Day")
+
+    return raw_df
 
 
 

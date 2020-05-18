@@ -6,19 +6,19 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
+output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output"
 
-input_directory = "" ##CHANGE
+input_directory = ""
 
-metadata_file = "" ##CHANGE
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-05-08/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv"
 
-name_stem="" ##CHANGE
+name_stem = "UK_report_testingfigs"
 
-week = "" ##CHANGE
+week = "2020-05-08"
 
 fd = os.path.join(output_directory, "figures_" + week)
 
-scripts_directory = "" ##CHANGE
+scripts_directory = "/Users/s1743989/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report"
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
 
@@ -205,12 +205,12 @@ print(starts_raw.to_markdown())
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 ```python, name="seqs_over_time", echo=False, include=False
-days, E, S, W, NI = dp.plot_sequences_over_time(taxa)
-raw_seqs_over_time = dp.raw_data_seqs_over_time(days, E, S, W, NI)
+#RAW DATA NEEDED HERE - day, E,S,W,NI
+
+dp.plot_sequences_over_time(taxa)
 ```
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
-print(raw_data_seqs_over_time.to_markdown())
 ```
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.

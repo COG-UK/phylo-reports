@@ -195,11 +195,10 @@ def plot_geog_plot(lineages_prep, normed):
         
         for k,v in lin.week_to_adm2.items():
             count_list.append(len(v))
-            
         
-        new_name = "y"+str(count)
+        #new_name = "y"+str(count)
         
-        y_dict[new_name] = count_list
+        y_dict[lin.id] = count_list
 
     totals = {}
 
@@ -248,6 +247,24 @@ def plot_geog_plot(lineages_prep, normed):
     plt.xticks(rotation=45)
     plt.xlabel("Week commencing")
     #plt.show()
+
+    return y_dict, x
+
+def make_raw_data_geog_plot(y_dict, weeks):
+    
+    raw_data = defaultdict(list)
+
+    for key, value in y_dict.items():
+
+        raw_data[key] = value
+    
+    raw_data["Week commencing"] = weeks
+
+    raw_df = pd.DataFrame(raw_data)
+
+    return raw_df
+
+
 
 def plot_starts(lineages_of_interest):
 

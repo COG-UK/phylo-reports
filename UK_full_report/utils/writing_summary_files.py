@@ -40,7 +40,7 @@ def write_omitteds(omitted, output_dir):
     fw.close()
 
 
-def write_summary_files(overall_output_dir, dataframe, omitted, week, intro_alls):
+def write_summary_files(overall_output_dir, dataframe, omitted, week, intro_alls, timeline_data):
 
     output_dir = os.path.join(overall_output_dir, "summary_files_" + week)
 
@@ -52,3 +52,5 @@ def write_summary_files(overall_output_dir, dataframe, omitted, week, intro_alls
     write_summary_table(dataframe, output_dir)
     write_omitteds(omitted, output_dir)
     write_singletons(intro_alls, output_dir)
+
+    timeline_data.to_csv(output_dir + "/timeline_raw_data.csv", index=False)

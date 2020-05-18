@@ -6,7 +6,7 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output"
+output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output/"
 
 input_directory = ""
 
@@ -220,6 +220,7 @@ The dots are sized by the number of sequences taken on that date, and again are 
 ```python, name="make_timeline", echo=False, results='tex', include=False
 dp.make_timeline(intro_bigs)
 timeline_df = dp.raw_data_timeline(intro_bigs)
+print(timeline_df.to_markdown)
 timeline_df.to_csv(output_directory + "timeline_raw_data.csv", index=False)
 ```
 

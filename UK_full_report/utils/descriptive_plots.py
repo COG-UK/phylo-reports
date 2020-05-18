@@ -109,9 +109,11 @@ def raw_data_timeline(intros):
 
         raw_dict["Lineage"].extend(self_list)
         
-        raw_dict["Days"].extend(list(intro.dates))
+        sorted_intros = sorted(list(intro.dates))
 
-        for date in intro.dates:
+        raw_dict["Days"].extend(sorted_intros)
+
+        for date in sorted_intros:
             E = 0
             S = 0
             W = 0

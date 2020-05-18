@@ -47,9 +47,9 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1, B.1.24      |                              20 |
 | UK10           | 0 (0%)             | 86 (91.49%)  | 0 (0%)      | 8 (8.51%)    | Mar-07, Apr-17 |                94 | B.1              |                              15 |
 | UK76           | 0 (0%)             | 0 (0%)       | 90 (98.9%)  | 1 (1.1%)     | Mar-16, Apr-27 |                91 | B.1              |                               5 |
-| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2.4, B.2       |                              12 |
-| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B, B.8           |                               9 |
-| UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2.1, B.2       |                              11 |
+| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2, B.2.4       |                              12 |
+| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B.8, B           |                               9 |
+| UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2, B.2.1       |                              11 |
 | UK4            | 0 (0%)             | 14 (22.58%)  | 0 (0%)      | 48 (77.42%)  | Mar-02, Apr-30 |                62 | B.8              |                               2 |
 | UK4136         | 0 (0%)             | 2 (3.39%)    | 0 (0%)      | 57 (96.61%)  | Mar-19, Apr-18 |                59 | B.1              |                              14 |
 | UK74           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 58 (100.0%)  | Mar-21, Apr-28 |                58 | B.1              |                               4 |
@@ -60,7 +60,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK133          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 50 (100.0%)  | Mar-15, Apr-20 |                50 | B.2.1            |                              12 |
 | UK3734         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 49 (100.0%)  | Mar-20, Apr-27 |                49 | B.1              |                               5 |
 | UK9            | 0 (0%)             | 0 (0%)       | 0 (0%)      | 49 (100.0%)  | Feb-24, Apr-19 |                49 | B.1              |                              13 |
-| UK126          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 47 (100.0%)  | Mar-12, Apr-19 |                47 | B.2.1, B.2       |                              13 |
+| UK126          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 47 (100.0%)  | Mar-12, Apr-19 |                47 | B.2, B.2.1       |                              13 |
 | UK159          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 46 (100.0%)  | Mar-21, Apr-29 |                46 | B.1              |                               3 |
 | UK6521         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 44 (100.0%)  | Mar-19, Apr-14 |                44 | B.1              |                              18 |
 | UK142          | 0 (0%)             | 0 (0%)       | 19 (43.18%) | 25 (56.82%)  | Mar-26, May-01 |                44 | B.1              |                               1 |
@@ -117,7 +117,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3707         | 0 (0%)             | 0 (0%)       | 1 (5.26%)   | 18 (94.74%)  | Mar-14, Apr-26 |                19 | B.1              |                               6 |
 | UK36           | 0 (0%)             | 0 (0%)       | 2 (10.53%)  | 17 (89.47%)  | Mar-25, Apr-28 |                19 | B.1              |                               4 |
 | UK153          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-16 |                18 | B.1.5            |                              16 |
-| UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2.1, B.2       |                              28 |
+| UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2, B.2.1       |                              28 |
 | UK131          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-11 |                18 | B.1              |                              21 |
 | UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1.10, B.1      |                              10 |
 | UK1312         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-20, Apr-30 |                17 | B.1              |                               2 |
@@ -175,16 +175,16 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK118          | 0 (0%)             | 1 (9.09%)    | 2 (18.18%)  | 8 (72.73%)   | Mar-17, Apr-13 |                11 | B.2              |                              19 |
 | UK2572         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-08, Apr-22 |                11 | B.1.11           |                              10 |
 | UK3740         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-28, Apr-17 |                11 | B.1              |                              15 |
-| UK899          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-20, Apr-06 |                11 | B.2.1, B.2       |                              26 |
+| UK899          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-20, Apr-06 |                11 | B.2, B.2.1       |                              26 |
 | UK132          | 0 (0%)             | 0 (0%)       | 11 (100.0%) | 0 (0%)       | Mar-13, Apr-05 |                11 | B.2              |                              27 |
 | UK2270         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-13, Apr-27 |                11 | B.1              |                               5 |
 | UK3774         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-20, Apr-21 |                11 | B.1              |                              11 |
 | UK3760         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Apr-04, Apr-27 |                10 | B.1              |                               5 |
 | UK2038         | 0 (0%)             | 0 (0%)       | 10 (100.0%) | 0 (0%)       | Apr-13, Apr-29 |                10 | B.1.5            |                               3 |
-| UK43           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-13, Apr-13 |                10 | B.2.1, B.2       |                              19 |
+| UK43           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-13, Apr-13 |                10 | B.2, B.2.1       |                              19 |
 | UK3710         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-22, Apr-11 |                10 | B.1              |                              21 |
 | UK690          | 1 (10.0%)          | 0 (0%)       | 0 (0%)      | 9 (90.0%)    | Mar-26, Apr-07 |                10 | B.1              |                              25 |
-| UK720          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-28, Mar-08 |                10 | B.2.1, B.2       |                              55 |
+| UK720          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-28, Mar-08 |                10 | B.2, B.2.1       |                              55 |
 | UK1184         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Mar-15, Apr-08 |                10 | B.1              |                              24 |
 | UK1586         | 0 (0%)             | 0 (0%)       | 10 (100.0%) | 0 (0%)       | Mar-19, Apr-08 |                10 | A.3              |                              24 |
 | UK42           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 10 (100.0%)  | Feb-26, Mar-15 |                10 | B.1              |                              48 |
@@ -261,7 +261,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK978          | 0 (0%)             | 5 (71.43%)   | 0 (0%)      | 2 (28.57%)   | Mar-20, Apr-09 |                 7 | B.2.1            |                              23 |
 | UK3822         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Apr-02, Apr-16 |                 7 | B.1              |                              16 |
 | UK19           | 0 (0%)             | 5 (71.43%)   | 0 (0%)      | 2 (28.57%)   | Mar-06, Apr-13 |                 7 | B.1              |                              19 |
-| UK130          | 0 (0%)             | 0 (0%)       | 1 (14.29%)  | 6 (85.71%)   | Mar-17, Mar-27 |                 7 | B.2.1, B.2       |                              36 |
+| UK130          | 0 (0%)             | 0 (0%)       | 1 (14.29%)  | 6 (85.71%)   | Mar-17, Mar-27 |                 7 | B.2, B.2.1       |                              36 |
 | UK2910         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Apr-02, Apr-27 |                 7 | B.1              |                               5 |
 | UK23           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Mar-11, Apr-08 |                 7 | B.2.2            |                              24 |
 | UK4932         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 7 (100.0%)   | Mar-22, Apr-19 |                 7 | B.2.1            |                              13 |
@@ -278,14 +278,14 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK1444         | 0 (0%)             | 4 (66.67%)   | 0 (0%)      | 2 (33.33%)   | Mar-22, Apr-12 |                 6 | B.2              |                              20 |
 | UK2915         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-26, Apr-06 |                 6 | B.1              |                              26 |
 | UK1975         | 0 (0%)             | 0 (0%)       | 6 (100.0%)  | 0 (0%)       | Apr-13, Apr-25 |                 6 | B.1.5            |                               7 |
-| UK5132         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Mar-30 |                 6 | B.2.1, B.2       |                              33 |
+| UK5132         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Mar-30 |                 6 | B.2, B.2.1       |                              33 |
 | UK3844         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Apr-05, Apr-21 |                 6 | B.1              |                              11 |
 | UK4807         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-31, Apr-15 |                 6 | B.1              |                              17 |
 | UK951          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-21, Apr-05 |                 6 | B.1              |                              27 |
 | UK80           | 0 (0%)             | 1 (16.67%)   | 2 (33.33%)  | 3 (50.0%)    | Mar-20, Apr-01 |                 6 | B.1              |                              31 |
 | UK4137         | 0 (0%)             | 6 (100.0%)   | 0 (0%)      | 0 (0%)       | Apr-02, Apr-09 |                 6 | B.1              |                              23 |
 | UK206          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-25, Apr-27 |                 6 | B.1              |                               5 |
-| UK5039         | 0 (0%)             | 0 (0%)       | 1 (16.67%)  | 5 (83.33%)   | Mar-18, Apr-02 |                 6 | B.2.1, B.2       |                              30 |
+| UK5039         | 0 (0%)             | 0 (0%)       | 1 (16.67%)  | 5 (83.33%)   | Mar-18, Apr-02 |                 6 | B.2, B.2.1       |                              30 |
 | UK1075         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-24, Mar-30 |                 6 | B.1              |                              33 |
 | UK620          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-24, Mar-29 |                 6 | B.2.1            |                              34 |
 | UK864          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-13, Apr-13 |                 6 | B.2.1            |                              19 |
@@ -317,7 +317,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK804          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-18, Apr-14 |                 6 | B.1              |                              18 |
 | UK115          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-16, Apr-06 |                 6 | B.8              |                              26 |
 | UK2867         | 0 (0%)             | 6 (100.0%)   | 0 (0%)      | 0 (0%)       | Apr-05, Apr-10 |                 6 | B.1              |                              22 |
-| UK54           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-14, Mar-28 |                 6 | B.2.1, B.2       |                              35 |
+| UK54           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-14, Mar-28 |                 6 | B.2, B.2.1       |                              35 |
 | UK3781         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-31, Apr-21 |                 6 | B.1              |                              11 |
 
 
@@ -543,6 +543,20 @@ The dots are sized by the number of sequences taken on that date, and again are 
 
 
 
+<bound method DataFrame.to_markdown of      Lineage        Days  England  Scotland  Wales  Northern Ireland
+0     UK4172  2020-02-16        1         0      0                 0
+1     UK4172  2020-02-15        1         0      0                 0
+2     UK4172  2020-03-01        2         0      0                 0
+3     UK4172  2020-03-02        2         0      0                 0
+4     UK4172  2020-03-02        2         0      0                 0
+...      ...         ...      ...       ...    ...               ...
+6579   UK693  2020-04-23        0         1      0                 0
+6580   UK693  2020-04-18        0         1      0                 0
+6581   UK693  2020-04-03        1         0      0                 0
+6582   UK693  2020-04-02        0         1      0                 0
+6583   UK693  2020-03-31        0         1      0                 0
+
+[6584 rows x 6 columns]>
 
 
 
@@ -555,24 +569,6 @@ The map below shows the number of sequences sampled in each admin2 region in the
 
 
 
----------------------------------------------------------------------------FileNotFoundError                         Traceback (most recent call last)<ipython-input-1-6cc849e2ee65> in <module>
-      5 input_geojsons = [uk_json, channels, NI_json]
-      6 
-----> 7 new_uncleans = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/mapping.py in make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir, week)
-    351 
-    352 
---> 353     new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir)
-    354 
-    355     return new_unclean_locs
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/mapping.py in find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir)
-    305 
-    306     new_unclean_locs = False
---> 307     fw = open(output_dir + "unclean_locations.csv", 'w')
-    308 
-    309     for i in all_uk["NAME_2"]:
-FileNotFoundError: [Errno 2] No such file or directory: '/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_outputsummary_files_2020-05-08/unclean_locations.csv'
-
 
 
 ![](/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output/figures_2020-05-08/UK_report_testingfigs_map_1.png)\
@@ -581,11 +577,7 @@ FileNotFoundError: [Errno 2] No such file or directory: '/Users/s1743989/VirusEv
 
 
 
-
----------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-b359170a4b6a> in <module>
-----> 1 if new_uncleans:
-      2     print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
-NameError: name 'new_uncleans' is not defined
+There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.
 
 
 

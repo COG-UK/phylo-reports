@@ -186,6 +186,8 @@ raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
 print(raw_geog.to_markdown())
 ```
 
@@ -197,6 +199,8 @@ starts_raw = dp.raw_data_starts(single, multi)
 ```
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
 print(starts_raw.to_markdown())
 ```
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
@@ -207,6 +211,8 @@ raw_seqs_over_time = dp.raw_data_seqs_over_time(days, E, S, W, NI)
 ```
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
 print(raw_seqs_over_time.to_markdown())
 ```
 
@@ -238,8 +244,11 @@ new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, me
 ```
 ```python, name="hack3", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
 print(mapping_data.to_markdown())
 ```
+
 
 
 ```python, name="uncleans", echo=False, results='tex'

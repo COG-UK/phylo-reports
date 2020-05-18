@@ -118,29 +118,33 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
                     seq_dict[new].append(seq_name)
 
                     #if uk_country == "WLS":
-                    if uk_country == "Wales"
+                    if uk_country == "Wales":
                         wales.append(seq_name)
                     #elif uk_country == "SCT":
-                    elif uk_country == "Scotland"
+                    elif uk_country == "Scotland":
                         scotland.append(seq_name)
                     #elif uk_country == "ENG":
-                    elif uk_country == "England"
+                    elif uk_country == "England":
                         england.append(seq_name)
                     #elif uk_country == "NIR":
-                    elif uk_country == Northern_Ireland:
+                    elif uk_country == "Northern_Ireland":
                         ni.append(seq_name)
                     else:
                         print("Some sequences with adm2 not assigned to UK country")
 
                 else:
                     
-                    if uk_country == "ENG":
+                    #if uk_country == "ENG":
+                    if uk_country == "England":
                         E += 1
-                    elif uk_country == "WLS":
+                    #elif uk_country == "WLS":
+                    elif uk_country == "Wales":
                         W +=1
-                    elif uk_country == "SCT":
+                    elif uk_country == "Scotland":
+                    # elif uk_country == "SCT":
                         S += 1
-                    elif uk_country == "NIR":
+                    elif uk_country == "Northern_Ireland":
+                    # elif uk_country == "NIR":
                         NI += 1
                     else:
                         print("Some sequences without adm2 not assigned to UK country")

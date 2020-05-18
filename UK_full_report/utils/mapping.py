@@ -98,7 +98,8 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
                 seq_name = sequence['sequence_name']
                 adm2 = sequence['adm2']
                 
-                uk_country = sequence['adm1'].split("-")[1]
+                #uk_country = sequence['adm1'].split("-")[1]
+                uk_country = seq_name.split("/")[0]
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
                     if adm2 in mapping_dictionary.keys():
@@ -116,13 +117,17 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
 
                     seq_dict[new].append(seq_name)
 
-                    if uk_country == "WLS":
+                    #if uk_country == "WLS":
+                    if uk_country == "Wales"
                         wales.append(seq_name)
-                    elif uk_country == "SCT":
+                    #elif uk_country == "SCT":
+                    elif uk_country == "Scotland"
                         scotland.append(seq_name)
-                    elif uk_country == "ENG":
+                    #elif uk_country == "ENG":
+                    elif uk_country == "England"
                         england.append(seq_name)
-                    elif uk_country == "NIR":
+                    #elif uk_country == "NIR":
+                    elif uk_country == Northern_Ireland:
                         ni.append(seq_name)
                     else:
                         print("Some sequences with adm2 not assigned to UK country")

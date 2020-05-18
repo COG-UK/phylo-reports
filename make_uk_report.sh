@@ -67,7 +67,7 @@ echo tidying
 
 mv UK_report_$WEEK.md UK_full_report/results/$WEEK/
 mv UK_report_$WEEK.pdf UK_full_report/results/$WEEK/
-rm UK_full_report/results/$WEEK/report_files/cog_gisaid.with_all_traits.with_phylotype_traits.csv
+rm UK_full_report/results/$WEEK/report_files/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv
 rm UK_report_$WEEK.pmd
 
 echo done!

@@ -210,7 +210,7 @@ raw_seqs_over_time = dp.raw_data_seqs_over_time(days, E, S, W, NI)
 ```
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
-print(raw_data_seqs_over_time.to_markdown())
+print(raw_seqs_over_time.to_markdown())
 ```
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.

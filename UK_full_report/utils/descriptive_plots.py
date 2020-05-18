@@ -96,6 +96,46 @@ def make_timeline(intro_bigs):
     plt.ylim(1, count+1)
     plt.xticks(rotation=45)
 
+def raw_data_timeline(intros):
+
+    raw_dict = defaultdict(list)
+
+    for intro in intros:
+
+        E = 0
+        S = 0
+        W = 0
+        NI = 0
+        
+        self_list = []
+
+        for i in range(len(intro.dates)):
+            self_list.append(intro.id)
+
+        raw_dict["Lineage"].extend(self_list)
+        
+        raw_dict["Days"].extend(list(intro.dates))
+
+        for i in intro.taxa:
+            if i.date_dt != "NA":
+                if i.country == "england":
+                    E += 1
+                elif i.country == "scotland":
+                    S += 1
+                elif i.country == "wales":
+                    W += 1
+                elif i.country == "northern_ireland":
+                    NI += 1
+        
+        raw_dict["England"].append(E)
+        raw_dict["Scotland"].append(S)
+        raw_dict["Wales"].append(W)
+        raw_dict["Northern Ireland"].append(NI)
+
+    raw_df = pd.DataFrame(raw_dict)
+    
+    return raw_df
+
 def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already displayed
 	
     labels = []
@@ -406,7 +446,9 @@ def raw_data_seqs_over_time(days, E, S, W, NI):
 
     raw_dict = defaultdict(list)
 
-    for d,e,s,w,ni in zip(days, E, S, W, NI):
+    sorted_days = sorted(days)
+
+    for d,e,s,w,ni in zip(sorted_days, E, S, W, NI):
 
         raw_dict["Day"].append(d)
         raw_dict["England"].append(e)

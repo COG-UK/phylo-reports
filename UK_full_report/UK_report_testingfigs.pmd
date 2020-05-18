@@ -6,19 +6,19 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
+output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output/"
 
-input_directory = "" ##CHANGE
+input_directory = ""
 
-metadata_file = "" ##CHANGE
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-05-08/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv"
 
-name_stem="" ##CHANGE
+name_stem = "UK_report_testingfigs"
 
-week = "" ##CHANGE
+week = "2020-05-08"
 
 fd = os.path.join(output_directory, "figures_" + week)
 
-scripts_directory = "" ##CHANGE
+scripts_directory = "/Users/s1743989/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report"
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
 
@@ -177,13 +177,12 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
 
 
-```python,name="geog_plot", echo=False, include=False 
+```python,name="geog_plot", echo=False, include=True 
 y_dict, week_list = dp.prep_geog_data(intro_bigs)
 #dp.stacked_geog_plot(y_dict, week_list, False)
 dp.plot_ridge_plot(week_list, y_dict)
 raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 ```
-
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
 print(raw_geog.to_markdown())

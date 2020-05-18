@@ -337,7 +337,7 @@ def clean_df(df):
         if row["NAME_1"] == "Northern Ireland":
             drop_labels.append(index)      
 
-    third_step = second_step.drop([newish.index[i] for i in drop_labels])
+    third_step = second_step.drop([second_step.index[i] for i in drop_labels])
     new_names = []
 
     for i in third_step["NAME_1"]:

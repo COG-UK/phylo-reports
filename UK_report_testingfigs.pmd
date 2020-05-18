@@ -157,12 +157,6 @@ dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_tot
 print(dataframe.to_markdown())
 ```
 
-```python,name="producing summary files", echo=False
-
-writing.write_summary_files(output_directory, dataframe, omitted, week, intro_alls)
-
-```
-
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
 The raw data for this bar chart are in the table above. 
@@ -215,13 +209,12 @@ print(raw_seqs_over_time.to_markdown())
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
 The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
+The raw data has been written to a summary file.
 
 
 ```python, name="make_timeline", echo=False, results='tex', include=False
 dp.make_timeline(intro_bigs)
 timeline_df = dp.raw_data_timeline(intro_bigs)
-print(timeline_df.to_markdown)
-timeline_df.to_csv(output_directory + "timeline_raw_data.csv", index=False)
 ```
 
 ```python, name="hack2", echo=False, results='raw'
@@ -238,11 +231,11 @@ NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
 
 input_geojsons = [uk_json, channels, NI_json]
 
-new_uncleans = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
+new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
 ```
 ```python, name="hack3", echo=False, results='raw'
-#RAW data - just the dataframe cols of merged_locs and number of seqs
 print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
+print(mapping_data.to_markdown())
 ```
 
 
@@ -269,4 +262,8 @@ print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 if input_directory != "":
     print("Trees and associated pie charts have been made and put into the figures folder")
     intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)
+```
+
+```python,name="producing summary files", echo=False
+writing.write_summary_files(output_directory, dataframe, omitted, week, intro_alls, timeline_df)
 ```

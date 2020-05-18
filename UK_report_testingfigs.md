@@ -47,7 +47,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1, B.1.24      |                              20 |
 | UK10           | 0 (0%)             | 86 (91.49%)  | 0 (0%)      | 8 (8.51%)    | Mar-07, Apr-17 |                94 | B.1              |                              15 |
 | UK76           | 0 (0%)             | 0 (0%)       | 90 (98.9%)  | 1 (1.1%)     | Mar-16, Apr-27 |                91 | B.1              |                               5 |
-| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2, B.2.4       |                              12 |
+| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2.4, B.2       |                              12 |
 | UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B, B.8           |                               9 |
 | UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2.1, B.2       |                              11 |
 | UK4            | 0 (0%)             | 14 (22.58%)  | 0 (0%)      | 48 (77.42%)  | Mar-02, Apr-30 |                62 | B.8              |                               2 |
@@ -119,7 +119,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK153          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-16 |                18 | B.1.5            |                              16 |
 | UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2.1, B.2       |                              28 |
 | UK131          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-11 |                18 | B.1              |                              21 |
-| UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1, B.1.10      |                              10 |
+| UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1.10, B.1      |                              10 |
 | UK1312         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-20, Apr-30 |                17 | B.1              |                               2 |
 | UK114          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-14, Apr-16 |                17 | B.2.1            |                              16 |
 | UK715          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-19, Apr-18 |                17 | B.1.5            |                              14 |
@@ -543,18 +543,6 @@ The dots are sized by the number of sequences taken on that date, and again are 
 
 
 
-
----------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-e53ee9afb4ad> in <module>
-      1 dp.make_timeline(intro_bigs)
-----> 2 timeline_df = dp.raw_data_timeline(intro_bigs)
-      3 timeline_df.to_csv(output_directory + "timeline_raw_data.csv", index=False)
-~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/descriptive_plots.py in raw_data_timeline(intros)
-    112         raw_dict["Days"].extend(list(intro.dates))
-    113 
---> 114         for date in intro_dates:
-    115             E = 0
-    116             S = 0
-NameError: name 'intro_dates' is not defined
 
 
 

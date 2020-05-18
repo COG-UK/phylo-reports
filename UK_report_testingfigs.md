@@ -41,14 +41,14 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | Lineage name   | Northern Ireland   | Wales        | Scotland    | England      | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:-------------------|:-------------|:------------|:-------------|:---------------|------------------:|:-----------------|--------------------------------:|
 | UK5            | 3 (0.4%)           | 85 (11.23%)  | 36 (4.76%)  | 633 (83.62%) | Mar-03, Apr-30 |               757 | B.1.1            |                               2 |
-| UK47           | 2 (0.33%)          | 365 (59.35%) | 7 (1.14%)   | 241 (39.19%) | Feb-23, Apr-23 |               615 | B.3, B           |                               9 |
+| UK47           | 2 (0.33%)          | 365 (59.35%) | 7 (1.14%)   | 241 (39.19%) | Feb-23, Apr-23 |               615 | B, B.3           |                               9 |
 | UK17           | 0 (0%)             | 63 (11.52%)  | 74 (13.53%) | 410 (74.95%) | Mar-09, Apr-30 |               547 | B.1.11           |                               2 |
 | UK30           | 1 (0.83%)          | 0 (0%)       | 79 (65.83%) | 40 (33.33%)  | Mar-18, Apr-27 |               120 | B.1              |                               5 |
-| UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1.24, B.1      |                              20 |
+| UK67           | 0 (0%)             | 95 (84.07%)  | 0 (0%)      | 18 (15.93%)  | Mar-20, Apr-12 |               113 | B.1, B.1.24      |                              20 |
 | UK10           | 0 (0%)             | 86 (91.49%)  | 0 (0%)      | 8 (8.51%)    | Mar-07, Apr-17 |                94 | B.1              |                              15 |
 | UK76           | 0 (0%)             | 0 (0%)       | 90 (98.9%)  | 1 (1.1%)     | Mar-16, Apr-27 |                91 | B.1              |                               5 |
-| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2.4, B.2       |                              12 |
-| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B.8, B           |                               9 |
+| UK18           | 0 (0%)             | 3 (4.23%)    | 0 (0%)      | 68 (95.77%)  | Mar-11, Apr-20 |                71 | B.2, B.2.4       |                              12 |
+| UK45           | 0 (0%)             | 0 (0%)       | 67 (95.71%) | 3 (4.29%)    | Mar-13, Apr-23 |                70 | B, B.8           |                               9 |
 | UK24           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 68 (100.0%)  | Mar-15, Apr-21 |                68 | B.2.1, B.2       |                              11 |
 | UK4            | 0 (0%)             | 14 (22.58%)  | 0 (0%)      | 48 (77.42%)  | Mar-02, Apr-30 |                62 | B.8              |                               2 |
 | UK4136         | 0 (0%)             | 2 (3.39%)    | 0 (0%)      | 57 (96.61%)  | Mar-19, Apr-18 |                59 | B.1              |                              14 |
@@ -65,7 +65,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK6521         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 44 (100.0%)  | Mar-19, Apr-14 |                44 | B.1              |                              18 |
 | UK142          | 0 (0%)             | 0 (0%)       | 19 (43.18%) | 25 (56.82%)  | Mar-26, May-01 |                44 | B.1              |                               1 |
 | UK41           | 0 (0%)             | 1 (2.27%)    | 43 (97.73%) | 0 (0%)       | Mar-12, Apr-27 |                44 | A.2              |                               5 |
-| UK92           | 0 (0%)             | 0 (0%)       | 43 (100.0%) | 0 (0%)       | Mar-22, May-01 |                43 | B.1.19, B.1      |                               1 |
+| UK92           | 0 (0%)             | 0 (0%)       | 43 (100.0%) | 0 (0%)       | Mar-22, May-01 |                43 | B.1, B.1.19      |                               1 |
 | UK1373         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 41 (100.0%)  | Mar-28, Apr-16 |                41 | B.1              |                              16 |
 | UK51           | 1 (2.44%)          | 1 (2.44%)    | 39 (95.12%) | 0 (0%)       | Mar-17, May-01 |                41 | B                |                               1 |
 | UK20           | 2 (5.0%)           | 2 (5.0%)     | 35 (87.5%)  | 1 (2.5%)     | Mar-13, Apr-10 |                40 | B.2              |                              22 |
@@ -95,7 +95,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3702         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 23 (100.0%)  | Apr-10, Apr-23 |                23 | B.1              |                               9 |
 | UK1970         | 0 (0%)             | 0 (0%)       | 23 (100.0%) | 0 (0%)       | Apr-08, Apr-30 |                23 | B.1.5            |                               2 |
 | UK123          | 0 (0%)             | 5 (21.74%)   | 0 (0%)      | 18 (78.26%)  | Mar-01, Apr-19 |                23 | B.1              |                              13 |
-| UK35           | 0 (0%)             | 8 (34.78%)   | 13 (56.52%) | 2 (8.7%)     | Mar-19, May-01 |                23 | B.1.5, B.1       |                               1 |
+| UK35           | 0 (0%)             | 8 (34.78%)   | 13 (56.52%) | 2 (8.7%)     | Mar-19, May-01 |                23 | B.1, B.1.5       |                               1 |
 | UK173          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 23 (100.0%)  | Mar-16, Apr-19 |                23 | B.1              |                              13 |
 | UK34           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 22 (100.0%)  | Mar-14, Apr-02 |                22 | B.2.1            |                              30 |
 | UK50           | 0 (0%)             | 1 (4.55%)    | 0 (0%)      | 21 (95.45%)  | Mar-13, Apr-05 |                22 | B.2.1            |                              27 |
@@ -119,7 +119,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK153          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-16 |                18 | B.1.5            |                              16 |
 | UK187          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Feb-28, Apr-04 |                18 | B.2.1, B.2       |                              28 |
 | UK131          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 18 (100.0%)  | Mar-21, Apr-11 |                18 | B.1              |                              21 |
-| UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1.10, B.1      |                              10 |
+| UK3704         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-13, Apr-22 |                17 | B.1, B.1.10      |                              10 |
 | UK1312         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-20, Apr-30 |                17 | B.1              |                               2 |
 | UK114          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-14, Apr-16 |                17 | B.2.1            |                              16 |
 | UK715          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 17 (100.0%)  | Mar-19, Apr-18 |                17 | B.1.5            |                              14 |
@@ -137,7 +137,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK976          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 14 (100.0%)  | Mar-24, Apr-10 |                14 | B.1              |                              22 |
 | UK3759         | 0 (0%)             | 0 (0%)       | 2 (14.29%)  | 12 (85.71%)  | Mar-13, Apr-30 |                14 | B.1              |                               2 |
 | UK1458         | 0 (0%)             | 14 (100.0%)  | 0 (0%)      | 0 (0%)       | Mar-23, Apr-09 |                14 | B.1              |                              23 |
-| UK109          | 0 (0%)             | 7 (50.0%)    | 2 (14.29%)  | 5 (35.71%)   | Mar-12, Apr-13 |                14 | B.1.7, B.1       |                              19 |
+| UK109          | 0 (0%)             | 7 (50.0%)    | 2 (14.29%)  | 5 (35.71%)   | Mar-12, Apr-13 |                14 | B.1, B.1.7       |                              19 |
 | UK5700         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 14 (100.0%)  | Mar-27, Apr-15 |                14 | B.1              |                              17 |
 | UK1055         | 0 (0%)             | 1 (7.69%)    | 0 (0%)      | 12 (92.31%)  | Mar-30, Apr-27 |                13 | B.1              |                               5 |
 | UK668          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 13 (100.0%)  | Mar-27, Apr-23 |                13 | B.1              |                               9 |
@@ -149,8 +149,8 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK1065         | 0 (0%)             | 0 (0%)       | 1 (7.69%)   | 12 (92.31%)  | Feb-13, Apr-22 |                13 | B.2              |                              10 |
 | UK184          | 0 (0%)             | 13 (100.0%)  | 0 (0%)      | 0 (0%)       | Mar-28, Apr-13 |                13 | B.1              |                              19 |
 | UK3921         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-29, Apr-27 |                12 | B.1              |                               5 |
-| UK37           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-29, Apr-16 |                12 | B.1.7, B.1       |                              16 |
-| UK291          | 0 (0%)             | 10 (83.33%)  | 0 (0%)      | 2 (16.67%)   | Mar-27, Apr-13 |                12 | B.1.5, B.1       |                              19 |
+| UK37           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-29, Apr-16 |                12 | B.1, B.1.7       |                              16 |
+| UK291          | 0 (0%)             | 10 (83.33%)  | 0 (0%)      | 2 (16.67%)   | Mar-27, Apr-13 |                12 | B.1, B.1.5       |                              19 |
 | UK38           | 0 (0%)             | 0 (0%)       | 0 (0%)      | 12 (100.0%)  | Mar-13, Apr-02 |                12 | B.1              |                              30 |
 | UK196          | 0 (0%)             | 3 (25.0%)    | 1 (8.33%)   | 8 (66.67%)   | Mar-26, Apr-18 |                12 | B.1              |                              14 |
 | UK146          | 0 (0%)             | 12 (100.0%)  | 0 (0%)      | 0 (0%)       | Mar-18, Apr-09 |                12 | B.2.2            |                              23 |
@@ -167,7 +167,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK7            | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-07, Apr-03 |                11 | B.8              |                              29 |
 | UK4172         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Feb-15, Mar-05 |                11 | B.1              |                              58 |
 | UK1124         | 0 (0%)             | 1 (9.09%)    | 0 (0%)      | 10 (90.91%)  | Mar-27, Apr-25 |                11 | B.1              |                               7 |
-| UK2840         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-27, Apr-13 |                11 | B.1.7, B.1       |                              19 |
+| UK2840         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Mar-27, Apr-13 |                11 | B.1, B.1.7       |                              19 |
 | UK939          | 7 (63.64%)         | 1 (9.09%)    | 3 (27.27%)  | 0 (0%)       | Mar-11, Apr-02 |                11 | B                |                              30 |
 | UK2899         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 11 (100.0%)  | Apr-06, Apr-30 |                11 | B.1              |                               2 |
 | UK124          | 0 (0%)             | 2 (18.18%)   | 0 (0%)      | 9 (81.82%)   | Mar-23, Mar-30 |                11 | B.1              |                              33 |
@@ -313,7 +313,7 @@ It is also written to "summary_files" as "lineage_summary.tsv" for further use.
 | UK3366         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Apr-03, Apr-15 |                 6 | B.1.10           |                              17 |
 | UK693          | 0 (0%)             | 0 (0%)       | 5 (83.33%)  | 1 (16.67%)   | Mar-31, May-02 |                 6 | B.1.11           |                               0 |
 | UK1494         | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-01, Mar-07 |                 6 | B.1              |                              56 |
-| UK120          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-20, Mar-31 |                 6 | B.1.7, B.1       |                              32 |
+| UK120          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-20, Mar-31 |                 6 | B.1, B.1.7       |                              32 |
 | UK804          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-18, Apr-14 |                 6 | B.1              |                              18 |
 | UK115          | 0 (0%)             | 0 (0%)       | 0 (0%)      | 6 (100.0%)   | Mar-16, Apr-06 |                 6 | B.8              |                              26 |
 | UK2867         | 0 (0%)             | 6 (100.0%)   | 0 (0%)      | 0 (0%)       | Apr-05, Apr-10 |                 6 | B.1              |                              22 |
@@ -544,41 +544,17 @@ The dots are sized by the number of sequences taken on that date, and again are 
 
 
 
----------------------------------------------------------------------------ValueError                                Traceback (most recent call last)<ipython-input-1-e53ee9afb4ad> in <module>
+---------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-e53ee9afb4ad> in <module>
       1 dp.make_timeline(intro_bigs)
 ----> 2 timeline_df = dp.raw_data_timeline(intro_bigs)
       3 timeline_df.to_csv(output_directory + "timeline_raw_data.csv", index=False)
 ~/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report/utils/descriptive_plots.py in raw_data_timeline(intros)
-    133         raw_dict["Northern Ireland"].append(NI)
-    134 
---> 135     raw_df = pd.DataFrame(raw_dict)
-    136 
-    137     return raw_df
-~/anaconda3/envs/report/lib/python3.7/site-packages/pandas/core/frame.py in __init__(self, data, index, columns, dtype, copy)
-    433             )
-    434         elif isinstance(data, dict):
---> 435             mgr = init_dict(data, index, columns, dtype=dtype)
-    436         elif isinstance(data, ma.MaskedArray):
-    437             import numpy.ma.mrecords as mrecords
-~/anaconda3/envs/report/lib/python3.7/site-packages/pandas/core/internals/construction.py in init_dict(data, index, columns, dtype)
-    252             arr if not is_datetime64tz_dtype(arr) else arr.copy() for arr in arrays
-    253         ]
---> 254     return arrays_to_mgr(arrays, data_names, index, columns, dtype=dtype)
-    255 
-    256 
-~/anaconda3/envs/report/lib/python3.7/site-packages/pandas/core/internals/construction.py in arrays_to_mgr(arrays, arr_names, index, columns, dtype)
-     62     # figure out the index, if necessary
-     63     if index is None:
----> 64         index = extract_index(arrays)
-     65     else:
-     66         index = ensure_index(index)
-~/anaconda3/envs/report/lib/python3.7/site-packages/pandas/core/internals/construction.py in extract_index(data)
-    363             lengths = list(set(raw_lengths))
-    364             if len(lengths) > 1:
---> 365                 raise ValueError("arrays must all be same length")
-    366 
-    367             if have_dicts:
-ValueError: arrays must all be same length
+    112         raw_dict["Days"].extend(list(intro.dates))
+    113 
+--> 114         for date in intro_dates:
+    115             E = 0
+    116             S = 0
+NameError: name 'intro_dates' is not defined
 
 
 

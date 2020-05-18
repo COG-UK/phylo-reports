@@ -111,7 +111,7 @@ def raw_data_timeline(intros):
         
         raw_dict["Days"].extend(list(intro.dates))
 
-        for date in intro_dates:
+        for date in intro.dates:
             E = 0
             S = 0
             W = 0

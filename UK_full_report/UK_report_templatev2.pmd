@@ -177,8 +177,10 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
 
 
-```python,name="geog_plot", echo=False, include=False
-y_dict, week_list = dp.plot_geog_plot(intro_bigs, False)
+```python,name="geog_plot", echo=False, include=True 
+y_dict, week_list = dp.prep_geog_data(intro_bigs)
+#dp.stacked_geog_plot(y_dict, week_list, False)
+dp.plot_ridge_plot(week_list, y_dict)
 raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 ```
 ```python,name="hack",echo=False,results='raw'

@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
+import joypy
 
 
 def make_plotting_dfs(intro_country_counts, intro_object_dict):
@@ -205,7 +206,7 @@ def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already dis
 def top_ten_sort(lineage):
     return len(lineage.taxa)
 
-def plot_geog_plot(lineages_prep, normed):
+def prep_geog_data(lineages_prep):
 
     lineages_of_interest = sorted(lineages_prep, key=top_ten_sort, reverse=True)[:10]
 
@@ -256,6 +257,10 @@ def plot_geog_plot(lineages_prep, normed):
         new = i.startdate()
         x.append(new)
 
+    return y_dict, x
+
+def stacked_geog_plot(y_dict, x,normed):
+
     if normed:
         y_norm = defaultdict(list)
 
@@ -290,7 +295,27 @@ def plot_geog_plot(lineages_prep, normed):
     plt.xlabel("Week commencing")
     #plt.show()
 
-    return y_dict, x
+def plot_ridge_plot(weeks, count_dict):
+    
+    new_weeks = []
+
+    ridge_dict = defaultdict(list)
+
+    for key, value in count_dict.items():
+        ridge_dict["Week_commencing"].extend(weeks)
+        ridge_dict["Number_adm2_regions"].extend(value)
+        for i in range(len(value)):
+            ridge_dict["Lineage"].append(key)
+
+        
+    ridge_df = pd.DataFrame(ridge_dict)
+
+    fig, axes = joypy.joyplot(ridge_df, by="Lineage", column="Number_adm2_regions", figsize=(10,20), kind="values", ylim='own', x_range=(0,10), colormap=plt.cm.magma)
+
+    axes[-1].set_xticks(range(10))
+    axes[-1].set_xticklabels(weeks, rotation=90)
+
+
 
 def make_raw_data_geog_plot(y_dict, weeks):
     

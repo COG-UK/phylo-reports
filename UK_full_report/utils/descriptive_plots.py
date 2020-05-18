@@ -102,11 +102,6 @@ def raw_data_timeline(intros):
 
     for intro in intros:
 
-        E = 0
-        S = 0
-        W = 0
-        NI = 0
-        
         self_list = []
 
         for i in range(len(intro.dates)):
@@ -116,21 +111,26 @@ def raw_data_timeline(intros):
         
         raw_dict["Days"].extend(list(intro.dates))
 
-        for i in intro.taxa:
-            if i.date_dt != "NA":
-                if i.country == "england":
-                    E += 1
-                elif i.country == "scotland":
-                    S += 1
-                elif i.country == "wales":
-                    W += 1
-                elif i.country == "northern_ireland":
-                    NI += 1
-        
-        raw_dict["England"].append(E)
-        raw_dict["Scotland"].append(S)
-        raw_dict["Wales"].append(W)
-        raw_dict["Northern Ireland"].append(NI)
+        for date in intro_dates:
+            E = 0
+            S = 0
+            W = 0
+            NI = 0
+            for i in intro.taxa:
+                if i.date_dt != "NA" and i.date_dt == date:
+                    if i.country == "england":
+                        E += 1
+                    elif i.country == "scotland":
+                        S += 1
+                    elif i.country == "wales":
+                        W += 1
+                    elif i.country == "northern_ireland":
+                        NI += 1
+            
+            raw_dict["England"].append(E)
+            raw_dict["Scotland"].append(S)
+            raw_dict["Wales"].append(W)
+            raw_dict["Northern Ireland"].append(NI)
 
     raw_df = pd.DataFrame(raw_dict)
     

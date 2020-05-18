@@ -324,8 +324,9 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
         for sequence in in_data:
             if sequence['country'] == "UK":
                 adm2 = sequence['adm2']
-                country = sequence['adm1'].split("-")[1]
-                
+                #country = sequence['adm1'].split("-")[1]
+                country = sequence["sequence_name"].split("/")[0]
+
                 if adm2 not in present_locs and adm2 not in mapping_dictionary.keys() and adm2 != "WALES" and adm2 != "" and adm2 != "OTHER" and adm2 != "UNKNOWN" and adm2 != "GIBRALTAR" and adm2 != "UNKNOWN SOURCE":
                     new_unclean_locs = True
                     fw.write(adm2 + "\n")

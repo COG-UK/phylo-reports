@@ -326,7 +326,35 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
     return new_unclean_locs
 
                     
+def clean_df(df):
 
+    first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
+    second_step = first_step.reset_index(drop=True)
+
+    drop_labels = []
+
+    for index,row in second_step.iterrows():
+        if row["NAME_1"] == "Northern Ireland":
+            drop_labels.append(index)      
+
+    third_step = second_step.drop([newish.index[i] for i in drop_labels])
+    new_names = []
+
+    for i in third_step["NAME_1"]:
+        if i == "Northern Ireland C":
+            new_names.append("Northern Ireland")
+        else:
+            new_names.append(i)
+            
+    third_step["Country"] = new_names
+
+    fourth_step = third_step.drop(["NAME_1"], axis=1)
+
+    headers = ["Admin2", "Number of sequences", "Sequence group", "Country"]
+    fourth_step.columns = headers
+    fourth_step = fourth_step[["Admin2","Country", "Number of sequences", "Sequence group"]]
+
+    return fourth_step
 
 def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week):
 
@@ -339,6 +367,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict)
 
     with_seq_counts = make_sequence_groups(with_seq_counts)
+    cleaned = clean_df(with_seq_counts)
 
     england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
 
@@ -352,7 +381,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     
     new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir)
 
-    return new_unclean_locs
+    return new_unclean_locs, cleaned
 
 
 

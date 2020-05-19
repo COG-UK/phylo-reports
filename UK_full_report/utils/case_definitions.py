@@ -128,6 +128,8 @@ class introduction():
         last_two_weeks = [current_week-1, current_week-2]
         last_month = [current_week-1, current_week-2, current_week-3, current_week-4]
 
+
+
         int_list = []
         for k,v in self.epiweek_counts.items():
             if k in last_month:
@@ -157,9 +159,25 @@ class introduction():
                 self.status = "Pending extinction"
                 self.pending = True
 
-    
-        if not self.status:
-            print("failed to assign status to " + self.name) 
+
+        # if self.last_sampled < 7:
+        #     for tax in self.taxa:
+        #         date_diff = (current_date - tax.date_dt).days
+        #         if date_diff > 7 and date_diff < 14:
+        #             self.status = "Continuing"
+        #             break
+        #         else:
+        #             self.status = "Reactivated"
+            
+        # elif self.last_sampled >= 7 and self.last_sampled < 14:
+        #     self.status = "Gone quiet" 
+        # elif self.last_sampled >= 14 and self.last_sampled < 28:
+        #     self.status = "Pending extinction"
+        # elif self.last_sampled >=28:
+        #     self.status="Extinct"
+
+        # if not self.status:
+        #     print("failed to assign status to " + self.name) 
 
         
         

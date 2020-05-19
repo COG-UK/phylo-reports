@@ -94,6 +94,7 @@ pendings = status_counts["Pending extinction"]
 extincts = status_counts["Extinct"]
 quiets = status_counts["Gone quiet"]
 
+print(reactivateds_lineages)
 
 print("Of the " + str(len(intro_alls) - len(intro_smalls)) + " that remain:")
 

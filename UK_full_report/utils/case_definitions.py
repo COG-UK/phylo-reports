@@ -83,7 +83,7 @@ class introduction():
 
         self.get_global_lineages()
         self.get_date_loc_info(current_day)
-        self.define_status(current_week)
+        self.define_status(current_day)
         
         
     def get_date_loc_info(self, current_date):
@@ -121,7 +121,7 @@ class introduction():
             
                     
         
-    def define_status(self, current_week): 
+    def define_status(self, current_date): 
     
         # last_week = current_week - 1
         # two_weeks_ago = current_week - 2

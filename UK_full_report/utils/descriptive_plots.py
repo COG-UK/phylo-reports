@@ -328,7 +328,7 @@ def make_raw_data_geog_plot(y_dict, weeks):
         raw_data[key] = value
 
     raw_df = pd.DataFrame(raw_data)
-    raw_df.reset_index("Week commencing", inplace=True)
+    raw_df.set_index("Week commencing", inplace=True)
     # raw_df.index.name = "Week commencing"
 
     return raw_df

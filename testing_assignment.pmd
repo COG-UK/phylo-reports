@@ -10,11 +10,11 @@ output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_pro
 
 input_directory = ""
 
-metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-05-08/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv"
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/BEAST_analysis/metadata_2020-05-15.csv"
 
 name_stem = "testing_assignment"
 
-week = "2020-05-08"
+week = "2020-05-15"
 
 fd = os.path.join(output_directory, "figures_" + week)
 
@@ -93,6 +93,9 @@ continuous = status_counts["Continuing"]
 pendings = status_counts["Pending extinction"]
 extincts = status_counts["Extinct"]
 quiets = status_counts["Gone quiet"]
+
+for i in reactivated_lineages:  
+    print(i.id, i.dates)
 
 print("Of the " + str(len(intro_alls) - len(intro_smalls)) + " that remain:")
 

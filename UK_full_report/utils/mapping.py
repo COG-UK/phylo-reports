@@ -366,6 +366,8 @@ def clean_df(df):
 
     final = fourth_step.fillna(0)
 
+    final.index.name="Admin2"
+
     return final
 
 def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week):

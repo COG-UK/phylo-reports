@@ -328,7 +328,7 @@ def make_raw_data_geog_plot(y_dict, weeks):
         raw_data[key] = value
 
     raw_df = pd.DataFrame(raw_data)
-    raw_df.set_index("Week commencing")
+    raw_df.index.name = "Week commencing"
 
     return raw_df
 
@@ -400,7 +400,8 @@ def raw_data_starts(singles, non_singles):
 
     raw_df = pd.DataFrame(raw_dict)
 
-    raw_df.set_index("Day")
+    # raw_df.set_index("Day")
+    raw_df.index.name = "Day"
 
     return raw_df
 
@@ -484,7 +485,8 @@ def raw_data_seqs_over_time(days, E, S, W, NI):
         raw_dict["Northern Ireland"].append(ni)
 
     raw_df = pd.DataFrame(raw_dict)
-    raw_df.set_index("Day")
+    #raw_df.set_index("Day")
+    raw_df.index.name = "Day"
 
     return raw_df
 

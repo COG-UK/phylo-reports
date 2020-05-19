@@ -16,6 +16,8 @@ name_stem="" ##CHANGE
 
 week = "" ##CHANGE
 
+sequencing_centre = "" ##CHANGE
+
 fd = os.path.join(output_directory, "figures_" + week)
 
 scripts_directory = "" ##CHANGE
@@ -63,14 +65,19 @@ import UK_full_report.utils.mapping as map
 
 current_date = time.make_current_week(week)
 
-intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa = parse.make_objects(metadata_file)
+intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa = parse.make_objects(metadata_file, sequencing_centre)
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
 print("This report gives summaries of UK specific lineages for week " + week + ". ")
 print("There are time lags due to batching, curation and analysis, the most recently sampled sequence is " + str(most_recent_sample) + ". The analysis (eg time since last sample) is therefore undertaken from this date.")
 
 print("<br/>")
-print(str(count) + " sequences in the UK have been included in this analysis.")
+
+if sequencing_centre != "":
+    print(str(len(taxa)) + " sequences in the UK from the sequencing centre "+sequencing_centre+" have been included in this analysis.")
+else:
+    print(str(count) + " sequences in the UK have been included in this analysis.")
+
 print(str(len(intro_countries)) + " lineages have been recorded, " + str(singletons_count) + " of which only contain one sequence.")
 
 ```
@@ -239,7 +246,7 @@ NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
 
 input_geojsons = [uk_json, channels, NI_json]
 
-new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week)
+new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre)
 ```
 ```python, name="hack3", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_map_1.png)\\")

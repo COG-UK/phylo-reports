@@ -366,7 +366,7 @@ def clean_df(df):
 
     final = fourth_step.fillna(0)
 
-    final.index.name="Admin2"
+    final.set_index("Admin2", inplace=True)
 
     return final
 

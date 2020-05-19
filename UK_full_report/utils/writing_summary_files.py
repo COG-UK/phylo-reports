@@ -5,7 +5,7 @@ def write_summary_table(dataframe, output_dir):
 
     dataframe.to_csv(output_dir + "/lineage_summary.tsv", sep="\t")
 
-def write_all_lines(intro_alls, output_dir):
+def write_all_lins(intro_alls, output_dir):
 
     fw = open(output_dir + "/all_lineages.csv", 'w')
     fw.write("Name,oldest_sequence,newest_sequence,number_taxa\n")

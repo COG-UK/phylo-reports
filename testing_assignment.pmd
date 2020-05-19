@@ -6,19 +6,19 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
+output_directory = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/report_writing/test_output/"
 
-input_directory = "" ##CHANGE
+input_directory = ""
 
-metadata_file = "" ##CHANGE
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Group/Coronavirus_projects/UK_project/2020-05-08/analysis/5/cog_gisaid.with_all_traits.with_phylotype_traits.csv"
 
-name_stem="" ##CHANGE
+name_stem = "testing_assignment"
 
-week = "" ##CHANGE
+week = "2020-05-08"
 
 fd = os.path.join(output_directory, "figures_" + week)
 
-scripts_directory = "" ##CHANGE
+scripts_directory = "/Users/s1743989/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report"
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
 
@@ -93,9 +93,6 @@ continuous = status_counts["Continuing"]
 pendings = status_counts["Pending extinction"]
 extincts = status_counts["Extinct"]
 quiets = status_counts["Gone quiet"]
-
-for i in reactivated_lineages:  
-    print(i.id, i.dates)
 
 print("Of the " + str(len(intro_alls) - len(intro_smalls)) + " that remain:")
 

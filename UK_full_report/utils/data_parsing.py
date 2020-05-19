@@ -83,8 +83,6 @@ def make_objects(metadata_file):
 
     most_recent_sample = sorted(tax_with_dates, key=sortkey2, reverse = True)[0].date_dt
     
-    current_week = Week.fromdate(most_recent_sample)
-
     introduction_int_list = sorted(introduction_int_list)
 
     intro_alls = []
@@ -93,7 +91,7 @@ def make_objects(metadata_file):
 
     for intro, taxa in intros_to_taxa.items():
         
-        i_o = case_def.introduction(intro, taxa, most_recent_sample, current_week)
+        i_o = case_def.introduction(intro, taxa, most_recent_sample)
         #i_o.overall_lineage = taxa[0].overall_lineage
         i_o.acctrans_designations = intro_acctrans[i_o.id]
 

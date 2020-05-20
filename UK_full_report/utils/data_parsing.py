@@ -13,7 +13,7 @@ def sortkey2(taxon):
     return taxon.date_dt
 
 
-def make_objects(metadata_file):
+def make_objects(metadata_file, sequencing_centre):
     count = 0
     taxa_list = []
     tax_with_dates = []
@@ -54,7 +54,11 @@ def make_objects(metadata_file):
 
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
 
+                # Northern_Ireland/NIRE-FB1AB/2020
                 country = seq_name.split("/")[0].lower()
+                extracted_sequencing_centre = seq_name.split("/")[1].split("-")[0]
+                if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
+                    continue
 
                 try:
                     metadata = info_dict[seq_name]

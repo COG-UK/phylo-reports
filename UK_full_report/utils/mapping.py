@@ -70,7 +70,7 @@ def clean_locs(cleaning_file, all_uk):
 
     return merged_locs, mapping_dictionary, multi_loc_dict
 
-def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
+def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre):
 
     seq_dict = defaultdict(list)
     missing_adm2 = {}
@@ -100,6 +100,10 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict):
                 
                 #uk_country = sequence['adm1'].split("-")[1]
                 uk_country = seq_name.split("/")[0]
+                
+                extracted_sequencing_centre = seq_name.split("/")[1].split("-")[0]
+                if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
+                    continue
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
                     if adm2 in mapping_dictionary.keys():
@@ -308,7 +312,7 @@ def plot_missing_sequences(missing_df):
     plt.title("Unplotted sequences")
 
 
-def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
+def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, sequencing_centre):
 
     present_locs = []
 
@@ -326,6 +330,9 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir):
                 adm2 = sequence['adm2']
                 #country = sequence['adm1'].split("-")[1]
                 country = sequence["sequence_name"].split("/")[0]
+                extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
+                if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
+                    continue
 
                 if adm2 not in present_locs and adm2 not in mapping_dictionary.keys() and adm2 != "WALES" and adm2 != "" and adm2 != "OTHER" and adm2 != "UNKNOWN" and adm2 != "GIBRALTAR" and adm2 != "UNKNOWN SOURCE":
                     new_unclean_locs = True
@@ -370,7 +377,7 @@ def clean_df(df):
 
     return final
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week):
+def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre):
 
     output_dir = overall_output_dir + "summary_files_" + week + "/"
 
@@ -378,7 +385,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     merged_locs, mapping_dictionary, multi_loc_dict = clean_locs(adm2_cleaning_file, all_uk)
 
-    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict)
+    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre)
 
     with_seq_counts = make_sequence_groups(with_seq_counts)
     cleaned = clean_df(with_seq_counts)
@@ -393,7 +400,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
         print("All sequences have been assigned clean adm2 data this week.")
                              
     
-    new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir)
+    new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)
 
     return new_unclean_locs, cleaned
 

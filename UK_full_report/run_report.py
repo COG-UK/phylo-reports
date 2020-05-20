@@ -8,7 +8,7 @@ class Error (Exception): pass
 
 scripts_directory = os.path.dirname(__file__)
 
-def make_report(input_directory, metadata_file, name_stem, output_directory, week, scripts_directory):
+def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, scripts_directory):
     fd = os.path.join(output_directory, "figures_" + week)
     pmd_file = open(name_stem + ".pmd", 'w')
     pmd_string = name_stem + ".pmd"
@@ -29,6 +29,8 @@ def make_report(input_directory, metadata_file, name_stem, output_directory, wee
                     new_l = 'metadata_file = "' + str(metadata_file) + '"\n'
                 elif "scripts_directory" in l:
                     new_l = 'scripts_directory = "' + str(scripts_directory) + '"\n'
+                elif "sequencing_centre" in l:
+                    new_l = 'sequencing_centre = "' + str(sequencing_centre) + '"\n'
 
             else:
                 new_l = l
@@ -68,11 +70,13 @@ def main():
     parser.add_argument("--w", required=True, help="most recent date included as a string")
     parser.add_argument("--s", default="UK_report", help="output name stem as a string")
     parser.add_argument("--od", default="./", help="output directory, default is working directory")
+    parser.add_argument("--sc", default="", type=str, help="Optional filter by sequencing centre, e.g. CAMB/NORW/PHWC, default all centres")
+    
     parser.add_argument("--pdf", action="store_true", help="tries to run pandoc conversion to pdf")
 
     args = parser.parse_args()
 
-    make_report(args.i, args.m, args.s, args.od, args.w, scripts_directory)
+    make_report(args.i, args.m, args.s, args.od, args.w, args.sc, scripts_directory)
     if args.pdf:
         convert_report_to_pdf(args.s, scripts_directory)
 

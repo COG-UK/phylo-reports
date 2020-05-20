@@ -16,7 +16,7 @@ name_stem="" ##CHANGE
 
 week = "" ##CHANGE
 
-fd = os.path.join(output_directory, "figures_" + week)
+fd = os.path.join(output_directory, "figures")
 
 scripts_directory = "" ##CHANGE
 

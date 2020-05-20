@@ -54,7 +54,7 @@ def write_omitteds(omitted, output_dir):
 
 def write_summary_files(overall_output_dir, dataframe, omitted, week, intro_alls, timeline_data):
 
-    output_dir = os.path.join(overall_output_dir, "summary_files_" + week)
+    output_dir = os.path.join(overall_output_dir, "summary_files")
 
     try:
         os.mkdir(output_dir)

@@ -44,6 +44,7 @@ def clean_locs(cleaning_file, all_uk):
         next(f)
         for l in f:
             toks = l.strip("\n").split(",")
+            toks [:] = [x for x in toks if x] #to get rid of empty strings in the csv
             mapping_dictionary[toks[0]] = toks[1:]
 
 
@@ -61,7 +62,6 @@ def clean_locs(cleaning_file, all_uk):
         if location in multi_loc_dict.keys():
             metadata_multi_loc.append(multi_loc_dict[location])
         else:
-            
             metadata_multi_loc.append(location.upper())
         
     all_uk["Multi_loc"] = metadata_multi_loc
@@ -185,10 +185,10 @@ def make_sequence_groups(with_seq_counts):
         
         if not np.isnan(seqs):
             
-            if seqs <20 and seqs > 0:
+            if seqs <10 and seqs > 0:
                 seq_group = ("1-10")
                 case_group = 0
-            elif seqs < 50 and seqs >= 20:
+            elif seqs < 50 and seqs >= 10:
                 seq_group = ("10-50")
                 case_group = 1
             elif seqs >=50 and seqs < 100:

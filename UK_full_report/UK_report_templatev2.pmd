@@ -155,6 +155,9 @@ if continuous > 0:
 ```
 
 The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
+
+Only those sequences which have been sampled in the last month, and have more than five sequences in them are shown.
+
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
 It is also written to "summary_files" as "lineage_summary.tsv" for further use. 

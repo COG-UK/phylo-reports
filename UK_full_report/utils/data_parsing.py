@@ -102,7 +102,7 @@ def make_objects(metadata_file, sequencing_centre):
         if len(i_o.acctrans_designations) > 1:
             i_o.split = True
         
-        if len(i_o.taxa) <= 5:
+        if len(i_o.taxa) <= 5 and i_o.last_sampled < 28:
             intro_smalls.append(i_o)
         else:
             intro_bigs.append(i_o)

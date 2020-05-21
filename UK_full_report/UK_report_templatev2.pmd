@@ -191,7 +191,6 @@ y_dict, week_list = dp.prep_geog_data(intro_bigs)
 dp.plot_ridge_plot(week_list, y_dict)
 raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 ```
-Successfully reintalled
 
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")

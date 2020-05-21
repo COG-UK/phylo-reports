@@ -310,9 +310,9 @@ def plot_ridge_plot(weeks, count_dict):
         
     ridge_df = pd.DataFrame(ridge_dict)
 
-    fig, axes = joypy.joyplot(ridge_df, by="Lineage", column="Number_adm2_regions", figsize=(20,20), kind="values", ylim='own', x_range=(0,14), colormap=plt.cm.magma)
+    fig, axes = joypy.joyplot(ridge_df, by="Lineage", column="Number_adm2_regions", figsize=(20,20), kind="values", ylim='own', x_range=(0,len(weeks)), colormap=plt.cm.magma)
 
-    axes[-1].set_xticks(range(14)))
+    axes[-1].set_xticks(range(len(weeks))))
     axes[-1].set_xticklabels(weeks, rotation=90)
 
 

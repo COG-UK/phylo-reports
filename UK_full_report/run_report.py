@@ -9,7 +9,7 @@ class Error (Exception): pass
 scripts_directory = os.path.dirname(__file__)
 
 def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, scripts_directory):
-    fd = os.path.join(output_directory, "figures_" + week)
+    fd = os.path.join(output_directory, "figures")
     pmd_file = open(name_stem + ".pmd", 'w')
     pmd_string = name_stem + ".pmd"
 

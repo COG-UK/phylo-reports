@@ -67,7 +67,7 @@ import UK_full_report.utils.mapping as map
 
 current_date = time.make_current_week(week)
 
-intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa = parse.make_objects(metadata_file, sequencing_centre)
+intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa, max_intros, min_intros, lineage_version = parse.parse_metadata(metadata_file, sequencing_centre)
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
 print("This report gives summaries of UK specific lineages for week " + week + ". ")
@@ -81,9 +81,13 @@ else:
     print(str(count) + " sequences in the UK have been included in this analysis.")
 
 print(str(len(intro_countries)) + " lineages have been recorded, " + str(singletons_count) + " of which only contain one sequence.")
-
 ```
-Note: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
+A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
+It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
+
+```python, name="min and max bounds", echo=False, results='tex'
+print("The minimum number of introductions is " + str(len(min_intros)) + " and the maximum is " + str(len(max_intros)))
+```
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
@@ -156,11 +160,16 @@ if continuous > 0:
 
 The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
 
-Only those sequences which have been sampled in the last month, and have more than five sequences in them are shown.
+Only those sequences which have been sampled in the last month, and contain more than five sequences shown.
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
-It is also written to "summary_files" as "lineage_summary.tsv" for further use. 
+```python, name="print lineage version", echo=False, results='tex'
+print("The global lineages are correct as of the data release on " + lineage_version)
+```
+
+It is written to "summary_files" as "lineage_summary.tsv" for further use, and the full list of lineages is available in the same directory as "all_lineages.csv"
+
 ```python, name="dataframe fun", echo=False, results='tex'
 intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
 dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)

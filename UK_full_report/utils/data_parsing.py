@@ -13,7 +13,7 @@ def sortkey2(taxon):
     return taxon.date_dt
 
 
-def make_objects(metadata_file, sequencing_centre):
+def parse_metadata(metadata_file, sequencing_centre):
     count = 0
     taxa_list = []
     tax_with_dates = []
@@ -38,6 +38,9 @@ def make_objects(metadata_file, sequencing_centre):
 
     intros_to_taxa = defaultdict(list)
 
+    min_intros = set()
+    max_intros = set()
+
     with open(metadata_file, "r") as f:
         reader = csv.DictReader(f)
         in_data = [r for r in reader]
@@ -50,7 +53,13 @@ def make_objects(metadata_file, sequencing_centre):
                 epiweek = sequence['epi_week']
                 glob_lin = sequence['lineage']
                 intro_name = sequence['uk_lineage']
-                acctrans = sequence['acc_lineage']
+                acctrans = sequence['acc_lineage'] #also going to be min number of intros
+                del_intros = sequence['del_introduction'] #max number
+
+                min_intros.add(acctrans)
+                max_intros.add(del_intros)
+
+                lineage_version = sequence["lineages_version"]
 
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
 
@@ -113,4 +122,4 @@ def make_objects(metadata_file, sequencing_centre):
 
     intro_bigs = sorted(intro_bigs, key=sort_key, reverse=False)
 
-    return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa
+    return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version

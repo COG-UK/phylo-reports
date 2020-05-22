@@ -54,12 +54,13 @@ def parse_metadata(metadata_file, sequencing_centre):
                 glob_lin = sequence['lineage']
                 intro_name = sequence['uk_lineage']
                 acctrans = sequence['acc_lineage'] #also going to be min number of intros
-                del_intros = sequence['del_introduction'] #max number
+                del_intros = sequence['del_lineage'] #max number
 
                 min_intros.add(acctrans)
                 max_intros.add(del_intros)
 
-                lineage_version = sequence["lineages_version"]
+                #lineage_version = sequence["lineages_version"]
+                lineage_version = "old"
 
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
 

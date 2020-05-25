@@ -375,7 +375,7 @@ def clean_df(df, sequencing_centre):
     final = fourth_step.fillna(0)
 
     if sequencing_centre != "":
-        final = final[df["Number of sequences"] != 0] #drop ones with zeroes in if the sequencing centre is around
+        final = final[final["Number of sequences"] != 0] #drop ones with zeroes in if the sequencing centre is around
 
     final.set_index("Admin2", inplace=True)
 

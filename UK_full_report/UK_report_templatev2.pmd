@@ -78,8 +78,10 @@ intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict,
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
 if sequencing_centre != "":
-    print("This report gives summaries of UK specific lineages sequenced by " + sequencing_centre + " for week " + week + ". "))
-print("This report gives summaries of UK specific lineages for week " + week + ". ")
+    print("This report gives summaries of UK specific lineages sequenced by " + sequencing_centre + " for week " + week + ". ")
+else:
+    print("This report gives summaries of UK specific lineages for week " + week + ". ")
+
 print("There are time lags due to batching, curation and analysis, the most recently sampled sequence is " + str(most_recent_sample) + ". The analysis (eg time since last sample) is therefore undertaken from this date.")
 
 print("<br/>")

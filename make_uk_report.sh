@@ -38,6 +38,7 @@ generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --o
 echo generating centre specific reports
 
 for centre in ${centres[*]}; do
+echo generating $centre report
 generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/ --sc $centre
 done
 
@@ -68,8 +69,8 @@ rm UK_full_report/results/$metadata
 #scp -r UK_full_report/regional_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
 #for centre in ${centres[*]}; do
-#scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/results_$centre/
-#scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/results_$centre/
+#scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
+#scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
 #done
 
 
@@ -80,11 +81,11 @@ mv UK_report.pdf UK_full_report/results/
 rm UK_report.pmd
 
 
-#for centre in ${centres[*]}; do
-#mv report_$centre.md UK_full_report/regional_reports/results_$centre
-#mv report_$centre.pdf UK_full_report/regional_reports/results_$centre
-#rm report_$centre.pmd
-#done
+for centre in ${centres[*]}; do
+mv report_$centre.md UK_full_report/regional_reports/
+mv report_$centre.pdf UK_full_report/regional_reports/
+rm report_$centre.pmd
+done
 
 
 echo done!

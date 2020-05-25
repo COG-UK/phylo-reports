@@ -329,8 +329,6 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, seq
             if sequence['country'] == "UK":
                 adm2 = sequence['adm2']
                 country = sequence['adm1'].split("-")[1]
-                #country = sequence["sequence_name"].split("/")[0]
-                #extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
                 extracted_sequencing_centre = sequence['sequencing_org_code']
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue

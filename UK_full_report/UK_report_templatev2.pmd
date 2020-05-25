@@ -123,7 +123,7 @@ print("Of the " + str(len(intro_alls) - len(intro_smalls)) + " that remain:")
 
 if pendings > 0:
     if pendings == 1:
-        print(str(pendings) + "is pending extinction ie last seen three weeks ago.")
+        print(str(pendings) + " is pending extinction ie last seen three weeks ago.")
     else:
         print(str(pendings) + " are pending extinction, ie last seen three weeks ago.")
 

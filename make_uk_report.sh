@@ -60,7 +60,7 @@ sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_templat
 
 echo copying back to climb
 
-rm UK_full_report/results/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv
+rm UK_full_report/results/report_metadata.csv
 
 scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
@@ -84,6 +84,7 @@ echo tidying
 mv UK_report.md UK_full_report/results/
 mv UK_report.pdf UK_full_report/results/
 rm UK_report.pmd
+
 
 #for centre in ${centres[*]}; do
 #mv report_$centre.md UK_full_report/regional_reports/results_$centre

@@ -74,7 +74,7 @@ def parse_metadata(metadata_file, sequencing_centre):
                     country = "wales"
                 elif country_prep == "SCT":
                     country = "scotland"
-                elif country_prep = "NIR":
+                elif country_prep == "NIR":
                     country = "northern_ireland"
                 
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:

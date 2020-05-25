@@ -272,7 +272,7 @@ NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
 
 input_geojsons = [uk_json, channels, NI_json]
 
-new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre)
+new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country)
 ```
 ```python, name="hack3", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_map_1.png)\\")

@@ -172,6 +172,8 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
 
     seq_count_df = pd.DataFrame(df_dict)
 
+    print(seq_count_df)
+
     with_seq_counts = merged_locs.merge(seq_count_df, how='left', left_index=True, right_on="Multi_loc")
 
     missing_df = pd.DataFrame(missing_adm2)

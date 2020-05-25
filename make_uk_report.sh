@@ -8,6 +8,8 @@ TREES=$3
 
 centres=(LIVE PHWC CAMB NORW GLAS EDIN SHEF EXET NOTT PORT OXON NORT NIRE LOND)
 
+metadata=report_metadata.csv
+
 echo making sure report scripts are up to date and getting ready
 
 git pull
@@ -18,7 +20,7 @@ pip install .
 
 echo copying files
 
-scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/COG/report_metadata.csv UK_full_report/results/
+scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/COG/$metadata UK_full_report/results/
 
 if $TREES
 then
@@ -29,14 +31,14 @@ echo making md file
  
 if $TREES
 then 
-generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv  --w $WEEK --s UK_report --od UK_full_report/results/--i UK_full_report/results/tree_files/
+generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s UK_report --od UK_full_report/results/--i UK_full_report/results/tree_files/
 else
-generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv --w $WEEK --s UK_report --od UK_full_report/results/
+generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s UK_report --od UK_full_report/results/
 
 echo generating centre specific reports
 
 #for centre in ${centres[*]}; do
-#generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
+#generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
 #done
 #generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun2/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
 
@@ -60,7 +62,7 @@ sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_templat
 
 echo copying back to climb
 
-rm UK_full_report/results/report_metadata.csv
+rm UK_full_report/results/$metadata
 
 #scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 #scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/

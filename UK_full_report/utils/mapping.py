@@ -103,7 +103,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
 
                 #it's something here
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
-                    if sequencing_centre == "LIVE":
+                    if extracted_sequencing_centre == "LIVE":
                         print("problem here")
                     continue
 

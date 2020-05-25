@@ -101,9 +101,10 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
                 uk_country = sequence['adm1'].split("-")[1]
                 extracted_sequencing_centre = sequence["sequencing_org_code"]
 
-                print(sequencing_centre)
-
+                #it's something here
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
+                    if sequencing_centre == "LIVE":
+                        print("problem here")
                     continue
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":

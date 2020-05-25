@@ -53,25 +53,25 @@ echo converting to pdf
 
 sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_template/latex_template.latex UK_report.pdf
 
-#for centre in ${centres[*]}; do
-#sh UK_full_report/call_pandoc.sh report_$centre.md UK_full_report/utils/latex_template/latex_template.latex report_$centre.pdf
-#done
+for centre in ${centres[*]}; do
+sh UK_full_report/call_pandoc.sh report_$centre.md UK_full_report/utils/latex_template/latex_template.latex report_$centre.pdf
+done
 
 echo copying back to climb
 
 rm UK_full_report/results/$metadata
 
-#scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-#scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-#scp -r UK_full_report/results/figures climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-#scp -r UK_full_report/results/summary_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/results/figures climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/results/summary_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
-#scp -r UK_full_report/regional_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/regional_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
-#for centre in ${centres[*]}; do
-#scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
-#scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
-#done
+for centre in ${centres[*]}; do
+scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
+scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
+done
 
 
 echo tidying

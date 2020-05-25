@@ -479,7 +479,7 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
     elif country != "" and sequencing_centre == "":
         ax.set_title("Sequences taken on each day in " + country, size=50, fontweight='bold')
     else:
-        ax.set_title("Sequences taken on each day by " + sequencing_centre, size=50, fontweight='bold')
+        ax.set_title("Sequences taken on each day in " + sequencing_centre, size=50, fontweight='bold')
 
     return labels, E, S, W, NI    
 
@@ -501,7 +501,7 @@ def raw_data_seqs_over_time(days, E, S, W, NI):
     raw_df.set_index("Day", inplace=True)
     #raw_df.index.name = "Day"
 
-    raw_df.loc[:, (raw_df != 0).any(axis=0)] #Should remove columns of all 0s 
+    raw_df = raw_df.loc[:, (raw_df != 0).any(axis=0)] #Should remove columns of all 0s 
 
     return raw_df
 

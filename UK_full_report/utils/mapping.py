@@ -375,7 +375,7 @@ def clean_df(df, sequencing_centre):
     final = fourth_step.fillna(0)
 
     if sequencing_centre != "":
-        final.loc[(final!=0).any(1)] #drop ones with zeroes in if the sequencing centre is around
+        final = final.loc[(final!=0).any(1)] #drop ones with zeroes in if the sequencing centre is around
 
     final.set_index("Admin2", inplace=True)
 
@@ -403,7 +403,8 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     elif not missing_sequences:
         print("All sequences have been assigned clean adm2 data this week.")
     elif missing_sequences and sequencing_centre != "":
-        missing_number = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+        missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+        missing_number = missing_number_prep.at[0]
         print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
                              
     

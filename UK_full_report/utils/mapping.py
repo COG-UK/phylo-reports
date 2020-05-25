@@ -101,6 +101,9 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
                 uk_country = sequence['adm1'].split("-")[1]
                 extracted_sequencing_centre = sequence["sequencing_org_code"]
 
+                if extracted_sequencing_centre == "LIVE":
+                    print("yes")
+
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
 
@@ -160,8 +163,6 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
 
     seq_counts = {}
     df_dict = defaultdict(list)
-
-    print(seq_dict)
 
     for k,v in seq_dict.items():
         seq_counts[k] = len(v)

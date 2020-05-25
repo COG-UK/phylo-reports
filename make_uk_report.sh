@@ -38,7 +38,7 @@ generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --o
 echo generating centre specific reports
 
 for centre in ${centres[*]}; do
-generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
+generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/ --sc $centre
 done
 
 fi

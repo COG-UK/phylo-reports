@@ -20,8 +20,6 @@ sequencing_centre = "" ##CHANGE
 
 fd = os.path.join(output_directory, "figures")
 
-sequencing_centre = "" ##CHANGE
-
 scripts_directory = "" ##CHANGE
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory

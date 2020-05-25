@@ -286,11 +286,10 @@ if not no_seqs:
     print(mapping_data.to_markdown())
 ```
 
-
-
 ```python, name="uncleans", echo=False, results='tex'
-if new_uncleans:
-    print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
+if not no_seqs:
+    if new_uncleans:
+        print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
 ```
 
 
@@ -299,12 +298,17 @@ if new_uncleans:
 Other results modules for UK lineage analysis can be added in here if required.
 
 \pagebreak
+```python, name=appendix, echo=False, results='tex'
+if sequencing_centre == "":
 
-## Appendix
+    print("## Appendix")
 
-The plot below shows the number of sequences from each country that don't have specific enough location data to plot on the map. 
+    print("The plot below shows the number of sequences from each country that don't have specific enough location data to plot on the map.")
+```
+
 ```python, name="hack4", echo=False, results='raw'
-print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
+if sequencing_centre == "":
+    print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
 
 ```python, echo=False, fig=False, name="trees", include=True 

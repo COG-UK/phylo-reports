@@ -31,14 +31,14 @@ echo making md file
  
 if $TREES
 then 
-generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s UK_report --od UK_full_report/results/--i UK_full_report/results/tree_files/
+generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/--i UK_full_report/results/tree_files/
 else
-generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s UK_report --od UK_full_report/results/
+generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/
 
 echo generating centre specific reports
 
 #for centre in ${centres[*]}; do
-#generate_report --m UK_full_report/results/$WEEK/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
+#generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
 #done
 #generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun2/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
 
@@ -76,10 +76,6 @@ rm UK_full_report/results/$metadata
 #scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/results_$centre/
 #done
 
-#scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
-#scp UK_report_$WEEK.md climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
-#scp -r UK_full_report/results/$WEEK/figures_$WEEK climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
-#scp -r UK_full_report/results/$WEEK/summary_files_$WEEK climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
 
 echo tidying
 

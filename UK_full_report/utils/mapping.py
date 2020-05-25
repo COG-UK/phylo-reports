@@ -411,6 +411,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
             print("All sequences have been assigned clean adm2 data this week.")
         elif missing_sequences and sequencing_centre != "":
             missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+            print(missing_number_prep)
             missing_number = missing_number_prep.at[0]
             print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
                                 

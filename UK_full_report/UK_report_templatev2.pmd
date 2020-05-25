@@ -274,6 +274,7 @@ map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, out
 
 if type(map_output) != bool:
     new_uncleans, mapping_data = map_output
+    no_seqs = False
 else:
     no_seqs = map_output
 ```

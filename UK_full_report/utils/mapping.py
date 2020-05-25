@@ -392,7 +392,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre)
 
     with_seq_counts = make_sequence_groups(with_seq_counts)
-    cleaned = clean_df(with_seq_counts)
+    cleaned = clean_df(with_seq_counts, sequencing_centre)
 
     england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
 

@@ -298,7 +298,7 @@ if not no_seqs:
 Other results modules for UK lineage analysis can be added in here if required.
 
 \pagebreak
-```python, name="appendix," echo=False, results='tex'
+```python, name="appendix", echo=False, results='tex'
 if sequencing_centre == "":
 
     print("## Appendix")

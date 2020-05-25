@@ -6,6 +6,8 @@ WEEK=$2
 TREES=$3
 
 
+centres=(LIVE PHWC CAMB NORW GLAS EDIN SHEF EXET NOTT PORT OXON NORT NIRE LOND)
+
 echo making sure report scripts are up to date and getting ready
 
 git pull
@@ -30,7 +32,14 @@ then
 generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv  --w $WEEK --s UK_report --od UK_full_report/results/--i UK_full_report/results/tree_files/
 else
 generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv --w $WEEK --s UK_report --od UK_full_report/results/
+
+echo generating centre specific reports
+
+for centre in ${centres[*]}; do
+generate_report --m UK_full_report/results/$WEEK/cog_gisaid.lineages.with_all_traits.with_phylotype_traits.csv --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
+done
 #generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun2/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
+
 fi
 
 #echo parsing markdown file
@@ -41,9 +50,13 @@ echo deactivating env
 
 conda deactivate
 
-echo converting UK_report.md to pdf
+echo converting to pdf
 
 sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_template/latex_template.latex UK_report.pdf
+
+for centre in ${centres[*]}; do
+sh UK_full_report/call_pandoc.sh report_$centre.md UK_full_report/utils/latex_template/latex_template.latex report_$centre.pdf
+done
 
 echo copying back to climb
 
@@ -51,9 +64,15 @@ rm UK_full_report/results/cog_gisaid.lineages.with_all_traits.with_phylotype_tra
 
 scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-scp -r UK_full_report/results/$WEEK/figures climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
-scp -r UK_full_report/results/$WEEK/summary_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/results/figures climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+scp -r UK_full_report/results/summary_files climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
+scp -r UK_full_report/regional_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+
+for centre in ${centres[*]}; do
+scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/results_$centre/
+scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/results_$centre/
+done
 
 #scp UK_report_$WEEK.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
 #scp UK_report_$WEEK.md climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/artifacts/published/latest/phylogenetics/reports/
@@ -65,6 +84,13 @@ echo tidying
 mv UK_report.md UK_full_report/results/
 mv UK_report.pdf UK_full_report/results/
 rm UK_report.pmd
+
+for centre in ${centres[*]}; do
+mv report_$centre.md UK_full_report/regional_reports/results_$centre
+mv report_$centre.pdf UK_full_report/regional_reports/results_$centre
+rm report_$centre.pmd
+done
+
 
 echo done!
 

@@ -37,16 +37,12 @@ generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --o
 
 echo generating centre specific reports
 
-#for centre in ${centres[*]}; do
-#generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
-#done
-#generate_report --m ~/VirusEvolution\ Dropbox/Group/Coronavirus_projects/UK_project/2020-05-01_rerun2/cog_gisaid.with_all_traits.with_phylotype_traits.fixed_epiweeks.csv --w 2020-05-01 --s UK_report_$WEEK --od UK_full_report/results/2020-05-01/report_files/ 
+for centre in ${centres[*]}; do
+generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/
+done
 
 fi
 
-#echo parsing markdown file
-
-#python3 parse_md_file.py --md $MDFILE --p md_with_figs_$WEEK.md
 
 echo deactivating env
 

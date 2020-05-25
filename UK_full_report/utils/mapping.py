@@ -383,7 +383,7 @@ def clean_df(df, sequencing_centre):
 
 def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country):
 
-    output_dir = overall_output_dir + "summary_files_" + week + "/"
+    output_dir = overall_output_dir + "summary_files/"
 
     all_uk = prep_data(input_geojsons, adm2_cleaning_file)
 

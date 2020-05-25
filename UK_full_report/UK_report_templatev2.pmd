@@ -270,13 +270,20 @@ NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
 
 input_geojsons = [uk_json, channels, NI_json]
 
-new_uncleans, mapping_data = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country)
+map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country)
+
+if len(map_output) == 2:
+    new_uncleans, mapping_data = map_output
+else:
+    no_seqs = map_output
 ```
 ```python, name="hack3", echo=False, results='raw'
-print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
+if not no_seqs:
+    print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
 ```
 ```python, name="raw", echo=False,results='tex'
-print(mapping_data.to_markdown())
+if not no_seqs:
+    print(mapping_data.to_markdown())
 ```
 
 

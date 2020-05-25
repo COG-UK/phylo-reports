@@ -101,10 +101,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
                 uk_country = sequence['adm1'].split("-")[1]
                 extracted_sequencing_centre = sequence["sequencing_org_code"]
 
-                #it's something here
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
-                    if extracted_sequencing_centre == "LIVE":
-                        print("problem here")
                     continue
 
                 if adm2 != "OTHER" and adm2 != "NOT FOUND" and adm2 != "UNKNOWN SOURCE" and adm2 != "" and adm2 != "WALES":
@@ -164,20 +161,27 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
     seq_counts = {}
     df_dict = defaultdict(list)
 
-    for k,v in seq_dict.items():
-        seq_counts[k] = len(v)
-        
-    for k,v in seq_counts.items():
-        df_dict["Multi_loc"].append(k)
-        df_dict["Seq_count"].append(v)
+    if len(seq_dict) != 0:
 
-    seq_count_df = pd.DataFrame(df_dict)
+        for k,v in seq_dict.items():
+            seq_counts[k] = len(v)
+            
+        for k,v in seq_counts.items():
+            df_dict["Multi_loc"].append(k)
+            df_dict["Seq_count"].append(v)
 
-    with_seq_counts = merged_locs.merge(seq_count_df, how='left', left_index=True, right_on="Multi_loc")
+        seq_count_df = pd.DataFrame(df_dict)
 
-    missing_df = pd.DataFrame(missing_adm2)
+        with_seq_counts = merged_locs.merge(seq_count_df, how='left', left_index=True, right_on="Multi_loc")
 
-    return with_seq_counts, missing_df, missing_sequences
+        missing_df = pd.DataFrame(missing_adm2)
+
+        return with_seq_counts, missing_df, missing_sequences
+    else:
+        no_loc_data = True
+        return no_loc_data
+
+    
 
 def make_sequence_groups(with_seq_counts):
 
@@ -388,28 +392,37 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     merged_locs, mapping_dictionary, multi_loc_dict = clean_locs(adm2_cleaning_file, all_uk)
 
-    with_seq_counts, missing_df, missing_sequences = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre)
+    parsing_output = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre)
 
-    with_seq_counts = make_sequence_groups(with_seq_counts)
-    cleaned = clean_df(with_seq_counts, sequencing_centre)
-
-    england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
-
-    plot_map(england, scotland, wales, n_i, channels, plot_dict)
-
-    if missing_sequences and sequencing_centre == "":
-        plot_missing_sequences(missing_df)
-    elif not missing_sequences:
-        print("All sequences have been assigned clean adm2 data this week.")
-    elif missing_sequences and sequencing_centre != "":
-        missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
-        missing_number = missing_number_prep.at[0]
-        print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
-                             
+    if len(parsing_output) == 3:
+        with_seq_counts, missing_df, missing_sequences = parsing_output
     
-    new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)
 
-    return new_unclean_locs, cleaned
+        with_seq_counts = make_sequence_groups(with_seq_counts)
+        cleaned = clean_df(with_seq_counts, sequencing_centre)
+
+        england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
+
+        plot_map(england, scotland, wales, n_i, channels, plot_dict)
+
+        if missing_sequences and sequencing_centre == "":
+            plot_missing_sequences(missing_df)
+        elif not missing_sequences:
+            print("All sequences have been assigned clean adm2 data this week.")
+        elif missing_sequences and sequencing_centre != "":
+            missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+            missing_number = missing_number_prep.at[0]
+            print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
+                                
+        
+        new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)
+
+        return new_unclean_locs, cleaned
+
+    else:
+        print("There are no sequences with geographical information for this sequencing centre")
+        no_seqs = True
+        return no_seqs
 
 
 

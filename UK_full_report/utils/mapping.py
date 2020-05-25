@@ -163,6 +163,8 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
     seq_counts = {}
     df_dict = defaultdict(list)
 
+    print(seq_dict)
+
     for k,v in seq_dict.items():
         seq_counts[k] = len(v)
         
@@ -171,8 +173,6 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
         df_dict["Seq_count"].append(v)
 
     seq_count_df = pd.DataFrame(df_dict)
-
-    print(seq_count_df)
 
     with_seq_counts = merged_locs.merge(seq_count_df, how='left', left_index=True, right_on="Multi_loc")
 

@@ -139,7 +139,7 @@ def raw_data_timeline(intros):
     
     return raw_df
 
-def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already displayed
+def plot_bars(intro_bigs, country, sequencing_centre): #NB the raw data for this is in the plot, already displayed
 	
     labels = []
     E = []
@@ -149,7 +149,7 @@ def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already dis
 
     for i in intro_bigs[::-1]:
 
-        E_c=0
+        E_c = 0
         S_c = 0
         W_c = 0
         NI_c = 0
@@ -199,8 +199,14 @@ def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already dis
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Lineage number", size=40, fontweight='bold')
-    ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
-    ax.legend(fontsize=40)
+
+    if sequencing_centre == "":
+        ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
+        ax.legend(fontsize=40)
+    elif country != "" and sequencing_centre == "":
+        ax.set_title('Sequences after introduction in ' + country, size=50, fontweight='bold')
+    else:
+        ax.set_title("Number of sequences after introduction in " + sequencing_centre, size=50, fontweight='bold')
     
 
 def top_ten_sort(lineage):
@@ -407,7 +413,7 @@ def raw_data_starts(singles, non_singles):
     return raw_df
 
 
-def plot_sequences_over_time(sequences):
+def plot_sequences_over_time(sequences, country, sequencing_centre):
 
     fig,ax = plt.subplots(1,1,figsize=(30,15), dpi= 80)
 
@@ -466,8 +472,14 @@ def plot_sequences_over_time(sequences):
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Day", size=40, fontweight='bold')
-    ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
-    ax.legend(fontsize=40)
+    
+    if country == "":
+        ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
+        ax.legend(fontsize=40)
+    elif country != "" and sequencing_centre == "":
+        ax.set_title("Sequences taken on each day in " + country, size=50, fontweight='bold')
+    else:
+        ax.set_title("Sequences taken on each day by " + sequencing_centre, size=50, fontweight='bold')
 
     return labels, E, S, W, NI    
 
@@ -488,6 +500,8 @@ def raw_data_seqs_over_time(days, E, S, W, NI):
     raw_df = pd.DataFrame(raw_dict)
     raw_df.set_index("Day", inplace=True)
     #raw_df.index.name = "Day"
+
+    raw_df.loc[:, (raw_df != 0).any(axis=0)] #Should remove columns of all 0s 
 
     return raw_df
 

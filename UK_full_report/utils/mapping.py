@@ -330,7 +330,8 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, seq
                 adm2 = sequence['adm2']
                 #country = sequence['adm1'].split("-")[1]
                 country = sequence["sequence_name"].split("/")[0]
-                extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
+                # extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
+                extracted_sequencing_centre = sequence['sequencing_org_code']
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
 
@@ -343,7 +344,7 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, seq
     return new_unclean_locs
 
                     
-def clean_df(df):
+def clean_df(df, sequencing_centre):
 
     first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
     second_step = first_step.reset_index(drop=True)
@@ -373,11 +374,14 @@ def clean_df(df):
 
     final = fourth_step.fillna(0)
 
+    if sequencing_centre != "":
+        final.loc[(final!=0).any(1)] #drop ones with zeroes in if the sequencing centre is around
+
     final.set_index("Admin2", inplace=True)
 
     return final
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre):
+def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country):
 
     output_dir = overall_output_dir + "summary_files_" + week + "/"
 
@@ -394,10 +398,13 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     plot_map(england, scotland, wales, n_i, channels, plot_dict)
 
-    if missing_sequences:
+    if missing_sequences and sequencing_centre == "":
         plot_missing_sequences(missing_df)
-    else:
+    elif not missing_sequences:
         print("All sequences have been assigned clean adm2 data this week.")
+    elif missing_sequences and sequencing_centre != "":
+        missing_number = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+        print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
                              
     
     new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)

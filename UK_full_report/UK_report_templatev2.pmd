@@ -65,11 +65,20 @@ import UK_full_report.utils.mapping as map
 ```
 ```python, name='prepping things and prelim info',echo=False, results='tex'
 
+sc_dict = {"LIVE":"England", "PHWC":"Wales","CAMB":"England","NORW":"England","GLAS":"Scotland","EDIN":"Scotland","SHEF":"England","EXET":"England","NOTT":"England","PORT":"England","OXON":"England","NORT":"England","NIRE":"Nothern_Ireland","LOND":"England"}
+
+if sequencing_centre != "":
+    country = sc_dict[sequencing_centre]
+else:
+    country = ""
+
 current_date = time.make_current_week(week)
 
 intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa, max_intros, min_intros, lineage_version = parse.parse_metadata(metadata_file, sequencing_centre)
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
+if sequencing_centre != "":
+    print("This report gives summaries of UK specific lineages sequenced by " + sequencing_centre + " for week " + week + ". "))
 print("This report gives summaries of UK specific lineages for week " + week + ". ")
 print("There are time lags due to batching, curation and analysis, the most recently sampled sequence is " + str(most_recent_sample) + ". The analysis (eg time since last sample) is therefore undertaken from this date.")
 
@@ -94,6 +103,9 @@ Sequences which were replicates or too error-prone were removed from this analys
 ```python, echo=False, results='tex'
 print(str(smalls_count) + " are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity")
 ```
+
+Furthermore, those sequences which haven't been sampled in the last month are not shown.
+
 ```python, echo=False, name='status description', results='tex'
 
 #split = lin_exp.find_splits(intro_alls)
@@ -160,8 +172,6 @@ if continuous > 0:
 
 The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
 
-Only those sequences which have been sampled in the last month, and contain more than five sequences shown.
-
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
 ```python, name="print lineage version", echo=False, results='tex'
@@ -185,7 +195,7 @@ The raw data for this bar chart are in the table above.
 
 df_counts, df_thinned, df_acctrans_counts = dp.make_plotting_dfs(intro_country_counts, intro_object_dict)
 
-dp.plot_bars(intro_bigs)
+dp.plot_bars(intro_bigs, country, sequencing_centre)
 
 ```
 
@@ -226,7 +236,7 @@ print(starts_raw.to_markdown())
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 ```python, name="seqs_over_time", echo=False, include=False
-days, E, S, W, NI = dp.plot_sequences_over_time(taxa)
+days, E, S, W, NI = dp.plot_sequences_over_time(taxa, country, sequencing_centre)
 raw_seqs_over_time = dp.raw_data_seqs_over_time(days, E, S, W, NI)
 ```
 ```python, name="hack", echo=False, results='raw'

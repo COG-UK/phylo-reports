@@ -54,19 +54,20 @@ def parse_metadata(metadata_file, sequencing_centre):
                 glob_lin = sequence['lineage']
                 intro_name = sequence['uk_lineage']
                 acctrans = sequence['acc_lineage'] #also going to be min number of intros
-                del_intros = sequence['del_lineage'] #max number
+                del_intros = sequence['del_lineage'] #max number - NEED TO CHANGE THIS FOR NEW RUN
+                extracted_sequencing_centre = sequence['sequencing_org_code']
 
                 min_intros.add(acctrans)
                 max_intros.add(del_intros)
 
-                #lineage_version = sequence["lineages_version"]
+                #lineage_version = sequence["lineages_version"] #CHANEGE FOR NEW RUN
                 lineage_version = "old"
 
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
 
                 # Northern_Ireland/NIRE-FB1AB/2020
                 country = seq_name.split("/")[0].lower()
-                extracted_sequencing_centre = seq_name.split("/")[1].split("-")[0]
+                
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
 

@@ -98,8 +98,8 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
                 seq_name = sequence['sequence_name']
                 adm2 = sequence['adm2']
                 
-                #uk_country = sequence['adm1'].split("-")[1]
-                uk_country = seq_name.split("/")[0]
+                uk_country = sequence['adm1'].split("-")[1]
+                #uk_country = seq_name.split("/")[0]
                 
                 extracted_sequencing_centre = seq_name.split("/")[1].split("-")[0]
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
@@ -121,34 +121,34 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
 
                     seq_dict[new].append(seq_name)
 
-                    #if uk_country == "WLS":
-                    if uk_country == "Wales":
+                    if uk_country == "WLS":
+                    #if uk_country == "Wales":
                         wales.append(seq_name)
-                    #elif uk_country == "SCT":
-                    elif uk_country == "Scotland":
+                    elif uk_country == "SCT":
+                    #elif uk_country == "Scotland":
                         scotland.append(seq_name)
-                    #elif uk_country == "ENG":
-                    elif uk_country == "England":
+                    elif uk_country == "ENG":
+                    #elif uk_country == "England":
                         england.append(seq_name)
-                    #elif uk_country == "NIR":
-                    elif uk_country == "Northern_Ireland":
+                    elif uk_country == "NIR":
+                    #elif uk_country == "Northern_Ireland":
                         ni.append(seq_name)
                     else:
                         print("Some sequences with adm2 not assigned to UK country")
 
                 else:
                     
-                    #if uk_country == "ENG":
-                    if uk_country == "England":
+                    if uk_country == "ENG":
+                    #if uk_country == "England":
                         E += 1
-                    #elif uk_country == "WLS":
-                    elif uk_country == "Wales":
+                    elif uk_country == "WLS":
+                    #elif uk_country == "Wales":
                         W +=1
-                    elif uk_country == "Scotland":
-                    # elif uk_country == "SCT":
+                    #elif uk_country == "Scotland":
+                    elif uk_country == "SCT":
                         S += 1
-                    elif uk_country == "Northern_Ireland":
-                    # elif uk_country == "NIR":
+                    #elif uk_country == "Northern_Ireland":
+                    elif uk_country == "NIR":
                         NI += 1
                     else:
                         print("Some sequences without adm2 not assigned to UK country")
@@ -328,10 +328,10 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, seq
         for sequence in in_data:
             if sequence['country'] == "UK":
                 adm2 = sequence['adm2']
-                #country = sequence['adm1'].split("-")[1]
-                country = sequence["sequence_name"].split("/")[0]
-                extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
-                # extracted_sequencing_centre = sequence['sequencing_org_code']
+                country = sequence['adm1'].split("-")[1]
+                #country = sequence["sequence_name"].split("/")[0]
+                #extracted_sequencing_centre = sequence["sequence_name"].split("/")[1].split("-")[0]
+                extracted_sequencing_centre = sequence['sequencing_org_code']
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
 

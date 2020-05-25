@@ -272,7 +272,7 @@ input_geojsons = [uk_json, channels, NI_json]
 
 map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country)
 
-if len(map_output) == 2:
+if type(map_output) != bool:
     new_uncleans, mapping_data = map_output
 else:
     no_seqs = map_output

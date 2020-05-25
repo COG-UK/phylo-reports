@@ -394,7 +394,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     parsing_output = parse_metadata(metadata_file, mapping_dictionary, merged_locs, multi_loc_dict, sequencing_centre)
 
-    if len(parsing_output) == 3:
+    if type(parsing_output) != bool:
         with_seq_counts, missing_df, missing_sequences = parsing_output
     
 

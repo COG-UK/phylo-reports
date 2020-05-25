@@ -91,6 +91,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
     NI = 0
 
     with open(metadata, "r") as f:
+        missing_sequences = False
         reader = csv.DictReader(f)
         in_data = [r for r in reader]
         for sequence in in_data:
@@ -177,6 +178,7 @@ def parse_metadata(metadata, mapping_dictionary, merged_locs, multi_loc_dict, se
         missing_df = pd.DataFrame(missing_adm2)
 
         return with_seq_counts, missing_df, missing_sequences
+    
     else:
         no_loc_data = True
         return no_loc_data

@@ -116,13 +116,13 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | Day        |   England |
 |:-----------|----------:|
 | 2020-04-24 |         2 |
-| 2020-04-25 |        12 |
-| 2020-04-26 |         1 |
-| 2020-04-27 |         1 |
+| 2020-04-25 |         2 |
+| 2020-04-26 |         2 |
+| 2020-04-27 |        12 |
 | 2020-04-28 |         7 |
 | 2020-04-29 |         2 |
-| 2020-05-02 |         2 |
-| 2020-05-03 |         2 |
+| 2020-05-02 |         1 |
+| 2020-05-03 |         1 |
 
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.

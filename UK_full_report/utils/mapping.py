@@ -449,7 +449,7 @@ def clean_df(df, sequencing_centre):
 
     return final
 
-def sort_missing_sequencing(missing_df, sequencing_centre, country):
+def sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, country):
 
     if missing_sequences and sequencing_centre == "":
             plot_missing_sequences(missing_df)
@@ -490,9 +490,9 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
         if sequencing_centre == "" and country != "": #so if it's an adm1 report
             plot_individual(england, scotland, wales, n_i, country)
         else:
-            plot_whole_map(england, scotland, wales, n_i, channels, plot_dict)
+            plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country)
 
-        sort_missing_sequences(missing_df, sequencing_centre, country)       
+        sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, country)       
         
         new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)
 

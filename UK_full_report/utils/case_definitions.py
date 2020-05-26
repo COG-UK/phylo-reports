@@ -54,7 +54,7 @@ class taxon():
             
 class introduction():
     
-    def __init__(self, name, taxa, current_day):
+    def __init__(self, name, taxa, current_day, filter_country, sequencing_centre):
         
         self.id = name
         self.new = False
@@ -68,9 +68,10 @@ class introduction():
         self.epiweeks = []
 
         self.week_to_adm2 = defaultdict(set)
-        self.adm2_to_week = defaultdict(set)
+        #self.adm2_to_week = defaultdict(set)
         
         self.locations = set()
+        self.adm1 = []
 
         #self.weeks_to_locs = defaultdict(set)
         self.always_active = False
@@ -90,11 +91,18 @@ class introduction():
        
         for tax in self.taxa:
             if tax.date_dt != "NA": #and tax.epiweek != "NA":
+                if filter_country != "" and sequencing_centre == "":
+                    if tax.country == filter_country:
+                        self.week_to_adm2[tax.epiweek].add(tax.adm2)
+
+                else:
+                    self.week_to_adm2[tax.epiweek].add(tax.adm2)
+
                 self.dates.append(tax.date_dt)
                 self.epiweeks.append(tax.epiweek)
                 self.locations.add(tax.adm2)
-                self.week_to_adm2[tax.epiweek].add(tax.adm2)
-                self.adm2_to_week[tax.adm2].add(tax.adm2)
+                #self.adm2_to_week[tax.adm2].add(tax.adm2)
+                self.adm1.append(tax.country)
 
         self.epiweek_counts = Counter(self.epiweeks)
         self.date_counts = Counter(self.dates)

@@ -29,26 +29,26 @@ def make_plotting_dfs(intro_country_counts, intro_object_dict):
 
 def make_timeline(intro_bigs, sequencing_centre, filter_country):
 
-    if sequencing == "" and filter_country != "":
+    if sequencing_centre == "" and filter_country != "":
         if filter_country == "England":
-            colour_dict = {"Wales":"slategrey",
+            colour_dict = {"Wales":"lightgrey",
             "England":"indianred",
-            "Scotland":"slategrey",
-            "Northern_Ireland":"slategrey"}
+            "Scotland":"lightgrey",
+            "Northern_Ireland":"lightgrey"}
         elif filter_country == "Wales":
             colour_dict = {"Wales":"darkseagreen",
-            "England":"slategrey",
-            "Scotland":"slategrey",
-            "Northern_Ireland":"slategrey"}
+            "England":"lightgrey",
+            "Scotland":"lightgrey",
+            "Northern_Ireland":"lightgrey"}
         elif filter_country == "Scotland":
-            colour_dict = {"Wales":"slategrey",
-            "England":"slategrey",
+            colour_dict = {"Wales":"lightgrey",
+            "England":"lightgrey",
             "Scotland":"steelblue",
-            "Northern_Ireland":"slategrey"}
+            "Northern_Ireland":"lightgrey"}
         elif filter_country == "Northern_Ireland":
-            colour_dict = {"Wales":"slategrey",
-            "England":"slategrey",
-            "Scotland":"slategrey",
+            colour_dict = {"Wales":"lightgrey",
+            "England":"lightgrey",
+            "Scotland":"lightgrey",
             "Northern_Ireland":"skyblue"}
     else:
         colour_dict = {"Wales":"darkseagreen",
@@ -63,6 +63,10 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
     ytick_list = []
 
     for intro in intro_bigs:
+        
+        if sequencing_centre == "" and filter_country != "" and filter_country not in intro.adm1:
+            continue
+        
         colours = []
         sizes = []
         sizes2 = []
@@ -75,35 +79,36 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
         y = [count, count]
         
         y2 = []
-        x2 = list(intro.dates)
-        
-        for i in x2:
-            sizes2.append((intro.date_counts[i])*40)
-            y2.append(count)
+        x2 = []
         
         country_set = set()
-        orders = []
 
         for i in intro.taxa:
             if i.date_dt != "NA":
-                colours.append(colour_dict[i.country])
-                country_set.add(i.country)
-                if sequencing == "" and filter_country != "":
-                    if i.country == filter_country:
-                        orders.append(3)
+                if sequencing_centre == "" and filter_country != "":
+                    if i.country != filter_country:
+                        x2.insert(0,i.date_dt)
+                        colours.insert(0,colour_dict[i.country])
                     else:
-                        orders.append(2)
+                        x2.append(i.date_dt)
+                        colours.append(colour_dict[i.country])
+                    country_set.add(i.country)
                 else:
-                    orders.append(2)
-                
-                
+                    x2.append(i.date_dt)
+                    colours.append(colour_dict[i.country])
+                    country_set.add(i.country)
+
+        for i in x2:
+            sizes2.append((intro.date_counts[i])*40)
+            y2.append(count)
+                 
         height.append(count)
         ytick_list.append(intro.id)
         
         if point_one != point_two:
-            for x_point, y_point, colour, order, size in zip(x2, y2, colours, orders, sizes2):
-                plt.scatter(x2,y2, c=colour, zorder=order, s=size)
-                plt.plot(x,y, color='black', zorder=1)
+            #for x_point, y_point, colour, order, size in zip(x2, y2, colours, orders, sizes2):
+            plt.scatter(x2,y2, c=colours, zorder=2, s=sizes2)
+            plt.plot(x,y, color='black', zorder=1)
             
         else:
             sizes.append(list(intro.date_counts.values())[0]*50)
@@ -169,19 +174,18 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
     NI = []
 
     seq_count_list = []
-    label_for_country_specific = []
+    labels_for_country_specific = []
 
     for i in intro_bigs[::-1]:
 
         if filter_country != "" and sequencing_centre == "":
-            labels_for_country_specific.append(i.id.lstrip("UK"))
-            seq_count = 0
-            for tax in i.taxa:
-                if tax.country == filter_country:
-                    seq_count += 1
+            if len(i.country_specific_taxa) > 5:
+                labels_for_country_specific.append(i.id.lstrip("UK"))
+                seq_count = len(i.country_specific_taxa)
+  
 
-            seq_count_list.append(seq_count)
-            
+                seq_count_list.append(seq_count)
+                
         else:
             labels.append(i.id.lstrip("UK"))
             
@@ -210,7 +214,7 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
 
     fig,ax = plt.subplots(figsize=(30,15))
 
-    colour_dict = ["England":'indianred',"Scotland":'steelblue',"Wales":'darkseagreen',"Northern_Ireland":'skyblue']
+    colour_dict = {"England":'indianred',"Scotland":'steelblue',"Wales":'darkseagreen',"Northern_Ireland":'skyblue'}
 
     if filter_country != "" and sequencing_centre == "":
         ax.bar(labels_for_country_specific, seq_count_list, color=colour_dict[filter_country])
@@ -253,7 +257,9 @@ def prep_geog_data(lineages_prep, filter_country, sequencing_centre):
         
         d = Counter(relevant_counts)
 
-        lineages_of_interest = d.most_common(10)
+        lineages_of_interest = []
+        for i in d.most_common(10):
+            lineages_of_interest.append(i[0])
 
     else:
         lineages_of_interest = sorted(lineages_prep, key=top_ten_sort, reverse=True)[:10]

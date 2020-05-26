@@ -6,23 +6,23 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
+output_directory = "UK_full_report/adm1_reports/Scotland/"
 
-input_directory = "" ##CHANGE
+input_directory = ""
 
-metadata_file = "" ##CHANGE
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Verity Hill/nCoV/report_metadata.csv"
 
-name_stem="" ##CHANGE
+name_stem = "Scotland"
 
-week = "" ##CHANGE
+week = "2020-05-22"
 
-sequencing_centre = "" ##CHANGE
+sequencing_centre = ""
 
-adm1 = "" ##CHANGE
+adm1 = "Scotland"
 
 fd = os.path.join(output_directory, "figures")
 
-scripts_directory = "" ##CHANGE
+scripts_directory = "/Users/s1743989/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report"
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
 

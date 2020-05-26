@@ -83,11 +83,21 @@ class introduction():
         self.split = False
 
         self.get_global_lineages()
-        self.get_date_loc_info(current_day)
+        self.get_date_loc_info(current_day, filter_country, sequencing_centre)
         self.define_status(current_day)
+
+        self.country_specific_taxa = []
+        self.country_specific_dates = []
+
+        if filter_country != "" and sequencing_centre == "":
+            for tax in self.taxa:
+                if tax.country == filter_country:
+                    self.country_specific_taxa.append(tax)
+                    if tax.date_dt != "NA":
+                        self.country_specific_dates.append(tax.date_dt)
         
         
-    def get_date_loc_info(self, current_date):
+    def get_date_loc_info(self, current_date, filter_country, sequencing_centre):
        
         for tax in self.taxa:
             if tax.date_dt != "NA": #and tax.epiweek != "NA":

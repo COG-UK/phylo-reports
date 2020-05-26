@@ -156,51 +156,51 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	global_lins = []
 	date_ranges = []
 	statuses = []
-	last_sampled = []
+	last_sampled_list = []
 	totals = []
 	names = []
 	
 	df_dict = defaultdict(list)
 
 	for lin in lineages:
+		if len(lin.country_specific_taxa) > 5:
 
-		names.append(lin.id)
-		
-		new_dates = []
-		total = 0
-
-		for tax in lin.taxa:
-			if tax.country = filter_country:
-				total += 1
-				global_lins.add(tax.global_lineage)
-				if tax.date_dt != "NA":
-					new_dates.append(tax.date_dt)
-		
-		totals.append(total)
-
-		if new_dates != []:
-
-			mrd = max(new_dates)
-            oldest = min(new_dates)
-
-			pretty_mrd = mrd.strftime('%b-%d')
-            pretty_oldest = oldest.strftime('%b-%d')
-
-			last_sampled = (most_recent_sample - mrd).days
+			names.append(lin.id)
 			
-			date_ranges.append((pretty_oldest, pretty_mrd))
-			last_sampled.append(last_sampled)
+			new_dates = []
+			total = 0
 
-		else:
-			date_ranges.append(('NA','NA'))
-			last_sampled.append('NA')
+			global_lineages = set()
+
+			for tax in lin.country_specific_taxa:
+				global_lineages.add(tax.global_lineage)
+			
+			totals.append(len(lin.country_specific_taxa))
+			global_lins.append(global_lineages)
+
+			if lin.country_specific_dates != []:
+
+				mrd = max(lin.country_specific_dates)
+				oldest = min(lin.country_specific_dates)
+
+				pretty_mrd = mrd.strftime('%b-%d')
+				pretty_oldest = oldest.strftime('%b-%d')
+
+				last_sampled = (most_recent_sample - mrd).days
+				
+				date_ranges.append((pretty_oldest, pretty_mrd))
+				last_sampled_list.append(last_sampled)
+
+			else:
+				date_ranges.append(('NA','NA'))
+				last_sampled.append('NA')
 
 
 	df_dict["Lineage name"] = names	
 	df_dict["Date range"] = date_ranges
 	df_dict["Number of sequences"] = totals
 	df_dict["Global lineage"] = global_lins
-	df_dict["Time since last sample (days)"] = last_sampled
+	df_dict["Time since last sample (days)"] = last_sampled_list
 
 	df = pd.DataFrame(df_dict)
 
@@ -218,8 +218,11 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 		new_dates.append(new_date)
 	df["Date range"] = new_dates
 
-	df.index.name = 'Lineage name'
-	tree_order = list(df_together.index)
+	df.set_index('Lineage name', inplace=True)
+	df.sort_values(by=["Number of sequences"], ascending=False, inplace=True)
+
+
+	tree_order = list(df.index)
 
 	return df, tree_order
 

@@ -123,7 +123,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
 
     if sequencing_centre == "" and filter_country != "":
         specific_taxa = [i for i in tax_with_dates if i.country == filter_country]
-        most_recent_sample = sorted(specific_tax, key=sortkey2, reverse = True)[0].date_dt
+        most_recent_sample = sorted(specific_taxa, key=sortkey2, reverse = True)[0].date_dt
     else:
         most_recent_sample = sorted(tax_with_dates, key=sortkey2, reverse = True)[0].date_dt
     
@@ -153,18 +153,25 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
 
     intro_bigs = sorted(intro_bigs, key=sort_key, reverse=False)
 
+    specific_singletons = 0
+
     if sequencing_centre == "" and filter_country != "":
+
         for intro in intro_alls:
-            if filter_country in intro.adm1:
-                relevant_count = 0
+
+            if len(intro.country_specific_taxa) != 0:
+
                 country_specific_lineages.append(intro)
-                for tax in intro.taxa:
-                    if tax.country == filter_country:
-                        relevant_count += 1
-                if relevant_count <= 5:
+
+                for i in intro.country_specific_taxa:
+                    country_specific_taxa.append(i)
+                
+                if len(intro.country_specific_taxa) == 1:
+                    specific_singletons += 1
+                if len(intro.country_specific_taxa) <= 5:
                     specific_smalls.append(intro)
                 else:
                     specific_bigs.append(intro)
 
 
-    return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs
+    return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons

@@ -425,6 +425,8 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
     NI = []
     labels = []
 
+    date_counts = defaultdict(list)
+
     for i in sequences:
         if i.date_dt != "NA":
             sequence_dates[i.date_dt].append(i)
@@ -453,7 +455,7 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
         W.append(W_c)
         NI.append(NI_c)
 
-    #seq_counts = Counter(sequence_dates)
+        date_counts[date] = [E_c, S_c, W_c, NI_c]
 
     E = np.array(E)
     S = np.array(S)
@@ -468,7 +470,7 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
     ax.bar(labels, NI, width, label='Northern_Ireland', color='skyblue', bottom = E+S+W)
 
     plt.xticks(rotation=55, size=25, fontweight='heavy')
-    plt.yticks(size=10, fontweight='heavy')
+    plt.yticks(size=25, fontweight='heavy')
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Day", size=40, fontweight='bold')
@@ -481,25 +483,23 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
     else:
         ax.set_title("Sequences taken on each day by " + sequencing_centre, size=50, fontweight='bold')
 
-    return labels, E, S, W, NI    
+    return date_counts   
 
-def raw_data_seqs_over_time(days, E, S, W, NI):
+def raw_data_seqs_over_time(date_counts):
 
     raw_dict = defaultdict(list)
 
-    sorted_days = sorted(days)
+    for key, value in date_counts.items():
 
-    for d,e,s,w,ni in zip(sorted_days, E, S, W, NI):
-
-        raw_dict["Day"].append(d)
-        raw_dict["England"].append(e)
-        raw_dict["Scotland"].append(s)
-        raw_dict["Wales"].append(w)
-        raw_dict["Northern Ireland"].append(ni)
+        raw_dict["Day"].append(key)
+        raw_dict["England"].append(value[0])
+        raw_dict["Scotland"].append(value[1])
+        raw_dict["Wales"].append(value[2])
+        raw_dict["Northern Ireland"].append(value[3])
 
     raw_df = pd.DataFrame(raw_dict)
+    raw_df.sort_values('Day',ascending=True, inplace=True)
     raw_df.set_index("Day", inplace=True)
-    #raw_df.index.name = "Day"
 
     raw_df = raw_df.loc[:, (raw_df != 0).any(axis=0)] #Should remove columns of all 0s 
 

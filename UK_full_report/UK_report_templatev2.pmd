@@ -238,8 +238,8 @@ print(starts_raw.to_markdown())
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 ```python, name="seqs_over_time", echo=False, include=False
-days, E, S, W, NI = dp.plot_sequences_over_time(taxa, country, sequencing_centre)
-raw_seqs_over_time = dp.raw_data_seqs_over_time(days, E, S, W, NI)
+date_counts = dp.plot_sequences_over_time(taxa, country, sequencing_centre)
+raw_seqs_over_time = dp.raw_data_seqs_over_time(date_counts)
 ```
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")

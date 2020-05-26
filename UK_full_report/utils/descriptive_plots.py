@@ -485,13 +485,13 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
         NI_c = 0
 
         for tax in tax_list:
-            if tax.country=="england":
+            if tax.country=="England":
                 E_c += 1
-            elif tax.country=="scotland":
+            elif tax.country=="Scotland":
                 S_c += 1
-            elif tax.country=="wales":
+            elif tax.country=="Wales":
                 W_c += 1
-            elif tax.country=="northern_ireland":
+            elif tax.country=="Northern_Ireland":
                 NI_c += 1
 
         E.append(E_c)

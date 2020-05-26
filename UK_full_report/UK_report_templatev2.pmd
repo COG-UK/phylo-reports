@@ -18,6 +18,8 @@ week = "" ##CHANGE
 
 sequencing_centre = "" ##CHANGE
 
+adm1 = "" ##CHANGE
+
 fd = os.path.join(output_directory, "figures")
 
 scripts_directory = "" ##CHANGE
@@ -63,12 +65,12 @@ import UK_full_report.utils.mapping as map
 ```
 ```python, name='prepping things and prelim info',echo=False, results='tex'
 
-sc_dict = {"LIVE":"England", "PHWC":"Wales","CAMB":"England","NORW":"England","GLAS":"Scotland","EDIN":"Scotland","SHEF":"England","EXET":"England","NOTT":"England","PORT":"England","OXON":"England","NORT":"England","NIRE":"Nothern_Ireland","LOND":"England"}
+sc_dict = {"LIVE":"England", "PHWC":"Wales","CAMB":"England","NORW":"England","GLAS":"Scotland","EDIN":"Scotland","SHEF":"England","EXET":"England","NOTT":"England","PORT":"England","OXON":"England","NORT":"England","NIRE":"Northern_Ireland","LOND":"England"}
 
 if sequencing_centre != "":
     country = sc_dict[sequencing_centre]
 else:
-    country = ""
+    country = adm1
 
 current_date = time.make_current_week(week)
 

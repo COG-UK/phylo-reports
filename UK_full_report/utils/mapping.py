@@ -263,7 +263,7 @@ def parse_countries(with_seq_counts):
     return england, scotland, wales, n_i, channels, plot_dict
 
 
-def plot_map(england, scotland, wales, n_i, channels, plot_dict):
+def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
 
     fig, ax = plt.subplots(1, 1)
     fig.set_size_inches(20, 15)
@@ -277,18 +277,48 @@ def plot_map(england, scotland, wales, n_i, channels, plot_dict):
     vmax = 12
     plotting_col = "Group"
 
+    if country != "":
+        if country == "Scotland":
+            scot_legend_bool = True
+            engl_legend_bool = False
+            n_i_legend_bool = False
+            wales_legend_bool = False
+        elif country == "England":
+            scot_legend_bool = False
+            engl_legend_bool = True
+            n_i_legend_bool = False
+            wales_legend_bool = False
+        elif country == "Wales":
+            scot_legend_bool = False
+            engl_legend_bool = False
+            n_i_legend_bool = False
+            wales_legend_bool = True
+        elif country == "Northern_Ireland":
+            scot_legend_bool = False
+            engl_legend_bool = False
+            n_i_legend_bool = True
+            wales_legend_bool = False
+    else:
+        scot_legend_bool = False
+        engl_legend_bool = True
+        n_i_legend_bool = False
+        wales_legend_bool = False
+
+
     if plot_dict["Scotland"]:
-        scotland.plot(column=plotting_col, cmap = "Blues", ax=ax, legend=True, categorical=True, vmin=vmin, vmax=vmax,
+        scotland.plot(column=plotting_col, cmap = "Blues", ax=ax, legend=scot_legend_bool, categorical=True, vmin=vmin, vmax=vmax,
                     missing_kwds={"color": "lightgrey","label": "No sequences yet"})
+    
     if plot_dict["Wales"]:
-        wales.plot(column=plotting_col, cmap = "Greens", ax=ax, legend=True, categorical=True, vmin=vmin, vmax=vmax,
+        wales.plot(column=plotting_col, cmap = "Greens", ax=ax, legend=wales_legend_bool, categorical=True, vmin=vmin, vmax=vmax,
                 missing_kwds={"color": "lightgrey","label": "No sequences yet"})
+    
     if plot_dict["England"]:
-        england.plot(column=plotting_col, cmap = "Reds", ax=ax, categorical=True,legend=True,
+        england.plot(column=plotting_col, cmap = "Reds", ax=ax, categorical=True,legend=engl_legend_bool,
                     vmin=vmin, vmax=vmax,
                     missing_kwds={"color": "lightgrey","label": "No sequences yet"})
     if plot_dict["NI"]:
-        n_i.plot(column=plotting_col, cmap = "Purples", ax=ax, legend=False, categorical=False, vmin=vmin, vmax=vmax,
+        n_i.plot(column=plotting_col, cmap = "Purples", ax=ax, legend=n_i_legend_bool, categorical=True, vmin=vmin, vmax=vmax,
                 missing_kwds={"color": "lightgrey","label": "No sequences yet"})
 
     if plot_dict["Channels"]:
@@ -306,6 +336,39 @@ def plot_map(england, scotland, wales, n_i, channels, plot_dict):
 
     ax.axis("off")
     ax.set_title('COVID-19 sequences from each Admn2 region UK', fontdict={'fontsize': '25', 'fontweight' : '3'})
+
+def plot_individual(england, scotland, wales, n_i, country):
+    
+    fig, ax = plt.subplots(1, 1)
+    fig.set_size_inches(20, 15)
+    england = england.to_crs("EPSG:3395")
+    scotland = scotland.to_crs("EPSG:3395")
+    wales = wales.to_crs("EPSG:3395")
+    n_i = n_i.to_crs("EPSG:3395")
+
+    vmin = -1
+    vmax = 12
+    plotting_col = "Group"
+    
+    plotting_dict = {"England": england, "Scotland":scotland, "Wales":wales, "Northern_Ireland":n_i}
+
+    colours = {"England": "Reds", "Scotland":"Blues", "Wales":"Greens", "Northern_Ireland":"Purples"}
+
+    plotting_dict[country].plot(column=plotting_col, cmap = colours[country], ax=ax, legend=True, categorical=True, vmin=vmin, vmax=vmax,
+                    missing_kwds={"color": "lightgrey","label": "No sequences yet"})
+
+    legend = ax.get_legend()
+    new_labels = ["0-10", "10-50", "50-100", "100-150", "150-200","200-250", "250-300", "300-400", "400-500", ">500",
+                "No sequences yet"]
+    legend.set_bbox_to_anchor((0.1,0.5,0.2,0.2))
+    legend.set_title("Number of sequences")
+
+    for text, label in zip(legend.get_texts(), new_labels):
+        text.set_text(label)
+
+    ax.axis("off")
+    ax.set_title('COVID-19 sequences from each Admn2 region in ' + country, fontdict={'fontsize': '25', 'fontweight' : '3'})
+
 
 def plot_missing_sequences(missing_df):
 
@@ -386,6 +449,25 @@ def clean_df(df, sequencing_centre):
 
     return final
 
+def sort_missing_sequencing(missing_df, sequencing_centre, country):
+
+    if missing_sequences and sequencing_centre == "":
+            plot_missing_sequences(missing_df)
+    elif not missing_sequences:
+            print("All sequences have been assigned clean adm2 data this week.")
+    elif missing_sequences and sequencing_centre != "":
+        missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
+        if country == "England":
+            missing_number = missing_number_prep.at[0]
+        elif country == "Wales":
+            missing_number = missing_number_prep.at[1]
+        elif country == "Scotland":
+            missing_number = missing_number_prep.at[2]
+        elif country == "Northern_Ireland":
+            missing_number = missing_number_prep.at[3]
+        print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
+
+
 def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country):
 
     output_dir = overall_output_dir + "summary_files/"
@@ -399,24 +481,18 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     if type(parsing_output) != bool:
         with_seq_counts, missing_df, missing_sequences = parsing_output
     
-
         with_seq_counts = make_sequence_groups(with_seq_counts)
+        
         cleaned = clean_df(with_seq_counts, sequencing_centre)
 
         england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
 
-        plot_map(england, scotland, wales, n_i, channels, plot_dict)
+        if sequencing_centre == "" and country != "": #so if it's an adm1 report
+            plot_individual(england, scotland, wales, n_i, country)
+        else:
+            plot_whole_map(england, scotland, wales, n_i, channels, plot_dict)
 
-        if missing_sequences and sequencing_centre == "":
-            plot_missing_sequences(missing_df)
-        elif not missing_sequences:
-            print("All sequences have been assigned clean adm2 data this week.")
-        elif missing_sequences and sequencing_centre != "":
-            missing_number_prep = missing_df.loc[missing_df["Country"] == country]["Number of missing sequences"]
-            print(missing_number_prep)
-            missing_number = missing_number_prep.at[0]
-            print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
-                                
+        sort_missing_sequences(missing_df, sequencing_centre, country)       
         
         new_unclean_locs = find_new_locs_cleaning(metadata_file, mapping_dictionary, all_uk, output_dir, sequencing_centre)
 

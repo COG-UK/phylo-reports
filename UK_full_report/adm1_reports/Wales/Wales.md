@@ -58,10 +58,10 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 | UK61           | Mar-10, Apr-29 |                   326 | B.3                 |                               0 |
 | UK158          | Mar-20, Apr-29 |                   119 | B.1.1.2             |                               0 |
 | UK5            | Mar-04, Apr-27 |                   109 | B.1.1.1             |                               2 |
-| UK42           | Mar-07, Apr-27 |                   108 | B.1, B.1.35         |                               2 |
+| UK42           | Mar-07, Apr-27 |                   108 | B.1.35, B.1         |                               2 |
 | UK140          | Mar-25, Apr-28 |                    86 | B.1.1               |                               1 |
 | UK74           | Mar-30, Apr-28 |                    84 | B.1                 |                               1 |
-| UK225          | Mar-15, Apr-27 |                    82 | B.2.2, B.2, B.2.6   |                               2 |
+| UK225          | Mar-15, Apr-27 |                    82 | B.2.6, B.2.2, B.2   |                               2 |
 | UK106          | Mar-17, Apr-27 |                    65 | B.1.44, B.1         |                               2 |
 | UK7            | Mar-26, Apr-27 |                    64 | B.1.p11             |                               2 |
 | UK5711         | Apr-01, Apr-27 |                    53 | B.1.p11             |                               2 |
@@ -73,7 +73,7 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 | UK86           | Mar-30, Apr-28 |                    20 | B.1                 |                               1 |
 | UK298          | Mar-27, Apr-28 |                    19 | B.1.1               |                               1 |
 | UK4            | Mar-11, Apr-24 |                    17 | B                   |                               5 |
-| UK472          | Apr-05, Apr-27 |                    16 | B.1.1, B.1.1.p11    |                               2 |
+| UK472          | Apr-05, Apr-27 |                    16 | B.1.1.p11, B.1.1    |                               2 |
 | UK633          | Apr-06, Apr-28 |                    14 | B.1.1.p16, B.1.1.16 |                               1 |
 | UK392          | Mar-25, Apr-12 |                    14 | B.1.67              |                              17 |
 | UK322          | Mar-30, Apr-26 |                    14 | B.1                 |                               3 |
@@ -93,7 +93,7 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 | UK471          | Apr-02, Apr-24 |                     8 | B.1.1               |                               5 |
 | UK156          | Mar-28, Apr-14 |                     8 | B.1.71              |                              15 |
 | UK750          | Apr-07, Apr-14 |                     8 | B.1                 |                              15 |
-| UK696          | Apr-10, Apr-24 |                     7 | B.1, B.1.5          |                               5 |
+| UK696          | Apr-10, Apr-24 |                     7 | B.1.5, B.1          |                               5 |
 | UK394          | Mar-30, Apr-17 |                     7 | B.1.1               |                              12 |
 | UK119          | Mar-30, Apr-14 |                     7 | B.2.5               |                              15 |
 | UK367          | Mar-25, Apr-27 |                     7 | B.1                 |                               2 |
@@ -121,7 +121,7 @@ The raw data for this bar chart are in the table above.
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_stacked_bars_by_country_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_stacked_bars_by_country_1.png)\
 
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
@@ -133,7 +133,7 @@ The raw data for the plot is shown below it, with each column representing a lin
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_geog_plot_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_geog_plot_1.png)\
 
 
 
@@ -161,7 +161,7 @@ NB the lineage may have started anywhere in the UK, but has been recorded at lea
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_firsts_plot_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_firsts_plot_1.png)\
 
 
 
@@ -240,7 +240,7 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_seqs_over_time_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_seqs_over_time_1.png)\
 
 
 
@@ -315,7 +315,7 @@ The raw data has been written to a summary file.
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_make_timeline_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_make_timeline_1.png)\
 
 
 The map below shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -325,166 +325,34 @@ The map below shows the number of sequences sampled in each admin2 region in the
 
 
 
-![](UK_full_report/adm1_reports/Wales/figures/Wales_map_1.png)\
+![](UK_full_report/adm1_reports/Scotland/figures/Wales_map_1.png)\
 
 
 
-| Admin2                       | Country          |   Number of sequences | Sequence group   |
-|:-----------------------------|:-----------------|----------------------:|:-----------------|
-| ABERDEEN                     | Scotland         |                    21 | 10-50            |
-| ABERDEENSHIRE                | Scotland         |                     0 | 0                |
-| ANGLESEY                     | Wales            |                    18 | 10-50            |
-| ANGUS                        | Scotland         |                    10 | 10-50            |
-| ANTRIM                       | Northern Ireland |                   109 | 100-150          |
-| ARGYLL AND BUTE              | Scotland         |                     0 | 0                |
-| ARMAGH                       | Northern Ireland |                    12 | 10-50            |
-| BATH AND NORTH EAST SOMERSET | England          |                     0 | 0                |
-| BEDFORDSHIRE                 | England          |                   415 | 400-500          |
-| BERKSHIRE                    | England          |                     7 | 1-10             |
-| BLACKBURN WITH DARWEN        | England          |                     0 | 0                |
-| BLACKPOOL                    | England          |                     0 | 0                |
-| BLAENAU GWENT                | Wales            |                    42 | 10-50            |
-| BOLTON                       | England          |                     0 | 0                |
-| BOURNEMOUTH                  | England          |                     0 | 0                |
-| BRIDGEND                     | Wales            |                    83 | 50-100           |
-| BRIGHTON AND HOVE            | England          |                     0 | 0                |
-| BRISTOL                      | England          |                    18 | 10-50            |
-| BUCKINGHAMSHIRE              | England          |                   326 | 300-400          |
-| BURY                         | England          |                     0 | 0                |
-| CAERPHILLY                   | Wales            |                    97 | 50-100           |
-| CAMBRIDGESHIRE               | England          |                   601 | >500             |
-| CARDIFF                      | Wales            |                   310 | 300-400          |
-| CARMARTHENSHIRE              | Wales            |                    75 | 50-100           |
-| CENTRAL BEDFORDSHIRE         | England          |                     0 | 0                |
-| CEREDIGION                   | Wales            |                    16 | 10-50            |
-| CHESHIRE                     | England          |                     8 | 1-10             |
-| CLACKMANNANSHIRE             | Scotland         |                     2 | 1-10             |
-| CONWY                        | Wales            |                    37 | 10-50            |
-| CORNWALL                     | England          |                    13 | 10-50            |
-| CUMBRIA                      | England          |                     8 | 1-10             |
-| DARLINGTON                   | England          |                     0 | 0                |
-| DENBIGHSHIRE                 | Wales            |                    64 | 50-100           |
-| DERBY                        | England          |                     0 | 0                |
-| DERBYSHIRE                   | England          |                    25 | 10-50            |
-| DEVON                        | England          |                   231 | 200-250          |
-| DORSET                       | England          |                   140 | 100-150          |
-| DOWN                         | Northern Ireland |                    52 | 50-100           |
-| DUMFRIES AND GALLOWAY        | Scotland         |                    38 | 10-50            |
-| DUNDEE                       | Scotland         |                    70 | 50-100           |
-| DURHAM                       | England          |                     1 | 1-10             |
-| EAST AYRSHIRE                | Scotland         |                    36 | 10-50            |
-| EAST DUNBARTONSHIRE          | Scotland         |                     0 | 0                |
-| EAST LOTHIAN                 | Scotland         |                    51 | 50-100           |
-| EAST RENFREWSHIRE            | Scotland         |                     0 | 0                |
-| EAST RIDING OF YORKSHIRE     | England          |                    20 | 10-50            |
-| EDINBURGH                    | Scotland         |                   397 | 300-400          |
-| EILEAN SIAR                  | Scotland         |                     2 | 1-10             |
-| ESSEX                        | England          |                  1084 | >500             |
-| FALKIRK                      | Scotland         |                    62 | 50-100           |
-| FERMANAGH                    | Northern Ireland |                     3 | 1-10             |
-| FIFE                         | Scotland         |                    41 | 10-50            |
-| FLINTSHIRE                   | Wales            |                    46 | 10-50            |
-| GATESHEAD                    | England          |                     0 | 0                |
-| GLASGOW                      | Scotland         |                   606 | >500             |
-| GLOUCESTERSHIRE              | England          |                   246 | 200-250          |
-| GREATER LONDON               | England          |                  2162 | >500             |
-| GUERNSEY                     | Channel_islands  |                    41 | 10-50            |
-| GWYNEDD                      | Wales            |                    39 | 10-50            |
-| HALTON                       | England          |                     0 | 0                |
-| HAMPSHIRE                    | England          |                    88 | 50-100           |
-| HARTLEPOOL                   | England          |                     0 | 0                |
-| HEREFORDSHIRE                | England          |                     1 | 1-10             |
-| HERTFORDSHIRE                | England          |                   838 | >500             |
-| HIGHLAND                     | Scotland         |                     9 | 1-10             |
-| INVERCLYDE                   | Scotland         |                     0 | 0                |
-| ISLE OF WIGHT                | England          |                     0 | 0                |
-| ISLES OF SCILLY              | England          |                     0 | 0                |
-| JERSEY                       | Channel_islands  |                    77 | 50-100           |
-| KENT                         | England          |                    27 | 10-50            |
-| KINGSTON UPON HULL           | England          |                     0 | 0                |
-| LANCASHIRE                   | England          |                     6 | 1-10             |
-| LEICESTER                    | England          |                     0 | 0                |
-| LEICESTERSHIRE               | England          |                     5 | 1-10             |
-| LINCOLNSHIRE                 | England          |                    14 | 10-50            |
-| LONDONDERRY                  | Northern Ireland |                    10 | 10-50            |
-| LUTON                        | England          |                     0 | 0                |
-| MANCHESTER                   | England          |                    29 | 10-50            |
-| MEDWAY                       | England          |                     0 | 0                |
-| MERSEYSIDE                   | England          |                    59 | 50-100           |
-| MERTHYR TYDFIL               | Wales            |                    41 | 10-50            |
-| MIDDLESBROUGH                | England          |                     0 | 0                |
-| MIDLOTHIAN                   | Scotland         |                   119 | 100-150          |
-| MILTON KEYNES                | England          |                     0 | 0                |
-| MONMOUTHSHIRE                | Wales            |                    46 | 10-50            |
-| MORAY                        | Scotland         |                     0 | 0                |
-| NEATH PORT TALBOT            | Wales            |                    85 | 50-100           |
-| NEWPORT                      | Wales            |                   112 | 100-150          |
-| NORFOLK                      | England          |                   324 | 300-400          |
-| NORTH AYRSHIRE               | Scotland         |                     0 | 0                |
-| NORTH LANARKSHIRE            | Scotland         |                   103 | 100-150          |
-| NORTH LINCOLNSHIRE           | England          |                     0 | 0                |
-| NORTH SOMERSET               | England          |                     0 | 0                |
-| NORTH YORKSHIRE              | England          |                     4 | 1-10             |
-| NORTHAMPTONSHIRE             | England          |                    22 | 10-50            |
-| NORTHUMBERLAND               | England          |                     2 | 1-10             |
-| NOTTINGHAM                   | England          |                   552 | >500             |
-| NOTTINGHAMSHIRE              | England          |                    58 | 50-100           |
-| OLDHAM                       | England          |                     0 | 0                |
-| ORKNEY ISLANDS               | Scotland         |                     1 | 1-10             |
-| OXFORDSHIRE                  | England          |                    91 | 50-100           |
-| PEMBROKESHIRE                | Wales            |                    56 | 50-100           |
-| PERTHSHIRE AND KINROSS       | Scotland         |                    14 | 10-50            |
-| PETERBOROUGH                 | England          |                     0 | 0                |
-| PLYMOUTH                     | England          |                     0 | 0                |
-| POOLE                        | England          |                     0 | 0                |
-| PORTSMOUTH                   | England          |                     0 | 0                |
-| POWYS                        | Wales            |                    35 | 10-50            |
-| REDCAR AND CLEVELAND         | England          |                     0 | 0                |
-| RENFREWSHIRE                 | Scotland         |                   157 | 150-200          |
-| RHONDDA, CYNON, TAFF         | Wales            |                     0 | 0                |
-| ROCHDALE                     | England          |                     0 | 0                |
-| RUTLAND                      | England          |                     0 | 0                |
-| SALFORD                      | England          |                     0 | 0                |
-| SCOTTISH BORDERS             | Scotland         |                   102 | 100-150          |
-| SHETLAND ISLANDS             | Scotland         |                    14 | 10-50            |
-| SHROPSHIRE                   | England          |                     1 | 1-10             |
-| SOMERSET                     | England          |                   231 | 200-250          |
-| SOUTH AYRSHIRE               | Scotland         |                     0 | 0                |
-| SOUTH GLOUCESTERSHIRE        | England          |                     0 | 0                |
-| SOUTH LANARKSHIRE            | Scotland         |                     3 | 1-10             |
-| SOUTH YORKSHIRE              | England          |                  1058 | >500             |
-| SOUTHAMPTON                  | England          |                     0 | 0                |
-| SOUTHEND-ON-SEA              | England          |                     0 | 0                |
-| STAFFORDSHIRE                | England          |                    24 | 10-50            |
-| STIRLING                     | Scotland         |                     0 | 0                |
-| STOCKPORT                    | England          |                     0 | 0                |
-| STOCKTON-ON-TEES             | England          |                     0 | 0                |
-| STOKE-ON-TRENT               | England          |                     0 | 0                |
-| SUFFOLK                      | England          |                   392 | 300-400          |
-| SURREY                       | England          |                    56 | 50-100           |
-| SUSSEX                       | England          |                     1 | 1-10             |
-| SWANSEA                      | Wales            |                   200 | 200-250          |
-| SWINDON                      | England          |                     0 | 0                |
-| TAMESIDE                     | England          |                     0 | 0                |
-| TELFORD AND WREKIN           | England          |                     0 | 0                |
-| THURROCK                     | England          |                     0 | 0                |
-| TORBAY                       | England          |                     0 | 0                |
-| TORFAEN                      | Wales            |                    71 | 50-100           |
-| TRAFFORD                     | England          |                     0 | 0                |
-| TYNE AND WEAR                | England          |                    37 | 10-50            |
-| TYRONE                       | Northern Ireland |                    13 | 10-50            |
-| VALE OF GLAMORGAN            | Wales            |                   118 | 100-150          |
-| WARRINGTON                   | England          |                     0 | 0                |
-| WARWICKSHIRE                 | England          |                     9 | 1-10             |
-| WEST DUNBARTONSHIRE          | Scotland         |                     0 | 0                |
-| WEST LOTHIAN                 | Scotland         |                    88 | 50-100           |
-| WEST MIDLANDS                | England          |                    87 | 50-100           |
-| WEST YORKSHIRE               | England          |                    19 | 10-50            |
-| WIGAN                        | England          |                     0 | 0                |
-| WILTSHIRE                    | England          |                   150 | 150-200          |
-| WORCESTERSHIRE               | England          |                     7 | 1-10             |
-| WREXHAM                      | Wales            |                    64 | 50-100           |
-| YORK                         | England          |                     0 | 0                |
+| Admin2               | Country   |   Number of sequences | Sequence group   |
+|:---------------------|:----------|----------------------:|:-----------------|
+| ANGLESEY             | Wales     |                    18 | 10-50            |
+| BLAENAU GWENT        | Wales     |                    42 | 10-50            |
+| BRIDGEND             | Wales     |                    83 | 50-100           |
+| CAERPHILLY           | Wales     |                    97 | 50-100           |
+| CARDIFF              | Wales     |                   310 | 300-400          |
+| CARMARTHENSHIRE      | Wales     |                    75 | 50-100           |
+| CEREDIGION           | Wales     |                    16 | 10-50            |
+| CONWY                | Wales     |                    37 | 10-50            |
+| DENBIGHSHIRE         | Wales     |                    64 | 50-100           |
+| FLINTSHIRE           | Wales     |                    46 | 10-50            |
+| GWYNEDD              | Wales     |                    39 | 10-50            |
+| MERTHYR TYDFIL       | Wales     |                    41 | 10-50            |
+| MONMOUTHSHIRE        | Wales     |                    46 | 10-50            |
+| NEATH PORT TALBOT    | Wales     |                    85 | 50-100           |
+| NEWPORT              | Wales     |                   112 | 100-150          |
+| PEMBROKESHIRE        | Wales     |                    56 | 50-100           |
+| POWYS                | Wales     |                    35 | 10-50            |
+| RHONDDA, CYNON, TAFF | Wales     |                     0 | 0                |
+| SWANSEA              | Wales     |                   200 | 200-250          |
+| TORFAEN              | Wales     |                    71 | 50-100           |
+| VALE OF GLAMORGAN    | Wales     |                   118 | 100-150          |
+| WREXHAM              | Wales     |                    64 | 50-100           |
 
 
 

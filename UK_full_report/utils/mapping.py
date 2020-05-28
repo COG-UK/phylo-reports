@@ -325,6 +325,8 @@ def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
         channels.plot(column=plotting_col, cmap = "Reds", ax=ax, legend=False, vmin=vmin, vmax=vmax,
                     missing_kwds={"color": "lightgrey","label": "No sequences yet"})
 
+
+
     legend = ax.get_legend()
     new_labels = ["0-10", "10-50", "50-100", "100-150", "150-200","200-250", "250-300", "300-400", "400-500", ">500",
                 "No sequences yet"]
@@ -346,20 +348,36 @@ def plot_individual(england, scotland, wales, n_i, country):
     wales = wales.to_crs("EPSG:3395")
     n_i = n_i.to_crs("EPSG:3395")
 
-    vmin = -1
-    vmax = 12
     plotting_col = "Group"
     
     plotting_dict = {"England": england, "Scotland":scotland, "Wales":wales, "Northern_Ireland":n_i}
 
+    label_dict = {0.0:"0-10", 1.0:"10-50", 2.0:"50-100", 3.0:"100-150", 4.0:"150-200",5.0:"200-250", 6.0:"250-300", 7.0:"300-400", 8.0:"400-500", 9.0:">500"}
+
     colours = {"England": "Reds", "Scotland":"Blues", "Wales":"Greens", "Northern_Ireland":"Purples"}
 
-    plotting_dict[country].plot(column=plotting_col, cmap = colours[country], ax=ax, legend=True, categorical=True, vmin=vmin, vmax=vmax,
+    plotting_df = plotting_dict[country]
+
+    new_labels = []
+    label_prep = set()
+
+    for group in plotting_df["Group"]:
+        if pd.notnull(group):
+            label_prep.add(group)
+        
+    prep_sorted = sorted(list(label_prep))
+    label_intermediate = []
+    
+    for i in prep_sorted:
+        new_labels.append(label_dict[i])
+        
+    new_labels.append("No sequences yet")
+        
+    plotting_df.plot(column=plotting_col, cmap = colours[country], ax=ax, legend=True, categorical=True,
                     missing_kwds={"color": "lightgrey","label": "No sequences yet"})
 
+
     legend = ax.get_legend()
-    new_labels = ["0-10", "10-50", "50-100", "100-150", "150-200","200-250", "250-300", "300-400", "400-500", ">500",
-                "No sequences yet"]
     legend.set_bbox_to_anchor((0.1,0.5,0.2,0.2))
     legend.set_title("Number of sequences")
 
@@ -412,7 +430,7 @@ def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, seq
     return new_unclean_locs
 
                     
-def clean_df(df, sequencing_centre):
+def clean_df(df, sequencing_centre, country):
 
     first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
     second_step = first_step.reset_index(drop=True)
@@ -447,7 +465,14 @@ def clean_df(df, sequencing_centre):
 
     final.set_index("Admin2", inplace=True)
 
-    return final
+    if sequencing_centre == "" and country != "":
+        if country == "Northern_Ireland":
+            final_individual = final.loc[final["Country"] == "Northern Ireland"]
+        else:
+            final_individual = final.loc[final["Country"] == country]
+        return final_individual
+    else:
+        return final
 
 def sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, country):
 
@@ -483,7 +508,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
     
         with_seq_counts = make_sequence_groups(with_seq_counts)
         
-        cleaned = clean_df(with_seq_counts, sequencing_centre)
+        cleaned = clean_df(with_seq_counts, sequencing_centre, country)
 
         england, scotland, wales, n_i, channels, plot_dict = parse_countries(with_seq_counts)
 

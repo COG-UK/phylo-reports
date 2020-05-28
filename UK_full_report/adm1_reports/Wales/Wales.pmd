@@ -6,7 +6,7 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory = "UK_full_report/adm1_reports/Wales/"
+output_directory = "UK_full_report/adm1_reports/Scotland/"
 
 input_directory = ""
 

@@ -674,7 +674,48 @@ def make_diversity_plot(intro_alls, taxa_list):
     axes[-1].set_xticks(range(len(week_labels)))
     axes[-1].set_xticklabels(week_labels, rotation=90)
 
-    plt.show()
+    return df
+
+def tidy_div_df(div_df):
+
+    england_dict = defaultdict(list)
+    w_dict = defaultdict(list)
+    s_dict = defaultdict(list)
+    ni_dict = defaultdict(list)
+
+    for index,row in df.iterrows():
+        if row["Adm1"] == "England":
+            england_dict["Week"].append(row["Dates"])
+            england_dict["England"].append(row["Shannon_diversity"])
+            
+            
+        if row["Adm1"] == "Wales":
+            w_dict["Wales"].append(row["Shannon_diversity"])
+            w_dict["Week"].append(row["Dates"])
+            
+        if row["Adm1"] == "Scotland":
+            s_dict["Scotland"].append(row["Shannon_diversity"])
+            s_dict["Week"].append(row["Dates"])
+            
+        if row["Adm1"] == "Northern_Ireland":
+            ni_dict["Northern Ireland"].append(row["Shannon_diversity"])
+            ni_dict["Week"].append(row["Dates"])
+            
+            
+    england_df = pd.DataFrame(england_dict)
+    w_df = pd.DataFrame(w_dict)
+    s_df = pd.DataFrame(s_dict)
+    ni_df = pd.DataFrame(ni_dict)
+
+    new = england_df.merge(w_df, on="Week", how="outer")
+    new2 = new.merge(s_df, on="Week", how="outer")
+    new3 = new2.merge(ni_df, on="Week", how="outer")
+
+    new3.sort_values(by="Week", inplace=True)
+    new3.fillna(0, inplace=True)
+    new3.set_index("Week", inplace=True)
+
+    return new3
 
 
 

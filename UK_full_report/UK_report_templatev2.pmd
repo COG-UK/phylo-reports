@@ -263,6 +263,7 @@ if sequencing_centre == "" and country=="":
     tidy_div = dp.tidy_div_df(div_df)
     
     print(tidy_div.to_markdown())
+```
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
 

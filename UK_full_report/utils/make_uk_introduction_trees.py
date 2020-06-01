@@ -20,12 +20,8 @@ from scipy.special import binom
 import itertools
 import requests
 
-try:
-    from StringIO import StringIO as sio
-    from cStringIO import StringIO as csio
-except ImportError:
-    from io import StringIO as sio
-    from io import BytesIO as csio
+from io import StringIO as sio
+from io import BytesIO as csio
 from Bio import Phylo
 from collections import defaultdict
 import matplotlib.font_manager as font_manager

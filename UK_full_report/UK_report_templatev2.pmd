@@ -20,7 +20,7 @@ sequencing_centre = "" ##CHANGE
 
 adm1 = "" ##CHANGE
 
-#fd = os.path.join(output_directory, "figures")
+fd = os.path.join(output_directory, "figures")
 
 scripts_directory = "" ##CHANGE
 

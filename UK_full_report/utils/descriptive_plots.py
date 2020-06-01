@@ -3,6 +3,7 @@ from collections import defaultdict
 from collections import OrderedDict
 import datetime as dt
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 import numpy as np
 import os
 import pandas as pd
@@ -238,8 +239,8 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
     if sequencing_centre == "":
         ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
         ax.legend(fontsize=40)
-    elif country != "" and sequencing_centre == "":
-        ax.set_title('Sequences after introduction in ' + country, size=50, fontweight='bold')
+    elif filter_country != "" and sequencing_centre == "":
+        ax.set_title('Sequences after introduction in ' + filter_country, size=50, fontweight='bold')
     else:
         ax.set_title("Number of sequences after introduction in " + sequencing_centre, size=50, fontweight='bold')
     
@@ -683,7 +684,7 @@ def tidy_div_df(div_df):
     s_dict = defaultdict(list)
     ni_dict = defaultdict(list)
 
-    for index,row in df.iterrows():
+    for index,row in div_df.iterrows():
         if row["Adm1"] == "England":
             england_dict["Week"].append(row["Dates"])
             england_dict["England"].append(row["Shannon_diversity"])

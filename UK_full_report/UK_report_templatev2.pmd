@@ -250,7 +250,7 @@ if sequencing_centre == "" and country=="":
     print("The growth and decline of diversity of lineages over time for each country is shown in the ridge plot below.") 
     print("This is represented by the Shannon Diversity, calculated using the number of sequences from each country from each lineage.")
 
-    div_df = dp.make_diversity_plot(intro_alls, taxa_list)
+    div_df = dp.make_diversity_plot(intro_alls, taxa)
 ```
 
 ``python,name="div_hack", echo=False,results='raw'

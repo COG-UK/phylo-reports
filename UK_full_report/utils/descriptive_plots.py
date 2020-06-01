@@ -620,7 +620,7 @@ def make_diversity_plot(intro_alls, taxa_list):
                     inner_dict[inner_key] += 1
 
 
-        outer_dict[outer_key] = inner_dict
+                outer_dict[outer_key] = inner_dict
 
     england_sorted = OrderedDict(sorted(England_div.items()))
     wales_sorted = OrderedDict(sorted(Wales_div.items()))

@@ -10,6 +10,7 @@ setup(
     test_suite="nose.collector",
     tests_require=["nose >= 1.3"],
     install_requires=[
+        "biopython>=1.70",
         "matplotlib>=3.2.1",
         "numpy>=1.18.1",
         "pweave==0.30.3",

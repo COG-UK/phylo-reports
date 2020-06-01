@@ -10,6 +10,7 @@ scripts_directory = os.path.dirname(__file__)
 
 def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, scripts_directory):
     fd = os.path.join(output_directory, "figures")
+    print(fd)
     pmd_string = os.path.join(output_directory, name_stem + ".pmd")
     pmd_file = open(pmd_string, 'w')
 

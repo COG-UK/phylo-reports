@@ -283,26 +283,31 @@ def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
             engl_legend_bool = False
             n_i_legend_bool = False
             wales_legend_bool = False
+            plotting_df = scotland
         elif country == "England":
             scot_legend_bool = False
             engl_legend_bool = True
             n_i_legend_bool = False
             wales_legend_bool = False
+            plotting_df = england
         elif country == "Wales":
             scot_legend_bool = False
             engl_legend_bool = False
             n_i_legend_bool = False
             wales_legend_bool = True
+            plotting_df= wales
         elif country == "Northern_Ireland":
             scot_legend_bool = False
             engl_legend_bool = False
             n_i_legend_bool = True
             wales_legend_bool = False
+            plotting_df = n_i
     else:
         scot_legend_bool = False
         engl_legend_bool = True
         n_i_legend_bool = False
         wales_legend_bool = False
+        plotting_df = england
 
 
     if plot_dict["Scotland"]:
@@ -325,11 +330,26 @@ def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
         channels.plot(column=plotting_col, cmap = "Reds", ax=ax, legend=False, vmin=vmin, vmax=vmax,
                     missing_kwds={"color": "lightgrey","label": "No sequences yet"})
 
+    label_dict = {0.0:"0-10", 1.0:"10-50", 2.0:"50-100", 3.0:"100-150", 4.0:"150-200",5.0:"200-250", 6.0:"250-300", 7.0:"300-400", 8.0:"400-500", 9.0:">500"}
 
+    label_prep = set()
+    new_labels = []
+
+    for group in plotting_df["Group"]:
+        if pd.notnull(group):
+            label_prep.add(group)
+        
+    prep_sorted = sorted(list(label_prep))
+    label_intermediate = []
+    
+    for i in prep_sorted:
+        new_labels.append(label_dict[i])
+        
+    new_labels.append("No sequences yet")
 
     legend = ax.get_legend()
-    new_labels = ["0-10", "10-50", "50-100", "100-150", "150-200","200-250", "250-300", "300-400", "400-500", ">500",
-                "No sequences yet"]
+    # new_labels = ["0-10", "10-50", "50-100", "100-150", "150-200","200-250", "250-300", "300-400", "400-500", ">500",
+    #             "No sequences yet"]
     legend.set_bbox_to_anchor((0.1,0.5,0.2,0.2))
     legend.set_title("Number of sequences")
 

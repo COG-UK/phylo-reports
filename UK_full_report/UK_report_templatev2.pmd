@@ -99,6 +99,7 @@ else:
 
     print(str(len(intro_countries)) + " lineages have been recorded, " + str(singletons_count) + " of which only contain one sequence.")
 ```
+
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
@@ -190,7 +191,7 @@ if continuous > 0:
 
 ```
 
-The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -209,7 +210,7 @@ else:
     intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
     dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
 
-print(dataframe.to_markdown())
+print(dataframe.head(10).to_markdown())
 ```
 
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -242,9 +243,6 @@ raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
 ```
-```python, name="raw", echo=False,results='tex'
-print(raw_geog.to_markdown())
-```
 
 ```python, name="diversity_plot", echo=False, include=False, results='raw'
 if sequencing_centre == "" and country=="":
@@ -259,12 +257,6 @@ if sequencing_centre == "" and country=="":
     print("![](" + fd + "/" + name_stem + "_diversity_plot_1.png)\\")
 ```
 
-```python,name="div_data", echo=False, results="tex"
-if sequencing_centre == "" and country=="":
-    tidy_div = dp.tidy_div_df(div_df)
-    
-    print(tidy_div.to_markdown())
-```
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
 
@@ -284,9 +276,6 @@ else:
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
 ```
-```python, name="raw", echo=False,results='tex'
-print(starts_raw.to_markdown())
-```
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 ```python, name="seqs_over_time", echo=False, include=False
@@ -299,9 +288,6 @@ else:
 ```
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
-```
-```python, name="raw", echo=False,results='tex'
-print(raw_seqs_over_time.to_markdown())
 ```
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
@@ -340,10 +326,6 @@ else:
 if not no_seqs:
     print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
 ```
-```python, name="raw", echo=False,results='tex'
-if not no_seqs:
-    print(mapping_data.to_markdown())
-```
 
 ```python, name="uncleans", echo=False, results='tex'
 if not no_seqs:
@@ -357,11 +339,10 @@ if not no_seqs:
 Other results modules for UK lineage analysis can be added in here if required.
 
 \pagebreak
+## Appendix
+
 ```python, name="appendix", echo=False, results='tex'
 if sequencing_centre == "" and country == "":
-
-    print("## Appendix")
-
     print("The plot below shows the number of sequences from each country that don't have specific enough location data to plot on the map.")
 ```
 
@@ -369,6 +350,51 @@ if sequencing_centre == "" and country == "":
 if sequencing_centre == "" and country == "":
     print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
+
+Below are the raw data tables for each of the figures in the report.
+
+
+> **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
+```python, name="summary_table", echo=False, results='tex'
+print(dataframe.to_markdown())
+```
+\pagebreak
+> **Table S2** Raw data for figure ? showing the number of admin2 regions a lineage is present in over time
+```python, name="raw", echo=False,results='tex'
+print(raw_geog.to_markdown())
+```
+\pagebreak
+```python, name="is there shannon", echo=False, results='raw'
+if sequencing_centre == "" and country=="":
+    print("> **Table S3** Raw data for figure ? showing the Shannon diversity per admin1 region over time")
+else:
+    print("Table S3 is not appropriate for this report and so has been omitted.")
+```
+\pagebreak
+```python,name="div_data", echo=False, results="tex"
+if sequencing_centre == "" and country=="":
+    tidy_div = dp.tidy_div_df(div_df)
+    
+    print(tidy_div.to_markdown())
+```
+\pagebreak
+> **Table S4** Raw data for figure ? showing when lineages started per day, divided by singletons and non-singletons
+```python, name="raw", echo=False,results='tex'
+print(starts_raw.to_markdown())
+```
+\pagebreak
+
+> **Table S5** Raw data for figure ? showing the number of sequences taken over time.
+```python, name="raw", echo=False,results='tex'
+print(raw_seqs_over_time.to_markdown())
+```
+\pagebreak
+> **Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
+```python, name="raw", echo=False,results='tex'
+if not no_seqs:
+    print(mapping_data.to_markdown())
+```
+\pagebreak
 
 ```python, echo=False, fig=False, name="trees", include=True 
 if input_directory != "":

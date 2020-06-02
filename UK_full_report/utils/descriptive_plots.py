@@ -316,7 +316,7 @@ def prep_geog_data(lineages_prep, filter_country, sequencing_centre):
 
     return y_dict, x
 
-def stacked_geog_plot(y_dict, x,normed):
+def stacked_geog_plot(y_dict, x,normed, totals, labels):
 
     if normed:
         y_norm = defaultdict(list)

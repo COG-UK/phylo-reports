@@ -189,17 +189,12 @@ def plot_bars(intro_bigs): #NB the raw data for this is in the plot, already dis
     ax.bar(labels, W, width, label='Wales', color='darkseagreen', bottom = E+S)
     ax.bar(labels, NI, width, label='Northern_Ireland', color='skyblue', bottom = E+S+W)
 
-    # ax.bar(labels, E, width, label='England', color='indianred')
-    # ax.bar(labels, S, width, label='Scotland', color='steelblue')
-    # ax.bar(labels, W, width, label='Wales', color='darkseagreen')
-    #
-
     plt.xticks(rotation=90, size=25, fontweight='heavy')
     plt.yticks(size=25, fontweight='heavy')
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Lineage number", size=40, fontweight='bold')
-    ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
+    #ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
     ax.legend(fontsize=40)
     
 
@@ -283,10 +278,10 @@ def stacked_geog_plot(y_dict, x,normed):
     ax.stackplot(x,y,labels=labels, colors=colors, alpha=0.8)
 
     if normed:
-        ax.set_title("Lineages by number of adm2 regions present by epiweek normalised")
+        #ax.set_title("Lineages by number of adm2 regions present by epiweek normalised")
         plt.ylabel("Number of adm2 regions present in lineage normalised")
     else:
-        ax.set_title("Lineages by number of adm2 regions present by epiweek")
+        #ax.set_title("Lineages by number of adm2 regions present by epiweek")
         plt.ylabel("Number of adm2 regions present in lineage")
    
     handles, labels = ax.get_legend_handles_labels()
@@ -378,7 +373,7 @@ def plot_starts(lineages_of_interest):
     plt.xticks(rotation=45, size=25, fontweight='heavy')
     plt.yticks(size=25, fontweight='heavy')
     
-    ax.set_title("Lineage starts per week", size=45)
+    #ax.set_title("Lineage starts per week", size=45)
     plt.xlabel("Week commencing", size=30)
     plt.ylabel("Number of earliest sequences", size=30)
     plt.legend()
@@ -466,7 +461,7 @@ def plot_sequences_over_time(sequences):
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Day", size=40, fontweight='bold')
-    ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
+    #ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
     ax.legend(fontsize=40)
 
     return labels, E, S, W, NI    

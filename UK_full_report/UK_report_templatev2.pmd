@@ -177,6 +177,7 @@ dp.plot_bars(intro_bigs)
 
 ```
 
+> **Figure one** Number of sequences sampled in a lineage by country
 ```python, name="hack_figure", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_stacked_bars_by_country_1.png)\\")
 ```
@@ -191,7 +192,7 @@ y_dict, week_list = dp.prep_geog_data(intro_bigs)
 dp.plot_ridge_plot(week_list, y_dict)
 raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
 ```
-
+> **Figure two** Lineages by number of adm2 regions present by epiweek
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
 ```
@@ -205,6 +206,7 @@ The date of first sequence in the cluster is shown below for every cluster with 
 multi, single = dp.plot_starts(intro_alls)
 starts_raw = dp.raw_data_starts(single, multi)
 ```
+>**Figure three** Lineage starts per week, split by singletons and non-singletons
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
 ```

@@ -255,7 +255,10 @@ if sequencing_centre == "" and country=="":
 
 ```python,name="div_hack", echo=False,results='raw'
 if sequencing_centre == "" and country=="":
+    print("> **Figure three** Shannon diversity of lineages for each country in the UK")
     print("![](" + fd + "/" + name_stem + "_diversity_plot_1.png)\\")
+else:
+    print("Figure three is innappropriate for this report")
 ```
 
 
@@ -274,7 +277,7 @@ else:
     multi, single = dp.plot_starts(intro_alls)
     starts_raw = dp.raw_data_starts(single, multi)
 ```
->**Figure three** Lineage starts per week, split by singletons and non-singletons
+>**Figure four** Lineage starts per week, split by singletons and non-singletons
 ```python,name="hack",echo=False,results='raw'
 print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
 ```
@@ -288,6 +291,7 @@ else:
     date_counts = dp.plot_sequences_over_time(taxa, country, sequencing_centre)
     raw_seqs_over_time = dp.raw_data_seqs_over_time(date_counts)
 ```
+> **Figure five** Sequences taken on each day by country
 ```python, name="hack", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
 ```
@@ -301,7 +305,7 @@ The raw data has been written to a summary file.
 dp.make_timeline(intro_bigs, sequencing_centre, country)
 timeline_df = dp.raw_data_timeline(intro_bigs)
 ```
-
+> **Figure six** Timeline of lineages, sized by number of sequences from each country.
 ```python, name="hack2", echo=False, results='raw'
 print("![](" + fd + "/" + name_stem + "_make_timeline_1.png)\\")
 ```
@@ -324,6 +328,7 @@ if type(map_output) != bool:
 else:
     no_seqs = map_output
 ```
+> **Figure seven** Map showing the number of sequences sampled by adm2 region
 ```python, name="hack3", echo=False, results='raw'
 if not no_seqs:
     print("![](" + fd + "/" + name_stem + "_map_1.png)\\")

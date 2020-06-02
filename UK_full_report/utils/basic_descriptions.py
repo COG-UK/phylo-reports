@@ -69,15 +69,11 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 
 	global_lins = []
 	date_ranges = []
-	statuses = []
 	last_sampled = []
 
 	for key, value in intro_country_together.items():
-		#lin = key.split("_")[1]
-		#global_lins.append(lin)
 		intro_object = intro_object_dict[key]
 		global_lins.append(intro_object.global_lineages)
-		statuses.append(intro_object.status)
 		
 		if intro_object.dates != []:
 			date_ranges.append((intro_object.pretty_oldest, intro_object.pretty_mrd))
@@ -96,7 +92,6 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	df_together["Date range"] = date_ranges
 	df_together["Total sequences"] = totals
 	df_together["Global lineage"] = global_lins
-	#df_together["Status"] = statuses
 	df_together["Time since last sample (days)"] = last_sampled
 
 	non_country_list = ["Date range", "Total sequences", "Global lineage", "Time since last sample (days)"]
@@ -142,14 +137,8 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 
 	new_header_list = []
 	for header in df_together.columns:
-		if header == "england":
-			new = "England"
-		elif header == "wales":
-			new = "Wales"
-		elif header == "northern_ireland":
+		if header == "Northern_Ireland":
 			new = "Northern Ireland"
-		elif header == "scotland":
-			new = "Scotland"
 		else:
 			new = header
 		
@@ -161,6 +150,84 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	tree_order = list(df_together.index)
 
 	return df_together, tree_order
+
+def make_country_specific_dataframe(lineages, filter_country, most_recent_sample):
+
+	global_lins = []
+	date_ranges = []
+	statuses = []
+	last_sampled_list = []
+	totals = []
+	names = []
+	
+	df_dict = defaultdict(list)
+
+	for lin in lineages:
+		if len(lin.country_specific_taxa) > 5:
+
+			names.append(lin.id)
+			
+			new_dates = []
+			total = 0
+
+			global_lineages = set()
+
+			for tax in lin.country_specific_taxa:
+				global_lineages.add(tax.global_lineage)
+			
+			totals.append(len(lin.country_specific_taxa))
+			global_lins.append(global_lineages)
+
+			if lin.country_specific_dates != []:
+
+				mrd = max(lin.country_specific_dates)
+				oldest = min(lin.country_specific_dates)
+
+				pretty_mrd = mrd.strftime('%b-%d')
+				pretty_oldest = oldest.strftime('%b-%d')
+
+				last_sampled = (most_recent_sample - mrd).days
+				
+				date_ranges.append((pretty_oldest, pretty_mrd))
+				last_sampled_list.append(last_sampled)
+
+			else:
+				date_ranges.append(('NA','NA'))
+				last_sampled.append('NA')
+
+
+	df_dict["Lineage name"] = names	
+	df_dict["Date range"] = date_ranges
+	df_dict["Number of sequences"] = totals
+	df_dict["Global lineage"] = global_lins
+	df_dict["Time since last sample (days)"] = last_sampled_list
+
+	df = pd.DataFrame(df_dict)
+
+	df.fillna(0, inplace=True, )
+
+	new_lineages = []
+	for i in df["Global lineage"]:
+		new_lin = str(i).strip("{").strip("}").replace("'","")
+		new_lineages.append(new_lin)
+	df["Global lineage"] = new_lineages
+
+	new_dates = []
+	for i in df["Date range"]:
+		new_date = str(i).strip("(").strip(")").replace("'","")
+		new_dates.append(new_date)
+	df["Date range"] = new_dates
+
+	df.set_index('Lineage name', inplace=True)
+	df.sort_values(by=["Number of sequences"], ascending=False, inplace=True)
+
+
+	tree_order = list(df.index)
+
+	return df, tree_order
+
+
+	
 
 
 

@@ -1,0 +1,360 @@
+
+# UK lineages summary report
+
+```python, echo=False, name='define_paths'
+import os
+
+#default is current working directory
+#this will come in here and also in the pweave call
+output_directory = "UK_full_report/adm1_reports/England/"
+
+input_directory = ""
+
+metadata_file = "/Users/s1743989/VirusEvolution Dropbox/Verity Hill/nCoV/report_metadata.csv"
+
+name_stem = "England"
+
+week = "2020-05-22"
+
+sequencing_centre = ""
+
+adm1 = "England"
+
+fd = os.path.join(output_directory, "figures")
+
+scripts_directory = "/Users/s1743989/anaconda3/envs/report/lib/python3.7/site-packages/UK_full_report"
+
+adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
+
+```
+
+```python, echo=False,name='import_dependencies'
+import matplotlib.pyplot as plt
+from collections import defaultdict
+from collections import Counter
+import pandas as pd
+import os
+from tabulate import tabulate
+import imp
+import warnings
+warnings.filterwarnings("ignore")
+
+import matplotlib as mpl
+import matplotlib.font_manager as font_manager
+
+font_list = font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeue.ttf" % scripts_directory)
+#font_list = font_manager.fontManager.addfont("%s/utils/helveticaneue/HelveticaNeueBD.ttf" % scripts_directory)
+
+mpl.rcParams['font.family'] = 'helveticaneue'
+mpl.rcParams['font.weight']=1000
+mpl.rcParams['axes.labelweight']=300
+mpl.rcParams['font.size']=20
+
+plt.rcParams.update({'figure.max_open_warning': 0})
+
+import UK_full_report.utils.basic_descriptions as descrip
+import UK_full_report.utils.make_uk_introduction_trees as tree_func
+import UK_full_report.utils.descriptive_plots as dp
+import UK_full_report.utils.case_definitions as case_defs
+import UK_full_report.utils.time_functions as time
+import UK_full_report.utils.data_parsing as parse
+import UK_full_report.utils.lineage_exploration as lin_exp
+import UK_full_report.utils.writing_summary_files as writing
+import UK_full_report.utils.mapping as map
+
+```
+```python, name='prepping things and prelim info',echo=False, results='tex'
+
+sc_dict = {"LIVE":"England", "PHWC":"Wales","CAMB":"England","NORW":"England","GLAS":"Scotland","EDIN":"Scotland","SHEF":"England","EXET":"England","NOTT":"England","PORT":"England","OXON":"England","NORT":"England","NIRE":"Northern_Ireland","LOND":"England"}
+
+if sequencing_centre != "":
+    country = sc_dict[sequencing_centre]
+else:
+    country = adm1
+
+current_date = time.make_current_week(week)
+
+intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons = parse.parse_metadata(metadata_file, sequencing_centre, country)
+singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
+
+if sequencing_centre != "":
+    print("This report gives summaries of UK specific lineages sequenced by " + sequencing_centre + " for week " + week + ". ")
+elif sequencing_centre == "" and country != "":
+    print("This report gives summaries of lineages sampled in " + country + " for week " + week + ". ")
+else:
+    print("This report gives summaries of UK specific lineages for week " + week + ". ")
+
+print("There are time lags due to batching, curation and analysis, the most recently sampled sequence is " + str(most_recent_sample) + ". The analysis (eg time since last sample) is therefore undertaken from this date.")
+
+print("<br/>")
+
+if sequencing_centre != "":
+    print(str(len(taxa)) + " sequences in the UK from the sequencing centre " + sequencing_centre + " have been included in this analysis.")
+elif sequencing_centre == "" and country != "":
+    print(str(len(country_specific_taxa)) + " sequences from " + country + " have been included in this analysis.")
+    print(str(len(country_specific_lineages)) + " lineages have been recorded, " + str(specific_singletons) + " of which only contain one sequence.")
+else:
+    print(str(count) + " sequences in the UK have been included in this analysis.")
+
+    print(str(len(intro_countries)) + " lineages have been recorded, " + str(singletons_count) + " of which only contain one sequence.")
+```
+A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
+It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
+
+```python, name="min and max bounds", echo=False, results='tex'
+if sequencing_centre == "" and country != "":
+     print("The minimum number of introductions is " + str(len(specific_min)) + " and the maximum is " + str(len(specific_max)))
+else:
+    print("The minimum number of introductions is " + str(len(min_intros)) + " and the maximum is " + str(len(max_intros)))
+```
+
+Sequences which were replicates or too error-prone were removed from this analysis.
+
+```python, echo=False, results='tex'
+if sequencing_centre == "" and country != "":
+    print(str(len(specific_smalls)) + " are lineages which were sampled less than five times in " + country + ", and so have been left out of visualisation in the interests of clarity")
+else:
+    print(str(smalls_count) + " are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity")
+```
+
+Furthermore, those sequences which haven't been sampled in the last month are not shown.
+
+```python, echo=False, name='status description', results='tex'
+
+#split = lin_exp.find_splits(intro_alls)
+
+if sequencing_centre == "" and country != "":
+    status_counts, reactivated_lineages, continuining_lineages = lin_exp.describe_lineages(specific_bigs)
+else:
+    status_counts, reactivated_lineages, continuining_lineages = lin_exp.describe_lineages(intro_bigs)
+
+reactivateds = status_counts["Reactivated"]
+actives = status_counts["Reactivated"] + status_counts["Continuing"]
+continuous = status_counts["Continuing"]
+pendings = status_counts["Pending extinction"]
+extincts = status_counts["Extinct"]
+quiets = status_counts["Gone quiet"]
+
+if sequencing_centre == "" and country != "":
+     print("Of the " + str(len(country_specific_lineages) - len(specific_smalls)) + " that remain:")
+else:
+    print("Of the " + str(len(intro_alls) - len(intro_smalls)) + " that remain:")
+
+if pendings > 0:
+    if pendings == 1:
+        print(str(pendings) + " is pending extinction ie last seen three weeks ago.")
+    else:
+        print(str(pendings) + " are pending extinction, ie last seen three weeks ago.")
+
+
+if extincts > 0:
+    if extincts == 1:
+        print(str(extincts) + " has not been seen for more than one month, and so is viewed as extinct, but will continue to be monitored.")
+    else:
+        print(str(extincts) + " have not been seen for more than one month, and so are viewed as extinct, but will continue to be monitored.")
+
+if quiets>0:
+    if quiets == 1:
+        print(str(quiets) + " has gone quiet, ie haven't been seen this week.")
+    else:
+        print(str(quiets) + " lineages have gone quiet, ie haven't been seen this week.")
+
+if reactivateds > 0:
+    if reactivateds == 1:
+        print(str(reactivateds) + " has reactivated.")
+    else:
+        print(str(reactivateds) + " lineages have reactivated.")
+
+if continuous > 0:
+    
+    if continuous == 1:
+        print(str(continuous) + " lineage has been continuously circulating.")
+    else:
+        print(str(continuous) + " lineages have been continuously circulating.")
+
+#if len(split) != 0:
+ #   print(str(len(split)) + " lineages have split since last week. They are removed from further inspection until they have been manually curated.")
+  #  if len(split) <= 10:
+   #     print("The split lineages are: ")
+    #    for i in split:
+     #       print(i.id)
+    #else:
+     #   print("There are more than ten split lineages, so please see the summary files for more information.")
+    
+    #for this week this is ok
+    #for lin in split:
+     #   intro_alls.remove(lin)
+      #  if lin in intro_bigs:
+       #     intro_bigs.remove(lin)
+
+```
+
+The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
+
+Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
+
+```python, name="print lineage version", echo=False, results='tex'
+print("The global lineages are correct as of the data release on " + lineage_version)
+```
+
+It is written to "summary_files" as "lineage_summary.tsv" for further use, and the full list of lineages is available in the same directory as "all_lineages.csv"
+
+```python, name="dataframe fun", echo=False, results='tex'
+if sequencing_centre == "" and country != "":
+
+    dataframe,tree_order = descrip.make_country_specific_dataframe(country_specific_lineages,country, most_recent_sample)
+
+else:
+    intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
+    dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
+
+print(dataframe.to_markdown())
+```
+
+These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
+
+The raw data for this bar chart are in the table above. 
+
+```python, name="stacked_bars_by_country", echo=False, include=False
+
+#df_counts, df_thinned, df_acctrans_counts = dp.make_plotting_dfs(intro_country_counts, intro_object_dict) #these are never actually used any more
+
+dp.plot_bars(intro_bigs, country, sequencing_centre)
+
+```
+
+```python, name="hack_figure", echo=False, results='raw'
+print("![](" + fd + "/" + name_stem + "_stacked_bars_by_country_1.png)\\")
+```
+
+The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
+The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
+
+
+```python,name="geog_plot", echo=False, include=False 
+y_dict, week_list = dp.prep_geog_data(intro_bigs, country, sequencing_centre)
+#dp.stacked_geog_plot(y_dict, week_list, False)
+dp.plot_ridge_plot(week_list, y_dict)
+raw_geog = dp.make_raw_data_geog_plot(y_dict, week_list)
+```
+
+```python,name="hack",echo=False,results='raw'
+print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
+print(raw_geog.to_markdown())
+```
+
+The date of first sequence in the cluster is shown below for every cluster with date information. 
+
+```python, name="clarifying_text", echo=False, results='tex'
+if sequencing_centre == "" and country != "":
+    print("NB the lineage may have started anywhere in the UK, but has been recorded at least once in " + country)
+```
+
+```python,name="firsts_plot", echo=False, include=False
+if sequencing_centre == "" and country != "":
+    multi, single = dp.plot_starts(country_specific_lineages)
+    starts_raw = dp.raw_data_starts(single, multi)
+else:
+    multi, single = dp.plot_starts(intro_alls)
+    starts_raw = dp.raw_data_starts(single, multi)
+```
+```python,name="hack",echo=False,results='raw'
+print("![](" + fd + "/" + name_stem + "_firsts_plot_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
+print(starts_raw.to_markdown())
+```
+For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
+
+```python, name="seqs_over_time", echo=False, include=False
+if sequencing_centre == "" and country != "":
+    date_counts = dp.plot_sequences_over_time(country_specific_taxa, country, sequencing_centre)
+    raw_seqs_over_time = dp.raw_data_seqs_over_time(date_counts)
+else:
+    date_counts = dp.plot_sequences_over_time(taxa, country, sequencing_centre)
+    raw_seqs_over_time = dp.raw_data_seqs_over_time(date_counts)
+```
+```python, name="hack", echo=False, results='raw'
+print("![](" + fd + "/" + name_stem + "_seqs_over_time_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
+print(raw_seqs_over_time.to_markdown())
+```
+
+These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
+The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
+The raw data has been written to a summary file.
+
+
+```python, name="make_timeline", echo=False, results='tex', include=False
+dp.make_timeline(intro_bigs, sequencing_centre, country)
+timeline_df = dp.raw_data_timeline(intro_bigs)
+```
+
+```python, name="hack2", echo=False, results='raw'
+print("![](" + fd + "/" + name_stem + "_make_timeline_1.png)\\")
+```
+
+The map below shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
+
+```python, name="map", include=False, results='tex', echo=False
+
+uk_json = "%s/utils/mapping_files/gadm36_GBR_2.json" % scripts_directory
+channels = "%s/utils/mapping_files/channel_islands.json" % scripts_directory
+NI_json = "%s/utils/mapping_files/NI_counties.geojson" % scripts_directory
+
+input_geojsons = [uk_json, channels, NI_json]
+
+map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country)
+
+if type(map_output) != bool:
+    new_uncleans, mapping_data = map_output
+    no_seqs = False
+else:
+    no_seqs = map_output
+```
+```python, name="hack3", echo=False, results='raw'
+if not no_seqs:
+    print("![](" + fd + "/" + name_stem + "_map_1.png)\\")
+```
+```python, name="raw", echo=False,results='tex'
+if not no_seqs:
+    print(mapping_data.to_markdown())
+```
+
+```python, name="uncleans", echo=False, results='tex'
+if not no_seqs:
+    if new_uncleans:
+        print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
+```
+
+
+
+
+Other results modules for UK lineage analysis can be added in here if required.
+
+\pagebreak
+```python, name="appendix", echo=False, results='tex'
+if sequencing_centre == "" and country == "":
+
+    print("## Appendix")
+
+    print("The plot below shows the number of sequences from each country that don't have specific enough location data to plot on the map.")
+```
+
+```python, name="hack4", echo=False, results='raw'
+if sequencing_centre == "" and country == "":
+    print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
+```
+
+```python, echo=False, fig=False, name="trees", include=True 
+if input_directory != "":
+    print("Trees and associated pie charts have been made and put into the figures folder")
+    intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)
+```
+
+```python,name="producing summary files", echo=False
+writing.write_summary_files(output_directory, dataframe, omitted, week, intro_alls, timeline_df)
+```

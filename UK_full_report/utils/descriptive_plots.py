@@ -605,22 +605,22 @@ def make_diversity_plot(intro_alls, taxa_list):
         elif country == "Northern_Ireland":
             outer_dict = NI_div
     
-    for week in total_epiweeks:
-        inner_dict = {}
-        for tax in taxa_list:
-            if tax.epiweek == week and tax.country == country:
+        for week in total_epiweeks:
+            inner_dict = {}
+            for tax in taxa_list:
+                if tax.epiweek == week and tax.country == country:
 
-                outer_key = week
-                inner_key = tax.introduction
+                    outer_key = week
+                    inner_key = tax.introduction
 
-                if inner_key in inner_dict.keys():
-                    inner_dict[inner_key] += 1
-                else:
-                    inner_dict[inner_key] = 0
-                    inner_dict[inner_key] += 1
+                    if inner_key in inner_dict.keys():
+                        inner_dict[inner_key] += 1
+                    else:
+                        inner_dict[inner_key] = 0
+                        inner_dict[inner_key] += 1
 
 
-                outer_dict[outer_key] = inner_dict
+                    outer_dict[outer_key] = inner_dict
 
     england_sorted = OrderedDict(sorted(England_div.items()))
     wales_sorted = OrderedDict(sorted(Wales_div.items()))
@@ -688,7 +688,6 @@ def tidy_div_df(div_df):
         if row["Adm1"] == "England":
             england_dict["Week"].append(row["Dates"])
             england_dict["England"].append(row["Shannon_diversity"])
-            
             
         if row["Adm1"] == "Wales":
             w_dict["Wales"].append(row["Shannon_diversity"])

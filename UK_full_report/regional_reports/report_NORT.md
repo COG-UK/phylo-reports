@@ -8,25 +8,24 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by NORT for week 2020-05-22. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-03. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of UK specific lineages sequenced by NORT for week 2020-05-29. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-14. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-51 sequences in the UK from the sequencing centre NORT have been included in this analysis.
-38 lineages have been recorded, 34 of which only contain one sequence.
+73 sequences in the UK from the sequencing centre NORT have been included in this analysis.
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
 
 
-The minimum number of introductions is 5185 and the maximum is 8310
+The minimum number of introductions is 6130 and the maximum is 9084
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-37 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+47 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
@@ -37,7 +36,7 @@ Of the 1 that remain:
 1 lineage has been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
+The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -52,7 +51,7 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|
-| UK5            | 10 (100.0%) | Apr-10, May-03 |                10 | B.1.1.1          |                               0 |
+| UK5            | 19 (100.0%) | Apr-10, May-14 |                19 | B.1.1.1, B.1.1   |                               0 |
 
 
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -83,12 +82,30 @@ The raw data for the plot is shown below it, with each column representing a lin
 | Week commencing   |   UK5 |
 |:------------------|------:|
 | 2020-04-05        |     1 |
+| 2020-04-12        |     1 |
 | 2020-04-19        |     1 |
 | 2020-04-26        |     1 |
 | 2020-05-03        |     1 |
+| 2020-05-10        |     1 |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
+
+
+
+
 
 
 
@@ -121,9 +138,17 @@ The date of first sequence in the cluster is shown below for every cluster with 
 | 2020-04-09 |                            3 |                                0 |       3 |
 | 2020-04-10 |                            2 |                                1 |       3 |
 | 2020-04-11 |                            2 |                                0 |       2 |
-| 2020-04-22 |                            1 |                                0 |       1 |
+| 2020-04-12 |                            2 |                                0 |       2 |
+| 2020-04-14 |                            1 |                                0 |       1 |
+| 2020-04-15 |                            1 |                                0 |       1 |
+| 2020-04-22 |                            0 |                                1 |       1 |
+| 2020-04-23 |                            1 |                                0 |       1 |
 | 2020-04-29 |                            1 |                                0 |       1 |
 | 2020-04-30 |                            1 |                                0 |       1 |
+| 2020-05-03 |                            1 |                                0 |       1 |
+| 2020-05-04 |                            1 |                                1 |       2 |
+| 2020-05-07 |                            1 |                                0 |       1 |
+| 2020-05-09 |                            0 |                                1 |       1 |
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
@@ -157,9 +182,12 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | 2020-04-08 |         1 |
 | 2020-04-09 |         3 |
 | 2020-04-10 |         3 |
-| 2020-04-11 |         2 |
+| 2020-04-11 |         3 |
+| 2020-04-12 |         3 |
+| 2020-04-14 |         1 |
+| 2020-04-15 |         1 |
 | 2020-04-22 |         1 |
-| 2020-04-23 |         1 |
+| 2020-04-23 |         2 |
 | 2020-04-24 |         1 |
 | 2020-04-25 |         1 |
 | 2020-04-26 |         1 |
@@ -168,7 +196,16 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | 2020-04-30 |         1 |
 | 2020-05-01 |         1 |
 | 2020-05-02 |         1 |
-| 2020-05-03 |         2 |
+| 2020-05-03 |         3 |
+| 2020-05-04 |         3 |
+| 2020-05-05 |         1 |
+| 2020-05-06 |         1 |
+| 2020-05-07 |         2 |
+| 2020-05-08 |         1 |
+| 2020-05-09 |         2 |
+| 2020-05-10 |         2 |
+| 2020-05-13 |         1 |
+| 2020-05-14 |         1 |
 
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
@@ -189,13 +226,20 @@ The map below shows the number of sequences sampled in each admin2 region in the
 
 
 
-There are no sequences with geographical information for this sequencing centre
+All sequences have been assigned clean adm2 data this week.
 
 
 
+![](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_map_1.png)\
 
 
 
+| Admin2          | Country   |   Number of sequences | Sequence group   |
+|:----------------|:----------|----------------------:|:-----------------|
+| CUMBRIA         | England   |                    22 | 10-50            |
+| DURHAM          | England   |                     2 | 1-10             |
+| NORTH YORKSHIRE | England   |                    48 | 10-50            |
+| TYNE AND WEAR   | England   |                     1 | 1-10             |
 
 
 

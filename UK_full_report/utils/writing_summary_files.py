@@ -52,14 +52,7 @@ def write_omitteds(omitted, output_dir):
     fw.close()
 
 
-def write_summary_files(overall_output_dir, dataframe, omitted, week, intro_alls, timeline_data):
-
-    output_dir = os.path.join(overall_output_dir, "summary_files")
-
-    try:
-        os.mkdir(output_dir)
-    except FileExistsError:
-        pass
+def write_summary_files(output_dir, dataframe, omitted, week, intro_alls, timeline_data):
 
     write_summary_table(dataframe, output_dir)
     write_omitteds(omitted, output_dir)

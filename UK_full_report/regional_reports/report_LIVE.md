@@ -8,39 +8,37 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by LIVE for week 2020-05-22. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-05. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of UK specific lineages sequenced by LIVE for week 2020-05-29. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-15. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-536 sequences in the UK from the sequencing centre LIVE have been included in this analysis.
-177 lineages have been recorded, 123 of which only contain one sequence.
+545 sequences in the UK from the sequencing centre LIVE have been included in this analysis.
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
 
 
-The minimum number of introductions is 5185 and the maximum is 8310
+The minimum number of introductions is 6130 and the maximum is 9084
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-154 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+164 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 23 that remain:
-6 are pending extinction, ie last seen three weeks ago.
-7 lineages have gone quiet, ie haven't been seen this week.
-3 lineages have reactivated.
-7 lineages have been continuously circulating.
+Of the 17 that remain:
+11 are pending extinction, ie last seen three weeks ago.
+4 lineages have gone quiet, ie haven't been seen this week.
+2 lineages have been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
+The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -55,29 +53,27 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|
-| UK5            | 69 (100.0%) | Mar-21, May-05 |                69 | B.1.1.1          |                               0 |
-| UK36           | 28 (100.0%) | Mar-29, May-03 |                28 | B.1              |                               2 |
-| UK307          | 19 (100.0%) | Mar-28, May-04 |                19 | B.1.1            |                               1 |
-| UK193          | 17 (100.0%) | Apr-07, May-01 |                17 | B.1.1            |                               4 |
-| UK140          | 17 (100.0%) | Mar-23, Apr-25 |                17 | B.1.1            |                              10 |
-| UK236          | 14 (100.0%) | Mar-27, Apr-22 |                14 | B.1.1            |                              13 |
-| UK249          | 13 (100.0%) | Apr-01, Apr-25 |                13 | B.1.1            |                              10 |
-| UK274          | 13 (100.0%) | Mar-23, Apr-15 |                13 | B.3              |                              20 |
-| UK149          | 13 (100.0%) | Mar-23, Apr-22 |                13 | B.1.1            |                              13 |
-| UK269          | 13 (100.0%) | Apr-03, May-03 |                13 | B.1.1            |                               2 |
-| UK122          | 10 (100.0%) | Apr-16, Apr-28 |                10 | B.1              |                               7 |
-| UK5700         | 10 (100.0%) | Mar-24, Apr-27 |                10 | B.1              |                               8 |
-| UK186          | 9 (100.0%)  | Apr-08, May-05 |                 9 | B                |                               0 |
-| UK18           | 9 (100.0%)  | Mar-27, Apr-19 |                 9 | B.1.1.7          |                              16 |
-| UK225          | 9 (100.0%)  | Mar-29, Apr-15 |                 9 | B.2, B.2.2       |                              20 |
-| UK182          | 8 (100.0%)  | Mar-29, May-02 |                 8 | B.1.1            |                               3 |
-| UK131          | 7 (100.0%)  | Mar-24, Apr-14 |                 7 | B.15             |                              21 |
-| UK390          | 6 (100.0%)  | Mar-29, May-01 |                 6 | B.1.5            |                               4 |
-| UK110          | 6 (100.0%)  | Mar-24, Apr-29 |                 6 | B.1              |                               6 |
-| UK40           | 6 (100.0%)  | Mar-31, Apr-20 |                 6 | B.16             |                              15 |
-| UK542          | 6 (100.0%)  | Apr-01, Apr-14 |                 6 | B.1              |                              21 |
-| UK435          | 6 (100.0%)  | Apr-03, Apr-23 |                 6 | B.1.5            |                              12 |
-| UK192          | 6 (100.0%)  | Apr-03, May-01 |                 6 | B.1.1            |                               4 |
+| UK5            | 71 (100.0%) | Mar-21, May-07 |                71 | B.1.1.1          |                               8 |
+| UK36           | 30 (100.0%) | Mar-29, May-12 |                30 | B.1              |                               3 |
+| UK293          | 20 (100.0%) | Mar-24, Apr-28 |                20 | B.1              |                              17 |
+| UK307          | 19 (100.0%) | Mar-28, May-04 |                19 | B.1.1            |                              11 |
+| UK632          | 17 (100.0%) | Mar-23, Apr-25 |                17 | B.1.1            |                              20 |
+| UK193          | 17 (100.0%) | Apr-07, May-01 |                17 | B.1.1            |                              14 |
+| UK236          | 14 (100.0%) | Mar-27, Apr-22 |                14 | B.1.1            |                              23 |
+| UK249          | 13 (100.0%) | Apr-01, Apr-25 |                13 | B.1.1            |                              20 |
+| UK92           | 13 (100.0%) | Mar-23, Apr-22 |                13 | B.1.1            |                              23 |
+| UK274          | 13 (100.0%) | Mar-23, Apr-15 |                13 | B.3              |                              30 |
+| UK186          | 12 (100.0%) | Apr-08, May-15 |                12 | B                |                               0 |
+| UK269          | 11 (100.0%) | Apr-03, May-06 |                11 | B.1.1            |                               9 |
+| UK5322         | 8 (100.0%)  | Apr-01, May-01 |                 8 | B.1.1            |                              14 |
+| UK182          | 8 (100.0%)  | Mar-29, May-02 |                 8 | B.1.1            |                              13 |
+| UK5177         | 7 (100.0%)  | Mar-27, Apr-11 |                 7 | B.1.1.7          |                              34 |
+| UK131          | 7 (100.0%)  | Mar-24, Apr-14 |                 7 | B.15             |                              31 |
+| UK542          | 6 (100.0%)  | Apr-01, Apr-14 |                 6 | B.1              |                              31 |
+| UK110          | 6 (100.0%)  | Mar-24, Apr-29 |                 6 | B.1              |                              16 |
+| UK390          | 6 (100.0%)  | Mar-29, May-01 |                 6 | B.1.5            |                              14 |
+| UK435          | 6 (100.0%)  | Apr-03, Apr-23 |                 6 | B.1.5            |                              22 |
+| UK40           | 6 (100.0%)  | Mar-31, Apr-20 |                 6 | B.16             |                              25 |
 
 
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -105,19 +101,36 @@ The raw data for the plot is shown below it, with each column representing a lin
 
 
 
-| Week commencing   |   UK5 |   UK36 |   UK307 |   UK140 |   UK193 |   UK236 |   UK274 |   UK149 |   UK249 |   UK269 |
-|:------------------|------:|-------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
-| 2020-03-15        |     1 |      0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |
-| 2020-03-22        |     1 |      0 |       1 |       1 |       0 |       1 |       1 |       1 |       0 |       0 |
-| 2020-03-29        |     1 |      1 |       1 |       1 |       0 |       1 |       1 |       1 |       1 |       1 |
-| 2020-04-05        |     1 |      1 |       1 |       1 |       1 |       1 |       1 |       1 |       1 |       1 |
-| 2020-04-12        |     1 |      1 |       1 |       1 |       1 |       0 |       1 |       1 |       1 |       1 |
-| 2020-04-19        |     1 |      1 |       1 |       1 |       1 |       1 |       0 |       1 |       1 |       1 |
-| 2020-04-26        |     1 |      1 |       0 |       0 |       1 |       0 |       0 |       0 |       0 |       1 |
-| 2020-05-03        |     1 |      1 |       1 |       0 |       0 |       0 |       0 |       0 |       0 |       1 |
+| Week commencing   |   UK5 |   UK36 |   UK293 |   UK307 |   UK632 |   UK193 |   UK236 |   UK92 |   UK249 |   UK186 |
+|:------------------|------:|-------:|--------:|--------:|--------:|--------:|--------:|-------:|--------:|--------:|
+| 2020-03-15        |     1 |      0 |       0 |       0 |       0 |       0 |       0 |      0 |       0 |       0 |
+| 2020-03-22        |     1 |      0 |       1 |       1 |       1 |       0 |       1 |      1 |       0 |       0 |
+| 2020-03-29        |     1 |      1 |       1 |       1 |       1 |       0 |       1 |      1 |       1 |       0 |
+| 2020-04-05        |     1 |      1 |       1 |       1 |       1 |       1 |       1 |      1 |       1 |       1 |
+| 2020-04-12        |     1 |      1 |       1 |       1 |       0 |       1 |       0 |      1 |       1 |       1 |
+| 2020-04-19        |     1 |      1 |       1 |       1 |       1 |       1 |       1 |      1 |       1 |       1 |
+| 2020-04-26        |     1 |      1 |       1 |       0 |       0 |       1 |       0 |      0 |       0 |       1 |
+| 2020-05-03        |     1 |      1 |       0 |       1 |       0 |       0 |       0 |      0 |       0 |       1 |
+| 2020-05-10        |     0 |      1 |       0 |       0 |       0 |       0 |       0 |      0 |       0 |       1 |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
+
+
+
+
 
 
 
@@ -131,40 +144,42 @@ The date of first sequence in the cluster is shown below for every cluster with 
 |:-----------|-----------------------------:|---------------------------------:|--------:|
 | 2020-03-20 |                            1 |                                0 |       1 |
 | 2020-03-21 |                            2 |                                1 |       3 |
-| 2020-03-23 |                            3 |                                3 |       6 |
-| 2020-03-24 |                            3 |                                5 |       8 |
-| 2020-03-25 |                            3 |                                3 |       6 |
+| 2020-03-23 |                            3 |                                4 |       7 |
+| 2020-03-24 |                            4 |                                4 |       8 |
+| 2020-03-25 |                            4 |                                2 |       6 |
 | 2020-03-26 |                            2 |                                1 |       3 |
 | 2020-03-27 |                            1 |                                4 |       5 |
 | 2020-03-28 |                            1 |                                1 |       2 |
-| 2020-03-29 |                            2 |                                4 |       6 |
+| 2020-03-29 |                            3 |                                3 |       6 |
 | 2020-03-30 |                            4 |                                2 |       6 |
-| 2020-03-31 |                            1 |                                2 |       3 |
-| 2020-04-01 |                            4 |                                2 |       6 |
+| 2020-03-31 |                            2 |                                2 |       4 |
+| 2020-04-01 |                            3 |                                3 |       6 |
 | 2020-04-02 |                            1 |                                2 |       3 |
-| 2020-04-03 |                           11 |                                7 |      18 |
-| 2020-04-04 |                            2 |                                1 |       3 |
-| 2020-04-05 |                            4 |                                0 |       4 |
+| 2020-04-03 |                           12 |                                6 |      18 |
+| 2020-04-04 |                            2 |                                2 |       4 |
+| 2020-04-05 |                            5 |                                1 |       6 |
 | 2020-04-06 |                            2 |                                0 |       2 |
-| 2020-04-07 |                            8 |                                1 |       9 |
+| 2020-04-07 |                            7 |                                1 |       8 |
 | 2020-04-08 |                            8 |                                3 |      11 |
-| 2020-04-09 |                            8 |                                5 |      13 |
+| 2020-04-09 |                            6 |                                6 |      12 |
 | 2020-04-10 |                            7 |                                0 |       7 |
 | 2020-04-11 |                            5 |                                0 |       5 |
 | 2020-04-12 |                            5 |                                0 |       5 |
 | 2020-04-13 |                            2 |                                0 |       2 |
 | 2020-04-14 |                            2 |                                2 |       4 |
-| 2020-04-16 |                            3 |                                2 |       5 |
-| 2020-04-17 |                            4 |                                1 |       5 |
+| 2020-04-15 |                            1 |                                0 |       1 |
+| 2020-04-16 |                            3 |                                1 |       4 |
+| 2020-04-17 |                            6 |                                0 |       6 |
 | 2020-04-18 |                            3 |                                1 |       4 |
-| 2020-04-19 |                            4 |                                0 |       4 |
+| 2020-04-19 |                            5 |                                0 |       5 |
 | 2020-04-20 |                            1 |                                0 |       1 |
-| 2020-04-21 |                            5 |                                0 |       5 |
+| 2020-04-21 |                            5 |                                1 |       6 |
 | 2020-04-22 |                            1 |                                0 |       1 |
 | 2020-04-23 |                            1 |                                0 |       1 |
 | 2020-04-25 |                            2 |                                0 |       2 |
+| 2020-04-26 |                            1 |                                0 |       1 |
 | 2020-04-27 |                            2 |                                0 |       2 |
-| 2020-04-29 |                            2 |                                0 |       2 |
+| 2020-04-29 |                            3 |                                0 |       3 |
 | 2020-05-01 |                            1 |                                1 |       2 |
 | 2020-05-02 |                            1 |                                0 |       1 |
 | 2020-05-03 |                            1 |                                0 |       1 |
@@ -228,6 +243,12 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | 2020-05-03 |         4 |
 | 2020-05-04 |         2 |
 | 2020-05-05 |         2 |
+| 2020-05-06 |         1 |
+| 2020-05-07 |         3 |
+| 2020-05-09 |         1 |
+| 2020-05-12 |         2 |
+| 2020-05-13 |         1 |
+| 2020-05-15 |         1 |
 
 
 These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.

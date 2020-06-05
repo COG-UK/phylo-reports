@@ -14,6 +14,7 @@ There are time lags due to batching, curation and analysis, the most recently sa
 2520 sequences from Scotland have been included in this analysis.
 725 lineages have been recorded, 554 of which only contain one sequence.
 
+
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
@@ -41,9 +42,13 @@ Of the 61 that remain:
 6 lineages have been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
+
+"Activity score" is calculated by taking the average gap between sampling for each lineage, and dividing it by the number of days since the lineage was last sampled. Therefore the higher the number, the more active the lineage is.
+If the score is above 1, then it has been sampled *more* recently than expected given its average gap size. We might interpret this as an increase in activity.
+If the score is below 1, it has been sampled *less* recently than expect given its average gap size, so we might interpret this as a decrease in activity.
 
 
 
@@ -54,94 +59,174 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 
 
-| Lineage name   | Date range     |   Number of sequences | Global lineage   |   Time since last sample (days) |
-|:---------------|:---------------|----------------------:|:-----------------|--------------------------------:|
-| UK36           | Mar-20, May-11 |                   216 | B.1              |                              13 |
-| UK52           | Mar-16, May-12 |                   175 | B.1.p73          |                              12 |
-| UK40           | Mar-13, May-12 |                   126 | B.16, B          |                              12 |
-| UK2464         | Mar-19, May-12 |                    92 | B.1.p11          |                              12 |
-| UK39           | Mar-12, May-10 |                    80 | A.2              |                              14 |
-| UK5            | Mar-13, May-18 |                    70 | B.1.1.1          |                               6 |
-| UK175          | Mar-22, May-04 |                    67 | B.1              |                              20 |
-| UK225          | Mar-14, Apr-07 |                    50 | B.2              |                              47 |
-| UK88           | Mar-22, May-12 |                    40 | B.1              |                              12 |
-| UK44           | Mar-17, May-01 |                    39 | B                |                              23 |
-| UK5098         | Mar-21, May-09 |                    36 | B.1.p73          |                              15 |
-| UK2200         | Mar-23, May-05 |                    32 | B.1.5, B.1.5.6   |                              19 |
-| UK43           | Mar-23, Apr-26 |                    28 | A.5              |                              28 |
-| UK82           | Mar-25, May-06 |                    27 | B.1.1, B.1.1.p11 |                              18 |
-| UK296          | Apr-08, May-13 |                    25 | B.1.5            |                              11 |
-| UK14           | Mar-14, Apr-27 |                    25 | B                |                              27 |
-| UK21           | Mar-18, May-23 |                    24 | B.1.40           |                               1 |
-| UK53           | Apr-16, May-21 |                    24 | B.1.1.4          |                               3 |
-| UK5668         | Mar-13, May-09 |                    21 | B.2              |                              15 |
-| UK87           | Mar-13, Apr-20 |                    20 | B.1.70           |                              34 |
-| UK150          | Mar-21, Apr-22 |                    19 | B.1.1.p12        |                              32 |
-| UK461          | Apr-18, May-19 |                    19 | B.1.5            |                               5 |
-| UK304          | Apr-16, May-20 |                    18 | B.1.1.14         |                               4 |
-| UK502          | Mar-06, Mar-30 |                    18 | B.1.69           |                              55 |
-| UK12           | Apr-12, May-13 |                    18 | B.1.p11          |                              11 |
-| UK66           | Mar-28, May-20 |                    16 | B.1.1.8          |                               4 |
-| UK264          | Mar-29, Apr-22 |                    15 | B.1.p11          |                              32 |
-| UK5669         | Mar-24, May-07 |                    15 | B.2              |                              17 |
-| UK370          | Apr-06, Apr-27 |                    14 | B.1.1.10         |                              27 |
-| UK156          | Mar-18, Apr-18 |                    14 | B.1.71           |                              36 |
-| UK558          | Apr-24, May-22 |                    13 | B.1.5            |                               2 |
-| UK160          | Mar-31, May-02 |                    12 | B.1.1            |                              22 |
-| UK261          | Mar-15, Apr-08 |                    12 | A.3              |                              46 |
-| UK73           | Apr-01, May-10 |                    12 | B.1.p11          |                              14 |
-| UK499          | Apr-24, May-15 |                    12 | B.1.5            |                               9 |
-| UK436          | Apr-13, May-14 |                    11 | B.1.5            |                              10 |
-| UK1539         | May-09, May-24 |                    11 | B.1.5            |                               0 |
-| UK562          | Mar-27, Apr-25 |                    11 | B.1              |                              29 |
-| UK100          | Apr-06, May-12 |                    11 | B.1.5            |                              12 |
-| UK414          | Apr-05, Apr-22 |                    10 | B.1.5            |                              32 |
-| UK137          | Mar-10, Mar-31 |                    10 | B.1.1            |                              54 |
-| UK1548         | Apr-13, Apr-24 |                     9 | B.1.5, B.1.5.5   |                              30 |
-| UK72           | Mar-14, Apr-01 |                     7 | B.10             |                              53 |
-| UK699          | Mar-23, Apr-24 |                     7 | B.1.5            |                              30 |
-| UK560          | Apr-15, Apr-27 |                     7 | B.1.5            |                              27 |
-| UK434          | Apr-20, May-03 |                     7 | B.1.5            |                              21 |
-| UK554          | Apr-23, May-05 |                     7 | B.1.5            |                              19 |
-| UK133          | Mar-22, Apr-25 |                     7 | B.1              |                              29 |
-| UK320          | Mar-24, Apr-21 |                     7 | B.1.5, B.1       |                              33 |
-| UK701          | Mar-03, Mar-27 |                     7 | B.1              |                              58 |
-| UK282          | Mar-23, Apr-22 |                     7 | B.1.1            |                              32 |
-| UK271          | Apr-15, Apr-26 |                     7 | B.1              |                              28 |
-| UK58           | Mar-12, Apr-07 |                     7 | B.1              |                              47 |
-| UK38           | Mar-16, May-01 |                     7 | B.2.1            |                              23 |
-| UK51           | Mar-26, Apr-13 |                     6 | B.1.36           |                              41 |
-| UK870          | Mar-18, Mar-25 |                     6 | B.1.5            |                              60 |
-| UK198          | Mar-18, Apr-15 |                     6 | A, B.1.5         |                              39 |
-| UK1667         | Mar-31, Apr-28 |                     6 | B.1.p9           |                              26 |
-| UK93           | Mar-21, May-06 |                     6 | B.1.1            |                              18 |
-| UK5352         | Apr-22, Apr-27 |                     6 | B.1.1.14         |                              27 |
-| UK555          | Apr-13, Apr-25 |                     6 | B.1.5            |                              29 |
+| Lineage name   | Date range     |   Number of sequences | Global lineage   |   Time since last sample (days) |   Activity score |
+|:---------------|:---------------|----------------------:|:-----------------|--------------------------------:|-----------------:|
+| UK36           | Mar-20, May-11 |                   216 | B.1              |                              13 |           0.0153 |
+| UK52           | Mar-16, May-12 |                   175 | B.1.p73          |                              12 |           0.0268 |
+| UK40           | Mar-13, May-12 |                   126 | B, B.16          |                              12 |           0.0376 |
+| UK2464         | Mar-19, May-12 |                    92 | B.1.p11          |                              12 |           0.0133 |
+| UK39           | Mar-12, May-10 |                    80 | A.2              |                              14 |           0.0533 |
+| UK5            | Mar-13, May-18 |                    70 | B.1.1.1          |                               6 |           0.0334 |
+| UK175          | Mar-22, May-04 |                    67 | B.1              |                              20 |           0.0326 |
+| UK225          | Mar-14, Apr-07 |                    50 | B.2              |                              47 |           0.0112 |
+| UK88           | Mar-22, May-12 |                    40 | B.1              |                              12 |           0.1062 |
+| UK44           | Mar-17, May-01 |                    39 | B                |                              23 |           0.0502 |
 
 
-These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
+These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
 The raw data for this bar chart are in the table above. 
 
 
+![Number of sequences sampled in a lineage by country](UK_full_report/adm1_reports/Scotland/figures/Scotland_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+
+
+Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
+This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
+
+
+![Lag since the most recent sequence from each sequencing centre to most current date](UK_full_report/adm1_reports/Scotland/figures/Scotland_lag_fig_1.png){#lag_fig }
+
+
+The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
+
+
+
+![Lineages by number of adm2 regions present by epiweek](UK_full_report/adm1_reports/Scotland/figures/Scotland_geog_plot_1.png){#geog_plot }
 
 
 
 
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_stacked_bars_by_country_1.png)\
-
-
-The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
-The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
 
 
 
+These lineages are shown on the timeline. Each line represents the length of the cluster, from oldest to most recent sampling date.
+The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
+The raw data has been written to a summary file.
 
 
 
 
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_geog_plot_1.png)\
+![Timeline of lineages, sized by number of sequences from each country.](UK_full_report/adm1_reports/Scotland/figures/Scotland_make_timeline_1.png){#make_timeline }
 
+
+The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
+
+
+
+NB the lineage may have started anywhere in the UK, but has been recorded at least once in Scotland
+
+
+
+![Lineage starts per week, split by singletons and non-singletons](UK_full_report/adm1_reports/Scotland/figures/Scotland_firsts_plot_1.png){#firsts_plot }
+
+For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
+
+
+![Sequences taken on each day by country](UK_full_report/adm1_reports/Scotland/figures/Scotland_seqs_over_time_1.png){#seqs_over_time }
+
+
+The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
+
+
+
+![Map showing the number of sequences sampled by adm2 region](UK_full_report/adm1_reports/Scotland/figures/Scotland_map_1.png){#map }
+
+
+
+
+There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.
+
+
+
+
+
+Other results modules for UK lineage analysis can be added in here if required.
+
+\pagebreak
+
+## Appendix
+
+
+
+
+
+
+
+
+
+Below are the raw data tables for each of the figures in the report.
+
+**Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
+
+
+| Lineage name   | Date range     |   Number of sequences | Global lineage   |   Time since last sample (days) | Activity score   |
+|:---------------|:---------------|----------------------:|:-----------------|--------------------------------:|:-----------------|
+| UK36           | Mar-20, May-11 |                   216 | B.1              |                              13 | 0.0153           |
+| UK52           | Mar-16, May-12 |                   175 | B.1.p73          |                              12 | 0.0268           |
+| UK40           | Mar-13, May-12 |                   126 | B, B.16          |                              12 | 0.0376           |
+| UK2464         | Mar-19, May-12 |                    92 | B.1.p11          |                              12 | 0.0133           |
+| UK39           | Mar-12, May-10 |                    80 | A.2              |                              14 | 0.0533           |
+| UK5            | Mar-13, May-18 |                    70 | B.1.1.1          |                               6 | 0.0334           |
+| UK175          | Mar-22, May-04 |                    67 | B.1              |                              20 | 0.0326           |
+| UK225          | Mar-14, Apr-07 |                    50 | B.2              |                              47 | 0.0112           |
+| UK88           | Mar-22, May-12 |                    40 | B.1              |                              12 | 0.1062           |
+| UK44           | Mar-17, May-01 |                    39 | B                |                              23 | 0.0502           |
+| UK5098         | Mar-21, May-09 |                    36 | B.1.p73          |                              15 | 0.0907           |
+| UK2200         | Mar-23, May-05 |                    32 | B.1.5, B.1.5.6   |                              19 | 0.0396           |
+| UK43           | Mar-23, Apr-26 |                    28 | A.5              |                              28 | 0.0574           |
+| UK82           | Mar-25, May-06 |                    27 | B.1.1.p11, B.1.1 |                              18 | 0.0864           |
+| UK296          | Apr-08, May-13 |                    25 | B.1.5            |                              11 | 0.1326           |
+| UK14           | Mar-14, Apr-27 |                    25 | B                |                              27 | 0.0645           |
+| UK21           | Mar-18, May-23 |                    24 | B.1.40           |                               1 | 2.8696           |
+| UK53           | Apr-16, May-21 |                    24 | B.1.1.4          |                               3 | 0.5816           |
+| UK5668         | Mar-13, May-09 |                    21 | B.2              |                              15 | 0.19             |
+| UK87           | Mar-13, Apr-20 |                    20 | B.1.70           |                              34 | 0.0588           |
+| UK150          | Mar-21, Apr-22 |                    19 | B.1.1.p12        |                              32 | 0.0556           |
+| UK461          | Apr-18, May-19 |                    19 | B.1.5            |                               5 | 0.3444           |
+| UK304          | Apr-16, May-20 |                    18 | B.1.1.14         |                               4 | 0.5              |
+| UK502          | Mar-06, Mar-30 |                    18 | B.1.69           |                              55 | 0.0257           |
+| UK12           | Apr-12, May-13 |                    18 | B.1.p11          |                              11 | 0.1044           |
+| UK66           | Mar-28, May-20 |                    16 | B.1.1.8          |                               4 | 0.1875           |
+| UK264          | Mar-29, Apr-22 |                    15 | B.1.p11          |                              32 | 0.0536           |
+| UK5669         | Mar-24, May-07 |                    15 | B.2              |                              17 | 0.1849           |
+| UK370          | Apr-06, Apr-27 |                    14 | B.1.1.10         |                              27 | 0.0598           |
+| UK156          | Mar-18, Apr-18 |                    14 | B.1.71           |                              36 | 0.0814           |
+| UK558          | Apr-24, May-22 |                    13 | B.1.5            |                               2 | 1.1667           |
+| UK160          | Mar-31, May-02 |                    12 | B.1.1            |                              22 | 0.1322           |
+| UK261          | Mar-15, Apr-08 |                    12 | A.3              |                              46 | 0.0474           |
+| UK73           | Apr-01, May-10 |                    12 | B.1.p11          |                              14 | 0.2532           |
+| UK499          | Apr-24, May-15 |                    12 | B.1.5            |                               9 | 0.2121           |
+| UK436          | Apr-13, May-14 |                    11 | B.1.5            |                              10 | 0.31             |
+| UK1539         | May-09, May-24 |                    11 | B.1.5            |                               0 | active today     |
+| UK562          | Mar-27, Apr-25 |                    11 | B.1              |                              29 | 0.1              |
+| UK100          | Apr-06, May-12 |                    11 | B.1.5            |                              12 | 0.3864           |
+| UK414          | Apr-05, Apr-22 |                    10 | B.1.5            |                              32 | 0.059            |
+| UK137          | Mar-10, Mar-31 |                    10 | B.1.1            |                              54 | 0.0754           |
+| UK1548         | Apr-13, Apr-24 |                     9 | B.1.5, B.1.5.5   |                              30 | 0.0458           |
+| UK72           | Mar-14, Apr-01 |                     7 | B.10             |                              53 | 0.0355           |
+| UK699          | Mar-23, Apr-24 |                     7 | B.1.5            |                              30 | 0.1778           |
+| UK560          | Apr-15, Apr-27 |                     7 | B.1.5            |                              27 | 0.0741           |
+| UK434          | Apr-20, May-03 |                     7 | B.1.5            |                              21 | 0.1032           |
+| UK554          | Apr-23, May-05 |                     7 | B.1.5            |                              19 | 0.1053           |
+| UK133          | Mar-22, Apr-25 |                     7 | B.1              |                              29 | 0.1466           |
+| UK320          | Mar-24, Apr-21 |                     7 | B.1.5, B.1       |                              33 | 0.1414           |
+| UK701          | Mar-03, Mar-27 |                     7 | B.1              |                              58 | 0.023            |
+| UK282          | Mar-23, Apr-22 |                     7 | B.1.1            |                              32 | 0.1562           |
+| UK271          | Apr-15, Apr-26 |                     7 | B.1              |                              28 | 0.1224           |
+| UK58           | Mar-12, Apr-07 |                     7 | B.1              |                              47 | 0.0519           |
+| UK38           | Mar-16, May-01 |                     7 | B.2.1            |                              23 | 0.1576           |
+| UK51           | Mar-26, Apr-13 |                     6 | B.1.36           |                              41 | 0.2107           |
+| UK870          | Mar-18, Mar-25 |                     6 | B.1.5            |                              60 | 0.0233           |
+| UK198          | Mar-18, Apr-15 |                     6 | B.1.5, A         |                              39 | 0.0798           |
+| UK1667         | Mar-31, Apr-28 |                     6 | B.1.p9           |                              26 | 0.2794           |
+| UK93           | Mar-21, May-06 |                     6 | B.1.1            |                              18 | 0.5111           |
+| UK5352         | Apr-22, Apr-27 |                     6 | B.1.1.14         |                              27 | 0.037            |
+| UK555          | Apr-13, Apr-25 |                     6 | B.1.5            |                              29 | 0.0828           |
+
+\pagebreak
+
+**Table S2** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
 | Week commencing   |   UK36 |   UK52 |   UK40 |   UK2464 |   UK39 |   UK5 |   UK175 |   UK88 |   UK44 |   UK5098 |
@@ -158,32 +243,17 @@ The raw data for the plot is shown below it, with each column representing a lin
 | 2020-05-10        |      1 |      3 |      1 |        2 |      1 |     0 |       0 |      2 |      0 |        0 |
 | 2020-05-17        |      0 |      0 |      0 |        0 |      0 |     1 |       0 |      0 |      0 |        0 |
 
+\pagebreak
+
+
+Table S3 is not appropriate for this report and so has been omitted.
 
 
 
 
+\pagebreak
 
-
-
-
-
-
-
-
-
-The date of first sequence in the cluster is shown below for every cluster with date information. 
-
-
-
-NB the lineage may have started anywhere in the UK, but has been recorded at least once in Scotland
-
-
-
-
-
-
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_firsts_plot_1.png)\
-
+**Table S4** Raw data for figure six showing when lineages started per day, divided by singletons and non-singletons
 
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
@@ -274,14 +344,9 @@ NB the lineage may have started anywhere in the UK, but has been recorded at lea
 | 2020-05-23 |                            2 |                                0 |       2 |
 | 2020-05-24 |                            1 |                                0 |       1 |
 
-For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
+\pagebreak
 
-
-
-
-
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_seqs_over_time_1.png)\
-
+**Table S5** Raw data for figure seven showing the number of sequences taken over time.
 
 
 | Day        |   Scotland |
@@ -373,30 +438,9 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | 2020-05-23 |          4 |
 | 2020-05-24 |          2 |
 
+\pagebreak
 
-These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
-The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
-The raw data has been written to a summary file.
-
-
-
-
-
-
-
-
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_make_timeline_1.png)\
-
-
-The map below shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
-
-
-
-
-
-
-![](UK_full_report/adm1_reports/Scotland/figures/Scotland_map_1.png)\
-
+**Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
 
 
 | Admin2                 | Country   |   Number of sequences | Sequence group   |
@@ -434,25 +478,7 @@ The map below shows the number of sequences sampled in each admin2 region in the
 | WEST DUNBARTONSHIRE    | Scotland  |                     0 | 0                |
 | WEST LOTHIAN           | Scotland  |                    92 | 50-100           |
 
-
-
-
-There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.
-
-
-
-
-
-Other results modules for UK lineage analysis can be added in here if required.
-
 \pagebreak
-
-
-
-
-
-
-
 
 
 

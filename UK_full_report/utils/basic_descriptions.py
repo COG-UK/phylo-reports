@@ -70,6 +70,7 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	global_lins = []
 	date_ranges = []
 	last_sampled = []
+	activity_scores = []
 
 	for key, value in intro_country_together.items():
 		intro_object = intro_object_dict[key]
@@ -78,9 +79,11 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 		if intro_object.dates != []:
 			date_ranges.append((intro_object.pretty_oldest, intro_object.pretty_mrd))
 			last_sampled.append(intro_object.last_sampled)
+			activity_scores.append(intro_object.activity_score)
 		else:
 			date_ranges.append(('NA','NA'))
 			last_sampled.append('NA')
+			activity_scores.append("NA")
 
 	df_together_prep = pd.DataFrame(intro_country_together)
 	df_together = df_together_prep.transpose()
@@ -93,8 +96,9 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	df_together["Total sequences"] = totals
 	df_together["Global lineage"] = global_lins
 	df_together["Time since last sample (days)"] = last_sampled
+	df_together["Activity score"] = activity_scores
 
-	non_country_list = ["Date range", "Total sequences", "Global lineage", "Time since last sample (days)"]
+	non_country_list = ["Date range", "Total sequences", "Global lineage", "Time since last sample (days)", "Activity score"]
 
 	df_together.sort_values(by=["Total sequences"], ascending=False, inplace=True)
 
@@ -159,6 +163,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	last_sampled_list = []
 	totals = []
 	names = []
+	activity_scores = []
 	
 	df_dict = defaultdict(list)
 
@@ -191,6 +196,8 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 				date_ranges.append((pretty_oldest, pretty_mrd))
 				last_sampled_list.append(last_sampled)
 
+				activity_scores.append(lin.activity_score)
+
 			else:
 				date_ranges.append(('NA','NA'))
 				last_sampled.append('NA')
@@ -201,6 +208,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	df_dict["Number of sequences"] = totals
 	df_dict["Global lineage"] = global_lins
 	df_dict["Time since last sample (days)"] = last_sampled_list
+	df_dict["Activity score"] = activity_scores
 
 	df = pd.DataFrame(df_dict)
 

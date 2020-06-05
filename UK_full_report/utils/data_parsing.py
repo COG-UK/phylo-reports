@@ -61,8 +61,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                 epiweek = sequence['epi_week']
                 glob_lin = sequence['lineage']
                 intro_name = sequence['uk_lineage']
-                acctrans = sequence['acc_lineage'] #also going to be min number of intros
-                del_intros = sequence['del_introduction'] #max number - NEED TO CHANGE THIS FOR NEW RUN
+                acctrans = sequence['acc_lineage'] #minimum number
+                del_intros = sequence['del_introduction'] #max number
                 extracted_sequencing_centre = sequence['sequencing_org_code']
 
                 min_intros.add(acctrans)
@@ -71,7 +71,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
 
                 lineage_version = sequence["lineages_version"] 
             
-                info_dict[seq_name] = [date, epiweek, adm2, glob_lin]
+                info_dict[seq_name] = [date, epiweek, adm2, glob_lin, extracted_sequencing_centre]
 
                 country_prep = adm1.split("-")[1]
                 if country_prep == "ENG":

@@ -5,6 +5,7 @@ from collections import OrderedDict
 import os
 from epiweeks import Week,Year
 from UK_full_report.utils.time_functions import *
+import numpy as np
 
 class taxon():
     
@@ -23,6 +24,7 @@ class taxon():
 
         self.adm2 = metadata[2]
         self.global_lineage = metadata[3]
+        self.sequencing_centre = metadata[4]
 
         epiweek_prep = metadata[1]
         if epiweek_prep != "0" and epiweek_prep != "":
@@ -66,6 +68,7 @@ class introduction():
         
         self.dates = []
         self.epiweeks = []
+        self.gaps = []
 
         self.week_to_adm2 = defaultdict(set)
         #self.adm2_to_week = defaultdict(set)
@@ -131,6 +134,28 @@ class introduction():
 
             self.last_sampled = (current_date - self.mrd).days
 
+            self.define_activity_level()
+
+    def define_activity_level(self):
+
+        self.sorted_dates = sorted(self.dates)
+        
+        for index, date in enumerate(self.sorted_dates):
+            
+            if index > 0:
+            
+                gap = (date - self.sorted_dates[index-1]).days
+                
+                self.gaps.append(gap)
+                
+                
+        self.average_gap = np.mean(self.gaps)
+                
+        if self.last_sampled != 0:
+            self.activity_score = str((self.average_gap/self.last_sampled).round(4))
+        else:
+            self.activity_score = "active today"
+        
     def get_global_lineages(self):
 
         for tax in self.taxa:

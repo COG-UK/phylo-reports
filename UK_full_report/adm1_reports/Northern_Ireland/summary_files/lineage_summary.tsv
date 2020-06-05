@@ -1,6 +1,6 @@
-Lineage name	Date range	Number of sequences	Global lineage	Time since last sample (days)
-UK72	Mar-11, Apr-21	52	B.10	1
-UK760	Mar-21, Apr-22	43	B.1.1	0
-UK295	Mar-11, Apr-22	10	B	0
-UK701	Mar-20, Mar-29	8	B.1	24
-UK2904	Apr-06, Apr-22	8	B.1.p11	0
+Lineage name	Date range	Number of sequences	Global lineage	Time since last sample (days)	Activity score
+UK72	Mar-11, Apr-21	52	B.10	1	-0.0592
+UK760	Mar-21, Apr-22	43	B.1.1	0	active today
+UK295	Mar-11, Apr-22	10	B	0	active today
+UK701	Mar-20, Mar-29	8	B.1	24	-0.0179
+UK2904	Apr-06, Apr-22	8	B.1.p11	0	active today

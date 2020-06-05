@@ -56,7 +56,7 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
                 "England":"indianred",
                 "Scotland":"steelblue",
                 "Northern_Ireland":"skyblue"}
-
+    
     fig,ax = plt.subplots(figsize=(15,40))
 
     count = 0
@@ -119,8 +119,11 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
                 plt.scatter(x,y, color='black',s=sizes)
             else:
                 plt.scatter(x,y, color=colour_dict[list(country_set)[0]], s=sizes)
-        
-    plt.yticks(height, ytick_list, size=10)
+    
+
+    text_size = 1/len(intro_bigs)*1500
+    
+    plt.yticks(height, ytick_list, size=text_size)
     plt.ylim(1, count+1)
     plt.xticks(rotation=45)
 
@@ -710,6 +713,50 @@ def tidy_div_df(div_df):
     new3.set_index("Week", inplace=True)
 
     return new3
+
+
+def sequencing_centre_lags(taxa_list, sc_dict, submission_date):
+
+    colour_dict = {"England":'indianred', "Wales":'darkseagreen', "Northern_Ireland":"skyblue", "Scotland": "steelblue"}
+
+    centre_dates = defaultdict(set)
+
+    centres = sc_dict.keys()
+
+    for tax in taxa_list:
+        centre_dates[tax.sequencing_centre].add(tax.date_dt)
+
+    mrt = {}
+
+    for centre, dates in centre_dates.items():
+        most_recent_date = (sorted(dates, reverse=True))[0]
+        mrt[centre] = most_recent_date
+
+    lags = {}
+    for centre, date in mrt.items():
+        lags[centre] = (submission_date - date).days
+
+    ordered_lags = {k:v for k,v in sorted(lags.items(), key=lambda item:item[1])}
+
+    x = ordered_lags.keys()
+    y = ordered_lags.values()
+
+    colours = []
+
+    for sc in x:
+        colours.append(colour_dict[sc_dict[sc]])
+
+    plt.xticks(rotation=45, size=15)
+    plt.ylabel("Days since most recent sequence", size=15)
+    plt.xlabel("Sequencing centre", size=15)
+
+    plt.bar(x, y, color = colours)
+
+        
+
+    
+
+    
 
 
 

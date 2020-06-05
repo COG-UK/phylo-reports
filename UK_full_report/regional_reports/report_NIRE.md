@@ -13,6 +13,7 @@ There are time lags due to batching, curation and analysis, the most recently sa
 <br/>
 163 sequences in the UK from the sequencing centre NIRE have been included in this analysis.
 
+
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
@@ -36,9 +37,13 @@ Of the 4 that remain:
 4 lineages have been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
+
+"Activity score" is calculated by taking the average gap between sampling for each lineage, and dividing it by the number of days since the lineage was last sampled. Therefore the higher the number, the more active the lineage is.
+If the score is above 1, then it has been sampled *more* recently than expected given its average gap size. We might interpret this as an increase in activity.
+If the score is below 1, it has been sampled *less* recently than expect given its average gap size, so we might interpret this as a decrease in activity.
 
 
 
@@ -49,37 +54,110 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 
 
-| Lineage name   | Northern_Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
-|:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|
-| UK72           | 42 (100.0%)        | Mar-11, Mar-26 |                42 | B.10             |                               3 |
-| UK760          | 11 (100.0%)        | Mar-21, Mar-28 |                11 | B.1.1            |                               1 |
-| UK295          | 8 (100.0%)         | Mar-11, Mar-24 |                 8 | B                |                               5 |
-| UK701          | 7 (100.0%)         | Mar-20, Mar-29 |                 7 | B.1              |                               0 |
+| Lineage name   | Northern Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
+|:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
+| UK72           | 42 (100.0%)        | Mar-11, Mar-26 |                42 | B.10             |                               3 | 0.122            |
+| UK760          | 11 (100.0%)        | Mar-21, Mar-28 |                11 | B.1.1            |                               1 | 0.7              |
+| UK295          | 8 (100.0%)         | Mar-11, Mar-24 |                 8 | B                |                               5 | 0.3714           |
+| UK701          | 7 (100.0%)         | Mar-20, Mar-29 |                 7 | B.1              |                               0 | active today     |
 
 
-These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
+These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
 The raw data for this bar chart are in the table above. 
 
 
+![Number of sequences sampled in a lineage by country](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+
+
+Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
+This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
+
+
+![Lag since the most recent sequence from each sequencing centre to most current date](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_lag_fig_1.png){#lag_fig }
+
+
+The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
+
+
+
+![Lineages by number of adm2 regions present by epiweek](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_geog_plot_1.png){#geog_plot }
 
 
 
 
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_stacked_bars_by_country_1.png)\
-
-
-The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
-The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
 
 
 
+These lineages are shown on the timeline. Each line represents the length of the cluster, from oldest to most recent sampling date.
+The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
+The raw data has been written to a summary file.
 
 
 
 
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_geog_plot_1.png)\
+![Timeline of lineages, sized by number of sequences from each country.](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_make_timeline_1.png){#make_timeline }
 
+
+The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
+
+
+
+
+
+
+![Lineage starts per week, split by singletons and non-singletons](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_firsts_plot_1.png){#firsts_plot }
+
+For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
+
+
+![Sequences taken on each day by country](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_seqs_over_time_1.png){#seqs_over_time }
+
+
+The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
+
+
+
+All sequences have been assigned clean adm2 data this week.
+![Map showing the number of sequences sampled by adm2 region](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_map_1.png){#map }
+
+
+
+
+
+
+
+
+
+Other results modules for UK lineage analysis can be added in here if required.
+
+\pagebreak
+
+## Appendix
+
+
+
+
+
+
+
+
+
+Below are the raw data tables for each of the figures in the report.
+
+**Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
+
+
+| Lineage name   | Northern Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
+|:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
+| UK72           | 42 (100.0%)        | Mar-11, Mar-26 |                42 | B.10             |                               3 | 0.122            |
+| UK760          | 11 (100.0%)        | Mar-21, Mar-28 |                11 | B.1.1            |                               1 | 0.7              |
+| UK295          | 8 (100.0%)         | Mar-11, Mar-24 |                 8 | B                |                               5 | 0.3714           |
+| UK701          | 7 (100.0%)         | Mar-20, Mar-29 |                 7 | B.1              |                               0 | active today     |
+
+\pagebreak
+
+**Table S2** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
 | Week commencing   |   UK72 |   UK760 |   UK295 |   UK701 |
@@ -89,31 +167,17 @@ The raw data for the plot is shown below it, with each column representing a lin
 | 2020-03-22        |      5 |       3 |       3 |       3 |
 | 2020-03-29        |      0 |       0 |       0 |       1 |
 
+\pagebreak
+
+
+Table S3 is not appropriate for this report and so has been omitted.
 
 
 
 
+\pagebreak
 
-
-
-
-
-
-
-
-
-The date of first sequence in the cluster is shown below for every cluster with date information. 
-
-
-
-
-
-
-
-
-
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_firsts_plot_1.png)\
-
+**Table S4** Raw data for figure six showing when lineages started per day, divided by singletons and non-singletons
 
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
@@ -136,14 +200,9 @@ The date of first sequence in the cluster is shown below for every cluster with 
 | 2020-03-28 |                            6 |                                0 |       6 |
 | 2020-03-29 |                            2 |                                1 |       3 |
 
-For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
+\pagebreak
 
-
-
-
-
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_seqs_over_time_1.png)\
-
+**Table S5** Raw data for figure seven showing the number of sequences taken over time.
 
 
 | Day        |   Northern Ireland |
@@ -166,31 +225,9 @@ For comparison, here is a plot of the day that every sequence was taken, coloure
 | 2020-03-28 |                 11 |
 | 2020-03-29 |                  5 |
 
+\pagebreak
 
-These lineages are shown on the timeline below. Each line represents the length of the cluster, from oldest to most recent sampling date.
-The dots are sized by the number of sequences taken on that date, and again are colour coded by country.
-The raw data has been written to a summary file.
-
-
-
-
-
-
-
-
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_make_timeline_1.png)\
-
-
-The map below shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
-
-
-
-All sequences have been assigned clean adm2 data this week.
-
-
-
-![](UK_full_report/regional_reports/results/results_NIRE/figures/report_NIRE_map_1.png)\
-
+**Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
 
 
 | Admin2      | Country          |   Number of sequences | Sequence group   |
@@ -202,24 +239,7 @@ All sequences have been assigned clean adm2 data this week.
 | LONDONDERRY | Northern Ireland |                     8 | 1-10             |
 | TYRONE      | Northern Ireland |                    11 | 10-50            |
 
-
-
-
-
-
-
-
-
-Other results modules for UK lineage analysis can be added in here if required.
-
 \pagebreak
-
-
-
-
-
-
-
 
 
 

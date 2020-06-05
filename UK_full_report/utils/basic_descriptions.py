@@ -137,7 +137,7 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 
 	new_header_list = []
 	for header in df_together.columns:
-		if header == "northern_ireland":
+		if header == "Northern_Ireland":
 			new = "Northern Ireland"
 		else:
 			new = header

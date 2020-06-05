@@ -8,36 +8,35 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by NIRE for week 2020-05-22. 
+This report gives summaries of UK specific lineages sequenced by NIRE for week 2020-05-29. 
 There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-03-29. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
 163 sequences in the UK from the sequencing centre NIRE have been included in this analysis.
-81 lineages have been recorded, 69 of which only contain one sequence.
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
 
 
-The minimum number of introductions is 5185 and the maximum is 8310
+The minimum number of introductions is 6130 and the maximum is 9084
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-76 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+83 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 5 that remain:
-5 lineages have been continuously circulating.
+Of the 4 that remain:
+4 lineages have been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
+The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -50,13 +49,12 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 
 
-| Lineage name   | Northern Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
+| Lineage name   | Northern_Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|
 | UK72           | 42 (100.0%)        | Mar-11, Mar-26 |                42 | B.10             |                               3 |
-| UK225          | 10 (100.0%)        | Mar-14, Mar-28 |                10 | B.2.2, B.2       |                               1 |
-| UK760          | 10 (100.0%)        | Mar-21, Mar-28 |                10 | B.1.1            |                               1 |
-| UK1            | 8 (100.0%)         | Mar-20, Mar-29 |                 8 | B.1              |                               0 |
+| UK760          | 11 (100.0%)        | Mar-21, Mar-28 |                11 | B.1.1            |                               1 |
 | UK295          | 8 (100.0%)         | Mar-11, Mar-24 |                 8 | B                |                               5 |
+| UK701          | 7 (100.0%)         | Mar-20, Mar-29 |                 7 | B.1              |                               0 |
 
 
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -84,15 +82,31 @@ The raw data for the plot is shown below it, with each column representing a lin
 
 
 
-| Week commencing   |   UK72 |   UK760 |   UK225 |   UK295 |   UK1 |
-|:------------------|-------:|--------:|--------:|--------:|------:|
-| 2020-03-08        |      1 |       0 |       1 |       1 |     0 |
-| 2020-03-15        |      3 |       1 |       2 |       2 |     1 |
-| 2020-03-22        |      5 |       3 |       3 |       3 |     4 |
-| 2020-03-29        |      0 |       0 |       0 |       0 |     1 |
+| Week commencing   |   UK72 |   UK760 |   UK295 |   UK701 |
+|:------------------|-------:|--------:|--------:|--------:|
+| 2020-03-08        |      1 |       0 |       1 |       0 |
+| 2020-03-15        |      3 |       1 |       2 |       1 |
+| 2020-03-22        |      5 |       3 |       3 |       3 |
+| 2020-03-29        |      0 |       0 |       0 |       1 |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
+
+
+
+
 
 
 
@@ -107,18 +121,19 @@ The date of first sequence in the cluster is shown below for every cluster with 
 | 2020-03-10 |                            2 |                                0 |       2 |
 | 2020-03-11 |                            0 |                                3 |       3 |
 | 2020-03-13 |                            1 |                                0 |       1 |
-| 2020-03-14 |                            4 |                                1 |       5 |
+| 2020-03-14 |                            5 |                                0 |       5 |
+| 2020-03-16 |                            0 |                                1 |       1 |
 | 2020-03-17 |                            3 |                                0 |       3 |
 | 2020-03-18 |                            4 |                                0 |       4 |
 | 2020-03-19 |                            1 |                                0 |       1 |
 | 2020-03-20 |                            2 |                                1 |       3 |
 | 2020-03-21 |                            5 |                                1 |       6 |
 | 2020-03-22 |                            3 |                                1 |       4 |
-| 2020-03-23 |                           11 |                                1 |      12 |
-| 2020-03-24 |                           11 |                                1 |      12 |
-| 2020-03-25 |                            9 |                                1 |      10 |
+| 2020-03-23 |                           11 |                                2 |      13 |
+| 2020-03-24 |                           12 |                                1 |      13 |
+| 2020-03-25 |                           11 |                                1 |      12 |
 | 2020-03-26 |                            6 |                                1 |       7 |
-| 2020-03-28 |                            5 |                                0 |       5 |
+| 2020-03-28 |                            6 |                                0 |       6 |
 | 2020-03-29 |                            2 |                                1 |       3 |
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.

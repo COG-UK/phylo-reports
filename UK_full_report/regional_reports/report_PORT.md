@@ -8,18 +8,17 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by PORT for week 2020-05-22. 
+This report gives summaries of UK specific lineages sequenced by PORT for week 2020-05-29. 
 There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-03. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
 29 sequences in the UK from the sequencing centre PORT have been included in this analysis.
-9 lineages have been recorded, 1 of which only contain one sequence.
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
 
 
 
-The minimum number of introductions is 5185 and the maximum is 8310
+The minimum number of introductions is 6130 and the maximum is 9084
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
@@ -37,7 +36,7 @@ Of the 1 that remain:
 1 lineage has been continuously circulating.
 
 
-The following table contains information about lineages and the number of sequences in each country in the UK for each lineage, in reverse size order. 
+The following table contains information about lineages and the number of sequences the dataset, in reverse size order. 
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -52,7 +51,7 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | England    | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |
 |:---------------|:-----------|:---------------|------------------:|:-----------------|--------------------------------:|
-| UK7            | 6 (100.0%) | Apr-24, Apr-27 |                 6 | B.1.p11          |                               6 |
+| UK2464         | 6 (100.0%) | Apr-24, Apr-27 |                 6 | B.1.p11          |                               6 |
 
 
 These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -80,13 +79,29 @@ The raw data for the plot is shown below it, with each column representing a lin
 
 
 
-| Week commencing   |   UK7 |
-|:------------------|------:|
-| 2020-04-19        |     1 |
-| 2020-04-26        |     1 |
+| Week commencing   |   UK2464 |
+|:------------------|---------:|
+| 2020-04-19        |        1 |
+| 2020-04-26        |        1 |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 The date of first sequence in the cluster is shown below for every cluster with date information. 
+
+
+
+
 
 
 

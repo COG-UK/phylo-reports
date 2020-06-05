@@ -13,7 +13,7 @@ metadata=report_metadata.csv
 
 echo making sure report scripts are up to date and getting ready
 
-git pull
+#git pull
 
 conda activate report
 
@@ -43,7 +43,7 @@ echo generating $centre report
 generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/ --sc $centre
 done
 
-for country in ${country[*]}; do
+for country in ${countries[*]}; do
 echo generating $country report
 generate_report --m UK_full_report/results/$metadata --w $WEEK --s $country --od UK_full_report/adm1_reports/$country/ --adm $country
 done
@@ -66,7 +66,7 @@ done
 
 for country in ${countries[*]}; do
 echo converting $centre to pdf
-sh UK_full_report/call_pandoc.sh $country.md UK_full_report/utils/latex_template/latex_template.latex $centre.pdf
+sh UK_full_report/call_pandoc.sh $country.md UK_full_report/utils/latex_template/latex_template.latex $country.pdf
 done
 
 echo copying back to climb
@@ -80,12 +80,14 @@ scp -r UK_full_report/results/summary_files climb-covid19-hillv@bham.covid19.cli
 
 scp -r UK_full_report/regional_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 
+scp -r UK_full_report/adm1_reports climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
+
 for centre in ${centres[*]}; do
 scp report_$centre.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
 scp report_$centre.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/regional_reports/
 done
 
-for country in ${country[*]}; do
+for country in ${countries[*]}; do
 scp $country.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/adm1_reports/$country
 scp $country.md climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/adm1_reports/$country
 done
@@ -106,7 +108,7 @@ done
 
 for country in ${countries[*]}; do
 mv $country.md UK_full_report/adm1_reports/$country
-mv $country.pdf UK_full_report/regional_reports/$country
+mv $country.pdf UK_full_report/adm1_reports/$country
 rm $country.pmd
 done
 

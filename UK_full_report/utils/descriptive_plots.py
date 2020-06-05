@@ -236,15 +236,11 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Lineage number", size=40, fontweight='bold')
 
-    if sequencing_centre == "":
-        ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
-        ax.legend(fontsize=40)
-    elif filter_country != "" and sequencing_centre == "":
-        ax.set_title('Sequences after introduction in ' + filter_country, size=50, fontweight='bold')
-    else:
-        ax.set_title("Number of sequences after introduction in " + sequencing_centre, size=50, fontweight='bold')
-    
 
+    if sequencing_centre == "":
+        #ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
+        ax.legend(fontsize=40)
+   
 def top_ten_sort(lineage):
     return len(lineage.taxa)
 
@@ -316,7 +312,7 @@ def prep_geog_data(lineages_prep, filter_country, sequencing_centre):
 
     return y_dict, x
 
-def stacked_geog_plot(y_dict, x,normed):
+def stacked_geog_plot(y_dict, x,normed, totals, labels):
 
     if normed:
         y_norm = defaultdict(list)
@@ -340,10 +336,10 @@ def stacked_geog_plot(y_dict, x,normed):
     ax.stackplot(x,y,labels=labels, colors=colors, alpha=0.8)
 
     if normed:
-        ax.set_title("Lineages by number of adm2 regions present by epiweek normalised")
+        #ax.set_title("Lineages by number of adm2 regions present by epiweek normalised")
         plt.ylabel("Number of adm2 regions present in lineage normalised")
     else:
-        ax.set_title("Lineages by number of adm2 regions present by epiweek")
+        #ax.set_title("Lineages by number of adm2 regions present by epiweek")
         plt.ylabel("Number of adm2 regions present in lineage")
    
     handles, labels = ax.get_legend_handles_labels()
@@ -435,7 +431,7 @@ def plot_starts(lineages_of_interest):
     plt.xticks(rotation=45, size=25, fontweight='heavy')
     plt.yticks(size=25, fontweight='heavy')
     
-    ax.set_title("Lineage starts per week", size=45)
+    #ax.set_title("Lineage starts per week", size=45)
     plt.xlabel("Week commencing", size=30)
     plt.ylabel("Number of earliest sequences", size=30)
     plt.legend()
@@ -525,14 +521,12 @@ def plot_sequences_over_time(sequences, country, sequencing_centre):
 
     ax.set_ylabel('Number of sequences', size=40, fontweight='bold')
     ax.set_xlabel("Day", size=40, fontweight='bold')
+
     
     if country == "":
-        ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
+        #ax.set_title('Sequences taken on each day by country', size=50, fontweight='bold')
         ax.legend(fontsize=40)
-    elif country != "" and sequencing_centre == "":
-        ax.set_title("Sequences taken on each day in " + country, size=50, fontweight='bold')
-    else:
-        ax.set_title("Sequences taken on each day by " + sequencing_centre, size=50, fontweight='bold')
+
 
     return date_counts   
 
@@ -605,22 +599,22 @@ def make_diversity_plot(intro_alls, taxa_list):
         elif country == "Northern_Ireland":
             outer_dict = NI_div
     
-    for week in total_epiweeks:
-        inner_dict = {}
-        for tax in taxa_list:
-            if tax.epiweek == week and tax.country == country:
+        for week in total_epiweeks:
+            inner_dict = {}
+            for tax in taxa_list:
+                if tax.epiweek == week and tax.country == country:
 
-                outer_key = week
-                inner_key = tax.introduction
+                    outer_key = week
+                    inner_key = tax.introduction
 
-                if inner_key in inner_dict.keys():
-                    inner_dict[inner_key] += 1
-                else:
-                    inner_dict[inner_key] = 0
-                    inner_dict[inner_key] += 1
+                    if inner_key in inner_dict.keys():
+                        inner_dict[inner_key] += 1
+                    else:
+                        inner_dict[inner_key] = 0
+                        inner_dict[inner_key] += 1
 
 
-        outer_dict[outer_key] = inner_dict
+                    outer_dict[outer_key] = inner_dict
 
     england_sorted = OrderedDict(sorted(England_div.items()))
     wales_sorted = OrderedDict(sorted(Wales_div.items()))
@@ -688,7 +682,6 @@ def tidy_div_df(div_df):
         if row["Adm1"] == "England":
             england_dict["Week"].append(row["Dates"])
             england_dict["England"].append(row["Shannon_diversity"])
-            
             
         if row["Adm1"] == "Wales":
             w_dict["Wales"].append(row["Shannon_diversity"])

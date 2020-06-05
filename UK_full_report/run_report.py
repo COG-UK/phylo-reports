@@ -10,8 +10,9 @@ scripts_directory = os.path.dirname(__file__)
 
 def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, scripts_directory):
     fd = os.path.join(output_directory, "figures")
-    pmd_file = open(name_stem + ".pmd", 'w')
-    pmd_string = name_stem + ".pmd"
+    print(fd)
+    pmd_string = os.path.join(output_directory, name_stem + ".pmd")
+    pmd_file = open(pmd_string, 'w')
 
     md_template = os.path.join(scripts_directory, 'UK_report_templatev2.pmd')
     with open(md_template) as f:
@@ -73,7 +74,7 @@ def main():
     parser.add_argument("--od", default="./", help="output directory, default is working directory")
     parser.add_argument("--sc", default="", type=str, help="Optional filter by sequencing centre, e.g. CAMB/NORW/PHWC, default all centres")
     parser.add_argument("--adm", default="", type=str, help="Optional filter by adm1 region")
-    
+
     parser.add_argument("--pdf", action="store_true", help="tries to run pandoc conversion to pdf")
 
     args = parser.parse_args()

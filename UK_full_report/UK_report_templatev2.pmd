@@ -168,7 +168,7 @@ if reactivateds > 0:
         print(str(reactivateds) + " lineages have reactivated.")
 
 if continuous > 0:
-    
+
     if continuous == 1:
         print(str(continuous) + " lineage has been continuously circulating.")
     else:
@@ -182,7 +182,7 @@ if continuous > 0:
      #       print(i.id)
     #else:
      #   print("There are more than ten split lineages, so please see the summary files for more information.")
-    
+
     #for this week this is ok
     #for lin in split:
      #   intro_alls.remove(lin)
@@ -191,7 +191,9 @@ if continuous > 0:
 
 ```
 
-The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
+
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lineages is found in the appendix, along with the raw data for all of the other figures.
+
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -219,7 +221,7 @@ print(dataframe.head(10).to_markdown())
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
-The raw data for this bar chart are in the table above. 
+The raw data for this bar chart are in the table above.
 
 ```python, name="stacked_bars_by_country", echo=False, include=True, figure=True, caption="Number of sequences sampled in a lineage by country"
 
@@ -336,6 +338,9 @@ if sequencing_centre == "" and country == "":
     print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
 
+
+```python, echo=False, fig=False, name="trees", include=True
+
 Below are the raw data tables for each of the figures in the report.
 
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
@@ -383,6 +388,7 @@ if not no_seqs:
 \pagebreak
 
 ```python, echo=False, fig=False, name="trees", include=True 
+
 if input_directory != "":
     print("Trees and associated pie charts have been made and put into the figures folder")
     intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)

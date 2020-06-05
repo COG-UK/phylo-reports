@@ -168,7 +168,7 @@ if reactivateds > 0:
         print(str(reactivateds) + " lineages have reactivated.")
 
 if continuous > 0:
-    
+
     if continuous == 1:
         print(str(continuous) + " lineage has been continuously circulating.")
     else:
@@ -182,7 +182,7 @@ if continuous > 0:
      #       print(i.id)
     #else:
      #   print("There are more than ten split lineages, so please see the summary files for more information.")
-    
+
     #for this week this is ok
     #for lin in split:
      #   intro_alls.remove(lin)
@@ -191,7 +191,9 @@ if continuous > 0:
 
 ```
 
-The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
+
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lineages is found in the appendix, along with the raw data for all of the other figures.
+
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -213,9 +215,9 @@ else:
 print(dataframe.head(10).to_markdown())
 ```
 
-These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
+These data is represented in the stacked bar chart below. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases.
 
-The raw data for this bar chart are in the table above. 
+The raw data for this bar chart are in the table above.
 
 ```python, name="stacked_bars_by_country", echo=False, include=False
 
@@ -230,11 +232,11 @@ dp.plot_bars(intro_bigs, country, sequencing_centre)
 print("![](" + fd + "/" + name_stem + "_stacked_bars_by_country_1.png)\\")
 ```
 
-The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below. 
+The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown below.
 The raw data for the plot is shown below it, with each column representing a lineage, and the number of admin2 regions it is present in in each week.
 
 
-```python,name="geog_plot", echo=False, include=False 
+```python,name="geog_plot", echo=False, include=False
 y_dict, week_list = dp.prep_geog_data(intro_bigs, country, sequencing_centre)
 #dp.stacked_geog_plot(y_dict, week_list, False)
 dp.plot_ridge_plot(week_list, y_dict)
@@ -247,7 +249,7 @@ print("![](" + fd + "/" + name_stem + "_geog_plot_1.png)\\")
 
 ```python, name="diversity_plot", echo=False, include=False, results='raw'
 if sequencing_centre == "" and country=="":
-    print("The growth and decline of diversity of lineages over time for each country is shown in the ridge plot below.") 
+    print("The growth and decline of diversity of lineages over time for each country is shown in the ridge plot below.")
     print("This is represented by the Shannon Diversity, calculated using the number of sequences from each country from each lineage.")
 
     div_df = dp.make_diversity_plot(intro_alls, taxa)
@@ -262,7 +264,14 @@ else:
 ```
 
 
-The date of first sequence in the cluster is shown below for every cluster with date information. 
+```python,name="div_data", echo=False, results="tex"
+if sequencing_centre == "" and country=="":
+    tidy_div = dp.tidy_div_df(div_df)
+
+    print(tidy_div.to_markdown())
+```
+
+The date of first sequence in the cluster is shown below for every cluster with date information.
 
 ```python, name="clarifying_text", echo=False, results='tex'
 if sequencing_centre == "" and country != "":
@@ -358,6 +367,9 @@ if sequencing_centre == "" and country == "":
     print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
 
+
+```python, echo=False, fig=False, name="trees", include=True
+
 Below are the raw data tables for each of the figures in the report.
 
 
@@ -404,6 +416,7 @@ if not no_seqs:
 \pagebreak
 
 ```python, echo=False, fig=False, name="trees", include=True 
+
 if input_directory != "":
     print("Trees and associated pie charts have been made and put into the figures folder")
     intro_list = tree_func.make_all_of_the_trees(input_directory, df_acctrans_counts, tree_order, intro_object_dict, taxon_dictionary)

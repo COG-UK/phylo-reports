@@ -720,6 +720,7 @@ def sequencing_centre_lags(taxa_list, sc_dict, submission_date):
     colour_dict = {"England":'indianred', "Wales":'darkseagreen', "Northern_Ireland":"skyblue", "Scotland": "steelblue"}
 
     centre_dates = defaultdict(set)
+    lag_dict = defaultdict(list)
 
     centres = sc_dict.keys()
 
@@ -751,6 +752,12 @@ def sequencing_centre_lags(taxa_list, sc_dict, submission_date):
     plt.xlabel("Sequencing centre", size=15)
 
     plt.bar(x, y, color = colours)
+
+    for k,v in ordered_lags.items():
+        lag_dict["Centre"].append(k)
+        lag_dict["Lag in days"].append(v)
+
+    return lag_dict
 
         
 

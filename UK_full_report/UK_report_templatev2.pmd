@@ -235,7 +235,7 @@ Different sequencing centres have different delays in turn around from receipt o
 This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
 
 ```python, name="lag_fig", include=True, echo=False, figure=True, caption="Lag since the most recent sequence from each sequencing centre to most current date"
-dp.sequencing_centre_lags(taxa, sc_dict, current_date)
+lag_dict = dp.sequencing_centre_lags(taxa, sc_dict, current_date)
 ```
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
@@ -338,9 +338,6 @@ if sequencing_centre == "" and country == "":
     print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
 ```
 
-
-```python, echo=False, fig=False, name="trees", include=True
-
 Below are the raw data tables for each of the figures in the report.
 
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
@@ -349,16 +346,22 @@ print(dataframe.to_markdown())
 ```
 \pagebreak
 
-**Table S2** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
+**Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
+```python, name="raw", echo=False, results='tex'
+print(lag_dict.to_markdown())
+```
+\pagebreak
+
+**Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 ```python, name="raw", echo=False,results='tex'
 print(raw_geog.to_markdown())
 ```
 \pagebreak
 ```python, name="is there shannon", echo=False, results='raw'
 if sequencing_centre == "" and country=="":
-    print("**Table S3** Raw data for figure four showing the Shannon diversity per admin1 region over time")
+    print("**Table S4** Raw data for figure four showing the Shannon diversity per admin1 region over time")
 else:
-    print("Table S3 is not appropriate for this report and so has been omitted.")
+    print("Table S4 is not appropriate for this report and so has been omitted.")
 ```
 ```python,name="div_data", echo=False, results="tex"
 if sequencing_centre == "" and country=="":
@@ -368,19 +371,19 @@ if sequencing_centre == "" and country=="":
 ```
 \pagebreak
 
-**Table S4** Raw data for figure six showing when lineages started per day, divided by singletons and non-singletons
+**Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 ```python, name="raw", echo=False,results='tex'
 print(starts_raw.to_markdown())
 ```
 \pagebreak
 
-**Table S5** Raw data for figure seven showing the number of sequences taken over time.
+**Table S6** Raw data for figure six showing the number of sequences taken over time.
 ```python, name="raw", echo=False,results='tex'
 print(raw_seqs_over_time.to_markdown())
 ```
 \pagebreak
 
-**Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
+**Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 ```python, name="raw", echo=False,results='tex'
 if not no_seqs:
     print(mapping_data.to_markdown())

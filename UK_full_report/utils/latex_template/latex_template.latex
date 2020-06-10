@@ -57,6 +57,7 @@ $endif$
 \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\usepackage{float}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
@@ -196,9 +197,10 @@ $if(dir)$
 \fi
 $endif$
 
-% set default figure placement to htbp
+
+% set default figure placement to hbtp
 \makeatletter
-\def\fps@figure{htbp}
+\def\fps@figure{H}
 \makeatother
 
 $for(header-includes)$

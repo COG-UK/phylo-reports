@@ -132,6 +132,15 @@ class introduction():
 
             self.length = (self.mrd - self.oldest).days
 
+            #This section deals with if sc's or adm1 don't contain the most recent sample in the lineage
+            if self.mrd <= current_date:
+                self.mrd = self.mrd
+            else:
+                self.mrd = min(self.dates)
+                for d in self.dates:
+                    if d <= current_date and d > self.mrd:
+                        self.mrd=d
+            
             self.last_sampled = (current_date - self.mrd).days
 
             self.define_activity_level()
@@ -150,7 +159,7 @@ class introduction():
                 
                 
         self.average_gap = np.mean(self.gaps)
-                
+
         if self.last_sampled != 0:
             self.activity_score = str((self.average_gap/self.last_sampled).round(4))
         else:

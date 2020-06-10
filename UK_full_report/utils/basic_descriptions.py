@@ -80,6 +80,7 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 			date_ranges.append((intro_object.pretty_oldest, intro_object.pretty_mrd))
 			last_sampled.append(intro_object.last_sampled)
 			activity_scores.append(intro_object.activity_score)
+
 		else:
 			date_ranges.append(('NA','NA'))
 			last_sampled.append('NA')
@@ -167,6 +168,8 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	
 	df_dict = defaultdict(list)
 
+	print(most_recent_sample)
+
 	for lin in lineages:
 		if len(lin.country_specific_taxa) > 5:
 
@@ -185,22 +188,19 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 
 			if lin.country_specific_dates != []:
 
-				mrd = max(lin.country_specific_dates)
 				oldest = min(lin.country_specific_dates)
 
-				pretty_mrd = mrd.strftime('%b-%d')
+				pretty_mrd = lin.mrd.strftime('%b-%d')
 				pretty_oldest = oldest.strftime('%b-%d')
-
-				last_sampled = (most_recent_sample - mrd).days
 				
 				date_ranges.append((pretty_oldest, pretty_mrd))
-				last_sampled_list.append(last_sampled)
+				last_sampled_list.append(lin.last_sampled)
 
 				activity_scores.append(lin.activity_score)
 
 			else:
 				date_ranges.append(('NA','NA'))
-				last_sampled.append('NA')
+				last_sampled_list.append('NA')
 
 
 	df_dict["Lineage name"] = names	

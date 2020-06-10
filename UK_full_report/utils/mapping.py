@@ -357,7 +357,7 @@ def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
         text.set_text(label)
 
     ax.axis("off")
-    ax.set_title('COVID-19 sequences from each Admn2 region UK', fontdict={'fontsize': '25', 'fontweight' : '3'})
+    #ax.set_title('COVID-19 sequences from each Admn2 region UK', fontdict={'fontsize': '25', 'fontweight' : '3'})
 
 def plot_individual(england, scotland, wales, n_i, country):
     
@@ -405,7 +405,7 @@ def plot_individual(england, scotland, wales, n_i, country):
         text.set_text(label)
 
     ax.axis("off")
-    ax.set_title('COVID-19 sequences from each Admn2 region in ' + country, fontdict={'fontsize': '25', 'fontweight' : '3'})
+    #ax.set_title('COVID-19 sequences from each Admn2 region in ' + country, fontdict={'fontsize': '25', 'fontweight' : '3'})
 
 
 def plot_missing_sequences(missing_df):
@@ -417,7 +417,7 @@ def plot_missing_sequences(missing_df):
 
     plt.xlabel("Country")
     plt.ylabel("Number of sequences")
-    plt.title("Unplotted sequences")
+    #plt.title("Unplotted sequences")
 
 
 def find_new_locs_cleaning(metadata, mapping_dictionary, all_uk, output_dir, sequencing_centre):

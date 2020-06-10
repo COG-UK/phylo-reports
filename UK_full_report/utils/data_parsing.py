@@ -65,9 +65,6 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                 del_intros = sequence['del_introduction'] #max number
                 extracted_sequencing_centre = sequence['sequencing_org_code']
 
-                min_intros.add(acctrans)
-                max_intros.add(del_intros)
-
 
                 lineage_version = sequence["lineages_version"] 
             
@@ -93,6 +90,9 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                 # if filter_country is not None and filter_country != "" and filter_country != country:
                 #     continue
 
+                min_intros.add(acctrans)
+                max_intros.add(del_intros)
+                
                 try:
                     metadata = info_dict[seq_name]
                     new = case_def.taxon(seq_name, country, intro_name, acctrans, metadata)
@@ -166,10 +166,10 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                 
                 if len(intro.country_specific_taxa) == 1:
                     specific_singletons += 1
-                if len(intro.country_specific_taxa) <= 5:
-                    specific_smalls.append(intro)
-                else:
+                if len(intro.country_specific_taxa) > 5 and intro.last_sampled < 28:
                     specific_bigs.append(intro)
+                else:
+                    specific_smalls.append(intro)
 
 
     return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons

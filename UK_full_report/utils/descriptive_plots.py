@@ -715,14 +715,21 @@ def tidy_div_df(div_df):
     return new3
 
 
-def sequencing_centre_lags(taxa_list, sc_dict, submission_date):
+def sequencing_centre_lags(taxa_list, sc_dict, submission_date, country):
 
     colour_dict = {"England":'indianred', "Wales":'darkseagreen', "Northern_Ireland":"skyblue", "Scotland": "steelblue"}
 
     centre_dates = defaultdict(set)
     lag_dict = defaultdict(list)
 
-    centres = sc_dict.keys()
+    if country == "":
+        centres = sc_dict.keys()
+    else:
+        centres = []
+        for k,v in sc_dict.items():
+            if v == country:
+                centres.append(k)
+
 
     for tax in taxa_list:
         centre_dates[tax.sequencing_centre].add(tax.date_dt)

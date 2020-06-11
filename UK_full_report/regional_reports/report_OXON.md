@@ -1,5 +1,4 @@
 
-# UK lineages summary report
 
 
 
@@ -7,8 +6,12 @@
 
 
 
+# Lineages report for OXON
 
-This report gives summaries of UK specific lineages sequenced by OXON for week 2020-05-29. 
+
+
+
+This report gives summaries of UK specific lineages sequenced by OXON for week 2020-06-05. 
 There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-04-14. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
 363 sequences in the UK from the sequencing centre OXON have been included in this analysis.
@@ -19,14 +22,14 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 6130 and the maximum is 9084
+The minimum number of introductions is 192 and the maximum is 201
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-187 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+186 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
@@ -37,7 +40,9 @@ Of the 6 that remain:
 6 lineages have been continuously circulating.
 
 
-The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
+
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lineages is found in the appendix, along with the raw data for all of the other figures.
+
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -60,30 +65,36 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 | UK514          | 19 (100.0%) | Mar-30, Apr-13 |                19 | B.1.1            |                               1 | 0.7778           |
 | UK5            | 17 (100.0%) | Mar-17, Apr-12 |                17 | B.1.1.1          |                               2 | 0.8125           |
 | UK888          | 14 (100.0%) | Apr-05, Apr-08 |                14 | B.1.1            |                               6 | 0.0385           |
-| UK311          | 8 (100.0%)  | Mar-20, Apr-11 |                 8 | B.1.1            |                               3 | 1.0476           |
+| UK311          | 9 (100.0%)  | Mar-20, Apr-11 |                 9 | B.1.1            |                               3 | 0.9167           |
 | UK89           | 7 (100.0%)  | Apr-05, Apr-08 |                 7 | B.1.1.9          |                               6 | 0.0833           |
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
-The raw data for this bar chart are in the table above. 
+The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
 This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
 
 
-![Lag since the most recent sequence from each sequencing centre to most current date](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_lag_fig_1.png){#lag_fig }
+```
+The lag for this sequencing centre is 52 days
+```
+
 
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
 
 
 
-![Lineages by number of adm2 regions present by epiweek](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_geog_plot_1.png){#geog_plot }
+
+
+
 
 
 
@@ -98,7 +109,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -108,20 +119,29 @@ The date of first sequence in the cluster is shown in figure five for every clus
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
 
 
 
-There are 275 sequences without enough geographical information to map from this centre.
-![Map showing the number of sequences sampled by adm2 region](UK_full_report/regional_reports/results/results_OXON/figures/report_OXON_map_1.png){#map }
+
+
+```
+There are 275 sequences without enough geographical information to map
+from this centre.
+```
+
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/OXON/figures/report_OXON_map_1.png){#map }
+
+
+
 
 
 
@@ -156,12 +176,21 @@ Below are the raw data tables for each of the figures in the report.
 | UK514          | 19 (100.0%) | Mar-30, Apr-13 |                19 | B.1.1            |                               1 | 0.7778           |
 | UK5            | 17 (100.0%) | Mar-17, Apr-12 |                17 | B.1.1.1          |                               2 | 0.8125           |
 | UK888          | 14 (100.0%) | Apr-05, Apr-08 |                14 | B.1.1            |                               6 | 0.0385           |
-| UK311          | 8 (100.0%)  | Mar-20, Apr-11 |                 8 | B.1.1            |                               3 | 1.0476           |
+| UK311          | 9 (100.0%)  | Mar-20, Apr-11 |                 9 | B.1.1            |                               3 | 0.9167           |
 | UK89           | 7 (100.0%)  | Apr-05, Apr-08 |                 7 | B.1.1.9          |                               6 | 0.0833           |
 
 \pagebreak
 
-**Table S2** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
+**Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
+
+
+|    | Centre   |   Lag in days |
+|---:|:---------|--------------:|
+|  0 | OXON     |            52 |
+
+\pagebreak
+
+**Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
 | Week commencing   |   UK238 |   UK514 |   UK5 |   UK888 |   UK311 |   UK89 |
@@ -175,14 +204,14 @@ Below are the raw data tables for each of the figures in the report.
 \pagebreak
 
 
-Table S3 is not appropriate for this report and so has been omitted.
+Table S4 is not appropriate for this report and so has been omitted.
 
 
 
 
 \pagebreak
 
-**Table S4** Raw data for figure six showing when lineages started per day, divided by singletons and non-singletons
+**Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
@@ -203,7 +232,7 @@ Table S3 is not appropriate for this report and so has been omitted.
 | 2020-04-04 |                            4 |                                3 |       7 |
 | 2020-04-05 |                           23 |                                9 |      32 |
 | 2020-04-06 |                           19 |                                4 |      23 |
-| 2020-04-07 |                           42 |                                9 |      51 |
+| 2020-04-07 |                           40 |                               10 |      50 |
 | 2020-04-08 |                           12 |                                5 |      17 |
 | 2020-04-09 |                            9 |                                1 |      10 |
 | 2020-04-10 |                            9 |                                0 |       9 |
@@ -213,7 +242,7 @@ Table S3 is not appropriate for this report and so has been omitted.
 
 \pagebreak
 
-**Table S5** Raw data for figure seven showing the number of sequences taken over time.
+**Table S6** Raw data for figure six showing the number of sequences taken over time.
 
 
 | Day        |   England |
@@ -246,7 +275,7 @@ Table S3 is not appropriate for this report and so has been omitted.
 
 \pagebreak
 
-**Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
+**Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 
 
 | Admin2           | Country   |   Number of sequences | Sequence group   |

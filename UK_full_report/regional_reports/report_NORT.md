@@ -1,5 +1,4 @@
 
-# UK lineages summary report
 
 
 
@@ -7,11 +6,15 @@
 
 
 
+# Lineages report for NORT
 
-This report gives summaries of UK specific lineages sequenced by NORT for week 2020-05-29. 
+
+
+
+This report gives summaries of UK specific lineages sequenced by NORT for week 2020-06-05. 
 There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-14. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-73 sequences in the UK from the sequencing centre NORT have been included in this analysis.
+86 sequences in the UK from the sequencing centre NORT have been included in this analysis.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -19,14 +22,14 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 6130 and the maximum is 9084
+The minimum number of introductions is 58 and the maximum is 60
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-47 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+57 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
@@ -37,7 +40,9 @@ Of the 1 that remain:
 1 lineage has been continuously circulating.
 
 
-The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lienages is found in the appendix, along with the raw data for all of the other figures.
+
+The following table contains information about the ten largest lineages lineages and the number of sequences the dataset. Information about other lineages is found in the appendix, along with the raw data for all of the other figures.
+
 
 Each entry is the count of sequences from each lineage in each country, with the percentage of the total sequences from that lineage that this count represents.
 
@@ -54,31 +59,37 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 
 
-| Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
-|:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK5            | 19 (100.0%) | Apr-10, May-14 |                19 | B.1.1, B.1.1.1   |                               0 | active today     |
+| Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |   Activity score |
+|:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|-----------------:|
+| UK5            | 20 (100.0%) | Apr-10, May-13 |                20 | B.1.1, B.1.1.1   |                               1 |           1.7368 |
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
-The raw data for this bar chart are in the table above. 
+The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
 This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
 
 
-![Lag since the most recent sequence from each sequencing centre to most current date](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_lag_fig_1.png){#lag_fig }
+```
+The lag for this sequencing centre is 22 days
+```
+
 
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
 
 
 
-![Lineages by number of adm2 regions present by epiweek](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_geog_plot_1.png){#geog_plot }
+
+
+
 
 
 
@@ -93,7 +104,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -103,20 +114,28 @@ The date of first sequence in the cluster is shown in figure five for every clus
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
 
 
 
+
+
+```
 All sequences have been assigned clean adm2 data this week.
-![Map showing the number of sequences sampled by adm2 region](UK_full_report/regional_reports/results/results_NORT/figures/report_NORT_map_1.png){#map }
+```
+
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-05/analysis/7/regional_reports/NORT/figures/report_NORT_map_1.png){#map }
+
+
+
 
 
 
@@ -145,13 +164,22 @@ Below are the raw data tables for each of the figures in the report.
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
 
 
-| Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
-|:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK5            | 19 (100.0%) | Apr-10, May-14 |                19 | B.1.1, B.1.1.1   |                               0 | active today     |
+| Lineage name   | England     | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) |   Activity score |
+|:---------------|:------------|:---------------|------------------:|:-----------------|--------------------------------:|-----------------:|
+| UK5            | 20 (100.0%) | Apr-10, May-13 |                20 | B.1.1, B.1.1.1   |                               1 |           1.7368 |
 
 \pagebreak
 
-**Table S2** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
+**Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
+
+
+|    | Centre   |   Lag in days |
+|---:|:---------|--------------:|
+|  0 | NORT     |            22 |
+
+\pagebreak
+
+**Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
 | Week commencing   |   UK5 |
@@ -161,19 +189,19 @@ Below are the raw data tables for each of the figures in the report.
 | 2020-04-19        |     1 |
 | 2020-04-26        |     1 |
 | 2020-05-03        |     1 |
-| 2020-05-10        |     1 |
+| 2020-05-10        |     2 |
 
 \pagebreak
 
 
-Table S3 is not appropriate for this report and so has been omitted.
+Table S4 is not appropriate for this report and so has been omitted.
 
 
 
 
 \pagebreak
 
-**Table S4** Raw data for figure six showing when lineages started per day, divided by singletons and non-singletons
+**Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
@@ -202,18 +230,24 @@ Table S3 is not appropriate for this report and so has been omitted.
 | 2020-04-12 |                            2 |                                0 |       2 |
 | 2020-04-14 |                            1 |                                0 |       1 |
 | 2020-04-15 |                            1 |                                0 |       1 |
+| 2020-04-16 |                            3 |                                0 |       3 |
+| 2020-04-17 |                            1 |                                0 |       1 |
 | 2020-04-22 |                            0 |                                1 |       1 |
 | 2020-04-23 |                            1 |                                0 |       1 |
 | 2020-04-29 |                            1 |                                0 |       1 |
 | 2020-04-30 |                            1 |                                0 |       1 |
+| 2020-05-01 |                            1 |                                0 |       1 |
+| 2020-05-02 |                            1 |                                0 |       1 |
 | 2020-05-03 |                            1 |                                0 |       1 |
 | 2020-05-04 |                            1 |                                1 |       2 |
-| 2020-05-07 |                            1 |                                0 |       1 |
-| 2020-05-09 |                            0 |                                1 |       1 |
+| 2020-05-07 |                            1 |                                1 |       2 |
+| 2020-05-11 |                            1 |                                0 |       1 |
+| 2020-05-12 |                            2 |                                0 |       2 |
+| 2020-05-14 |                            1 |                                0 |       1 |
 
 \pagebreak
 
-**Table S5** Raw data for figure seven showing the number of sequences taken over time.
+**Table S6** Raw data for figure six showing the number of sequences taken over time.
 
 
 | Day        |   England |
@@ -242,6 +276,8 @@ Table S3 is not appropriate for this report and so has been omitted.
 | 2020-04-12 |         3 |
 | 2020-04-14 |         1 |
 | 2020-04-15 |         1 |
+| 2020-04-16 |         3 |
+| 2020-04-17 |         1 |
 | 2020-04-22 |         1 |
 | 2020-04-23 |         2 |
 | 2020-04-24 |         1 |
@@ -250,8 +286,8 @@ Table S3 is not appropriate for this report and so has been omitted.
 | 2020-04-27 |         1 |
 | 2020-04-29 |         1 |
 | 2020-04-30 |         1 |
-| 2020-05-01 |         1 |
-| 2020-05-02 |         1 |
+| 2020-05-01 |         2 |
+| 2020-05-02 |         2 |
 | 2020-05-03 |         3 |
 | 2020-05-04 |         3 |
 | 2020-05-05 |         1 |
@@ -260,19 +296,21 @@ Table S3 is not appropriate for this report and so has been omitted.
 | 2020-05-08 |         1 |
 | 2020-05-09 |         2 |
 | 2020-05-10 |         2 |
+| 2020-05-11 |         3 |
+| 2020-05-12 |         4 |
 | 2020-05-13 |         1 |
 | 2020-05-14 |         1 |
 
 \pagebreak
 
-**Table S6** Raw data for the map with the number of sequences assigned to each admin2 region.
+**Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 
 
 | Admin2          | Country   |   Number of sequences | Sequence group   |
 |:----------------|:----------|----------------------:|:-----------------|
 | CUMBRIA         | England   |                    22 | 10-50            |
-| DURHAM          | England   |                     2 | 1-10             |
-| NORTH YORKSHIRE | England   |                    48 | 10-50            |
+| DURHAM          | England   |                     5 | 1-10             |
+| NORTH YORKSHIRE | England   |                    58 | 50-100           |
 | TYNE AND WEAR   | England   |                     1 | 1-10             |
 
 \pagebreak

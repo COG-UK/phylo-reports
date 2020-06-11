@@ -167,9 +167,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	activity_scores = []
 	
 	df_dict = defaultdict(list)
-
-	print(most_recent_sample)
-
+	
 	for lin in lineages:
 		if len(lin.country_specific_taxa) > 5:
 

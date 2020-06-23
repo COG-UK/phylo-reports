@@ -6,7 +6,7 @@ WEEK=$2
 TREES=$3
 
 
-centres=(BHAM SANG PHEC LIVE PHWC CAMB NORW GLAS EDIN SHEF EXET NOTT PORT OXON NORT NIRE LOND)
+centres=(BIRM SANG PHEC LIVE PHWC CAMB NORW GLAS EDIN SHEF EXET NOTT PORT OXON NORT NIRE LOND)
 countries=(England Scotland Wales Northern_Ireland)
 
 metadata=report_metadata.csv
@@ -31,22 +31,22 @@ scp climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/
 
 echo making md file
  
-if $TREES
-then 
-generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/ --i UK_full_report/results/tree_files/
-else
-generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/
+# if $TREES
+# then 
+# generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/ --i UK_full_report/results/tree_files/
+# else
+# generate_report --m UK_full_report/results/$metadata --w $WEEK --s UK_report --od UK_full_report/results/
 
-echo generating centre specific reports
+# echo generating centre specific reports
 
-for centre in ${centres[*]}; do
-echo generating $centre report
-generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/ --sc $centre
-done
+# for centre in ${centres[*]}; do
+# echo generating $centre report
+# generate_report --m UK_full_report/results/$metadata --w $WEEK --s report_$centre --od UK_full_report/regional_reports/results/results_$centre/ --sc $centre
+# done
 
 for country in ${countries[*]}; do
 echo generating $country report
-generate_report --m UK_full_report/results/$metadata --w $WEEK --s $country --od UK_full_report/adm1_reports/$country/ --adm $country
+generate_report --m UK_full_report/results/$metadata --w $WEEK --s $country --od UK_full_report/results/ --adm $country
 done
 
 fi
@@ -58,12 +58,12 @@ conda deactivate
 
 echo converting to pdf
 
-sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_template/latex_template.latex UK_report.pdf
+# sh UK_full_report/call_pandoc.sh UK_report.md UK_full_report/utils/latex_template/latex_template.latex UK_report.pdf
 
-for centre in ${centres[*]}; do
-echo converting $centre to pdf
-sh UK_full_report/call_pandoc.sh report_$centre.md UK_full_report/utils/latex_template/latex_template.latex report_$centre.pdf
-done
+# for centre in ${centres[*]}; do
+# echo converting $centre to pdf
+# sh UK_full_report/call_pandoc.sh report_$centre.md UK_full_report/utils/latex_template/latex_template.latex report_$centre.pdf
+# done
 
 for country in ${countries[*]}; do
 echo converting $centre to pdf
@@ -72,7 +72,7 @@ done
 
 # echo copying back to climb
 
-# rm UK_full_report/results/$metadata
+rm UK_full_report/results/$metadata
 
 # scp UK_report.pdf climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/
 # scp UK_report.md  climb-covid19-hillv@bham.covid19.climb.ac.uk:/cephfs/covid/bham/raccoon-dog/$CLIMBSTEM/publish/phylogenetics/reports/

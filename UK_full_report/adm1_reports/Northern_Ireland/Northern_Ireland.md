@@ -11,11 +11,11 @@
 
 
 
-This report gives summaries of lineages sampled in Northern Ireland for week 2020-06-05. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-04-22. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of lineages sampled in Northern Ireland for week 2020-06-19. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-05-02. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-281 sequences from Northern_Ireland have been included in this analysis.
-124 lineages have been recorded, 99 of which only contain one sequence.
+464 sequences from Northern_Ireland have been included in this analysis.
+65 lineages have been recorded, 39 of which only contain one sequence.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -23,23 +23,23 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 124 and the maximum is 145
+The minimum number of introductions is 29 and the maximum is 204
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-118 are lineages which were sampled less than five times in Northern_Ireland, and so have been left out of visualisation in the interests of clarity
+53 are lineages which were sampled less than five times in Northern_Ireland, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 6 that remain:
+Of the 12 that remain:
 1 has reactivated.
-5 lineages have been continuously circulating.
+11 lineages have been continuously circulating.
 
 
 
@@ -63,12 +63,16 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | Date range     |   Number of sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:---------------|----------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK72           | Mar-11, Apr-22 |                    55 | B.10             |                               0 | active today     |
-| UK760          | Mar-21, Apr-22 |                    43 | B.1.1            |                               0 | active today     |
-| UK295          | Mar-11, Apr-22 |                    10 | B                |                               0 | active today     |
-| UK2916         | Mar-20, Apr-22 |                     9 | B.1              |                               0 | active today     |
-| UK2904         | Apr-06, Apr-22 |                     8 | B.1.p11          |                               0 | active today     |
-| UK2735         | Mar-29, Apr-22 |                     7 | B.1.1            |                               0 | active today     |
+| UK5            | Mar-10, May-02 |                   210 | B.1.1, B.1.1.1   |                               0 | active today     |
+| UK601          | Mar-11, Apr-29 |                    64 | B.10             |                               3 | 0.1957           |
+| UK167          | Mar-14, May-02 |                    17 | B.1              |                               0 | active today     |
+| UK2735         | Mar-26, May-02 |                    15 | B.1.1            |                               0 | active today     |
+| UK706          | Mar-28, Apr-29 |                    13 | B.1.1            |                               3 | 0.7556           |
+| UK72           | Mar-11, May-01 |                    12 | B                |                               1 | 0.3478           |
+| UK107          | Mar-17, May-02 |                    11 | B.2.1            |                               0 | active today     |
+| UK2913         | Apr-06, May-02 |                    11 | B.1.p11          |                               0 | active today     |
+| UK2916         | Mar-20, May-01 |                     9 | B.1              |                               1 | 0.3673           |
+| UK370          | Mar-24, May-01 |                     8 | B.1.1.10         |                               1 | 0.5057           |
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -76,7 +80,7 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](UK_full_report/results/figures/Northern_Ireland_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
@@ -89,7 +93,7 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 
 
 
-![Lineages by number of adm2 regions present by epiweek](UK_full_report/results/figures/Northern_Ireland_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_geog_plot_1.png){#geog_plot }
 
 
 
@@ -107,7 +111,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](UK_full_report/results/figures/Northern_Ireland_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -118,12 +122,12 @@ NB the lineage may have started anywhere in the UK, but has been recorded at lea
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](UK_full_report/results/figures/Northern_Ireland_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](UK_full_report/results/figures/Northern_Ireland_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -132,7 +136,7 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 
 
 
-![Map showing the number of sequences sampled by adm2 region](UK_full_report/results/figures/Northern_Ireland_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/adm1_reports/Northern_Ireland/figures/Northern_Ireland_map_1.png){#map }
 
 
 
@@ -167,12 +171,18 @@ Below are the raw data tables for each of the figures in the report.
 
 | Lineage name   | Date range     |   Number of sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:---------------|----------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK72           | Mar-11, Apr-22 |                    55 | B.10             |                               0 | active today     |
-| UK760          | Mar-21, Apr-22 |                    43 | B.1.1            |                               0 | active today     |
-| UK295          | Mar-11, Apr-22 |                    10 | B                |                               0 | active today     |
-| UK2916         | Mar-20, Apr-22 |                     9 | B.1              |                               0 | active today     |
-| UK2904         | Apr-06, Apr-22 |                     8 | B.1.p11          |                               0 | active today     |
-| UK2735         | Mar-29, Apr-22 |                     7 | B.1.1            |                               0 | active today     |
+| UK5            | Mar-10, May-02 |                   210 | B.1.1, B.1.1.1   |                               0 | active today     |
+| UK601          | Mar-11, Apr-29 |                    64 | B.10             |                               3 | 0.1957           |
+| UK167          | Mar-14, May-02 |                    17 | B.1              |                               0 | active today     |
+| UK2735         | Mar-26, May-02 |                    15 | B.1.1            |                               0 | active today     |
+| UK706          | Mar-28, Apr-29 |                    13 | B.1.1            |                               3 | 0.7556           |
+| UK72           | Mar-11, May-01 |                    12 | B                |                               1 | 0.3478           |
+| UK107          | Mar-17, May-02 |                    11 | B.2.1            |                               0 | active today     |
+| UK2913         | Apr-06, May-02 |                    11 | B.1.p11          |                               0 | active today     |
+| UK2916         | Mar-20, May-01 |                     9 | B.1              |                               1 | 0.3673           |
+| UK370          | Mar-24, May-01 |                     8 | B.1.1.10         |                               1 | 0.5057           |
+| UK187          | Mar-26, Apr-30 |                     7 | B.1              |                               2 | 0.413            |
+| UK581          | Apr-06, May-01 |                     6 | B.1.1            |                               1 | 4.1667           |
 
 \pagebreak
 
@@ -181,22 +191,23 @@ Below are the raw data tables for each of the figures in the report.
 
 |    | Centre   |   Lag in days |
 |---:|:---------|--------------:|
-|  0 | NIRE     |            66 |
+|  0 | NIRE     |            80 |
 
 \pagebreak
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK72 |   UK760 |   UK295 |   UK2916 |   UK2904 |   UK2735 |   UK187 |   UK5 |   UK225 |   UK706 |
-|:------------------|-------:|--------:|--------:|---------:|---------:|---------:|--------:|------:|--------:|--------:|
-| 2020-03-08        |      1 |       0 |       1 |        0 |        0 |        0 |       0 |     1 |       0 |       0 |
-| 2020-03-15        |      3 |       1 |       2 |        1 |        0 |        0 |       0 |     0 |       0 |       0 |
-| 2020-03-22        |      5 |       3 |       3 |        4 |        0 |        0 |       1 |     1 |       1 |       1 |
-| 2020-03-29        |      2 |       1 |       1 |        1 |        0 |        1 |       1 |     1 |       0 |       0 |
-| 2020-04-05        |      1 |       2 |       0 |        0 |        2 |        1 |       0 |     0 |       0 |       1 |
-| 2020-04-12        |      0 |       2 |       0 |        0 |        1 |        0 |       0 |     0 |       0 |       0 |
-| 2020-04-19        |      1 |       2 |       1 |        0 |        1 |        1 |       1 |     0 |       0 |       0 |
+| Week commencing   |   UK5 |   UK601 |   UK167 |   UK2735 |   UK706 |   UK72 |   UK107 |   UK2913 |   UK2916 |   UK370 |
+|:------------------|------:|--------:|--------:|---------:|--------:|-------:|--------:|---------:|---------:|--------:|
+| 2020-03-08        |     2 |       1 |       2 |        0 |       0 |      1 |       0 |        0 |        0 |       0 |
+| 2020-03-15        |     3 |       3 |       0 |        0 |       0 |      2 |       1 |        0 |        1 |       0 |
+| 2020-03-22        |     4 |       5 |       2 |        1 |       1 |      3 |       2 |        0 |        4 |       2 |
+| 2020-03-29        |     2 |       2 |       1 |        1 |       0 |      1 |       0 |        0 |        1 |       1 |
+| 2020-04-05        |     4 |       2 |       1 |        2 |       1 |      0 |       1 |        2 |        0 |       1 |
+| 2020-04-12        |     4 |       1 |       1 |        1 |       1 |      0 |       1 |        1 |        0 |       1 |
+| 2020-04-19        |     4 |       1 |       1 |        1 |       1 |      1 |       0 |        1 |        0 |       0 |
+| 2020-04-26        |     4 |       1 |       1 |        3 |       1 |      0 |       0 |        1 |        0 |       0 |
 
 \pagebreak
 
@@ -213,43 +224,42 @@ Table S4 is not appropriate for this report and so has been omitted.
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
 |:-----------|-----------------------------:|---------------------------------:|--------:|
-| 2020-02-03 |                            0 |                                1 |       1 |
-| 2020-02-23 |                            0 |                                1 |       1 |
+| 2020-01-27 |                            0 |                                1 |       1 |
+| 2020-02-03 |                            0 |                                2 |       2 |
+| 2020-02-05 |                            0 |                                1 |       1 |
+| 2020-02-09 |                            0 |                                1 |       1 |
+| 2020-02-14 |                            0 |                                1 |       1 |
+| 2020-02-23 |                            0 |                                2 |       2 |
+| 2020-02-25 |                            0 |                                1 |       1 |
+| 2020-02-26 |                            0 |                                1 |       1 |
+| 2020-02-27 |                            0 |                                1 |       1 |
 | 2020-02-28 |                            0 |                                2 |       2 |
-| 2020-03-03 |                            0 |                                2 |       2 |
+| 2020-03-02 |                            0 |                                1 |       1 |
 | 2020-03-04 |                            0 |                                1 |       1 |
-| 2020-03-06 |                            0 |                                2 |       2 |
-| 2020-03-09 |                            0 |                                1 |       1 |
-| 2020-03-10 |                            1 |                                1 |       2 |
+| 2020-03-06 |                            0 |                                3 |       3 |
+| 2020-03-07 |                            0 |                                2 |       2 |
+| 2020-03-09 |                            0 |                                2 |       2 |
+| 2020-03-10 |                            0 |                                2 |       2 |
 | 2020-03-11 |                            0 |                                2 |       2 |
-| 2020-03-12 |                            0 |                                2 |       2 |
-| 2020-03-14 |                            4 |                                2 |       6 |
-| 2020-03-17 |                            2 |                                1 |       3 |
-| 2020-03-18 |                            2 |                                7 |       9 |
-| 2020-03-19 |                            1 |                                1 |       2 |
-| 2020-03-20 |                            2 |                                2 |       4 |
-| 2020-03-21 |                            4 |                                2 |       6 |
-| 2020-03-22 |                            2 |                                1 |       3 |
-| 2020-03-23 |                            6 |                                5 |      11 |
-| 2020-03-24 |                           10 |                                2 |      12 |
-| 2020-03-25 |                            8 |                                1 |       9 |
-| 2020-03-26 |                            5 |                                4 |       9 |
-| 2020-03-27 |                            1 |                                2 |       3 |
-| 2020-03-28 |                            3 |                                0 |       3 |
+| 2020-03-12 |                            0 |                                4 |       4 |
+| 2020-03-14 |                            2 |                                1 |       3 |
+| 2020-03-17 |                            0 |                                3 |       3 |
+| 2020-03-18 |                            0 |                                4 |       4 |
+| 2020-03-19 |                            0 |                                1 |       1 |
+| 2020-03-20 |                            1 |                                2 |       3 |
+| 2020-03-21 |                            0 |                                1 |       1 |
+| 2020-03-22 |                            0 |                                2 |       2 |
+| 2020-03-23 |                            1 |                                2 |       3 |
+| 2020-03-24 |                            1 |                                0 |       1 |
+| 2020-03-25 |                            2 |                                1 |       3 |
+| 2020-03-26 |                            2 |                                2 |       4 |
+| 2020-03-27 |                            0 |                                1 |       1 |
 | 2020-03-29 |                            0 |                                1 |       1 |
-| 2020-03-30 |                            4 |                                0 |       4 |
-| 2020-03-31 |                            1 |                                2 |       3 |
-| 2020-04-02 |                            1 |                                0 |       1 |
-| 2020-04-05 |                            0 |                                1 |       1 |
-| 2020-04-06 |                            2 |                                2 |       4 |
-| 2020-04-08 |                            0 |                                1 |       1 |
-| 2020-04-10 |                            3 |                                0 |       3 |
-| 2020-04-11 |                            3 |                                0 |       3 |
-| 2020-04-13 |                            2 |                                0 |       2 |
-| 2020-04-15 |                            1 |                                0 |       1 |
-| 2020-04-20 |                            1 |                                0 |       1 |
-| 2020-04-21 |                            2 |                                0 |       2 |
-| 2020-04-22 |                            1 |                                0 |       1 |
+| 2020-04-06 |                            0 |                                1 |       1 |
+| 2020-04-11 |                            0 |                                1 |       1 |
+| 2020-04-12 |                            0 |                                1 |       1 |
+| 2020-04-13 |                            1 |                                0 |       1 |
+| 2020-04-14 |                            1 |                                0 |       1 |
 
 \pagebreak
 
@@ -275,21 +285,37 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-03-26 |                 27 |
 | 2020-03-27 |                  7 |
 | 2020-03-28 |                 12 |
-| 2020-03-29 |                 10 |
+| 2020-03-29 |                 11 |
 | 2020-03-30 |                  6 |
 | 2020-03-31 |                  8 |
 | 2020-04-02 |                  1 |
 | 2020-04-04 |                  1 |
-| 2020-04-06 |                 13 |
-| 2020-04-10 |                 11 |
-| 2020-04-11 |                  8 |
-| 2020-04-12 |                  7 |
-| 2020-04-13 |                  5 |
-| 2020-04-15 |                  8 |
-| 2020-04-19 |                  1 |
+| 2020-04-06 |                 18 |
+| 2020-04-07 |                  5 |
+| 2020-04-08 |                 14 |
+| 2020-04-09 |                  1 |
+| 2020-04-10 |                 19 |
+| 2020-04-11 |                 14 |
+| 2020-04-12 |                 23 |
+| 2020-04-13 |                 22 |
+| 2020-04-14 |                 11 |
+| 2020-04-15 |                 13 |
+| 2020-04-17 |                  6 |
+| 2020-04-18 |                  7 |
+| 2020-04-19 |                  2 |
 | 2020-04-20 |                  2 |
-| 2020-04-21 |                 12 |
-| 2020-04-22 |                 14 |
+| 2020-04-21 |                 17 |
+| 2020-04-22 |                 23 |
+| 2020-04-23 |                 11 |
+| 2020-04-24 |                  2 |
+| 2020-04-25 |                  5 |
+| 2020-04-26 |                  2 |
+| 2020-04-27 |                  2 |
+| 2020-04-28 |                  9 |
+| 2020-04-29 |                 11 |
+| 2020-04-30 |                 15 |
+| 2020-05-01 |                  7 |
+| 2020-05-02 |                  2 |
 
 \pagebreak
 
@@ -298,12 +324,12 @@ Table S4 is not appropriate for this report and so has been omitted.
 
 | Admin2      | Country          |   Number of sequences | Sequence group   |
 |:------------|:-----------------|----------------------:|:-----------------|
-| ANTRIM      | Northern Ireland |                   142 | 100-150          |
-| ARMAGH      | Northern Ireland |                    12 | 10-50            |
-| DOWN        | Northern Ireland |                    94 | 50-100           |
-| FERMANAGH   | Northern Ireland |                     3 | 1-10             |
-| LONDONDERRY | Northern Ireland |                    16 | 10-50            |
-| TYRONE      | Northern Ireland |                    15 | 10-50            |
+| ANTRIM      | Northern Ireland |                   243 | 200-250          |
+| ARMAGH      | Northern Ireland |                    15 | 10-50            |
+| DOWN        | Northern Ireland |                   161 | 150-200          |
+| FERMANAGH   | Northern Ireland |                     4 | 1-10             |
+| LONDONDERRY | Northern Ireland |                    22 | 10-50            |
+| TYRONE      | Northern Ireland |                    19 | 10-50            |
 
 \pagebreak
 

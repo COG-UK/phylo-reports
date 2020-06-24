@@ -708,18 +708,21 @@ def make_diversity_plot(intro_alls, taxa_list, country, sequencing_centre):
 
         ax[0].fill_between(x1,y1=y1, alpha=0.5, color="indianred")
         ax[0].plot(x1,y1, color="indianred")
+        ax[0].set_title("England")
 
         ax[1].fill_between(x2,y1=y2, alpha=0.5, color="seagreen")
         ax[1].plot(x2,y2, color="seagreen")
+        ax[1].set_title("Wales")
 
         ax[2].fill_between(x3,y1=y3, alpha=0.5, color="lightblue")
         ax[2].plot(x3,y3, color="lightblue")
+        ax[2].set_title("Northern Ireland")
 
         ax[3].fill_between(x4,y1=y4, alpha=0.5, color="steelblue")
-        plt.xticks(rotation=45)
         ax[3].plot(x4,y4, color="steelblue")
+        ax[3].set_title("Scotland")
 
-        plt.xticks(rotation=45)
+        plt.xticks(rotation=90)
 
 
         return df

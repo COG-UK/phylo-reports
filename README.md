@@ -34,7 +34,9 @@ To generate the report:
 5. Activate the environment by running ```conda activate report```
 6. Run the command: ```generate_report --m path/to/metadata --w relevant_week --s file_name_stem --od path/to/output```
 
-Optional additional command of ```--sc sequencing_centre``` which lets you filter the metadata by sequencing centre, for example: --sc NORW. Courtesy of Andrew Paige @andrewjpage
+For filtering reports:
+- ```--sc sequencing_centre``` which lets you filter the metadata by sequencing centre, for example: --sc NORW
+- ```--adm adm1_country``` produces UK country specific reports
     
 This will produce a MD file, a PDF and the figures as PNGs. Depending on your output file path, the markdown may not contain the figures, but the PDF will. 
 

@@ -633,52 +633,94 @@ def make_diversity_plot(intro_alls, taxa_list, country, sequencing_centre):
 
         df_dict = defaultdict(list)
 
-        England_sdi = {}
+        eng_dict = defaultdict(list)
+        wales_dict = defaultdict(list)
+        ni_dict = defaultdict(list)
+        scot_dict = defaultdict(list)
+
         for date, inner_dict in england_sorted.items():
             new_date = date.startdate()
             div = sdi(inner_dict)
-            England_sdi[new_date] = div
+
+            eng_dict["Date"].append(new_date)
+            eng_dict["Diversity"].append(div)
+            
             df_dict["Adm1"].append("England")
             df_dict["Dates"].append(new_date)
             df_dict["Shannon_diversity"].append(div)
             
-        Scotland_sdi = {}
         for date, inner_dict in scotland_sorted.items():
             new_date = date.startdate()
             div = sdi(inner_dict)
-            Scotland_sdi[new_date] = div
+
+            scot_dict["Date"].append(new_date)
+            scot_dict["Diversity"].append(div)
+
             df_dict["Adm1"].append("Scotland")
             df_dict["Dates"].append(new_date)
             df_dict["Shannon_diversity"].append(div)
             
-        Wales_sdi = {}
         for date, inner_dict in wales_sorted.items():
             new_date = date.startdate()
             div = sdi(inner_dict)
-            Wales_sdi[new_date] = div
+
+            wales_dict["Date"].append(new_date)
+            wales_dict["Diversity"].append(div)
+
             df_dict["Adm1"].append("Wales")
             df_dict["Dates"].append(new_date)
             df_dict["Shannon_diversity"].append(div)
 
-        NI_sdi = {}
         for date, inner_dict in ni_sorted.items():
             new_date = date.startdate()
             div = sdi(inner_dict)
-            NI_sdi[new_date] = div
+            
+            ni_dict["Date"].append(new_date)
+            ni_dict["Diversity"].append(div)
+
             df_dict["Adm1"].append("Northern_Ireland")
             df_dict["Dates"].append(new_date)
             df_dict["Shannon_diversity"].append(div)
 
         df = pd.DataFrame(df_dict)
 
-        cmap = cm.get_cmap('GnBu')
+        # cmap = cm.get_cmap('GnBu')
+        # fig, axes = joypy.joyplot(df, by="Adm1", column="Shannon_diversity", figsize=(10,7), kind="values",
+        #                     ylim='own', x_range=(0,len(week_labels)), colormap=cmap)
+
+        # axes[-1].set_xticks(range(len(week_labels)))
+        # axes[-1].set_xticklabels(week_labels, rotation=90)
+
+        x1 = eng_dict["Date"]
+        y1 = eng_dict["Diversity"]
+
+        x2 = wales_dict["Date"]
+        y2 = wales_dict["Diversity"]
+
+        x3 = ni_dict["Date"]
+        y3 = ni_dict["Diversity"]
+
+        x4 = scot_dict["Date"]
+        y4 = scot_dict["Diversity"]
 
 
-        fig, axes = joypy.joyplot(df, by="Adm1", column="Shannon_diversity", figsize=(10,7), kind="values",
-                            ylim='own', x_range=(0,len(week_labels)), colormap=cmap)
+        fig, ax = plt.subplots(4,sharex='all',sharey='all', figsize=(15,15))
 
-        axes[-1].set_xticks(range(len(week_labels)))
-        axes[-1].set_xticklabels(week_labels, rotation=90)
+        ax[0].fill_between(x1,y1=y1, alpha=0.5, color="indianred")
+        ax[0].plot(x1,y1, color="indianred")
+
+        ax[1].fill_between(x2,y1=y2, alpha=0.5, color="seagreen")
+        ax[1].plot(x2,y2, color="seagreen")
+
+        ax[2].fill_between(x3,y1=y3, alpha=0.5, color="lightblue")
+        ax[2].plot(x3,y3, color="lightblue")
+
+        ax[3].fill_between(x4,y1=y4, alpha=0.5, color="steelblue")
+        plt.xticks(rotation=45)
+        ax[3].plot(x4,y4, color="steelblue")
+
+        plt.xticks(rotation=45)
+
 
         return df
 

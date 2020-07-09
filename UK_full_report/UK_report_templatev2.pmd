@@ -212,7 +212,7 @@ Each entry is the count of sequences from each lineage in each country, with the
 
 "Activity score" is calculated by taking the average gap between sampling for each lineage, and dividing it by the number of days since the lineage was last sampled. Therefore the higher the number, the more active the lineage is.
 If the score is above 1, then it has been sampled *more* recently than expected given its average gap size. We might interpret this as an increase in activity.
-If the score is below 1, it has been sampled *less* recently than expect given its average gap size, so we might interpret this as a decrease in activity.
+If the score is below 1, it has been sampled *less* recently than expected given its average gap size, so we might interpret this as a decrease in activity.
 
 ```python, name="print lineage version", echo=False, results='tex'
 print("The global lineages are correct as of the data release on " + lineage_version)

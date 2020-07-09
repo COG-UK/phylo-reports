@@ -11,11 +11,11 @@
 
 
 
-This report gives summaries of UK specific lineages for week 2020-06-19. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-14. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of UK specific lineages for week 2020-07-03. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-28. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-23786 sequences in the UK have been included in this analysis.
-1061 lineages have been recorded, 525 of which only contain one sequence.
+27611 sequences in the UK have been included in this analysis.
+1167 lineages have been recorded, 565 of which only contain one sequence.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -23,25 +23,25 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 512 and the maximum is 10001
+The minimum number of introductions is 937 and the maximum is 10919
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-815 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+893 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 83 that remain:
-46 are pending extinction, ie last seen three weeks ago.
-31 lineages have gone quiet, ie haven't been seen this week.
-1 has reactivated.
-5 lineages have been continuously circulating.
+Of the 66 that remain:
+43 are pending extinction, ie last seen three weeks ago.
+16 lineages have gone quiet, ie haven't been seen this week.
+3 lineages have reactivated.
+4 lineages have been continuously circulating.
 
 
 
@@ -63,18 +63,18 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 
 
-| Lineage name   | England       | Wales        | Northern Ireland   | Scotland     | Date range     |   Total sequences | Global lineage                                                                                     |   Time since last sample (days) | Activity score   |
-|:---------------|:--------------|:-------------|:-------------------|:-------------|:---------------|------------------:|:---------------------------------------------------------------------------------------------------|--------------------------------:|:-----------------|
-| UK5            | 5390 (80.17%) | 821 (12.21%) | 210 (3.12%)        | 302 (4.49%)  | Feb-23, Jun-14 |              6723 | B.1.1.p16, B.1.1.13, B.1.1.16, B.1.1.1, B.1.1.p15, B.1.1.p11, B.1.1.p12, B.1.1.10, B.1.1, B.1.1.14 |                               0 | active today     |
-| UK42           | 699 (53.4%)   | 371 (28.34%) | 2 (0.15%)          | 237 (18.11%) | Feb-03, Jun-04 |              1309 | B.1.67, B.1.35, B.1.5, B.1.p73, B.1.p11, B.1, B.1.71, B.1.72                                       |                              10 | 0.0093           |
-| UK107          | 1183 (91.78%) | 55 (4.27%)   | 11 (0.85%)         | 40 (3.1%)    | Feb-09, Jun-02 |              1289 | B.2.5, B.2.1, B.2                                                                                  |                              12 | 0.0074           |
-| UK5676         | 328 (62.24%)  | 57 (10.82%)  | 5 (0.95%)          | 137 (26.0%)  | Feb-14, May-22 |               527 | B.3, B.2                                                                                           |                              23 | 0.0081           |
-| UK2464         | 283 (57.99%)  | 80 (16.39%)  | 0 (0%)             | 125 (25.61%) | Mar-09, Jun-07 |               488 | B.1.p11, B.1                                                                                       |                               7 | 0.0264           |
-| UK61           | 41 (9.36%)    | 397 (90.64%) | 0 (0%)             | 0 (0%)       | Mar-08, May-27 |               438 | B.3                                                                                                |                              18 | 0.0102           |
-| UK199          | 243 (56.25%)  | 37 (8.56%)   | 1 (0.23%)          | 151 (34.95%) | Feb-26, Jun-08 |               432 | B.1.p73, B.1, B.1.5.5, B.1.5                                                                       |                               6 | 0.0398           |
-| UK36           | 59 (14.18%)   | 2 (0.48%)    | 2 (0.48%)          | 353 (84.86%) | Mar-18, Jun-03 |               416 | B.1                                                                                                |                              11 | 0.0169           |
-| UK2913         | 307 (74.15%)  | 17 (4.11%)   | 11 (2.66%)         | 79 (19.08%)  | Mar-07, Jun-01 |               414 | B.1.p11, B.1                                                                                       |                              13 | 0.016            |
-| UK167          | 241 (61.48%)  | 115 (29.34%) | 17 (4.34%)         | 19 (4.85%)   | Jan-27, Jun-07 |               392 | B.1.66, B.1                                                                                        |                               7 | 0.0482           |
+| Lineage name   | England       | Wales         | Scotland     | Northern Ireland   | Date range     |   Total sequences | Global lineage                                                                                                                         |   Time since last sample (days) |   Activity score |
+|:---------------|:--------------|:--------------|:-------------|:-------------------|:---------------|------------------:|:---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------:|-----------------:|
+| UK5            | 6696 (77.34%) | 1168 (13.49%) | 435 (5.02%)  | 359 (4.15%)        | Feb-16, Jun-27 |              8658 | B.1.1.16, B.1.1.p12, B.1.1.4, B.1.1.p16, B.1.1.10, B.1.1.14, B.1.1.13, B.1.1.p11, B.1.1.p15, B.1.1.2, B.1.1.5, B.1.1, B.1.1.3, B.1.1.1 |                               1 |           0.0152 |
+| UK107          | 1293 (91.44%) | 61 (4.31%)    | 46 (3.25%)   | 14 (0.99%)         | Feb-09, Jun-02 |              1414 | B, B.2, B.2.5, B.2.1                                                                                                                   |                              26 |           0.0031 |
+| UK42           | 794 (58.0%)   | 368 (26.88%)  | 205 (14.97%) | 2 (0.15%)          | Feb-24, Jun-21 |              1369 | B.1.35, B.1.72, B.1.p11, B.1.5, B.1.p73, B.1, B.1.71                                                                                   |                               7 |           0.0123 |
+| UK36           | 68 (11.2%)    | 1 (0.16%)     | 536 (88.3%)  | 2 (0.33%)          | Mar-18, Jun-06 |               607 | B.1                                                                                                                                    |                              22 |           0.006  |
+| UK5676         | 362 (63.4%)   | 54 (9.46%)    | 150 (26.27%) | 5 (0.88%)          | Feb-26, May-27 |               571 | B.2                                                                                                                                    |                              32 |           0.005  |
+| UK2464         | 298 (53.6%)   | 78 (14.03%)   | 180 (32.37%) | 0 (0%)             | Mar-09, Jun-18 |               556 | B.1.p11, B.1                                                                                                                           |                              10 |           0.0182 |
+| UK199          | 260 (47.62%)  | 55 (10.07%)   | 227 (41.58%) | 4 (0.73%)          | Feb-26, Jun-22 |               546 | B.1.5, B.1.5.5, B.1, B.1.p73                                                                                                           |                               6 |           0.0358 |
+| UK2913         | 387 (72.74%)  | 18 (3.38%)    | 110 (20.68%) | 17 (3.2%)          | Mar-07, Jun-16 |               532 | B.1.p11, B.1                                                                                                                           |                              12 |           0.0159 |
+| UK61           | 107 (20.19%)  | 419 (79.06%)  | 3 (0.57%)    | 1 (0.19%)          | Feb-23, May-27 |               530 | B, B.3                                                                                                                                 |                              32 |           0.0056 |
+| UK5098         | 6 (1.36%)     | 1 (0.23%)     | 433 (98.41%) | 0 (0%)             | Mar-01, Jun-05 |               440 | B.1.8, B.1, B.1.p73                                                                                                                    |                              23 |           0.0095 |
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -82,21 +82,21 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
 This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
 
 
-![Lag since the most recent sequence from each sequencing centre to most current date](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_lag_fig_1.png){#lag_fig }
+![Lag since the most recent sequence from each sequencing centre to most current date](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_lag_fig_1.png){#lag_fig }
 
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
 
 
 
-![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_geog_plot_1.png){#geog_plot }
 
 
 
@@ -106,7 +106,7 @@ This is represented by the Shannon Diversity, calculated using the number of seq
 
 
 
-![Shannon diversity of lineages in each adm1 region](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_diversity_plot_1.png){#diversity_plot }
+![Shannon diversity of lineages in each adm1 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_diversity_plot_1.png){#diversity_plot }
 
 
 
@@ -117,7 +117,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -127,12 +127,12 @@ The date of first sequence in the cluster is shown in figure five for every clus
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -141,7 +141,7 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 
 
 
-![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_map_1.png){#map }
 
 
 
@@ -168,7 +168,7 @@ The plot below shows the number of sequences from each country that don't have s
 
 
 
-![](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/full_report/figures/UK_report_map_2.png)\
+![](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/full_report/figures/UK_report_map_2.png)\
 
 
 Below are the raw data tables for each of the figures in the report.
@@ -176,254 +176,282 @@ Below are the raw data tables for each of the figures in the report.
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
 
 
-| Lineage name   | England       | Wales        | Northern Ireland   | Scotland     | Date range     |   Total sequences | Global lineage                                                                                     |   Time since last sample (days) | Activity score   |
-|:---------------|:--------------|:-------------|:-------------------|:-------------|:---------------|------------------:|:---------------------------------------------------------------------------------------------------|--------------------------------:|:-----------------|
-| UK5            | 5390 (80.17%) | 821 (12.21%) | 210 (3.12%)        | 302 (4.49%)  | Feb-23, Jun-14 |              6723 | B.1.1.p16, B.1.1.13, B.1.1.16, B.1.1.1, B.1.1.p15, B.1.1.p11, B.1.1.p12, B.1.1.10, B.1.1, B.1.1.14 |                               0 | active today     |
-| UK42           | 699 (53.4%)   | 371 (28.34%) | 2 (0.15%)          | 237 (18.11%) | Feb-03, Jun-04 |              1309 | B.1.67, B.1.35, B.1.5, B.1.p73, B.1.p11, B.1, B.1.71, B.1.72                                       |                              10 | 0.0093           |
-| UK107          | 1183 (91.78%) | 55 (4.27%)   | 11 (0.85%)         | 40 (3.1%)    | Feb-09, Jun-02 |              1289 | B.2.5, B.2.1, B.2                                                                                  |                              12 | 0.0074           |
-| UK5676         | 328 (62.24%)  | 57 (10.82%)  | 5 (0.95%)          | 137 (26.0%)  | Feb-14, May-22 |               527 | B.3, B.2                                                                                           |                              23 | 0.0081           |
-| UK2464         | 283 (57.99%)  | 80 (16.39%)  | 0 (0%)             | 125 (25.61%) | Mar-09, Jun-07 |               488 | B.1.p11, B.1                                                                                       |                               7 | 0.0264           |
-| UK61           | 41 (9.36%)    | 397 (90.64%) | 0 (0%)             | 0 (0%)       | Mar-08, May-27 |               438 | B.3                                                                                                |                              18 | 0.0102           |
-| UK199          | 243 (56.25%)  | 37 (8.56%)   | 1 (0.23%)          | 151 (34.95%) | Feb-26, Jun-08 |               432 | B.1.p73, B.1, B.1.5.5, B.1.5                                                                       |                               6 | 0.0398           |
-| UK36           | 59 (14.18%)   | 2 (0.48%)    | 2 (0.48%)          | 353 (84.86%) | Mar-18, Jun-03 |               416 | B.1                                                                                                |                              11 | 0.0169           |
-| UK2913         | 307 (74.15%)  | 17 (4.11%)   | 11 (2.66%)         | 79 (19.08%)  | Mar-07, Jun-01 |               414 | B.1.p11, B.1                                                                                       |                              13 | 0.016            |
-| UK167          | 241 (61.48%)  | 115 (29.34%) | 17 (4.34%)         | 19 (4.85%)   | Jan-27, Jun-07 |               392 | B.1.66, B.1                                                                                        |                               7 | 0.0482           |
-| UK5098         | 6 (1.78%)     | 0 (0%)       | 0 (0%)             | 332 (98.22%) | Mar-16, May-27 |               338 | B.1.p73, B.1.8, B.1                                                                                |                              18 | 0.0119           |
-| UK158          | 33 (9.88%)    | 301 (90.12%) | 0 (0%)             | 0 (0%)       | Mar-20, Jun-03 |               334 | B.1.1.2, B.1.1                                                                                     |                              11 | 0.0205           |
-| UK2916         | 252 (77.54%)  | 52 (16.0%)   | 9 (2.77%)          | 12 (3.69%)   | Feb-03, Jun-01 |               325 | B.1                                                                                                |                              13 | 0.0283           |
-| UK72           | 251 (77.71%)  | 14 (4.33%)   | 12 (3.72%)         | 46 (14.24%)  | Feb-05, May-27 |               323 | B, B.2.2, B.2                                                                                      |                              18 | 0.0193           |
-| UK109          | 46 (14.84%)   | 31 (10.0%)   | 4 (1.29%)          | 229 (73.87%) | Mar-12, Jun-08 |               310 | B.1.5.5, B.1.5                                                                                     |                               6 | 0.0475           |
-| UK5741         | 161 (59.19%)  | 111 (40.81%) | 0 (0%)             | 0 (0%)       | Mar-09, Jun-02 |               272 | B.1.44, B.1                                                                                        |                              12 | 0.0261           |
-| UK2735         | 142 (57.49%)  | 67 (27.13%)  | 15 (6.07%)         | 23 (9.31%)   | Mar-18, May-29 |               247 | B.1.1                                                                                              |                              16 | 0.0183           |
-| UK632          | 38 (15.45%)   | 205 (83.33%) | 0 (0%)             | 3 (1.22%)    | Mar-23, Jun-04 |               246 | B.1.1                                                                                              |                              10 | 0.0298           |
-| UK3021         | 23 (9.58%)    | 217 (90.42%) | 0 (0%)             | 0 (0%)       | Mar-12, Jun-06 |               240 | B.1                                                                                                |                               8 | 0.045            |
-| UK9            | 213 (99.53%)  | 1 (0.47%)    | 0 (0%)             | 0 (0%)       | Mar-09, May-15 |               214 | B.1.13                                                                                             |                              30 | 0.0105           |
-| UK3929         | 175 (82.94%)  | 3 (1.42%)    | 2 (0.95%)          | 31 (14.69%)  | Mar-06, Jun-03 |               211 | B.1.1.4, B.1.1.3, B.1.1                                                                            |                              11 | 0.0385           |
-| UK370          | 81 (46.29%)   | 54 (30.86%)  | 8 (4.57%)          | 32 (18.29%)  | Mar-06, Jun-02 |               175 | B.1.1.10                                                                                           |                              12 | 0.0421           |
-| UK40           | 6 (3.49%)     | 2 (1.16%)    | 0 (0%)             | 164 (95.35%) | Mar-13, May-26 |               172 | B, B.16                                                                                            |                              19 | 0.0228           |
-| UK15           | 128 (76.19%)  | 11 (6.55%)   | 1 (0.6%)           | 28 (16.67%)  | Feb-27, May-06 |               168 | B.1.1                                                                                              |                              39 | 0.0106           |
-| UK5561         | 119 (80.41%)  | 23 (15.54%)  | 1 (0.68%)          | 5 (3.38%)    | Feb-25, May-24 |               148 | B.2.2, B.2                                                                                         |                              21 | 0.0288           |
-| UK6            | 133 (96.38%)  | 0 (0%)       | 0 (0%)             | 5 (3.62%)    | Mar-06, May-13 |               138 | B.1                                                                                                |                              32 | 0.0155           |
-| UK4            | 124 (97.64%)  | 0 (0%)       | 1 (0.79%)          | 2 (1.57%)    | Feb-28, Apr-29 |               127 | B                                                                                                  |                              46 | 0.0105           |
-| UK494          | 121 (97.58%)  | 1 (0.81%)    | 0 (0%)             | 2 (1.61%)    | Mar-19, May-05 |               124 | B.1.p11                                                                                            |                              40 | 0.0096           |
-| UK63           | 121 (99.18%)  | 1 (0.82%)    | 0 (0%)             | 0 (0%)       | Mar-18, May-10 |               122 | B.1.1                                                                                              |                              35 | 0.0125           |
-| UK565          | 102 (91.07%)  | 5 (4.46%)    | 1 (0.89%)          | 4 (3.57%)    | Mar-11, May-14 |               112 | B.1.1                                                                                              |                              31 | 0.0186           |
-| UK66           | 92 (83.64%)   | 0 (0%)       | 1 (0.91%)          | 17 (15.45%)  | Mar-18, May-20 |               110 | B.1.1.8                                                                                            |                              25 | 0.0231           |
-| UK39           | 2 (1.83%)     | 0 (0%)       | 0 (0%)             | 107 (98.17%) | Mar-12, May-24 |               109 | A.2                                                                                                |                              21 | 0.0322           |
-| UK394          | 21 (20.39%)   | 79 (76.7%)   | 1 (0.97%)          | 2 (1.94%)    | Mar-17, May-24 |               103 | B.1.1.10, B.1.1                                                                                    |                              21 | 0.0317           |
-| UK2200         | 22 (23.16%)   | 33 (34.74%)  | 5 (5.26%)          | 35 (36.84%)  | Feb-28, May-20 |                95 | B.1.5.6, B.1.5                                                                                     |                              25 | 0.0349           |
-| UK601          | 21 (22.58%)   | 0 (0%)       | 64 (68.82%)        | 8 (8.6%)     | Mar-11, May-04 |                93 | B.10                                                                                               |                              41 | 0.0143           |
-| UK240          | 84 (91.3%)    | 2 (2.17%)    | 0 (0%)             | 6 (6.52%)    | Feb-25, May-08 |                92 | B, B.3, B.2, B.2.5, B.2.1                                                                          |                              37 | 0.0217           |
-| UK28           | 89 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-13, May-08 |                89 | B.1.1.10                                                                                           |                              37 | 0.0172           |
-| UK5180         | 81 (91.01%)   | 4 (4.49%)    | 4 (4.49%)          | 0 (0%)       | Mar-07, May-09 |                89 | B.1.1.7                                                                                            |                              36 | 0.0199           |
-| UK5498         | 66 (78.57%)   | 7 (8.33%)    | 0 (0%)             | 11 (13.1%)   | Mar-06, May-28 |                84 | B, B.2                                                                                             |                              17 | 0.0588           |
-| UK829          | 80 (98.77%)   | 0 (0%)       | 0 (0%)             | 1 (1.23%)    | Mar-03, Apr-29 |                81 | B.2.5                                                                                              |                              46 | 0.0155           |
-| UK51           | 72 (90.0%)    | 0 (0%)       | 1 (1.25%)          | 7 (8.75%)    | Mar-21, Jun-07 |                80 | B.1.36                                                                                             |                               7 | 0.141            |
-| UK339          | 61 (76.25%)   | 15 (18.75%)  | 1 (1.25%)          | 3 (3.75%)    | Feb-23, Apr-16 |                80 | B.3                                                                                                |                              59 | 0.0114           |
-| UK501          | 66 (84.62%)   | 1 (1.28%)    | 0 (0%)             | 11 (14.1%)   | Mar-02, Jun-02 |                78 | B.1                                                                                                |                              12 | 0.0996           |
-| UK5322         | 1 (1.28%)     | 73 (93.59%)  | 0 (0%)             | 4 (5.13%)    | Mar-23, May-30 |                78 | B.1.1                                                                                              |                              15 | 0.0589           |
-| UK2906         | 68 (91.89%)   | 2 (2.7%)     | 0 (0%)             | 4 (5.41%)    | Mar-04, Jun-02 |                74 | B.1                                                                                                |                              12 | 0.1027           |
-| UK86           | 18 (24.32%)   | 56 (75.68%)  | 0 (0%)             | 0 (0%)       | Mar-05, May-28 |                74 | B.1, B.1.5                                                                                         |                              17 | 0.0677           |
-| UK495          | 1 (1.35%)     | 73 (98.65%)  | 0 (0%)             | 0 (0%)       | Apr-01, May-30 |                74 | B.1.p11                                                                                            |                              15 | 0.0539           |
-| UK77           | 67 (93.06%)   | 5 (6.94%)    | 0 (0%)             | 0 (0%)       | Mar-11, May-20 |                72 | B.2                                                                                                |                              25 | 0.0394           |
-| UK319          | 71 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-28, Jun-01 |                71 | B.1                                                                                                |                              13 | 0.0714           |
-| UK85           | 63 (90.0%)    | 5 (7.14%)    | 1 (1.43%)          | 1 (1.43%)    | Mar-09, Apr-27 |                70 | B, B.3                                                                                             |                              48 | 0.0148           |
-| UK120          | 52 (78.79%)   | 0 (0%)       | 0 (0%)             | 14 (21.21%)  | Feb-03, May-05 |                66 | B, B.14                                                                                            |                              40 | 0.0354           |
-| UK37           | 63 (96.92%)   | 1 (1.54%)    | 0 (0%)             | 1 (1.54%)    | Mar-17, May-04 |                65 | B.1.30, B.1                                                                                        |                              41 | 0.0183           |
-| UK607          | 53 (81.54%)   | 12 (18.46%)  | 0 (0%)             | 0 (0%)       | Mar-02, May-18 |                65 | B                                                                                                  |                              27 | 0.0446           |
-| UK31           | 60 (93.75%)   | 0 (0%)       | 0 (0%)             | 4 (6.25%)    | Mar-11, Apr-23 |                64 | B.3                                                                                                |                              52 | 0.0131           |
-| UK274          | 60 (95.24%)   | 2 (3.17%)    | 0 (0%)             | 1 (1.59%)    | Mar-06, May-21 |                63 | B, B.3                                                                                             |                              24 | 0.0511           |
-| UK384          | 60 (95.24%)   | 1 (1.59%)    | 0 (0%)             | 2 (3.17%)    | Feb-28, Apr-23 |                63 | B.2.1, B.2                                                                                         |                              52 | 0.0171           |
-| UK366          | 63 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-04, Jun-03 |                63 | B.1.1                                                                                              |                              11 | 0.088            |
-| UK509          | 62 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-07, May-29 |                62 | B.1.1                                                                                              |                              16 | 0.0533           |
-| UK198          | 5 (8.33%)     | 15 (25.0%)   | 3 (5.0%)           | 37 (61.67%)  | Mar-17, May-07 |                60 | B.1, B.1.5                                                                                         |                              38 | 0.0227           |
-| UK13           | 55 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-13, May-13 |                55 | B.1.1                                                                                              |                              32 | 0.0353           |
-| UK476          | 55 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-30, May-06 |                55 | B.1.1                                                                                              |                              39 | 0.0176           |
-| UK89           | 42 (77.78%)   | 12 (22.22%)  | 0 (0%)             | 0 (0%)       | Mar-21, Jun-05 |                54 | B.1.1.9, B.1.1                                                                                     |                               9 | 0.1593           |
-| UK371          | 50 (98.04%)   | 1 (1.96%)    | 0 (0%)             | 0 (0%)       | Mar-12, May-09 |                51 | B.1.1                                                                                              |                              36 | 0.0322           |
-| UK513          | 50 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-12, Apr-29 |                50 | B.1.p11                                                                                            |                              46 | 0.0213           |
-| UK448          | 47 (97.92%)   | 1 (2.08%)    | 0 (0%)             | 0 (0%)       | Apr-04, May-26 |                48 | B.1.1                                                                                              |                              19 | 0.0582           |
-| UK187          | 4 (8.51%)     | 29 (61.7%)   | 7 (14.89%)         | 7 (14.89%)   | Mar-23, Apr-30 |                47 | B.1                                                                                                |                              45 | 0.0184           |
-| UK275          | 38 (80.85%)   | 8 (17.02%)   | 0 (0%)             | 1 (2.13%)    | Mar-09, Apr-27 |                47 | B.1.13                                                                                             |                              48 | 0.0222           |
-| UK5523         | 46 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | May-01, Jun-01 |                46 | B.1                                                                                                |                              13 | 0.053            |
-| UK517          | 43 (93.48%)   | 1 (2.17%)    | 0 (0%)             | 2 (4.35%)    | Mar-02, Apr-30 |                46 | B.1.1                                                                                              |                              45 | 0.0291           |
-| UK41           | 30 (69.77%)   | 13 (30.23%)  | 0 (0%)             | 0 (0%)       | Feb-29, May-21 |                43 | B.1                                                                                                |                              24 | 0.0813           |
-| UK105          | 1 (2.33%)     | 42 (97.67%)  | 0 (0%)             | 0 (0%)       | Mar-27, May-26 |                43 | B.1.p11                                                                                            |                              19 | 0.0752           |
-| UK497          | 38 (90.48%)   | 4 (9.52%)    | 0 (0%)             | 0 (0%)       | Mar-13, Jun-03 |                42 | A.2                                                                                                |                              11 | 0.1818           |
-| UK3126         | 41 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-06, May-19 |                41 | B.1.1                                                                                              |                              26 | 0.0413           |
-| UK64           | 26 (65.0%)    | 12 (30.0%)   | 0 (0%)             | 2 (5.0%)     | Mar-12, May-05 |                40 | B.1.p73, B.1                                                                                       |                              40 | 0.0346           |
-| UK276          | 37 (94.87%)   | 0 (0%)       | 1 (2.56%)          | 1 (2.56%)    | Mar-10, May-13 |                39 | B.1.1                                                                                              |                              32 | 0.0526           |
-| UK179          | 16 (41.03%)   | 23 (58.97%)  | 0 (0%)             | 0 (0%)       | Mar-17, May-07 |                39 | B.1.1, B.1.1.p11                                                                                   |                              38 | 0.0353           |
-| UK131          | 34 (89.47%)   | 4 (10.53%)   | 0 (0%)             | 0 (0%)       | Mar-11, Apr-14 |                38 | B.15                                                                                               |                              61 | 0.0151           |
-| UK173          | 38 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-14, May-19 |                38 | B                                                                                                  |                              26 | 0.0686           |
-| UK376          | 38 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-11, Apr-30 |                38 | B.1.1.9                                                                                            |                              45 | 0.03             |
-| UK404          | 37 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-01, Apr-19 |                37 | B.1                                                                                                |                              56 | 0.0243           |
-| UK12           | 36 (97.3%)    | 0 (0%)       | 1 (2.7%)           | 0 (0%)       | Mar-12, May-07 |                37 | B.1.p11                                                                                            |                              38 | 0.0409           |
-| UK355          | 35 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-22, Jun-14 |                35 | B.1.1                                                                                              |                               0 | active today     |
-| UK119          | 27 (77.14%)   | 7 (20.0%)    | 0 (0%)             | 1 (2.86%)    | Mar-11, Apr-24 |                35 | B.2.5                                                                                              |                              51 | 0.0254           |
-| UK79           | 35 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-24, May-05 |                35 | B.1                                                                                                |                              40 | 0.0309           |
-| UK304          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 34 (100.0%)  | Apr-16, Jun-02 |                34 | B.1.1.14                                                                                           |                              12 | 0.1187           |
-| UK18           | 31 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-11, Apr-14 |                31 | B.1.1.7                                                                                            |                              61 | 0.0186           |
-| UK1207         | 30 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-23, May-12 |                30 | B.1.1                                                                                              |                              33 | 0.0522           |
-| UK14           | 2 (6.67%)     | 0 (0%)       | 0 (0%)             | 28 (93.33%)  | Mar-12, Apr-27 |                30 | B                                                                                                  |                              48 | 0.033            |
-| UK241          | 30 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-22, Apr-16 |                30 | B.1.5.3                                                                                            |                              59 | 0.0146           |
-| UK43           | 1 (3.45%)     | 0 (0%)       | 0 (0%)             | 28 (96.55%)  | Mar-12, Apr-26 |                29 | A.5                                                                                                |                              49 | 0.0328           |
-| UK100          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 29 (100.0%)  | Mar-30, May-25 |                29 | B.1, B.1.5                                                                                         |                              20 | 0.1              |
-| UK3692         | 22 (75.86%)   | 1 (3.45%)    | 0 (0%)             | 6 (20.69%)   | Mar-09, May-19 |                29 | B.1.1                                                                                              |                              26 | 0.0975           |
-| UK44           | 0 (0%)        | 0 (0%)       | 1 (3.45%)          | 28 (96.55%)  | Mar-17, Apr-19 |                29 | B                                                                                                  |                              56 | 0.021            |
-| UK5549         | 24 (88.89%)   | 0 (0%)       | 2 (7.41%)          | 1 (3.7%)     | Mar-04, May-18 |                27 | B.2.2                                                                                              |                              27 | 0.1068           |
-| UK5649         | 24 (88.89%)   | 2 (7.41%)    | 0 (0%)             | 1 (3.7%)     | Mar-15, May-04 |                27 | B.2.6                                                                                              |                              41 | 0.0469           |
-| UK567          | 4 (14.81%)    | 18 (66.67%)  | 1 (3.7%)           | 4 (14.81%)   | Mar-20, May-15 |                27 | B.2.2                                                                                              |                              30 | 0.0718           |
-| UK1721         | 26 (96.3%)    | 1 (3.7%)     | 0 (0%)             | 0 (0%)       | Mar-19, May-08 |                27 | B.1                                                                                                |                              37 | 0.052            |
-| UK101          | 26 (96.3%)    | 0 (0%)       | 0 (0%)             | 1 (3.7%)     | Mar-21, Apr-25 |                27 | B.1.5                                                                                              |                              50 | 0.0269           |
-| UK5309         | 23 (88.46%)   | 3 (11.54%)   | 0 (0%)             | 0 (0%)       | Mar-20, May-30 |                26 | B.1.1.10, B.1.1                                                                                    |                              15 | 0.1893           |
-| UK94           | 26 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-12, Apr-19 |                26 | B.2.1, B.2                                                                                         |                              56 | 0.0271           |
-| UK326          | 24 (96.0%)    | 0 (0%)       | 0 (0%)             | 1 (4.0%)     | Mar-22, May-22 |                25 | B.1.1.10                                                                                           |                              23 | 0.1105           |
-| UK23           | 25 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-21, May-09 |                25 | B.9                                                                                                |                              36 | 0.0567           |
-| UK317          | 11 (44.0%)    | 12 (48.0%)   | 0 (0%)             | 2 (8.0%)     | Mar-13, Apr-20 |                25 | B.3                                                                                                |                              55 | 0.0288           |
-| UK164          | 24 (96.0%)    | 1 (4.0%)     | 0 (0%)             | 0 (0%)       | Apr-08, May-28 |                25 | B.1                                                                                                |                              17 | 0.1225           |
-| UK462          | 17 (70.83%)   | 7 (29.17%)   | 0 (0%)             | 0 (0%)       | Apr-01, May-18 |                24 | B.1                                                                                                |                              27 | 0.0757           |
-| UK1667         | 4 (16.67%)    | 0 (0%)       | 0 (0%)             | 20 (83.33%)  | Mar-30, May-14 |                24 | B.1.9, B.1.p9                                                                                      |                              31 | 0.0631           |
-| UK46           | 23 (95.83%)   | 1 (4.17%)    | 0 (0%)             | 0 (0%)       | Mar-02, May-08 |                24 | B.2.1                                                                                              |                              37 | 0.0787           |
-| UK491          | 16 (66.67%)   | 8 (33.33%)   | 0 (0%)             | 0 (0%)       | Mar-03, Apr-14 |                24 | B, B.2.1, B.2                                                                                      |                              61 | 0.0299           |
-| UK21           | 0 (0%)        | 0 (0%)       | 0 (0%)             | 24 (100.0%)  | Mar-18, May-23 |                24 | B.1.40                                                                                             |                              22 | 0.1304           |
-| UK202          | 9 (39.13%)    | 13 (56.52%)  | 0 (0%)             | 1 (4.35%)    | Mar-10, Jun-04 |                23 | B.1.1                                                                                              |                              10 | 0.3909           |
-| UK87           | 0 (0%)        | 0 (0%)       | 0 (0%)             | 23 (100.0%)  | Mar-13, Apr-24 |                23 | B.1.70                                                                                             |                              51 | 0.0374           |
-| UK203          | 19 (86.36%)   | 2 (9.09%)    | 0 (0%)             | 1 (4.55%)    | Mar-22, May-30 |                22 | B.1.1                                                                                              |                              15 | 0.219            |
-| UK116          | 8 (38.1%)     | 13 (61.9%)   | 0 (0%)             | 0 (0%)       | Mar-24, May-30 |                21 | B.1                                                                                                |                              15 | 0.2233           |
-| UK2045         | 21 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-17, May-09 |                21 | B.1                                                                                                |                              36 | 0.0736           |
-| UK335          | 16 (76.19%)   | 1 (4.76%)    | 0 (0%)             | 4 (19.05%)   | Mar-07, Jun-05 |                21 | B.1.1                                                                                              |                               9 | 0.5              |
-| UK161          | 16 (76.19%)   | 5 (23.81%)   | 0 (0%)             | 0 (0%)       | Mar-10, May-25 |                21 | B.1.1                                                                                              |                              20 | 0.19             |
-| UK27           | 18 (85.71%)   | 2 (9.52%)    | 0 (0%)             | 1 (4.76%)    | Mar-05, May-21 |                21 | B.1.1                                                                                              |                              24 | 0.1604           |
-| UK480          | 19 (90.48%)   | 0 (0%)       | 0 (0%)             | 2 (9.52%)    | Mar-20, May-18 |                21 | B.1.1                                                                                              |                              27 | 0.1093           |
-| UK174          | 21 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-19, May-22 |                21 | B.1.5                                                                                              |                              23 | 0.1391           |
-| UK24           | 21 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-14, Apr-10 |                21 | B.2.1                                                                                              |                              65 | 0.0208           |
-| UK75           | 20 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-17, Apr-26 |                20 | B.1.34, B.1                                                                                        |                              49 | 0.043            |
-| UK5503         | 20 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-20, May-13 |                20 | B.1                                                                                                |                              32 | 0.0888           |
-| UK233          | 20 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | May-25, Jun-08 |                20 | B.1                                                                                                |                               6 | 0.1228           |
-| UK47           | 15 (75.0%)    | 5 (25.0%)    | 0 (0%)             | 0 (0%)       | Mar-17, May-18 |                20 | B.1.1                                                                                              |                              27 | 0.1209           |
-| UK134          | 15 (78.95%)   | 0 (0%)       | 0 (0%)             | 4 (21.05%)   | Mar-04, Apr-07 |                19 | B.1                                                                                                |                              68 | 0.0278           |
-| UK1703         | 19 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, May-01 |                19 | B.1                                                                                                |                              44 | 0.0366           |
-| UK146          | 18 (94.74%)   | 0 (0%)       | 0 (0%)             | 1 (5.26%)    | Mar-24, May-07 |                19 | B.1.1                                                                                              |                              38 | 0.0643           |
-| UK502          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 18 (100.0%)  | Mar-06, Mar-30 |                18 | B.1.69                                                                                             |                              76 | 0.0186           |
-| UK4493         | 0 (0%)        | 0 (0%)       | 0 (0%)             | 18 (100.0%)  | Apr-23, May-19 |                18 | B.1                                                                                                |                              26 | 0.0588           |
-| UK425          | 4 (22.22%)    | 14 (77.78%)  | 0 (0%)             | 0 (0%)       | Mar-28, May-15 |                18 | B.1.1                                                                                              |                              30 | 0.0941           |
-| UK4237         | 18 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, Apr-20 |                18 | B.1.1                                                                                              |                              55 | 0.0193           |
-| UK125          | 17 (94.44%)   | 0 (0%)       | 0 (0%)             | 1 (5.56%)    | Mar-30, May-29 |                18 | B.1.1                                                                                              |                              16 | 0.2206           |
-| UK2539         | 18 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-24, May-14 |                18 | B.1.1.5                                                                                            |                              31 | 0.0968           |
-| UK5300         | 16 (94.12%)   | 0 (0%)       | 0 (0%)             | 1 (5.88%)    | Apr-17, Jun-07 |                17 | B.1.1                                                                                              |                               7 | 0.4554           |
-| UK71           | 16 (94.12%)   | 1 (5.88%)    | 0 (0%)             | 0 (0%)       | Mar-08, May-06 |                17 | B                                                                                                  |                              39 | 0.0946           |
-| UK604          | 12 (70.59%)   | 2 (11.76%)   | 0 (0%)             | 3 (17.65%)   | Mar-06, Mar-17 |                17 | B.1.1                                                                                              |                              89 | 0.0077           |
-| UK706          | 3 (18.75%)    | 0 (0%)       | 13 (81.25%)        | 0 (0%)       | Mar-26, Apr-29 |                16 | B.1.1                                                                                              |                              46 | 0.0493           |
-| UK268          | 12 (75.0%)    | 4 (25.0%)    | 0 (0%)             | 0 (0%)       | Mar-23, Jun-04 |                16 | B.1.1                                                                                              |                              10 | 0.4867           |
-| UK5660         | 16 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-25, May-08 |                16 | B.1.1                                                                                              |                              37 | 0.0234           |
-| UK3781         | 16 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-09, May-08 |                16 | B.1.1                                                                                              |                              37 | 0.1081           |
-| UK527          | 10 (62.5%)    | 5 (31.25%)   | 0 (0%)             | 1 (6.25%)    | Mar-19, Apr-18 |                16 | B.1                                                                                                |                              57 | 0.0351           |
-| UK553          | 11 (68.75%)   | 5 (31.25%)   | 0 (0%)             | 0 (0%)       | Feb-28, Apr-29 |                16 | B.1                                                                                                |                              46 | 0.0884           |
-| UK5715         | 14 (93.33%)   | 0 (0%)       | 0 (0%)             | 1 (6.67%)    | Feb-13, Apr-22 |                15 | B.2                                                                                                |                              53 | 0.093            |
-| UK569          | 15 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-23, May-12 |                15 | B.1.1                                                                                              |                              33 | 0.1082           |
-| UK1177         | 15 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-22, May-29 |                15 | B.1.1                                                                                              |                              16 | 0.1652           |
-| UK1006         | 15 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, May-03 |                15 | B.1.1                                                                                              |                              42 | 0.0527           |
-| UK70           | 12 (80.0%)    | 1 (6.67%)    | 2 (13.33%)         | 0 (0%)       | Mar-06, Apr-18 |                15 | B.2                                                                                                |                              57 | 0.0539           |
-| UK34           | 15 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Feb-15, Apr-02 |                15 | B.4                                                                                                |                              73 | 0.046            |
-| UK38           | 14 (93.33%)   | 0 (0%)       | 0 (0%)             | 1 (6.67%)    | Mar-04, Apr-20 |                15 | B.2.1                                                                                              |                              55 | 0.061            |
-| UK186          | 13 (92.86%)   | 1 (7.14%)    | 0 (0%)             | 0 (0%)       | Mar-27, May-15 |                14 | B                                                                                                  |                              30 | 0.1256           |
-| UK49           | 12 (85.71%)   | 0 (0%)       | 1 (7.14%)          | 1 (7.14%)    | Mar-12, May-01 |                14 | B.9                                                                                                |                              44 | 0.0874           |
-| UK153          | 14 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-13, Apr-14 |                14 | B.2                                                                                                |                              61 | 0.0404           |
-| UK408          | 12 (92.31%)   | 1 (7.69%)    | 0 (0%)             | 0 (0%)       | Apr-13, Jun-08 |                13 | B.1.1                                                                                              |                               6 | 0.7778           |
-| UK58           | 6 (46.15%)    | 0 (0%)       | 0 (0%)             | 7 (53.85%)   | Mar-12, Apr-09 |                13 | B.1                                                                                                |                              66 | 0.0354           |
-| UK137          | 1 (7.69%)     | 0 (0%)       | 1 (7.69%)          | 11 (84.62%)  | Mar-09, Mar-31 |                13 | B.1.1                                                                                              |                              75 | 0.0244           |
-| UK832          | 12 (92.31%)   | 0 (0%)       | 0 (0%)             | 1 (7.69%)    | Mar-09, Apr-26 |                13 | A.5                                                                                                |                              49 | 0.0816           |
-| UK378          | 13 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Feb-15, Mar-05 |                13 | B.1.1                                                                                              |                             101 | 0.0157           |
-| UK436          | 0 (0%)        | 1 (8.33%)    | 0 (0%)             | 11 (91.67%)  | Mar-30, May-14 |                12 | B.1.5                                                                                              |                              31 | 0.132            |
-| UK141          | 12 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-22, Apr-24 |                12 | B.1.1                                                                                              |                              51 | 0.0588           |
-| UK261          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 12 (100.0%)  | Mar-15, Apr-08 |                12 | A.3                                                                                                |                              67 | 0.0326           |
-| UK178          | 11 (91.67%)   | 0 (0%)       | 1 (8.33%)          | 0 (0%)       | Mar-14, Apr-29 |                12 | B.1.1                                                                                              |                              46 | 0.0909           |
-| UK5663         | 12 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-11, May-02 |                12 | B.2                                                                                                |                              43 | 0.0444           |
-| UK193          | 11 (91.67%)   | 1 (8.33%)    | 0 (0%)             | 0 (0%)       | Mar-30, May-01 |                12 | B.1.1                                                                                              |                              44 | 0.0661           |
-| UK759          | 11 (91.67%)   | 1 (8.33%)    | 0 (0%)             | 0 (0%)       | Mar-28, Apr-27 |                12 | B.1.1                                                                                              |                              48 | 0.0568           |
-| UK132          | 11 (91.67%)   | 0 (0%)       | 0 (0%)             | 1 (8.33%)    | Mar-27, Apr-30 |                12 | B.1                                                                                                |                              45 | 0.0687           |
-| UK83           | 9 (75.0%)     | 1 (8.33%)    | 0 (0%)             | 2 (16.67%)   | Feb-29, Apr-08 |                12 | B.1.1                                                                                              |                              67 | 0.0529           |
-| UK507          | 12 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-18, Apr-30 |                12 | B.1.1.10                                                                                           |                              45 | 0.0869           |
-| UK287          | 11 (91.67%)   | 1 (8.33%)    | 0 (0%)             | 0 (0%)       | Mar-28, Apr-24 |                12 | B.1                                                                                                |                              51 | 0.0481           |
-| UK5446         | 12 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | May-05, May-16 |                12 | B.1.1                                                                                              |                              29 | 0.0345           |
-| UK445          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-14, Apr-27 |                11 | B.1.1                                                                                              |                              48 | 0.0917           |
-| UK5084         | 9 (81.82%)    | 2 (18.18%)   | 0 (0%)             | 0 (0%)       | Mar-29, Apr-16 |                11 | B.1                                                                                                |                              59 | 0.0305           |
-| UK415          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-19, May-06 |                11 | B.1                                                                                                |                              39 | 0.0436           |
-| UK566          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, Apr-21 |                11 | B.1.1.10, B.1.1                                                                                    |                              54 | 0.0352           |
-| UK5307         | 9 (81.82%)    | 2 (18.18%)   | 0 (0%)             | 0 (0%)       | Mar-08, May-12 |                11 | B.1.1                                                                                              |                              33 | 0.197            |
-| UK572          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-16, Apr-11 |                11 | B.2                                                                                                |                              64 | 0.0406           |
-| UK523          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-14, May-14 |                11 | B.1.1                                                                                              |                              31 | 0.0968           |
-| UK266          | 11 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-06, Apr-30 |                11 | B.1                                                                                                |                              45 | 0.0533           |
-| UK801          | 0 (0%)        | 10 (100.0%)  | 0 (0%)             | 0 (0%)       | Apr-05, May-05 |                10 | B.1                                                                                                |                              40 | 0.0833           |
-| UK291          | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-29, May-14 |                10 | B.1.5                                                                                              |                              31 | 0.1649           |
-| UK22           | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-02, Apr-21 |                10 | B                                                                                                  |                              54 | 0.1029           |
-| UK788          | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Feb-28, Mar-05 |                10 | B.4                                                                                                |                             101 | 0.0066           |
-| UK320          | 6 (60.0%)     | 0 (0%)       | 4 (40.0%)          | 0 (0%)       | Mar-22, Jun-02 |                10 | B.1                                                                                                |                              12 | 0.6667           |
-| UK5653         | 9 (90.0%)     | 0 (0%)       | 0 (0%)             | 1 (10.0%)    | Mar-10, Apr-01 |                10 | B.2.6                                                                                              |                              74 | 0.033            |
-| UK242          | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-26, Apr-20 |                10 | B.1.5                                                                                              |                              55 | 0.0505           |
-| UK113          | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-22, Jun-02 |                10 | B.1.1                                                                                              |                              12 | 0.6667           |
-| UK206          | 0 (0%)        | 9 (100.0%)   | 0 (0%)             | 0 (0%)       | Apr-02, May-20 |                 9 | B.1                                                                                                |                              25 | 0.24             |
-| UK3509         | 4 (44.44%)    | 3 (33.33%)   | 0 (0%)             | 2 (22.22%)   | Mar-12, Apr-24 |                 9 | B.1.1.10                                                                                           |                              51 | 0.1054           |
-| UK506          | 2 (22.22%)    | 7 (77.78%)   | 0 (0%)             | 0 (0%)       | Apr-02, Apr-20 |                 9 | B.1.1                                                                                              |                              55 | 0.0409           |
-| UK696          | 0 (0%)        | 9 (100.0%)   | 0 (0%)             | 0 (0%)       | Apr-10, May-01 |                 9 | B.1, B.1.5                                                                                         |                              44 | 0.0597           |
-| UK340          | 9 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-23, May-17 |                 9 | B.1.1                                                                                              |                              28 | 0.2455           |
-| UK454          | 9 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-22, Apr-29 |                 9 | B.1.1                                                                                              |                              46 | 0.1033           |
-| UK133          | 2 (22.22%)    | 0 (0%)       | 0 (0%)             | 7 (77.78%)   | Mar-22, Apr-25 |                 9 | B.1                                                                                                |                              50 | 0.085            |
-| UK59           | 9 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-24, Apr-21 |                 9 | B.1                                                                                                |                              54 | 0.0648           |
-| UK5348         | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-14, Apr-24 |                 8 | B.1.1                                                                                              |                              51 | 0.1148           |
-| UK570          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-24, Apr-29 |                 8 | B.1.1                                                                                              |                              46 | 0.1118           |
-| UK244          | 7 (87.5%)     | 1 (12.5%)    | 0 (0%)             | 0 (0%)       | Mar-12, Apr-06 |                 8 | B.1.1                                                                                              |                              69 | 0.0518           |
-| UK739          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-01, Mar-08 |                 8 | B.4                                                                                                |                              98 | 0.0102           |
-| UK594          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 8 (100.0%)   | Apr-20, May-01 |                 8 | B                                                                                                  |                              44 | 0.0357           |
-| UK55           | 4 (50.0%)     | 0 (0%)       | 0 (0%)             | 4 (50.0%)    | Mar-23, May-06 |                 8 | B.1.1                                                                                              |                              39 | 0.1612           |
-| UK756          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Feb-27, Mar-05 |                 8 | B.1.1                                                                                              |                             101 | 0.0099           |
-| UK271          | 1 (12.5%)     | 0 (0%)       | 0 (0%)             | 7 (87.5%)    | Apr-02, Apr-26 |                 8 | B.1                                                                                                |                              49 | 0.07             |
-| UK548          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 8 (100.0%)   | Mar-14, Mar-30 |                 8 | B.2.1                                                                                              |                              76 | 0.0301           |
-| UK342          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, Apr-23 |                 8 | B.1.1                                                                                              |                              52 | 0.0577           |
-| UK5308         | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-29, May-01 |                 8 | B.1.1                                                                                              |                              44 | 0.0065           |
-| UK584          | 7 (87.5%)     | 0 (0%)       | 0 (0%)             | 1 (12.5%)    | Mar-17, May-08 |                 8 | B.2.1, B.2                                                                                         |                              37 | 0.2008           |
-| UK479          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-01, Apr-27 |                 8 | B.1.1                                                                                              |                              48 | 0.0774           |
-| UK284          | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-02, Apr-25 |                 8 | B.1.1                                                                                              |                              50 | 0.0657           |
-| UK243          | 5 (62.5%)     | 0 (0%)       | 0 (0%)             | 3 (37.5%)    | Mar-18, Apr-15 |                 8 | B.1.p11, B.1, B.1.5                                                                                |                              60 | 0.0667           |
-| UK633          | 0 (0%)        | 8 (100.0%)   | 0 (0%)             | 0 (0%)       | Apr-03, Apr-28 |                 8 | B.1.1.p16, B.1.1.16                                                                                |                              47 | 0.076            |
-| UK65           | 7 (87.5%)     | 0 (0%)       | 0 (0%)             | 1 (12.5%)    | Mar-07, Apr-21 |                 8 | B.1.1                                                                                              |                              54 | 0.119            |
-| UK2888         | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-09, May-14 |                 8 | B.1.1                                                                                              |                              31 | 0.1613           |
-| UK755          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-06, May-21 |                 7 | B.1.1                                                                                              |                              24 | 0.5278           |
-| UK490          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-03, May-02 |                 7 | B.1.1                                                                                              |                              43 | 0.1124           |
-| UK122          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-23, May-07 |                 7 | B.1                                                                                                |                              38 | 0.1974           |
-| UK232          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-04, Mar-30 |                 7 | B.1.1                                                                                              |                              76 | 0.057            |
-| UK151          | 0 (0%)        | 0 (0%)       | 0 (0%)             | 7 (100.0%)   | Mar-23, Apr-24 |                 7 | B.1                                                                                                |                              51 | 0.1046           |
-| UK171          | 2 (28.57%)    | 0 (0%)       | 0 (0%)             | 5 (71.43%)   | Mar-31, Apr-21 |                 7 | B.1                                                                                                |                              54 | 0.0648           |
-| UK3045         | 1 (14.29%)    | 6 (85.71%)   | 0 (0%)             | 0 (0%)       | Apr-15, May-27 |                 7 | B.1.1, B.1.1.p11                                                                                   |                              18 | 0.3889           |
-| UK581          | 1 (14.29%)    | 0 (0%)       | 6 (85.71%)         | 0 (0%)       | Apr-06, May-01 |                 7 | B.1.1                                                                                              |                              44 | 0.0947           |
-| UK32           | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-10, May-01 |                 7 | B.1.1                                                                                              |                              44 | 0.0795           |
-| UK5501         | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Apr-16, Jun-01 |                 7 | B.1.12                                                                                             |                              13 | 0.5897           |
-| UK323          | 2 (28.57%)    | 1 (14.29%)   | 0 (0%)             | 4 (57.14%)   | Mar-23, May-06 |                 7 | B.1.35, B.1, B.1.5                                                                                 |                              39 | 0.188            |
-| UK520          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-14, Apr-08 |                 7 | B.2.1, B.2                                                                                         |                              67 | 0.0622           |
-| UK390          | 7 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-27, May-01 |                 7 | B.1.5                                                                                              |                              44 | 0.1326           |
-| UK451          | 0 (0%)        | 6 (85.71%)   | 0 (0%)             | 1 (14.29%)   | Mar-20, Apr-05 |                 7 | B.2.1                                                                                              |                              70 | 0.0381           |
-| UK80           | 4 (57.14%)    | 3 (42.86%)   | 0 (0%)             | 0 (0%)       | Mar-31, Apr-20 |                 7 | B.1.1.p15                                                                                          |                              55 | 0.0606           |
-| UK5640         | 2 (28.57%)    | 0 (0%)       | 1 (14.29%)         | 4 (57.14%)   | Mar-20, Apr-27 |                 7 | B.1.1                                                                                              |                              48 | 0.1319           |
-| UK433          | 4 (57.14%)    | 0 (0%)       | 0 (0%)             | 3 (42.86%)   | Mar-22, May-03 |                 7 | B                                                                                                  |                              42 | 0.1667           |
-| UK263          | 6 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-20, Apr-13 |                 6 | B.1.p11                                                                                            |                              62 | 0.0774           |
-| UK364          | 1 (16.67%)    | 4 (66.67%)   | 1 (16.67%)         | 0 (0%)       | Mar-19, May-14 |                 6 | B.1                                                                                                |                              31 | 0.3613           |
-| UK485          | 5 (83.33%)    | 0 (0%)       | 1 (16.67%)         | 0 (0%)       | Mar-02, Apr-06 |                 6 | B.1.1                                                                                              |                              69 | 0.1014           |
-| UK521          | 2 (33.33%)    | 4 (66.67%)   | 0 (0%)             | 0 (0%)       | Mar-27, Apr-08 |                 6 | B.1.1                                                                                              |                              67 | 0.0358           |
-| UK2014         | 2 (33.33%)    | 0 (0%)       | 0 (0%)             | 4 (66.67%)   | Apr-11, Jun-05 |                 6 | B.1                                                                                                |                               9 | 1.2222           |
-| UK799          | 6 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-01, Mar-07 |                 6 | B.1                                                                                                |                              99 | 0.0121           |
-| UK713          | 5 (83.33%)    | 1 (16.67%)   | 0 (0%)             | 0 (0%)       | Apr-03, May-27 |                 6 | B.1.1                                                                                              |                              18 | 0.6              |
-| UK629          | 6 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-23, Apr-13 |                 6 | B.1                                                                                                |                              62 | 0.0677           |
-| UK464          | 4 (66.67%)    | 2 (33.33%)   | 0 (0%)             | 0 (0%)       | Mar-25, Apr-19 |                 6 | B.1                                                                                                |                              56 | 0.0893           |
-| UK185          | 4 (66.67%)    | 0 (0%)       | 1 (16.67%)         | 1 (16.67%)   | Mar-10, May-15 |                 6 | B.3                                                                                                |                              30 | 0.44             |
-| UK5903         | 5 (83.33%)    | 0 (0%)       | 0 (0%)             | 1 (16.67%)   | Mar-25, Apr-18 |                 6 | B.2                                                                                                |                              57 | 0.0842           |
-| UK270          | 5 (83.33%)    | 0 (0%)       | 0 (0%)             | 1 (16.67%)   | Mar-04, Apr-01 |                 6 | B                                                                                                  |                              74 | 0.0757           |
-| UK552          | 1 (16.67%)    | 0 (0%)       | 0 (0%)             | 5 (83.33%)   | Mar-18, Mar-30 |                 6 | A.1                                                                                                |                              76 | 0.0316           |
-| UK5215         | 5 (83.33%)    | 0 (0%)       | 1 (16.67%)         | 0 (0%)       | Mar-29, May-13 |                 6 | B.1.1                                                                                              |                              32 | 0.2812           |
-| UK269          | 6 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Mar-25, Jun-02 |                 6 | B.1.1                                                                                              |                              12 | 1.15             |
-| UK574          | 4 (66.67%)    | 2 (33.33%)   | 0 (0%)             | 0 (0%)       | Mar-26, Apr-13 |                 6 | B.2.1                                                                                              |                              62 | 0.0581           |
-| UK330          | 5 (83.33%)    | 1 (16.67%)   | 0 (0%)             | 0 (0%)       | Mar-23, Apr-08 |                 6 | B.1.1                                                                                              |                              67 | 0.0478           |
-| UK654          | 6 (100.0%)    | 0 (0%)       | 0 (0%)             | 0 (0%)       | Feb-27, Mar-08 |                 6 | B.2.5                                                                                              |                              98 | 0.0204           |
+| Lineage name   | England       | Wales         | Scotland     | Northern Ireland   | Date range     |   Total sequences | Global lineage                                                                                                                         |   Time since last sample (days) | Activity score   |
+|:---------------|:--------------|:--------------|:-------------|:-------------------|:---------------|------------------:|:---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------:|:-----------------|
+| UK5            | 6696 (77.34%) | 1168 (13.49%) | 435 (5.02%)  | 359 (4.15%)        | Feb-16, Jun-27 |              8658 | B.1.1.16, B.1.1.p12, B.1.1.4, B.1.1.p16, B.1.1.10, B.1.1.14, B.1.1.13, B.1.1.p11, B.1.1.p15, B.1.1.2, B.1.1.5, B.1.1, B.1.1.3, B.1.1.1 |                               1 | 0.0152           |
+| UK107          | 1293 (91.44%) | 61 (4.31%)    | 46 (3.25%)   | 14 (0.99%)         | Feb-09, Jun-02 |              1414 | B, B.2, B.2.5, B.2.1                                                                                                                   |                              26 | 0.0031           |
+| UK42           | 794 (58.0%)   | 368 (26.88%)  | 205 (14.97%) | 2 (0.15%)          | Feb-24, Jun-21 |              1369 | B.1.35, B.1.72, B.1.p11, B.1.5, B.1.p73, B.1, B.1.71                                                                                   |                               7 | 0.0123           |
+| UK36           | 68 (11.2%)    | 1 (0.16%)     | 536 (88.3%)  | 2 (0.33%)          | Mar-18, Jun-06 |               607 | B.1                                                                                                                                    |                              22 | 0.006            |
+| UK5676         | 362 (63.4%)   | 54 (9.46%)    | 150 (26.27%) | 5 (0.88%)          | Feb-26, May-27 |               571 | B.2                                                                                                                                    |                              32 | 0.005            |
+| UK2464         | 298 (53.6%)   | 78 (14.03%)   | 180 (32.37%) | 0 (0%)             | Mar-09, Jun-18 |               556 | B.1.p11, B.1                                                                                                                           |                              10 | 0.0182           |
+| UK199          | 260 (47.62%)  | 55 (10.07%)   | 227 (41.58%) | 4 (0.73%)          | Feb-26, Jun-22 |               546 | B.1.5, B.1.5.5, B.1, B.1.p73                                                                                                           |                               6 | 0.0358           |
+| UK2913         | 387 (72.74%)  | 18 (3.38%)    | 110 (20.68%) | 17 (3.2%)          | Mar-07, Jun-16 |               532 | B.1.p11, B.1                                                                                                                           |                              12 | 0.0159           |
+| UK61           | 107 (20.19%)  | 419 (79.06%)  | 3 (0.57%)    | 1 (0.19%)          | Feb-23, May-27 |               530 | B, B.3                                                                                                                                 |                              32 | 0.0056           |
+| UK5098         | 6 (1.36%)     | 1 (0.23%)     | 433 (98.41%) | 0 (0%)             | Mar-01, Jun-05 |               440 | B.1.8, B.1, B.1.p73                                                                                                                    |                              23 | 0.0095           |
+| UK109          | 111 (27.89%)  | 35 (8.79%)    | 244 (61.31%) | 8 (2.01%)          | Mar-12, Jun-12 |               398 | B.1.5, B.1.5.5                                                                                                                         |                              16 | 0.0145           |
+| UK2916         | 301 (79.84%)  | 54 (14.32%)   | 13 (3.45%)   | 9 (2.39%)          | Feb-03, Jun-10 |               377 | B.1                                                                                                                                    |                              18 | 0.0189           |
+| UK72           | 265 (77.71%)  | 15 (4.4%)     | 49 (14.37%)  | 12 (3.52%)         | Feb-05, Jun-02 |               341 | B.2.2, B                                                                                                                               |                              26 | 0.0133           |
+| UK167          | 240 (75.24%)  | 21 (6.58%)    | 32 (10.03%)  | 26 (8.15%)         | Mar-06, Jun-07 |               319 | B.1.66, B.1                                                                                                                            |                              21 | 0.0139           |
+| UK5741         | 191 (64.53%)  | 104 (35.14%)  | 1 (0.34%)    | 0 (0%)             | Mar-09, Jun-12 |               296 | B.1.44, B.1                                                                                                                            |                              16 | 0.0201           |
+| UK632          | 42 (15.33%)   | 232 (84.67%)  | 0 (0%)       | 0 (0%)             | Mar-23, Jun-10 |               274 | B.1.1                                                                                                                                  |                              18 | 0.0161           |
+| UK2735         | 150 (55.15%)  | 76 (27.94%)   | 32 (11.76%)  | 14 (5.15%)         | Mar-18, Jun-10 |               272 | B.1.1                                                                                                                                  |                              18 | 0.0172           |
+| UK3021         | 23 (9.27%)    | 225 (90.73%)  | 0 (0%)       | 0 (0%)             | Mar-12, Jun-09 |               248 | B.1                                                                                                                                    |                              19 | 0.019            |
+| UK9            | 226 (99.56%)  | 1 (0.44%)     | 0 (0%)       | 0 (0%)             | Mar-09, May-15 |               227 | B.1.13                                                                                                                                 |                              44 | 0.0067           |
+| UK40           | 6 (2.69%)     | 2 (0.9%)      | 215 (96.41%) | 0 (0%)             | Mar-13, Jun-08 |               223 | B.16, B                                                                                                                                |                              20 | 0.0196           |
+| UK5561         | 169 (84.5%)   | 23 (11.5%)    | 7 (3.5%)     | 1 (0.5%)           | Feb-25, May-24 |               200 | B.2.2, B.2                                                                                                                             |                              35 | 0.0128           |
+| UK15           | 141 (73.82%)  | 11 (5.76%)    | 36 (18.85%)  | 3 (1.57%)          | Feb-27, May-06 |               191 | B.1.1                                                                                                                                  |                              53 | 0.0069           |
+| UK370          | 93 (48.69%)   | 50 (26.18%)   | 40 (20.94%)  | 8 (4.19%)          | Mar-06, Jun-16 |               191 | B.1.1.10                                                                                                                               |                              12 | 0.0447           |
+| UK240          | 169 (91.85%)  | 2 (1.09%)     | 13 (7.07%)   | 0 (0%)             | Feb-25, May-27 |               184 | B, B.2, B.2.5, B.2.1                                                                                                                   |                              32 | 0.0157           |
+| UK39           | 3 (2.03%)     | 0 (0%)        | 145 (97.97%) | 0 (0%)             | Mar-12, May-29 |               148 | A.2                                                                                                                                    |                              30 | 0.0177           |
+| UK6            | 135 (96.43%)  | 0 (0%)        | 5 (3.57%)    | 0 (0%)             | Mar-06, Jun-16 |               140 | B.1                                                                                                                                    |                              12 | 0.0612           |
+| UK63           | 128 (95.52%)  | 2 (1.49%)     | 4 (2.99%)    | 0 (0%)             | Mar-18, May-10 |               134 | B.1.1                                                                                                                                  |                              49 | 0.0081           |
+| UK4            | 124 (95.38%)  | 2 (1.54%)     | 3 (2.31%)    | 1 (0.77%)          | Feb-28, Apr-29 |               130 | B                                                                                                                                      |                              60 | 0.0079           |
+| UK494          | 125 (97.66%)  | 1 (0.78%)     | 2 (1.56%)    | 0 (0%)             | Mar-19, May-05 |               128 | B.1.p11, B.1                                                                                                                           |                              54 | 0.0069           |
+| UK495          | 1 (0.79%)     | 124 (98.41%)  | 1 (0.79%)    | 0 (0%)             | Mar-28, Jun-03 |               126 | B.1.p11                                                                                                                                |                              25 | 0.0214           |
+| UK66           | 105 (85.37%)  | 0 (0%)        | 17 (13.82%)  | 1 (0.81%)          | Mar-18, May-20 |               123 | B.1.1.8                                                                                                                                |                              39 | 0.0132           |
+| UK668          | 28 (24.14%)   | 1 (0.86%)     | 87 (75.0%)   | 0 (0%)             | Mar-20, Jun-10 |               116 | B.1                                                                                                                                    |                              18 | 0.0396           |
+| UK2200         | 37 (34.26%)   | 35 (32.41%)   | 30 (27.78%)  | 6 (5.56%)          | Feb-28, Jun-06 |               108 | B.1.5, B.1.5.6                                                                                                                         |                              22 | 0.0421           |
+| UK605          | 24 (22.22%)   | 79 (73.15%)   | 4 (3.7%)     | 1 (0.93%)          | Mar-17, May-24 |               108 | B.1.1, B.1.1.10                                                                                                                        |                              35 | 0.0182           |
+| UK822          | 1 (0.97%)     | 102 (99.03%)  | 0 (0%)       | 0 (0%)             | Apr-14, Jun-11 |               103 | B.1                                                                                                                                    |                              17 | 0.0334           |
+| UK5180         | 93 (92.08%)   | 4 (3.96%)     | 0 (0%)       | 4 (3.96%)          | Mar-07, May-09 |               101 | B.1.1.7                                                                                                                                |                              50 | 0.0126           |
+| UK28           | 99 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-13, May-08 |                99 | B.1.1.10                                                                                                                               |                              51 | 0.0112           |
+| UK601          | 23 (23.47%)   | 0 (0%)        | 9 (9.18%)    | 66 (67.35%)        | Mar-11, May-11 |                98 | B.10                                                                                                                                   |                              48 | 0.0131           |
+| UK51           | 88 (91.67%)   | 0 (0%)        | 7 (7.29%)    | 1 (1.04%)          | Mar-21, Jun-20 |                96 | B.1.36                                                                                                                                 |                               8 | 0.1197           |
+| UK5322         | 2 (2.11%)     | 86 (90.53%)   | 7 (7.37%)    | 0 (0%)             | Mar-22, Jun-04 |                95 | B.1.1                                                                                                                                  |                              24 | 0.0328           |
+| UK77           | 88 (95.65%)   | 4 (4.35%)     | 0 (0%)       | 0 (0%)             | Mar-11, May-20 |                92 | B.2                                                                                                                                    |                              39 | 0.0197           |
+| UK5498         | 72 (79.12%)   | 7 (7.69%)     | 12 (13.19%)  | 0 (0%)             | Mar-06, May-28 |                91 | B, B.2                                                                                                                                 |                              31 | 0.0297           |
+| UK501          | 66 (75.86%)   | 1 (1.15%)     | 20 (22.99%)  | 0 (0%)             | Mar-11, Jun-18 |                87 | B.1                                                                                                                                    |                              10 | 0.1151           |
+| UK829          | 84 (98.82%)   | 0 (0%)        | 1 (1.18%)    | 0 (0%)             | Mar-03, Apr-29 |                85 | B.2.5                                                                                                                                  |                              60 | 0.0113           |
+| UK31           | 78 (95.12%)   | 0 (0%)        | 4 (4.88%)    | 0 (0%)             | Mar-12, Jun-27 |                82 | B.3                                                                                                                                    |                               1 | 1.321            |
+| UK2906         | 72 (92.31%)   | 2 (2.56%)     | 4 (5.13%)    | 0 (0%)             | Mar-03, Jun-02 |                78 | B.1                                                                                                                                    |                              26 | 0.0455           |
+| UK319          | 77 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-28, Jun-03 |                77 | B.1                                                                                                                                    |                              25 | 0.0353           |
+| UK339          | 70 (92.11%)   | 4 (5.26%)     | 1 (1.32%)    | 1 (1.32%)          | Mar-09, Jun-18 |                76 | B.3                                                                                                                                    |                              10 | 0.1347           |
+| UK384          | 70 (95.89%)   | 1 (1.37%)     | 2 (2.74%)    | 0 (0%)             | Feb-28, Apr-23 |                73 | B.2, B.2.1                                                                                                                             |                              66 | 0.0116           |
+| UK120          | 58 (79.45%)   | 0 (0%)        | 15 (20.55%)  | 0 (0%)             | Feb-27, Jun-07 |                73 | B.14, B                                                                                                                                |                              21 | 0.0668           |
+| UK86           | 9 (12.68%)    | 61 (85.92%)   | 1 (1.41%)    | 0 (0%)             | Mar-05, May-30 |                71 | B.1                                                                                                                                    |                              29 | 0.0424           |
+| UK335          | 58 (81.69%)   | 1 (1.41%)     | 12 (16.9%)   | 0 (0%)             | Mar-07, Jun-22 |                71 | B.1.1                                                                                                                                  |                               6 | 0.2548           |
+| UK607          | 58 (82.86%)   | 12 (17.14%)   | 0 (0%)       | 0 (0%)             | Mar-02, May-18 |                70 | B                                                                                                                                      |                              41 | 0.0272           |
+| UK89           | 58 (82.86%)   | 12 (17.14%)   | 0 (0%)       | 0 (0%)             | Mar-21, Jun-22 |                70 | B.1.1, B.1.1.9                                                                                                                         |                               6 | 0.2246           |
+| UK37           | 67 (97.1%)    | 1 (1.45%)     | 1 (1.45%)    | 0 (0%)             | Mar-17, May-04 |                69 | B.1, B.1.30                                                                                                                            |                              55 | 0.0128           |
+| UK274          | 63 (95.45%)   | 2 (3.03%)     | 1 (1.52%)    | 0 (0%)             | Mar-06, May-19 |                66 | B, B.3                                                                                                                                 |                              40 | 0.0285           |
+| UK13           | 64 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-13, May-21 |                64 | B.1.1                                                                                                                                  |                              38 | 0.0288           |
+| UK509          | 63 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-07, May-29 |                63 | B.1.1                                                                                                                                  |                              30 | 0.028            |
+| UK476          | 56 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, May-06 |                56 | B.1.1                                                                                                                                  |                              53 | 0.0182           |
+| UK371          | 54 (98.18%)   | 1 (1.82%)     | 0 (0%)       | 0 (0%)             | Mar-12, May-06 |                55 | B.1.1                                                                                                                                  |                              53 | 0.0192           |
+| UK376          | 55 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-11, May-03 |                55 | B.1.1.9                                                                                                                                |                              56 | 0.0175           |
+| UK275          | 44 (83.02%)   | 8 (15.09%)    | 1 (1.89%)    | 0 (0%)             | Mar-09, Apr-27 |                53 | B.1.13                                                                                                                                 |                              62 | 0.0152           |
+| UK187          | 5 (9.62%)     | 29 (55.77%)   | 9 (17.31%)   | 9 (17.31%)         | Mar-21, Apr-30 |                52 | B.1                                                                                                                                    |                              59 | 0.0133           |
+| UK448          | 50 (98.04%)   | 1 (1.96%)     | 0 (0%)       | 0 (0%)             | Apr-04, May-26 |                51 | B.1.1                                                                                                                                  |                              33 | 0.0315           |
+| UK5523         | 51 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-16, Jun-01 |                51 | B.1                                                                                                                                    |                              27 | 0.0341           |
+| UK517          | 47 (94.0%)    | 1 (2.0%)      | 2 (4.0%)     | 0 (0%)             | Mar-02, Apr-30 |                50 | B.1.1                                                                                                                                  |                              59 | 0.0204           |
+| UK641          | 47 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-25, Jun-17 |                47 | B.1.1                                                                                                                                  |                              11 | 0.166            |
+| UK276          | 46 (97.87%)   | 0 (0%)        | 1 (2.13%)    | 0 (0%)             | Mar-15, May-13 |                47 | B.1.1                                                                                                                                  |                              46 | 0.0279           |
+| UK478          | 46 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-20, May-19 |                46 | B.1.1                                                                                                                                  |                              40 | 0.0333           |
+| UK497          | 39 (88.64%)   | 4 (9.09%)     | 1 (2.27%)    | 0 (0%)             | Mar-13, Jun-03 |                44 | A.2                                                                                                                                    |                              25 | 0.0763           |
+| UK100          | 0 (0%)        | 0 (0%)        | 43 (100.0%)  | 0 (0%)             | Mar-22, Jun-01 |                43 | B.1.5, B.1                                                                                                                             |                              27 | 0.0626           |
+| UK64           | 31 (72.09%)   | 12 (27.91%)   | 0 (0%)       | 0 (0%)             | Mar-12, May-05 |                43 | B.1                                                                                                                                    |                              54 | 0.0238           |
+| UK44           | 3 (7.14%)     | 0 (0%)        | 37 (88.1%)   | 2 (4.76%)          | Mar-17, Apr-23 |                42 | B                                                                                                                                      |                              66 | 0.0137           |
+| UK5309         | 38 (92.68%)   | 3 (7.32%)     | 0 (0%)       | 0 (0%)             | Mar-20, Jun-18 |                41 | B.1.1, B.1.1.10                                                                                                                        |                              10 | 0.225            |
+| UK3126         | 41 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-06, May-19 |                41 | B.1.1                                                                                                                                  |                              40 | 0.0269           |
+| UK623          | 40 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | May-10, Jun-11 |                40 | B.1.1                                                                                                                                  |                              17 | 0.0483           |
+| UK12           | 39 (97.5%)    | 0 (0%)        | 0 (0%)       | 1 (2.5%)           | Mar-12, May-07 |                40 | B.1.p11, B.1                                                                                                                           |                              52 | 0.0276           |
+| UK304          | 0 (0%)        | 0 (0%)        | 40 (100.0%)  | 0 (0%)             | Apr-16, Jun-02 |                40 | B.1.1.14                                                                                                                               |                              26 | 0.0464           |
+| UK131          | 34 (89.47%)   | 4 (10.53%)    | 0 (0%)       | 0 (0%)             | Mar-11, Apr-14 |                38 | B.15                                                                                                                                   |                              75 | 0.0123           |
+| UK1207         | 37 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, Jun-01 |                37 | B.1.1                                                                                                                                  |                              27 | 0.072            |
+| UK179          | 17 (45.95%)   | 20 (54.05%)   | 0 (0%)       | 0 (0%)             | Mar-17, May-07 |                37 | B.1.1, B.1.1.p11                                                                                                                       |                              52 | 0.0272           |
+| UK119          | 29 (78.38%)   | 7 (18.92%)    | 1 (2.7%)     | 0 (0%)             | Mar-11, Apr-24 |                37 | B.2.5                                                                                                                                  |                              65 | 0.0188           |
+| UK5549         | 31 (86.11%)   | 0 (0%)        | 3 (8.33%)    | 2 (5.56%)          | Mar-04, May-18 |                36 | B.2.2                                                                                                                                  |                              41 | 0.0523           |
+| UK27           | 31 (86.11%)   | 4 (11.11%)    | 1 (2.78%)    | 0 (0%)             | Mar-05, May-21 |                36 | B.1.1                                                                                                                                  |                              38 | 0.0579           |
+| UK14           | 3 (8.33%)     | 0 (0%)        | 33 (91.67%)  | 0 (0%)             | Mar-12, May-21 |                36 | B                                                                                                                                      |                              38 | 0.0526           |
+| UK79           | 35 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-24, May-05 |                35 | B.1                                                                                                                                    |                              54 | 0.0229           |
+| UK636          | 34 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-16, May-25 |                34 | B.1.1                                                                                                                                  |                              34 | 0.0624           |
+| UK43           | 1 (2.94%)     | 0 (0%)        | 33 (97.06%)  | 0 (0%)             | Mar-12, Apr-26 |                34 | A.5                                                                                                                                    |                              63 | 0.0216           |
+| UK479          | 6 (17.65%)    | 28 (82.35%)   | 0 (0%)       | 0 (0%)             | Apr-05, Jun-12 |                34 | B.1.1                                                                                                                                  |                              16 | 0.1288           |
+| UK87           | 0 (0%)        | 0 (0%)        | 33 (100.0%)  | 0 (0%)             | Mar-13, Apr-24 |                33 | B.1.70                                                                                                                                 |                              65 | 0.0202           |
+| UK462          | 25 (78.12%)   | 7 (21.88%)    | 0 (0%)       | 0 (0%)             | Apr-01, Jun-09 |                32 | B.1                                                                                                                                    |                              19 | 0.1171           |
+| UK404          | 32 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-01, Apr-19 |                32 | B.1                                                                                                                                    |                              70 | 0.0226           |
+| UK5649         | 29 (90.62%)   | 2 (6.25%)     | 1 (3.12%)    | 0 (0%)             | Mar-15, May-04 |                32 | B.2.6                                                                                                                                  |                              55 | 0.0293           |
+| UK18           | 31 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-11, Apr-14 |                31 | B.1.1.7                                                                                                                                |                              75 | 0.0151           |
+| UK241          | 31 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-22, Apr-16 |                31 | B.1.5.3                                                                                                                                |                              73 | 0.0114           |
+| UK21           | 0 (0%)        | 0 (0%)        | 31 (100.0%)  | 0 (0%)             | Mar-18, May-23 |                31 | B.1.40                                                                                                                                 |                              36 | 0.0611           |
+| UK23           | 30 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-18, May-09 |                30 | B.9                                                                                                                                    |                              50 | 0.0359           |
+| UK1667         | 5 (16.67%)    | 0 (0%)        | 25 (83.33%)  | 0 (0%)             | Mar-30, May-18 |                30 | B.1.9, B.1.p9                                                                                                                          |                              41 | 0.0412           |
+| UK567          | 4 (13.33%)    | 20 (66.67%)   | 5 (16.67%)   | 1 (3.33%)          | Mar-20, May-15 |                30 | B.2.2                                                                                                                                  |                              44 | 0.0439           |
+| UK158          | 29 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, Apr-24 |                29 | B.1.1                                                                                                                                  |                              65 | 0.0176           |
+| UK482          | 2 (6.9%)      | 0 (0%)        | 0 (0%)       | 27 (93.1%)         | Apr-03, May-05 |                29 | B.1.1                                                                                                                                  |                              54 | 0.0212           |
+| UK1721         | 27 (96.43%)   | 1 (3.57%)     | 0 (0%)       | 0 (0%)             | Mar-19, May-08 |                28 | B.1                                                                                                                                    |                              51 | 0.0363           |
+| UK101          | 26 (96.3%)    | 0 (0%)        | 1 (3.7%)     | 0 (0%)             | Mar-21, Apr-25 |                27 | B.1.5                                                                                                                                  |                              64 | 0.021            |
+| UK46           | 25 (92.59%)   | 1 (3.7%)      | 1 (3.7%)     | 0 (0%)             | Mar-02, May-08 |                27 | B.2.1                                                                                                                                  |                              51 | 0.0505           |
+| UK94           | 26 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-12, Apr-19 |                26 | B.2, B.2.1                                                                                                                             |                              70 | 0.0217           |
+| UK317          | 11 (42.31%)   | 12 (46.15%)   | 3 (11.54%)   | 0 (0%)             | Mar-13, Apr-20 |                26 | B.3                                                                                                                                    |                              69 | 0.022            |
+| UK615          | 26 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-15, May-15 |                26 | B.1.1                                                                                                                                  |                              44 | 0.0555           |
+| UK600          | 4 (15.38%)    | 22 (84.62%)   | 0 (0%)       | 0 (0%)             | Apr-01, May-26 |                26 | B.1.1                                                                                                                                  |                              33 | 0.0667           |
+| UK173          | 26 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, Apr-20 |                26 | B                                                                                                                                      |                              69 | 0.0214           |
+| UK4493         | 0 (0%)        | 0 (0%)        | 26 (100.0%)  | 0 (0%)             | Apr-23, May-19 |                26 | B.1                                                                                                                                    |                              40 | 0.026            |
+| UK1177         | 25 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-22, Jun-09 |                25 | B.1.1                                                                                                                                  |                              19 | 0.1053           |
+| UK202          | 10 (40.0%)    | 14 (56.0%)    | 1 (4.0%)     | 0 (0%)             | Mar-10, Jun-04 |                25 | B.1.1                                                                                                                                  |                              24 | 0.1493           |
+| UK47           | 20 (80.0%)    | 5 (20.0%)     | 0 (0%)       | 0 (0%)             | Mar-17, May-18 |                25 | B.1.1                                                                                                                                  |                              41 | 0.063            |
+| UK684          | 24 (96.0%)    | 1 (4.0%)      | 0 (0%)       | 0 (0%)             | Apr-08, May-21 |                25 | B.1                                                                                                                                    |                              38 | 0.0471           |
+| UK116          | 9 (36.0%)     | 16 (64.0%)    | 0 (0%)       | 0 (0%)             | Mar-24, Jun-02 |                25 | B.1                                                                                                                                    |                              26 | 0.1122           |
+| UK326          | 24 (96.0%)    | 0 (0%)        | 1 (4.0%)     | 0 (0%)             | Mar-22, May-22 |                25 | B.1.1.10                                                                                                                               |                              37 | 0.0687           |
+| UK617          | 25 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-29, Apr-28 |                25 | B.1.1                                                                                                                                  |                              61 | 0.0205           |
+| UK161          | 21 (84.0%)    | 4 (16.0%)     | 0 (0%)       | 0 (0%)             | Mar-10, May-25 |                25 | B.1.1                                                                                                                                  |                              34 | 0.0931           |
+| UK712          | 24 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-08, Jun-18 |                24 | B.1.5, B.1                                                                                                                             |                              10 | 0.3087           |
+| UK2787         | 23 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-07, Jun-26 |                23 | B.1.1                                                                                                                                  |                               2 | 1.8182           |
+| UK5300         | 22 (95.65%)   | 0 (0%)        | 1 (4.35%)    | 0 (0%)             | Apr-17, Jun-16 |                23 | B.1.1                                                                                                                                  |                              12 | 0.2273           |
+| UK2045         | 23 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-17, May-09 |                23 | B.1                                                                                                                                    |                              50 | 0.0482           |
+| UK58           | 6 (26.09%)    | 0 (0%)        | 17 (73.91%)  | 0 (0%)             | Mar-12, Apr-24 |                23 | B.1                                                                                                                                    |                              65 | 0.0301           |
+| UK4237         | 22 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-28, Jun-10 |                22 | B.1.1                                                                                                                                  |                              18 | 0.1958           |
+| UK5503         | 21 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-20, Jun-12 |                21 | B.1                                                                                                                                    |                              16 | 0.2625           |
+| UK329          | 21 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-17, Apr-26 |                21 | B.1.34, B.1                                                                                                                            |                              63 | 0.0317           |
+| UK203          | 20 (95.24%)   | 1 (4.76%)     | 0 (0%)       | 0 (0%)             | Mar-22, Jun-03 |                21 | B.1.1                                                                                                                                  |                              25 | 0.146            |
+| UK174          | 21 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-19, May-22 |                21 | B.1.5                                                                                                                                  |                              37 | 0.0865           |
+| UK24           | 21 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, Apr-10 |                21 | B.2.1                                                                                                                                  |                              79 | 0.0171           |
+| UK233          | 21 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | May-25, Jun-15 |                21 | B.1                                                                                                                                    |                              13 | 0.0808           |
+| UK134          | 16 (80.0%)    | 0 (0%)        | 4 (20.0%)    | 0 (0%)             | Mar-04, Apr-07 |                20 | B.1                                                                                                                                    |                              82 | 0.0218           |
+| UK125          | 19 (95.0%)    | 0 (0%)        | 1 (5.0%)     | 0 (0%)             | Mar-30, May-29 |                20 | B.1.1                                                                                                                                  |                              30 | 0.1053           |
+| UK604          | 15 (75.0%)    | 2 (10.0%)     | 3 (15.0%)    | 0 (0%)             | Mar-06, Mar-17 |                20 | B.1.1                                                                                                                                  |                             103 | 0.0056           |
+| UK1703         | 20 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-16, May-01 |                20 | B.1                                                                                                                                    |                              58 | 0.0417           |
+| UK146          | 18 (94.74%)   | 0 (0%)        | 1 (5.26%)    | 0 (0%)             | Mar-24, May-07 |                19 | B.1.1                                                                                                                                  |                              52 | 0.047            |
+| UK3692         | 15 (78.95%)   | 1 (5.26%)     | 2 (10.53%)   | 1 (5.26%)          | Mar-12, May-19 |                19 | B.1.1                                                                                                                                  |                              40 | 0.0944           |
+| UK70           | 16 (84.21%)   | 1 (5.26%)     | 0 (0%)       | 2 (10.53%)         | Mar-06, Apr-22 |                19 | B.2                                                                                                                                    |                              67 | 0.039            |
+| UK206          | 0 (0%)        | 19 (100.0%)   | 0 (0%)       | 0 (0%)             | Apr-02, May-20 |                19 | B.1                                                                                                                                    |                              39 | 0.0684           |
+| UK425          | 4 (22.22%)    | 14 (77.78%)   | 0 (0%)       | 0 (0%)             | Mar-28, May-15 |                18 | B.1.1                                                                                                                                  |                              44 | 0.0642           |
+| UK502          | 0 (0%)        | 0 (0%)        | 18 (100.0%)  | 0 (0%)             | Mar-06, Mar-30 |                18 | B.1.69                                                                                                                                 |                              90 | 0.0157           |
+| UK706          | 3 (17.65%)    | 0 (0%)        | 0 (0%)       | 14 (82.35%)        | Mar-26, Apr-29 |                17 | B.1.1                                                                                                                                  |                              60 | 0.0354           |
+| UK268          | 13 (76.47%)   | 4 (23.53%)    | 0 (0%)       | 0 (0%)             | Mar-23, Jun-03 |                17 | B.1.1                                                                                                                                  |                              25 | 0.18             |
+| UK71           | 16 (94.12%)   | 1 (5.88%)     | 0 (0%)       | 0 (0%)             | Mar-08, May-06 |                17 | B                                                                                                                                      |                              53 | 0.0696           |
+| UK83           | 13 (81.25%)   | 1 (6.25%)     | 2 (12.5%)    | 0 (0%)             | Feb-29, Apr-13 |                16 | B.1.1                                                                                                                                  |                              76 | 0.0386           |
+| UK3045         | 2 (12.5%)     | 14 (87.5%)    | 0 (0%)       | 0 (0%)             | Apr-15, Jun-28 |                16 | B.1.1, B.1.1.p11                                                                                                                       |                               0 | active today     |
+| UK186          | 15 (93.75%)   | 1 (6.25%)     | 0 (0%)       | 0 (0%)             | Mar-27, Jun-09 |                16 | B                                                                                                                                      |                              19 | 0.2596           |
+| UK695          | 0 (0%)        | 16 (100.0%)   | 0 (0%)       | 0 (0%)             | Mar-25, Apr-12 |                16 | B.1.67                                                                                                                                 |                              77 | 0.0156           |
+| UK5660         | 16 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-25, May-08 |                16 | B.1.1                                                                                                                                  |                              51 | 0.017            |
+| UK569          | 16 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, Jun-16 |                16 | B.1.1                                                                                                                                  |                              12 | 0.4722           |
+| UK38           | 14 (93.33%)   | 0 (0%)        | 1 (6.67%)    | 0 (0%)             | Mar-04, Apr-20 |                15 | B.2.1                                                                                                                                  |                              69 | 0.0487           |
+| UK832          | 14 (93.33%)   | 0 (0%)        | 1 (6.67%)    | 0 (0%)             | Mar-09, May-10 |                15 | A.5                                                                                                                                    |                              49 | 0.0904           |
+| UK722          | 0 (0%)        | 0 (0%)        | 15 (100.0%)  | 0 (0%)             | Mar-23, May-27 |                15 | B.1.5                                                                                                                                  |                              32 | 0.1451           |
+| UK153          | 15 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-13, Apr-14 |                15 | B.2, B.3                                                                                                                               |                              75 | 0.0305           |
+| UK49           | 12 (85.71%)   | 0 (0%)        | 1 (7.14%)    | 1 (7.14%)          | Mar-12, May-01 |                14 | B.9                                                                                                                                    |                              58 | 0.0663           |
+| UK137          | 1 (7.14%)     | 0 (0%)        | 13 (92.86%)  | 0 (0%)             | Mar-09, Mar-31 |                14 | B.1.1                                                                                                                                  |                              89 | 0.019            |
+| UK3509         | 9 (64.29%)    | 3 (21.43%)    | 2 (14.29%)   | 0 (0%)             | Mar-23, Apr-21 |                14 | B.1.1.10                                                                                                                               |                              68 | 0.0328           |
+| UK261          | 0 (0%)        | 0 (0%)        | 14 (100.0%)  | 0 (0%)             | Mar-15, Apr-10 |                14 | A.3                                                                                                                                    |                              79 | 0.0253           |
+| UK5715         | 13 (92.86%)   | 0 (0%)        | 1 (7.14%)    | 0 (0%)             | Feb-29, Apr-22 |                14 | B.2                                                                                                                                    |                              67 | 0.0608           |
+| UK32           | 14 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-29, May-03 |                14 | B.1.1                                                                                                                                  |                              56 | 0.0481           |
+| UK565          | 14 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-14, May-14 |                14 | B.1.1                                                                                                                                  |                              45 | 0.0513           |
+| UK436          | 0 (0%)        | 1 (7.14%)     | 13 (92.86%)  | 0 (0%)             | Mar-28, May-14 |                14 | B.1.5                                                                                                                                  |                              45 | 0.0803           |
+| UK527          | 10 (71.43%)   | 4 (28.57%)    | 0 (0%)       | 0 (0%)             | Mar-22, Apr-18 |                14 | B.1                                                                                                                                    |                              71 | 0.0293           |
+| UK602          | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-20, Apr-02 |                13 | B.1.1                                                                                                                                  |                              87 | 0.0125           |
+| UK165          | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-13, May-19 |                13 | B                                                                                                                                      |                              40 | 0.075            |
+| UK5663         | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, May-02 |                13 | B.2                                                                                                                                    |                              57 | 0.0585           |
+| UK132          | 12 (92.31%)   | 0 (0%)        | 1 (7.69%)    | 0 (0%)             | Mar-27, Apr-30 |                13 | B.1                                                                                                                                    |                              59 | 0.048            |
+| UK328          | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-13, Apr-23 |                13 | B.1                                                                                                                                    |                              66 | 0.0126           |
+| UK34           | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Feb-27, Apr-02 |                13 | B.4                                                                                                                                    |                              87 | 0.0335           |
+| UK5307         | 10 (76.92%)   | 2 (15.38%)    | 1 (7.69%)    | 0 (0%)             | Mar-08, May-12 |                13 | B.1.1                                                                                                                                  |                              47 | 0.1152           |
+| UK141          | 13 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-22, Apr-24 |                13 | B.1.1                                                                                                                                  |                              65 | 0.0423           |
+| UK320          | 6 (46.15%)    | 0 (0%)        | 0 (0%)       | 7 (53.85%)         | Mar-22, Jun-02 |                13 | B.1                                                                                                                                    |                              26 | 0.2308           |
+| UK287          | 11 (91.67%)   | 1 (8.33%)     | 0 (0%)       | 0 (0%)             | Mar-28, Apr-24 |                12 | B.1                                                                                                                                    |                              65 | 0.0378           |
+| UK566          | 11 (91.67%)   | 0 (0%)        | 1 (8.33%)    | 0 (0%)             | Apr-02, Apr-21 |                12 | B.1.1, B.1.1.10                                                                                                                        |                              68 | 0.0254           |
+| UK507          | 12 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-18, Apr-30 |                12 | B.1.1.10                                                                                                                               |                              59 | 0.0663           |
+| UK5084         | 10 (83.33%)   | 2 (16.67%)    | 0 (0%)       | 0 (0%)             | Mar-28, Apr-16 |                12 | B.1                                                                                                                                    |                              73 | 0.0237           |
+| UK193          | 11 (91.67%)   | 1 (8.33%)     | 0 (0%)       | 0 (0%)             | Mar-30, May-01 |                12 | B.1.1                                                                                                                                  |                              58 | 0.0502           |
+| UK291          | 12 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-29, May-14 |                12 | B.1.5                                                                                                                                  |                              45 | 0.0929           |
+| UK467          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, Jun-05 |                11 | B.1.1                                                                                                                                  |                              23 | 0.3217           |
+| UK178          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, Apr-13 |                11 | B.1.1                                                                                                                                  |                              76 | 0.0395           |
+| UK215          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-16, Apr-11 |                11 | B.2                                                                                                                                    |                              78 | 0.0333           |
+| UK759          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-28, Apr-04 |                11 | B.1.1                                                                                                                                  |                              85 | 0.0082           |
+| UK2888         | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-09, May-14 |                11 | B.1.1                                                                                                                                  |                              45 | 0.0778           |
+| UK415          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-19, May-06 |                11 | B.1                                                                                                                                    |                              53 | 0.0321           |
+| UK340          | 10 (90.91%)   | 1 (9.09%)     | 0 (0%)       | 0 (0%)             | Mar-17, May-17 |                11 | B.1.1                                                                                                                                  |                              42 | 0.1452           |
+| UK653          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-07, May-19 |                11 | B.1.1                                                                                                                                  |                              40 | 0.105            |
+| UK22           | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-02, Apr-21 |                11 | B                                                                                                                                      |                              68 | 0.0735           |
+| UK266          | 11 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-06, Apr-30 |                11 | B.1                                                                                                                                    |                              59 | 0.0407           |
+| UK788          | 10 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Feb-28, Mar-05 |                10 | B.4                                                                                                                                    |                             115 | 0.0058           |
+| UK584          | 9 (90.0%)     | 0 (0%)        | 1 (10.0%)    | 0 (0%)             | Mar-17, Apr-02 |                10 | B.2, B.2.1                                                                                                                             |                              87 | 0.0204           |
+| UK327          | 0 (0%)        | 10 (100.0%)   | 0 (0%)       | 0 (0%)             | Apr-05, May-05 |                10 | B.1                                                                                                                                    |                              54 | 0.0617           |
+| UK433          | 5 (50.0%)     | 0 (0%)        | 5 (50.0%)    | 0 (0%)             | Mar-22, May-03 |                10 | B                                                                                                                                      |                              56 | 0.0833           |
+| UK133          | 3 (30.0%)     | 0 (0%)        | 7 (70.0%)    | 0 (0%)             | Mar-22, Apr-25 |                10 | B.1                                                                                                                                    |                              64 | 0.059            |
+| UK5653         | 9 (90.0%)     | 0 (0%)        | 1 (10.0%)    | 0 (0%)             | Mar-10, Apr-01 |                10 | B.2.6                                                                                                                                  |                              88 | 0.0278           |
+| UK5525         | 10 (100.0%)   | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-31, Apr-29 |                10 | B.1                                                                                                                                    |                              60 | 0.0537           |
+| UK581          | 1 (10.0%)     | 0 (0%)        | 0 (0%)       | 9 (90.0%)          | Apr-06, May-01 |                10 | B.1.1                                                                                                                                  |                              58 | 0.0479           |
+| UK55           | 6 (60.0%)     | 0 (0%)        | 4 (40.0%)    | 0 (0%)             | Mar-13, May-06 |                10 | B.1.1                                                                                                                                  |                              53 | 0.1132           |
+| UK263          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-20, Apr-13 |                 9 | B.1.p11                                                                                                                                |                              76 | 0.0395           |
+| UK284          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-02, Apr-25 |                 9 | B.1.1                                                                                                                                  |                              64 | 0.0449           |
+| UK113          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-22, Jun-02 |                 9 | B.1.1                                                                                                                                  |                              26 | 0.3462           |
+| UK454          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-22, Apr-29 |                 9 | B.1.1                                                                                                                                  |                              60 | 0.0792           |
+| UK121          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-21, May-27 |                 9 | B.1.1.7                                                                                                                                |                              32 | 0.1406           |
+| UK91           | 8 (88.89%)    | 1 (11.11%)    | 0 (0%)       | 0 (0%)             | Mar-01, Apr-01 |                 9 | B.1                                                                                                                                    |                              88 | 0.044            |
+| UK244          | 8 (88.89%)    | 1 (11.11%)    | 0 (0%)       | 0 (0%)             | Mar-10, Apr-06 |                 9 | B.1.1                                                                                                                                  |                              83 | 0.0407           |
+| UK563          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-11, May-01 |                 9 | B.1.1                                                                                                                                  |                              58 | 0.1099           |
+| UK5501         | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-16, Jun-01 |                 9 | B.1.12                                                                                                                                 |                              27 | 0.213            |
+| UK629          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, May-05 |                 9 | B.1                                                                                                                                    |                              54 | 0.0995           |
+| UK575          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, Apr-16 |                 9 | B.2.1                                                                                                                                  |                              73 | 0.0565           |
+| UK819          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-01, May-15 |                 9 | B.1                                                                                                                                    |                              44 | 0.125            |
+| UK756          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Feb-27, Mar-05 |                 9 | B.1.1                                                                                                                                  |                             115 | 0.0076           |
+| UK65           | 8 (88.89%)    | 0 (0%)        | 1 (11.11%)   | 0 (0%)             | Mar-07, Apr-21 |                 9 | B.1.1                                                                                                                                  |                              68 | 0.0827           |
+| UK698          | 8 (88.89%)    | 0 (0%)        | 1 (11.11%)   | 0 (0%)             | Mar-23, Apr-12 |                 9 | B.1.p73, B.1                                                                                                                           |                              77 | 0.0325           |
+| UK1810         | 8 (88.89%)    | 0 (0%)        | 1 (11.11%)   | 0 (0%)             | Mar-21, Apr-20 |                 9 | B.1.5, B.1                                                                                                                             |                              69 | 0.0543           |
+| UK491          | 9 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-03, Apr-03 |                 9 | B, B.2                                                                                                                                 |                              86 | 0.0451           |
+| UK80           | 5 (62.5%)     | 3 (37.5%)     | 0 (0%)       | 0 (0%)             | Mar-31, Jun-17 |                 8 | B.1.1.p15                                                                                                                              |                              11 | 1.013            |
+| UK271          | 1 (12.5%)     | 0 (0%)        | 7 (87.5%)    | 0 (0%)             | Apr-02, Apr-26 |                 8 | B.1                                                                                                                                    |                              63 | 0.0544           |
+| UK195          | 7 (87.5%)     | 1 (12.5%)     | 0 (0%)       | 0 (0%)             | May-19, Jun-15 |                 8 | B.1                                                                                                                                    |                              13 | 0.2967           |
+| UK633          | 0 (0%)        | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | Apr-03, Apr-28 |                 8 | B.1.1.16, B.1.1.p16                                                                                                                    |                              61 | 0.0585           |
+| UK594          | 0 (0%)        | 0 (0%)        | 8 (100.0%)   | 0 (0%)             | Apr-20, May-01 |                 8 | B                                                                                                                                      |                              58 | 0.0271           |
+| UK548          | 0 (0%)        | 0 (0%)        | 8 (100.0%)   | 0 (0%)             | Mar-14, Mar-30 |                 8 | B.2.1                                                                                                                                  |                              90 | 0.0254           |
+| UK151          | 0 (0%)        | 0 (0%)        | 8 (100.0%)   | 0 (0%)             | Mar-23, Apr-24 |                 8 | B.1                                                                                                                                    |                              65 | 0.0703           |
+| UK342          | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-02, Apr-22 |                 8 | B.1.1                                                                                                                                  |                              67 | 0.0426           |
+| UK4658         | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-13, Apr-10 |                 8 | B.2.1                                                                                                                                  |                              79 | 0.0506           |
+| UK5308         | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-29, May-01 |                 8 | B.1.1                                                                                                                                  |                              58 | 0.0049           |
+| UK598          | 7 (87.5%)     | 1 (12.5%)     | 0 (0%)       | 0 (0%)             | Mar-22, Apr-14 |                 8 | B.1.1                                                                                                                                  |                              75 | 0.0438           |
+| UK323          | 2 (25.0%)     | 2 (25.0%)     | 4 (50.0%)    | 0 (0%)             | Mar-12, May-06 |                 8 | B.1.35, B.1.5, B.1                                                                                                                     |                              53 | 0.1482           |
+| UK570          | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-24, Apr-29 |                 8 | B.1.1                                                                                                                                  |                              60 | 0.0857           |
+| UK696          | 0 (0%)        | 8 (100.0%)    | 0 (0%)       | 0 (0%)             | Apr-10, May-01 |                 8 | B.1.5, B.1                                                                                                                             |                              58 | 0.0517           |
+| UK369          | 7 (87.5%)     | 0 (0%)        | 1 (12.5%)    | 0 (0%)             | Mar-22, Apr-11 |                 8 | B.1.1                                                                                                                                  |                              78 | 0.0366           |
+| UK755          | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-06, May-21 |                 8 | B.1.1                                                                                                                                  |                              38 | 0.2857           |
+| UK739          | 8 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-01, Mar-08 |                 8 | B.4                                                                                                                                    |                             112 | 0.0089           |
+| UK656          | 3 (42.86%)    | 4 (57.14%)    | 0 (0%)       | 0 (0%)             | Mar-13, Apr-24 |                 7 | B.1.1.10                                                                                                                               |                              65 | 0.1077           |
+| UK490          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-03, May-02 |                 7 | B.1.1                                                                                                                                  |                              57 | 0.0848           |
+| UK75           | 6 (85.71%)    | 0 (0%)        | 1 (14.29%)   | 0 (0%)             | Mar-28, Apr-12 |                 7 | B                                                                                                                                      |                              77 | 0.0325           |
+| UK451          | 0 (0%)        | 6 (85.71%)    | 1 (14.29%)   | 0 (0%)             | Mar-20, Apr-05 |                 7 | B.2.1                                                                                                                                  |                              84 | 0.0317           |
+| UK767          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-05, Apr-19 |                 7 | B.1                                                                                                                                    |                              70 | 0.0333           |
+| UK232          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-04, Mar-30 |                 7 | B.1.1                                                                                                                                  |                              90 | 0.0481           |
+| UK464          | 4 (57.14%)    | 2 (28.57%)    | 0 (0%)       | 1 (14.29%)         | Mar-25, May-04 |                 7 | B.1                                                                                                                                    |                              55 | 0.1212           |
+| UK171          | 2 (28.57%)    | 0 (0%)        | 5 (71.43%)   | 0 (0%)             | Mar-31, Apr-21 |                 7 | B.1                                                                                                                                    |                              68 | 0.0515           |
+| UK437          | 5 (71.43%)    | 2 (28.57%)    | 0 (0%)       | 0 (0%)             | Mar-23, Apr-11 |                 7 | B.1                                                                                                                                    |                              78 | 0.0406           |
+| UK98           | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-24, Jun-08 |                 7 | B.6                                                                                                                                    |                              20 | 0.6333           |
+| UK269          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-25, Jun-02 |                 7 | B.1.1                                                                                                                                  |                              26 | 0.4423           |
+| UK957          | 6 (85.71%)    | 0 (0%)        | 0 (0%)       | 1 (14.29%)         | Mar-24, May-26 |                 7 | B.1.1                                                                                                                                  |                              33 | 0.3182           |
+| UK799          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-01, Mar-07 |                 7 | B.1                                                                                                                                    |                             113 | 0.0088           |
+| UK390          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-27, May-01 |                 7 | B.1.5                                                                                                                                  |                              58 | 0.1006           |
+| UK1003         | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-02, Apr-22 |                 7 | B.1.1                                                                                                                                  |                              67 | 0.0498           |
+| UK54           | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-11, Apr-02 |                 7 | B.2.4                                                                                                                                  |                              87 | 0.0421           |
+| UK671          | 0 (0%)        | 0 (0%)        | 7 (100.0%)   | 0 (0%)             | Apr-17, May-31 |                 7 | B.1.p73                                                                                                                                |                              28 | 0.2619           |
+| UK414          | 5 (71.43%)    | 0 (0%)        | 0 (0%)       | 2 (28.57%)         | Mar-30, May-09 |                 7 | B.1.1                                                                                                                                  |                              50 | 0.1333           |
+| UK728          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-19, Apr-01 |                 7 | B.2, B.2.1                                                                                                                             |                              88 | 0.0246           |
+| UK520          | 7 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-14, Apr-08 |                 7 | B.2.1                                                                                                                                  |                              81 | 0.0514           |
+| UK270          | 6 (85.71%)    | 0 (0%)        | 1 (14.29%)   | 0 (0%)             | Mar-04, Apr-03 |                 7 | B                                                                                                                                      |                              86 | 0.0581           |
+| UK521          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-31, May-01 |                 6 | B.1.1                                                                                                                                  |                              58 | 0.1069           |
+| UK552          | 1 (16.67%)    | 0 (0%)        | 5 (83.33%)   | 0 (0%)             | Mar-18, Mar-30 |                 6 | A.1                                                                                                                                    |                              90 | 0.0267           |
+| UK743          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Feb-24, Jun-14 |                 6 | B.1.5.1                                                                                                                                |                              14 | 1.5857           |
+| UK106          | 3 (50.0%)     | 1 (16.67%)    | 2 (33.33%)   | 0 (0%)             | Mar-09, Apr-18 |                 6 | B, B.3                                                                                                                                 |                              71 | 0.1127           |
+| UK419          | 0 (0%)        | 0 (0%)        | 5 (83.33%)   | 1 (16.67%)         | Mar-30, May-07 |                 6 | B.1.1                                                                                                                                  |                              52 | 0.1462           |
+| UK5648         | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-08, Apr-02 |                 6 | B.2                                                                                                                                    |                              87 | 0.0575           |
+| UK364          | 1 (16.67%)    | 4 (66.67%)    | 0 (0%)       | 1 (16.67%)         | Mar-19, May-14 |                 6 | B.1                                                                                                                                    |                              45 | 0.2489           |
+| UK185          | 4 (66.67%)    | 0 (0%)        | 1 (16.67%)   | 1 (16.67%)         | Mar-10, May-15 |                 6 | B.3                                                                                                                                    |                              44 | 0.3              |
+| UK676          | 5 (83.33%)    | 0 (0%)        | 1 (16.67%)   | 0 (0%)             | Mar-03, Mar-12 |                 6 | B.1.1                                                                                                                                  |                             108 | 0.0167           |
+| UK403          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-23, Apr-14 |                 6 | B.1.1                                                                                                                                  |                              75 | 0.0587           |
+| UK56           | 5 (83.33%)    | 1 (16.67%)    | 0 (0%)       | 0 (0%)             | Mar-18, Apr-04 |                 6 | B.2                                                                                                                                    |                              85 | 0.04             |
+| UK456          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-03, Apr-23 |                 6 | B.1.1                                                                                                                                  |                              66 | 0.0606           |
+| UK654          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Feb-27, Mar-08 |                 6 | B.2.5                                                                                                                                  |                             112 | 0.0179           |
+| UK60           | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-21, Mar-30 |                 6 | B                                                                                                                                      |                              90 | 0.02             |
+| UK1867         | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-18, Apr-30 |                 6 | B.1.1                                                                                                                                  |                              59 | 0.1458           |
+| UK697          | 0 (0%)        | 0 (0%)        | 6 (100.0%)   | 0 (0%)             | Mar-31, Apr-24 |                 6 | B.1                                                                                                                                    |                              65 | 0.0738           |
+| UK330          | 5 (83.33%)    | 1 (16.67%)    | 0 (0%)       | 0 (0%)             | Mar-23, Apr-08 |                 6 | B.1.1                                                                                                                                  |                              81 | 0.0395           |
+| UK293          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-13, Apr-16 |                 6 | B.3                                                                                                                                    |                              73 | 0.0932           |
+| UK777          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Apr-01, Apr-14 |                 6 | B.1                                                                                                                                    |                              75 | 0.0347           |
+| UK4735         | 0 (0%)        | 0 (0%)        | 6 (100.0%)   | 0 (0%)             | Apr-22, May-27 |                 6 | B.1.1                                                                                                                                  |                              32 | 0.2188           |
+| UK288          | 3 (50.0%)     | 0 (0%)        | 2 (33.33%)   | 1 (16.67%)         | Mar-12, Apr-04 |                 6 | B.2.1                                                                                                                                  |                              85 | 0.0541           |
+| UK196          | 6 (100.0%)    | 0 (0%)        | 0 (0%)       | 0 (0%)             | Mar-15, Mar-31 |                 6 | B.2.1                                                                                                                                  |                              89 | 0.036            |
+| UK243          | 3 (50.0%)     | 0 (0%)        | 3 (50.0%)    | 0 (0%)             | Mar-18, Apr-12 |                 6 | B.1.5                                                                                                                                  |                              77 | 0.0649           |
 
 \pagebreak
 
@@ -432,52 +460,52 @@ Below are the raw data tables for each of the figures in the report.
 
 |    | Centre   |   Lag in days |
 |---:|:---------|--------------:|
-|  0 | NOTT     |             5 |
-|  1 | CAMB     |             5 |
-|  2 | NORW     |            10 |
-|  3 | PORT     |            11 |
-|  4 | BIRM     |            11 |
+|  0 | PHWC     |             5 |
+|  1 | NOTT     |             6 |
+|  2 | BIRM     |             8 |
+|  3 | SHEF     |             9 |
+|  4 | CAMB     |            10 |
 |  5 | EDIN     |            11 |
-|  6 | LIVE     |            11 |
-|  7 | PHWC     |            13 |
-|  8 | SANG     |            14 |
-|  9 | EXET     |            16 |
-| 10 | SHEF     |            18 |
-| 11 | NORT     |            19 |
-| 12 | GLAS     |            23 |
-| 13 | PHEC     |            31 |
-| 14 | LOND     |            36 |
-| 15 | OXON     |            66 |
-| 16 | NIRE     |            80 |
+|  6 | NORW     |            15 |
+|  7 | GLAS     |            15 |
+|  8 | PHEC     |            16 |
+|  9 | LIVE     |            17 |
+| 10 | SANG     |            24 |
+| 11 | PORT     |            24 |
+| 12 | EXET     |            30 |
+| 13 | NORT     |            33 |
+| 14 | OXON     |            45 |
+| 15 | LOND     |            50 |
+| 16 | NIRE     |            94 |
 
 \pagebreak
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK5 |   UK42 |   UK107 |   UK5676 |   UK2464 |   UK61 |   UK199 |   UK36 |   UK2913 |   UK167 |
-|:------------------|------:|-------:|--------:|---------:|---------:|-------:|--------:|-------:|---------:|--------:|
-| 2020-01-26        |     0 |      0 |       0 |        0 |        0 |      0 |       0 |      0 |        0 |       1 |
-| 2020-02-02        |     0 |      1 |       0 |        0 |        0 |      0 |       0 |      0 |        0 |       0 |
-| 2020-02-09        |     0 |      0 |       1 |        1 |        0 |      0 |       0 |      0 |        0 |       0 |
-| 2020-02-16        |     0 |      0 |       1 |        0 |        0 |      0 |       0 |      0 |        0 |       0 |
-| 2020-02-23        |     2 |      4 |       5 |        2 |        0 |      0 |       1 |      0 |        0 |       0 |
-| 2020-03-01        |    10 |     12 |       6 |        6 |        0 |      0 |       2 |      0 |        1 |       1 |
-| 2020-03-08        |    29 |     16 |      18 |       15 |        3 |      3 |       3 |      0 |        4 |       9 |
-| 2020-03-15        |    33 |     22 |      26 |       28 |       12 |      2 |      10 |      4 |        6 |       4 |
-| 2020-03-22        |    55 |     38 |      36 |       30 |       25 |      9 |      21 |      9 |       12 |      17 |
-| 2020-03-29        |    63 |     50 |      39 |       38 |       30 |     14 |      26 |     18 |       19 |      23 |
-| 2020-04-05        |    73 |     51 |      35 |       27 |       27 |     21 |      24 |     12 |       21 |      25 |
-| 2020-04-12        |    69 |     41 |      21 |       13 |       23 |     14 |      20 |     20 |       18 |      19 |
-| 2020-04-19        |    69 |     37 |      19 |       16 |       24 |      8 |      20 |     17 |       17 |      17 |
-| 2020-04-26        |    66 |     26 |      11 |        6 |       15 |      7 |      15 |     12 |       15 |      15 |
-| 2020-05-03        |    62 |     16 |       4 |        6 |       11 |      3 |       9 |      8 |        5 |      11 |
-| 2020-05-10        |    57 |     15 |       2 |        3 |        7 |      6 |      10 |     11 |        7 |      11 |
-| 2020-05-17        |    49 |      7 |       1 |        1 |        2 |      2 |       4 |      6 |        3 |      13 |
-| 2020-05-24        |    38 |      4 |       0 |        0 |        1 |      4 |       4 |      4 |        4 |       6 |
-| 2020-05-31        |    30 |      4 |       1 |        0 |        2 |      0 |       3 |      2 |        3 |       3 |
-| 2020-06-07        |    13 |      0 |       0 |        0 |        1 |      0 |       1 |      0 |        0 |       1 |
-| 2020-06-14        |     1 |      0 |       0 |        0 |        0 |      0 |       0 |      0 |        0 |       0 |
+| Week commencing   |   UK5 |   UK107 |   UK42 |   UK36 |   UK2464 |   UK199 |   UK2913 |   UK5098 |   UK109 |   UK2916 |
+|:------------------|------:|--------:|-------:|-------:|---------:|--------:|---------:|---------:|--------:|---------:|
+| 2020-02-02        |     0 |       0 |      0 |      0 |        0 |       0 |        0 |        0 |       0 |        1 |
+| 2020-02-09        |     0 |       1 |      0 |      0 |        0 |       0 |        0 |        0 |       0 |        0 |
+| 2020-02-16        |     1 |       0 |      0 |      0 |        0 |       0 |        0 |        0 |       0 |        0 |
+| 2020-02-23        |     2 |       5 |      5 |      0 |        0 |       1 |        0 |        0 |       0 |       10 |
+| 2020-03-01        |    11 |       6 |     15 |      0 |        0 |       2 |        1 |        1 |       0 |       16 |
+| 2020-03-08        |    31 |      19 |     18 |      0 |        4 |       3 |        4 |        1 |       3 |        8 |
+| 2020-03-15        |    36 |      28 |     23 |      6 |       13 |      13 |        9 |        4 |       6 |       10 |
+| 2020-03-22        |    63 |      36 |     40 |      9 |       28 |      27 |       19 |        8 |       7 |       17 |
+| 2020-03-29        |    71 |      41 |     49 |     20 |       33 |      29 |       26 |        5 |      18 |       20 |
+| 2020-04-05        |    81 |      37 |     53 |     18 |       29 |      34 |       27 |       13 |      22 |       18 |
+| 2020-04-12        |    78 |      28 |     41 |     26 |       31 |      27 |       27 |       14 |      19 |       16 |
+| 2020-04-19        |    87 |      19 |     35 |     17 |       24 |      25 |       21 |       15 |      16 |       14 |
+| 2020-04-26        |    78 |      12 |     27 |     13 |       15 |      19 |       16 |        7 |      10 |       13 |
+| 2020-05-03        |    79 |       4 |     16 |     12 |       11 |      12 |        6 |        6 |       9 |        4 |
+| 2020-05-10        |    70 |       2 |     11 |     14 |        8 |      11 |        7 |       11 |      12 |        3 |
+| 2020-05-17        |    57 |       1 |      8 |      9 |        3 |       5 |        3 |       10 |       5 |        1 |
+| 2020-05-24        |    46 |       0 |      4 |      5 |        1 |       4 |        4 |        8 |       3 |        0 |
+| 2020-05-31        |    35 |       1 |      6 |      7 |        3 |       3 |        4 |        4 |       4 |        3 |
+| 2020-06-07        |    28 |       0 |      0 |      0 |        1 |       2 |        0 |        0 |       2 |        1 |
+| 2020-06-14        |    14 |       0 |      0 |      0 |        2 |       0 |        1 |        0 |       0 |        0 |
+| 2020-06-21        |     7 |       0 |      1 |      0 |        0 |       1 |        0 |        0 |       0 |        0 |
 
 \pagebreak
 
@@ -486,29 +514,30 @@ Below are the raw data tables for each of the figures in the report.
 
 
 
-| Week       |   England |    Wales |   Scotland |   Northern Ireland |
-|:-----------|----------:|---------:|-----------:|-------------------:|
-| 2020-01-26 |  0        | -0       |   0        |            0       |
-| 2020-02-02 |  1.25548  |  0       |   0        |            0       |
-| 2020-02-09 |  1.66746  |  0       |   0        |            0       |
-| 2020-02-16 |  0.796312 |  0       |   0        |            0       |
-| 2020-02-23 |  2.80211  | -0       |  -0        |            0       |
-| 2020-03-01 |  3.38983  |  1.33218 |   2.13833  |            0       |
-| 2020-03-08 |  3.77071  |  1.84732 |   3.31772  |            1.9792  |
-| 2020-03-15 |  3.56184  |  2.01829 |   3.36593  |            1.82452 |
-| 2020-03-22 |  3.80546  |  2.53207 |   3.50744  |            2.78284 |
-| 2020-03-29 |  3.76128  |  3.48345 |   3.45855  |            2.00866 |
-| 2020-04-05 |  3.5745   |  3.26534 |   3.22123  |            2.02811 |
-| 2020-04-12 |  3.44145  |  2.95106 |   3.06333  |            1.62747 |
-| 2020-04-19 |  3.29698  |  3.01851 |   3.15986  |            1.06588 |
-| 2020-04-26 |  3.19389  |  2.999   |   2.8534   |            1.58445 |
-| 2020-05-03 |  3.1828   |  2.65735 |   2.70626  |            0       |
-| 2020-05-10 |  2.71692  |  2.63827 |   2.65054  |            0       |
-| 2020-05-17 |  1.9998   |  2.59537 |   2.22607  |            0       |
-| 2020-05-24 |  1.94991  |  2.2692  |   2.12343  |            0       |
-| 2020-05-31 |  2.12849  |  1.65076 |   1.24908  |            0       |
-| 2020-06-07 |  1.17005  |  0       |   0.693147 |            0       |
-| 2020-06-14 |  0.693147 |  0       |   0        |            0       |
+| Week       |   England |     Wales |   Scotland |   Northern Ireland |
+|:-----------|----------:|----------:|-----------:|-------------------:|
+| 2020-02-02 |  0.562335 |  0        |    0       |           0        |
+| 2020-02-09 | -0        |  0        |    0       |           0        |
+| 2020-02-16 | -0        |  0        |    0       |           0        |
+| 2020-02-23 |  2.69812  | -0        |   -0       |           0        |
+| 2020-03-01 |  3.27542  |  1.03972  |    2.1961  |           0        |
+| 2020-03-08 |  3.73035  |  1.82175  |    3.30629 |           2.13833  |
+| 2020-03-15 |  3.5986   |  1.90111  |    3.38952 |           1.65948  |
+| 2020-03-22 |  3.82189  |  2.35921  |    3.58468 |           2.73527  |
+| 2020-03-29 |  3.79534  |  3.31791  |    3.45432 |           1.71147  |
+| 2020-04-05 |  3.51223  |  3.04127  |    3.24663 |           2.19792  |
+| 2020-04-12 |  3.32701  |  2.77082  |    3.14563 |           1.56957  |
+| 2020-04-19 |  3.19203  |  2.87373  |    3.10626 |           1.7272   |
+| 2020-04-26 |  2.98946  |  2.83926  |    2.79133 |           1.55027  |
+| 2020-05-03 |  2.8654   |  2.61705  |    2.66917 |           0.979229 |
+| 2020-05-10 |  2.46193  |  2.45208  |    2.58735 |          -0        |
+| 2020-05-17 |  2.13989  |  2.38265  |    2.32646 |          -0        |
+| 2020-05-24 |  2.328    |  2.11254  |    2.46267 |          -0        |
+| 2020-05-31 |  2.515    |  1.8823   |    2.10997 |          -0        |
+| 2020-06-07 |  1.90464  |  1.61473  |    1.58326 |           0        |
+| 2020-06-14 |  1.67341  | -0        |    1.27703 |           0        |
+| 2020-06-21 |  1.51715  |  0.636514 |   -0       |           0        |
+| 2020-06-28 |  0        | -0        |    0       |           0        |
 
 \pagebreak
 
@@ -517,104 +546,105 @@ Below are the raw data tables for each of the figures in the report.
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
 |:-----------|-----------------------------:|---------------------------------:|--------:|
-| 2020-01-27 |                            0 |                                1 |       1 |
-| 2020-02-03 |                            0 |                                3 |       3 |
+| 2020-02-03 |                            0 |                                1 |       1 |
 | 2020-02-05 |                            0 |                                1 |       1 |
 | 2020-02-09 |                            0 |                                1 |       1 |
-| 2020-02-13 |                            0 |                                1 |       1 |
-| 2020-02-14 |                            0 |                                1 |       1 |
-| 2020-02-15 |                            0 |                                2 |       2 |
 | 2020-02-16 |                            0 |                                1 |       1 |
-| 2020-02-23 |                            0 |                                2 |       2 |
+| 2020-02-23 |                            0 |                                1 |       1 |
+| 2020-02-24 |                            0 |                                2 |       2 |
 | 2020-02-25 |                            0 |                                2 |       2 |
-| 2020-02-26 |                            1 |                                1 |       2 |
-| 2020-02-27 |                            1 |                                3 |       4 |
-| 2020-02-28 |                            0 |                                6 |       6 |
+| 2020-02-26 |                            1 |                                2 |       3 |
+| 2020-02-27 |                            1 |                                5 |       6 |
+| 2020-02-28 |                            0 |                                5 |       5 |
 | 2020-02-29 |                            0 |                                2 |       2 |
-| 2020-03-01 |                            3 |                                5 |       8 |
-| 2020-03-02 |                            1 |                                8 |       9 |
-| 2020-03-03 |                            1 |                                5 |       6 |
-| 2020-03-04 |                            0 |                                9 |       9 |
-| 2020-03-05 |                            0 |                                4 |       4 |
-| 2020-03-06 |                            3 |                                9 |      12 |
-| 2020-03-07 |                            3 |                                6 |       9 |
-| 2020-03-08 |                            2 |                                5 |       7 |
-| 2020-03-09 |                            6 |                               14 |      20 |
-| 2020-03-10 |                            4 |                                6 |      10 |
-| 2020-03-11 |                           10 |                               15 |      25 |
-| 2020-03-12 |                           10 |                               21 |      31 |
-| 2020-03-13 |                           12 |                                8 |      20 |
-| 2020-03-14 |                            4 |                               10 |      14 |
-| 2020-03-15 |                            3 |                                4 |       7 |
-| 2020-03-16 |                            3 |                                6 |       9 |
-| 2020-03-17 |                           10 |                               15 |      25 |
-| 2020-03-18 |                            8 |                               17 |      25 |
-| 2020-03-19 |                           10 |                               11 |      21 |
-| 2020-03-20 |                           11 |                               18 |      29 |
-| 2020-03-21 |                            6 |                                9 |      15 |
-| 2020-03-22 |                           12 |                               16 |      28 |
-| 2020-03-23 |                           13 |                               22 |      35 |
-| 2020-03-24 |                           13 |                               14 |      27 |
-| 2020-03-25 |                           16 |                               10 |      26 |
-| 2020-03-26 |                           10 |                               17 |      27 |
-| 2020-03-27 |                           10 |                               12 |      22 |
-| 2020-03-28 |                            9 |                               13 |      22 |
-| 2020-03-29 |                           16 |                               11 |      27 |
-| 2020-03-30 |                           17 |                               24 |      41 |
-| 2020-03-31 |                           24 |                               16 |      40 |
-| 2020-04-01 |                           14 |                                9 |      23 |
-| 2020-04-02 |                           14 |                               17 |      31 |
-| 2020-04-03 |                           14 |                               11 |      25 |
-| 2020-04-04 |                           11 |                                8 |      19 |
-| 2020-04-05 |                           16 |                                5 |      21 |
-| 2020-04-06 |                           14 |                               12 |      26 |
-| 2020-04-07 |                           20 |                                9 |      29 |
-| 2020-04-08 |                           12 |                                4 |      16 |
-| 2020-04-09 |                            6 |                                6 |      12 |
-| 2020-04-10 |                           11 |                                6 |      17 |
-| 2020-04-11 |                            5 |                                6 |      11 |
-| 2020-04-12 |                            6 |                                3 |       9 |
-| 2020-04-13 |                           13 |                                2 |      15 |
-| 2020-04-14 |                           10 |                                4 |      14 |
-| 2020-04-15 |                            8 |                                2 |      10 |
-| 2020-04-16 |                           14 |                                4 |      18 |
-| 2020-04-17 |                            2 |                                3 |       5 |
-| 2020-04-18 |                            5 |                                4 |       9 |
-| 2020-04-19 |                            4 |                                1 |       5 |
-| 2020-04-20 |                            3 |                                4 |       7 |
-| 2020-04-21 |                           11 |                                2 |      13 |
-| 2020-04-22 |                            3 |                                4 |       7 |
-| 2020-04-23 |                            4 |                                4 |       8 |
-| 2020-04-24 |                            6 |                                0 |       6 |
+| 2020-03-01 |                            2 |                                5 |       7 |
+| 2020-03-02 |                            1 |                                6 |       7 |
+| 2020-03-03 |                            0 |                                7 |       7 |
+| 2020-03-04 |                            3 |                                8 |      11 |
+| 2020-03-05 |                            0 |                                5 |       5 |
+| 2020-03-06 |                            4 |                                9 |      13 |
+| 2020-03-07 |                            5 |                                6 |      11 |
+| 2020-03-08 |                            1 |                                4 |       5 |
+| 2020-03-09 |                            4 |                               12 |      16 |
+| 2020-03-10 |                            5 |                                8 |      13 |
+| 2020-03-11 |                            9 |                               15 |      24 |
+| 2020-03-12 |                            6 |                               24 |      30 |
+| 2020-03-13 |                           12 |                               12 |      24 |
+| 2020-03-14 |                            6 |                                9 |      15 |
+| 2020-03-15 |                            6 |                                6 |      12 |
+| 2020-03-16 |                            3 |                                5 |       8 |
+| 2020-03-17 |                            7 |                               16 |      23 |
+| 2020-03-18 |                            8 |                               20 |      28 |
+| 2020-03-19 |                            9 |                               11 |      20 |
+| 2020-03-20 |                            9 |                               22 |      31 |
+| 2020-03-21 |                            8 |                               12 |      20 |
+| 2020-03-22 |                           11 |                               20 |      31 |
+| 2020-03-23 |                           11 |                               25 |      36 |
+| 2020-03-24 |                           15 |                               18 |      33 |
+| 2020-03-25 |                           19 |                               17 |      36 |
+| 2020-03-26 |                           12 |                               18 |      30 |
+| 2020-03-27 |                           17 |                               15 |      32 |
+| 2020-03-28 |                           11 |                               16 |      27 |
+| 2020-03-29 |                           18 |                               11 |      29 |
+| 2020-03-30 |                           20 |                               22 |      42 |
+| 2020-03-31 |                           27 |                               21 |      48 |
+| 2020-04-01 |                           20 |                               10 |      30 |
+| 2020-04-02 |                           14 |                               18 |      32 |
+| 2020-04-03 |                           18 |                               12 |      30 |
+| 2020-04-04 |                           12 |                                5 |      17 |
+| 2020-04-05 |                           14 |                                9 |      23 |
+| 2020-04-06 |                           11 |                               12 |      23 |
+| 2020-04-07 |                            9 |                               11 |      20 |
+| 2020-04-08 |                           15 |                                6 |      21 |
+| 2020-04-09 |                            8 |                                3 |      11 |
+| 2020-04-10 |                           10 |                                5 |      15 |
+| 2020-04-11 |                            8 |                                4 |      12 |
+| 2020-04-12 |                            7 |                                5 |      12 |
+| 2020-04-13 |                           17 |                                6 |      23 |
+| 2020-04-14 |                            9 |                                4 |      13 |
+| 2020-04-15 |                            2 |                                4 |       6 |
+| 2020-04-16 |                           16 |                                7 |      23 |
+| 2020-04-17 |                            5 |                                4 |       9 |
+| 2020-04-18 |                            8 |                                4 |      12 |
+| 2020-04-19 |                            4 |                                2 |       6 |
+| 2020-04-20 |                            6 |                                4 |      10 |
+| 2020-04-21 |                           12 |                                2 |      14 |
+| 2020-04-22 |                            5 |                                6 |      11 |
+| 2020-04-23 |                            2 |                                6 |       8 |
+| 2020-04-24 |                            5 |                                2 |       7 |
 | 2020-04-25 |                            2 |                                3 |       5 |
-| 2020-04-26 |                            0 |                                1 |       1 |
-| 2020-04-27 |                            3 |                                0 |       3 |
-| 2020-04-28 |                            5 |                                1 |       6 |
-| 2020-04-29 |                            2 |                                1 |       3 |
-| 2020-05-01 |                            2 |                                2 |       4 |
-| 2020-05-02 |                            3 |                                2 |       5 |
+| 2020-04-26 |                            2 |                                0 |       2 |
+| 2020-04-27 |                            4 |                                2 |       6 |
+| 2020-04-28 |                            6 |                                3 |       9 |
+| 2020-04-29 |                            3 |                                1 |       4 |
+| 2020-04-30 |                            3 |                                0 |       3 |
+| 2020-05-01 |                            2 |                                1 |       3 |
+| 2020-05-02 |                            1 |                                1 |       2 |
 | 2020-05-03 |                            3 |                                0 |       3 |
 | 2020-05-04 |                            4 |                                3 |       7 |
-| 2020-05-05 |                            1 |                                1 |       2 |
-| 2020-05-06 |                            3 |                                0 |       3 |
-| 2020-05-07 |                            0 |                                1 |       1 |
-| 2020-05-08 |                            1 |                                0 |       1 |
-| 2020-05-11 |                            2 |                                0 |       2 |
+| 2020-05-05 |                            1 |                                0 |       1 |
+| 2020-05-06 |                            2 |                                0 |       2 |
+| 2020-05-07 |                            0 |                                2 |       2 |
+| 2020-05-08 |                            3 |                                0 |       3 |
+| 2020-05-10 |                            0 |                                1 |       1 |
+| 2020-05-11 |                            3 |                                0 |       3 |
 | 2020-05-12 |                            2 |                                0 |       2 |
-| 2020-05-13 |                            1 |                                0 |       1 |
-| 2020-05-14 |                            2 |                                2 |       4 |
-| 2020-05-15 |                            2 |                                0 |       2 |
-| 2020-05-17 |                            1 |                                0 |       1 |
+| 2020-05-14 |                            3 |                                1 |       4 |
+| 2020-05-17 |                            2 |                                0 |       2 |
 | 2020-05-18 |                            0 |                                1 |       1 |
-| 2020-05-20 |                            1 |                                0 |       1 |
-| 2020-05-21 |                            1 |                                0 |       1 |
+| 2020-05-19 |                            0 |                                1 |       1 |
+| 2020-05-20 |                            0 |                                1 |       1 |
+| 2020-05-22 |                            2 |                                0 |       2 |
 | 2020-05-23 |                            1 |                                0 |       1 |
-| 2020-05-25 |                            0 |                                1 |       1 |
+| 2020-05-25 |                            1 |                                1 |       2 |
 | 2020-05-26 |                            1 |                                0 |       1 |
-| 2020-05-28 |                            1 |                                0 |       1 |
 | 2020-06-03 |                            1 |                                0 |       1 |
+| 2020-06-04 |                            1 |                                0 |       1 |
 | 2020-06-05 |                            1 |                                0 |       1 |
+| 2020-06-06 |                            0 |                                1 |       1 |
+| 2020-06-08 |                            1 |                                0 |       1 |
 | 2020-06-09 |                            1 |                                0 |       1 |
+| 2020-06-15 |                            1 |                                0 |       1 |
 
 \pagebreak
 
@@ -623,131 +653,139 @@ Below are the raw data tables for each of the figures in the report.
 
 | Day        |   England |   Scotland |   Wales |   Northern Ireland |
 |:-----------|----------:|-----------:|--------:|-------------------:|
-| 2020-01-27 |         0 |          0 |       1 |                  0 |
-| 2020-02-03 |         5 |          0 |       0 |                  0 |
+| 2020-02-03 |         1 |          0 |       0 |                  0 |
 | 2020-02-05 |         1 |          0 |       0 |                  0 |
 | 2020-02-08 |         2 |          0 |       0 |                  0 |
-| 2020-02-09 |         2 |          0 |       0 |                  0 |
-| 2020-02-13 |         2 |          0 |       0 |                  0 |
-| 2020-02-14 |         2 |          0 |       0 |                  0 |
-| 2020-02-15 |         2 |          0 |       0 |                  0 |
-| 2020-02-16 |         4 |          0 |       0 |                  0 |
-| 2020-02-18 |         1 |          0 |       0 |                  0 |
-| 2020-02-19 |         1 |          0 |       0 |                  0 |
-| 2020-02-20 |         1 |          0 |       0 |                  0 |
+| 2020-02-09 |         1 |          0 |       0 |                  0 |
+| 2020-02-13 |         1 |          0 |       0 |                  0 |
+| 2020-02-16 |         1 |          0 |       0 |                  0 |
 | 2020-02-23 |         2 |          0 |       0 |                  0 |
-| 2020-02-24 |         4 |          0 |       0 |                  0 |
+| 2020-02-24 |         5 |          0 |       0 |                  0 |
 | 2020-02-25 |         7 |          0 |       0 |                  0 |
 | 2020-02-26 |         6 |          0 |       0 |                  0 |
 | 2020-02-27 |        19 |          0 |       1 |                  0 |
 | 2020-02-28 |        24 |          1 |       0 |                  0 |
-| 2020-02-29 |        22 |          0 |       0 |                  0 |
-| 2020-03-01 |        51 |          1 |       2 |                  0 |
-| 2020-03-02 |        73 |          1 |       0 |                  0 |
-| 2020-03-03 |        91 |          2 |       0 |                  0 |
-| 2020-03-04 |       103 |          5 |       1 |                  0 |
-| 2020-03-05 |        81 |          3 |       0 |                  0 |
-| 2020-03-06 |        74 |          7 |       0 |                  0 |
-| 2020-03-07 |        44 |          5 |       2 |                  0 |
-| 2020-03-08 |        51 |          1 |       2 |                  0 |
-| 2020-03-09 |        71 |         12 |       1 |                  0 |
-| 2020-03-10 |        92 |          5 |       5 |                  2 |
-| 2020-03-11 |       145 |         11 |      10 |                  3 |
-| 2020-03-12 |       180 |         32 |       7 |                  0 |
-| 2020-03-13 |       104 |         42 |       8 |                  1 |
-| 2020-03-14 |        84 |         13 |      10 |                  6 |
-| 2020-03-15 |        65 |          8 |      15 |                  0 |
-| 2020-03-16 |        79 |         14 |      22 |                  5 |
-| 2020-03-17 |       119 |         31 |      32 |                  7 |
-| 2020-03-18 |       185 |         24 |      25 |                  6 |
-| 2020-03-19 |       151 |         28 |      30 |                  3 |
-| 2020-03-20 |       199 |         32 |      12 |                  6 |
-| 2020-03-21 |       206 |         35 |       0 |                 13 |
-| 2020-03-22 |       199 |         32 |       0 |                  8 |
-| 2020-03-23 |       345 |         84 |       1 |                 29 |
-| 2020-03-24 |       292 |         87 |      22 |                 23 |
-| 2020-03-25 |       290 |         71 |      94 |                 16 |
-| 2020-03-26 |       305 |         91 |      18 |                 27 |
-| 2020-03-27 |       302 |         87 |      29 |                  7 |
-| 2020-03-28 |       309 |         40 |      17 |                 12 |
-| 2020-03-29 |       348 |         53 |      22 |                 11 |
-| 2020-03-30 |       498 |        120 |      75 |                  6 |
-| 2020-03-31 |       455 |         86 |     144 |                  8 |
-| 2020-04-01 |       429 |         71 |     136 |                  0 |
-| 2020-04-02 |       429 |         48 |      99 |                  1 |
-| 2020-04-03 |       422 |         57 |     112 |                  0 |
-| 2020-04-04 |       345 |         45 |     139 |                  1 |
-| 2020-04-05 |       356 |         50 |      65 |                  0 |
-| 2020-04-06 |       439 |         71 |     167 |                 18 |
-| 2020-04-07 |       406 |         70 |     185 |                  5 |
-| 2020-04-08 |       379 |         43 |     126 |                 14 |
-| 2020-04-09 |       359 |         25 |      83 |                  1 |
-| 2020-04-10 |       328 |         22 |     120 |                 19 |
-| 2020-04-11 |       259 |         46 |      73 |                 14 |
-| 2020-04-12 |       211 |         61 |      87 |                 23 |
-| 2020-04-13 |       242 |         55 |      77 |                 22 |
-| 2020-04-14 |       311 |         50 |     123 |                 11 |
-| 2020-04-15 |       310 |         51 |      80 |                 13 |
-| 2020-04-16 |       354 |         62 |      73 |                  0 |
-| 2020-04-17 |       315 |         24 |      47 |                  6 |
-| 2020-04-18 |       235 |         55 |      43 |                  7 |
-| 2020-04-19 |       203 |         30 |      36 |                  2 |
-| 2020-04-20 |       266 |         68 |      68 |                  2 |
-| 2020-04-21 |       220 |        104 |      31 |                 17 |
-| 2020-04-22 |       170 |         99 |      18 |                 23 |
-| 2020-04-23 |       154 |         76 |      31 |                 11 |
-| 2020-04-24 |       110 |         91 |      70 |                  2 |
-| 2020-04-25 |        76 |         70 |      40 |                  5 |
-| 2020-04-26 |        97 |         49 |      19 |                  2 |
-| 2020-04-27 |       164 |         61 |      70 |                  2 |
-| 2020-04-28 |       126 |         35 |      51 |                  9 |
-| 2020-04-29 |       216 |         23 |      52 |                 11 |
-| 2020-04-30 |       183 |         24 |      50 |                 15 |
-| 2020-05-01 |       218 |         25 |      46 |                  7 |
-| 2020-05-02 |       118 |         13 |      51 |                  2 |
-| 2020-05-03 |        94 |         16 |      19 |                  0 |
-| 2020-05-04 |       179 |          9 |      40 |                  0 |
-| 2020-05-05 |       119 |         17 |      34 |                  0 |
-| 2020-05-06 |       143 |         31 |      53 |                  0 |
-| 2020-05-07 |       123 |         33 |      53 |                  0 |
-| 2020-05-08 |        79 |         25 |      30 |                  0 |
-| 2020-05-09 |        65 |         17 |      41 |                  0 |
-| 2020-05-10 |        73 |         21 |      38 |                  0 |
-| 2020-05-11 |       114 |         16 |      63 |                  0 |
-| 2020-05-12 |        77 |         22 |      44 |                  0 |
-| 2020-05-13 |        77 |         29 |      53 |                  0 |
-| 2020-05-14 |        54 |         47 |      28 |                  0 |
-| 2020-05-15 |        60 |         22 |      31 |                  0 |
-| 2020-05-16 |        44 |         19 |      14 |                  0 |
-| 2020-05-17 |        26 |         16 |      11 |                  0 |
-| 2020-05-18 |        69 |         29 |      18 |                  0 |
-| 2020-05-19 |        52 |         29 |      27 |                  0 |
-| 2020-05-20 |        32 |         15 |      38 |                  0 |
-| 2020-05-21 |        39 |         13 |      24 |                  0 |
-| 2020-05-22 |        35 |          8 |      24 |                  0 |
-| 2020-05-23 |        21 |          7 |      21 |                  0 |
-| 2020-05-24 |        20 |          4 |      18 |                  0 |
-| 2020-05-25 |        39 |          8 |      16 |                  0 |
-| 2020-05-26 |        43 |          3 |      25 |                  0 |
-| 2020-05-27 |        30 |          5 |      29 |                  0 |
-| 2020-05-28 |        35 |          4 |      19 |                  0 |
-| 2020-05-29 |        16 |          1 |      20 |                  0 |
-| 2020-05-30 |        11 |          0 |      14 |                  0 |
-| 2020-05-31 |        26 |          1 |      10 |                  0 |
-| 2020-06-01 |        41 |          3 |       6 |                  0 |
-| 2020-06-02 |        34 |         11 |       1 |                  0 |
-| 2020-06-03 |        27 |          1 |       7 |                  0 |
-| 2020-06-04 |        26 |          7 |       6 |                  0 |
-| 2020-06-05 |        13 |          1 |       1 |                  0 |
-| 2020-06-06 |         9 |          2 |       1 |                  0 |
-| 2020-06-07 |        12 |          1 |       0 |                  0 |
-| 2020-06-08 |        14 |          1 |       0 |                  0 |
-| 2020-06-09 |         2 |          0 |       0 |                  0 |
-| 2020-06-10 |        10 |          0 |       0 |                  0 |
-| 2020-06-11 |         1 |          0 |       0 |                  0 |
-| 2020-06-12 |         2 |          0 |       0 |                  0 |
-| 2020-06-13 |         1 |          0 |       0 |                  0 |
-| 2020-06-14 |         2 |          0 |       0 |                  0 |
+| 2020-02-29 |        23 |          0 |       0 |                  0 |
+| 2020-03-01 |        51 |          1 |       1 |                  0 |
+| 2020-03-02 |        76 |          1 |       0 |                  0 |
+| 2020-03-03 |        97 |          2 |       0 |                  0 |
+| 2020-03-04 |       107 |          5 |       1 |                  0 |
+| 2020-03-05 |        85 |          3 |       0 |                  0 |
+| 2020-03-06 |        81 |          7 |       0 |                  0 |
+| 2020-03-07 |        46 |          5 |       2 |                  0 |
+| 2020-03-08 |        53 |          1 |       2 |                  0 |
+| 2020-03-09 |        75 |         12 |       1 |                  0 |
+| 2020-03-10 |        98 |          5 |       5 |                  2 |
+| 2020-03-11 |       151 |         11 |      10 |                  3 |
+| 2020-03-12 |       193 |         32 |       7 |                  0 |
+| 2020-03-13 |       113 |         42 |       8 |                  1 |
+| 2020-03-14 |        95 |         13 |      10 |                  6 |
+| 2020-03-15 |        86 |          8 |      15 |                  0 |
+| 2020-03-16 |        95 |         14 |      22 |                  5 |
+| 2020-03-17 |       136 |         33 |      32 |                  7 |
+| 2020-03-18 |       209 |         27 |      24 |                  6 |
+| 2020-03-19 |       172 |         31 |      30 |                  3 |
+| 2020-03-20 |       225 |         40 |      12 |                  6 |
+| 2020-03-21 |       232 |         44 |       0 |                 13 |
+| 2020-03-22 |       213 |         50 |       0 |                  8 |
+| 2020-03-23 |       385 |         96 |       1 |                 29 |
+| 2020-03-24 |       347 |         87 |      25 |                 23 |
+| 2020-03-25 |       341 |         78 |      91 |                 16 |
+| 2020-03-26 |       367 |        111 |      18 |                 27 |
+| 2020-03-27 |       356 |        130 |      29 |                  7 |
+| 2020-03-28 |       372 |         82 |      17 |                 12 |
+| 2020-03-29 |       407 |         63 |      22 |                 11 |
+| 2020-03-30 |       573 |        134 |      75 |                  6 |
+| 2020-03-31 |       562 |         98 |     141 |                  8 |
+| 2020-04-01 |       467 |         84 |     131 |                  0 |
+| 2020-04-02 |       461 |         61 |      99 |                  1 |
+| 2020-04-03 |       507 |         83 |     111 |                  0 |
+| 2020-04-04 |       382 |         58 |     128 |                  1 |
+| 2020-04-05 |       374 |         55 |      65 |                  0 |
+| 2020-04-06 |       447 |        103 |     167 |                 18 |
+| 2020-04-07 |       407 |         97 |     185 |                  5 |
+| 2020-04-08 |       397 |         91 |     126 |                 14 |
+| 2020-04-09 |       372 |         41 |      83 |                  1 |
+| 2020-04-10 |       350 |         53 |     120 |                 19 |
+| 2020-04-11 |       277 |         62 |      73 |                 14 |
+| 2020-04-12 |       233 |         85 |      87 |                 23 |
+| 2020-04-13 |       296 |         92 |      77 |                 22 |
+| 2020-04-14 |       335 |         84 |     123 |                 14 |
+| 2020-04-15 |       336 |         85 |      80 |                 23 |
+| 2020-04-16 |       376 |        101 |      74 |                 32 |
+| 2020-04-17 |       349 |         70 |      47 |                 28 |
+| 2020-04-18 |       262 |         73 |      43 |                  7 |
+| 2020-04-19 |       236 |         30 |      37 |                  9 |
+| 2020-04-20 |       318 |         76 |      71 |                 25 |
+| 2020-04-21 |       272 |        107 |      41 |                 23 |
+| 2020-04-22 |       284 |        107 |      21 |                 23 |
+| 2020-04-23 |       268 |         81 |      31 |                 11 |
+| 2020-04-24 |       175 |         91 |      70 |                 10 |
+| 2020-04-25 |       120 |         70 |      41 |                 14 |
+| 2020-04-26 |       119 |         49 |      19 |                  4 |
+| 2020-04-27 |       193 |         61 |      75 |                 11 |
+| 2020-04-28 |       169 |         36 |      51 |                 15 |
+| 2020-04-29 |       240 |         23 |      52 |                 11 |
+| 2020-04-30 |       202 |         24 |      56 |                 15 |
+| 2020-05-01 |       229 |         25 |      46 |                 16 |
+| 2020-05-02 |       123 |         13 |      51 |                  9 |
+| 2020-05-03 |       104 |         16 |      20 |                 12 |
+| 2020-05-04 |       194 |          9 |      40 |                 20 |
+| 2020-05-05 |       133 |         18 |      34 |                  4 |
+| 2020-05-06 |       158 |         32 |      53 |                  2 |
+| 2020-05-07 |       143 |         39 |      53 |                  3 |
+| 2020-05-08 |        90 |         40 |      32 |                  7 |
+| 2020-05-09 |        66 |         29 |      41 |                 10 |
+| 2020-05-10 |        92 |         30 |      38 |                  1 |
+| 2020-05-11 |       132 |         34 |      70 |                  3 |
+| 2020-05-12 |        92 |         50 |      44 |                  4 |
+| 2020-05-13 |        87 |         40 |      53 |                  0 |
+| 2020-05-14 |        61 |         50 |      28 |                  0 |
+| 2020-05-15 |        70 |         22 |      33 |                  0 |
+| 2020-05-16 |        49 |         21 |      18 |                  0 |
+| 2020-05-17 |        34 |         16 |      19 |                  0 |
+| 2020-05-18 |        76 |         35 |      36 |                  1 |
+| 2020-05-19 |        64 |         38 |      40 |                  1 |
+| 2020-05-20 |        36 |         18 |      42 |                  0 |
+| 2020-05-21 |        47 |         28 |      26 |                  0 |
+| 2020-05-22 |        40 |         17 |      32 |                  0 |
+| 2020-05-23 |        21 |          8 |      25 |                  0 |
+| 2020-05-24 |        21 |          8 |      18 |                  0 |
+| 2020-05-25 |        42 |         13 |      23 |                  0 |
+| 2020-05-26 |        46 |          6 |      31 |                  0 |
+| 2020-05-27 |        34 |         12 |      35 |                  1 |
+| 2020-05-28 |        35 |          7 |      25 |                  0 |
+| 2020-05-29 |        21 |          2 |      25 |                  0 |
+| 2020-05-30 |        29 |          5 |      15 |                  0 |
+| 2020-05-31 |        39 |          7 |      11 |                  0 |
+| 2020-06-01 |        49 |          7 |      13 |                  1 |
+| 2020-06-02 |        51 |         14 |       6 |                  0 |
+| 2020-06-03 |        49 |          4 |      16 |                  0 |
+| 2020-06-04 |        41 |          9 |      10 |                  0 |
+| 2020-06-05 |        30 |          3 |       3 |                  0 |
+| 2020-06-06 |        21 |          4 |       2 |                  0 |
+| 2020-06-07 |        26 |          1 |       1 |                  0 |
+| 2020-06-08 |        32 |          2 |       3 |                  0 |
+| 2020-06-09 |        31 |          1 |       8 |                  0 |
+| 2020-06-10 |        29 |          2 |       8 |                  0 |
+| 2020-06-11 |        19 |          3 |       4 |                  0 |
+| 2020-06-12 |        16 |          2 |       3 |                  0 |
+| 2020-06-13 |        12 |          1 |       0 |                  0 |
+| 2020-06-14 |        11 |          1 |       0 |                  0 |
+| 2020-06-15 |        21 |          3 |       0 |                  0 |
+| 2020-06-16 |        18 |          1 |       0 |                  0 |
+| 2020-06-17 |        14 |          1 |       0 |                  0 |
+| 2020-06-18 |        26 |          1 |       0 |                  0 |
+| 2020-06-19 |         7 |          0 |       1 |                  0 |
+| 2020-06-20 |         4 |          0 |       1 |                  0 |
+| 2020-06-21 |         3 |          0 |       0 |                  0 |
+| 2020-06-22 |         2 |          3 |       0 |                  0 |
+| 2020-06-23 |         4 |          0 |       0 |                  0 |
+| 2020-06-24 |         1 |          0 |       0 |                  0 |
+| 2020-06-25 |         1 |          0 |       0 |                  0 |
+| 2020-06-26 |         1 |          0 |       2 |                  0 |
+| 2020-06-27 |         1 |          0 |       4 |                  0 |
+| 2020-06-28 |         0 |          0 |       1 |                  0 |
 
 \pagebreak
 
@@ -756,116 +794,116 @@ Below are the raw data tables for each of the figures in the report.
 
 | Admin2                       | Country          |   Number of sequences | Sequence group   |
 |:-----------------------------|:-----------------|----------------------:|:-----------------|
-| ABERDEEN                     | Scotland         |                    22 | 10-50            |
-| ABERDEENSHIRE                | Scotland         |                     5 | 1-10             |
-| ANGLESEY                     | Wales            |                    71 | 50-100           |
-| ANGUS                        | Scotland         |                    38 | 10-50            |
-| ANTRIM                       | Northern Ireland |                   243 | 200-250          |
-| ARGYLL AND BUTE              | Scotland         |                     6 | 1-10             |
-| ARMAGH                       | Northern Ireland |                    15 | 10-50            |
+| ABERDEEN                     | Scotland         |                    23 | 10-50            |
+| ABERDEENSHIRE                | Scotland         |                    12 | 10-50            |
+| ANGLESEY                     | Wales            |                    80 | 50-100           |
+| ANGUS                        | Scotland         |                    69 | 50-100           |
+| ANTRIM                       | Northern Ireland |                   325 | 300-400          |
+| ARGYLL AND BUTE              | Scotland         |                    14 | 10-50            |
+| ARMAGH                       | Northern Ireland |                    29 | 10-50            |
 | BATH AND NORTH EAST SOMERSET | England          |                     0 | 0                |
-| BEDFORDSHIRE                 | England          |                   449 | 400-500          |
-| BERKSHIRE                    | England          |                    10 | 10-50            |
+| BEDFORDSHIRE                 | England          |                   452 | 400-500          |
+| BERKSHIRE                    | England          |                    21 | 10-50            |
 | BLACKBURN WITH DARWEN        | England          |                     0 | 0                |
 | BLACKPOOL                    | England          |                     0 | 0                |
-| BLAENAU GWENT                | Wales            |                    60 | 50-100           |
+| BLAENAU GWENT                | Wales            |                    59 | 50-100           |
 | BOLTON                       | England          |                     0 | 0                |
 | BOURNEMOUTH                  | England          |                     0 | 0                |
-| BRIDGEND                     | Wales            |                   115 | 100-150          |
+| BRIDGEND                     | Wales            |                   114 | 100-150          |
 | BRIGHTON AND HOVE            | England          |                     0 | 0                |
 | BRISTOL                      | England          |                    18 | 10-50            |
-| BUCKINGHAMSHIRE              | England          |                   400 | 400-500          |
+| BUCKINGHAMSHIRE              | England          |                   413 | 400-500          |
 | BURY                         | England          |                     0 | 0                |
 | CAERPHILLY                   | Wales            |                   142 | 100-150          |
-| CAMBRIDGESHIRE               | England          |                   706 | >500             |
-| CARDIFF                      | Wales            |                   563 | >500             |
-| CARMARTHENSHIRE              | Wales            |                   144 | 100-150          |
+| CAMBRIDGESHIRE               | England          |                   727 | >500             |
+| CARDIFF                      | Wales            |                   586 | >500             |
+| CARMARTHENSHIRE              | Wales            |                   148 | 100-150          |
 | CENTRAL BEDFORDSHIRE         | England          |                     0 | 0                |
 | CEREDIGION                   | Wales            |                    16 | 10-50            |
-| CHESHIRE                     | England          |                    43 | 10-50            |
-| CLACKMANNANSHIRE             | Scotland         |                     2 | 1-10             |
-| CONWY                        | Wales            |                   143 | 100-150          |
-| CORNWALL                     | England          |                    23 | 10-50            |
-| CUMBRIA                      | England          |                    58 | 50-100           |
+| CHESHIRE                     | England          |                    44 | 10-50            |
+| CLACKMANNANSHIRE             | Scotland         |                     4 | 1-10             |
+| CONWY                        | Wales            |                   162 | 150-200          |
+| CORNWALL                     | England          |                    27 | 10-50            |
+| CUMBRIA                      | England          |                    78 | 50-100           |
 | DARLINGTON                   | England          |                     0 | 0                |
-| DENBIGHSHIRE                 | Wales            |                   168 | 150-200          |
+| DENBIGHSHIRE                 | Wales            |                   194 | 150-200          |
 | DERBY                        | England          |                     0 | 0                |
-| DERBYSHIRE                   | England          |                    28 | 10-50            |
-| DEVON                        | England          |                   400 | 400-500          |
-| DORSET                       | England          |                   183 | 150-200          |
-| DOWN                         | Northern Ireland |                   161 | 150-200          |
-| DUMFRIES AND GALLOWAY        | Scotland         |                    68 | 50-100           |
-| DUNDEE                       | Scotland         |                   140 | 100-150          |
-| DURHAM                       | England          |                    21 | 10-50            |
-| EAST AYRSHIRE                | Scotland         |                    84 | 50-100           |
-| EAST DUNBARTONSHIRE          | Scotland         |                    36 | 10-50            |
-| EAST LOTHIAN                 | Scotland         |                    55 | 50-100           |
-| EAST RENFREWSHIRE            | Scotland         |                    21 | 10-50            |
-| EAST RIDING OF YORKSHIRE     | England          |                    33 | 10-50            |
-| EDINBURGH                    | Scotland         |                   456 | 400-500          |
+| DERBYSHIRE                   | England          |                    30 | 10-50            |
+| DEVON                        | England          |                   421 | 400-500          |
+| DORSET                       | England          |                   192 | 150-200          |
+| DOWN                         | Northern Ireland |                   272 | 250-300          |
+| DUMFRIES AND GALLOWAY        | Scotland         |                    88 | 50-100           |
+| DUNDEE                       | Scotland         |                   278 | 250-300          |
+| DURHAM                       | England          |                   161 | 150-200          |
+| EAST AYRSHIRE                | Scotland         |                    93 | 50-100           |
+| EAST DUNBARTONSHIRE          | Scotland         |                    73 | 50-100           |
+| EAST LOTHIAN                 | Scotland         |                    57 | 50-100           |
+| EAST RENFREWSHIRE            | Scotland         |                    40 | 10-50            |
+| EAST RIDING OF YORKSHIRE     | England          |                    35 | 10-50            |
+| EDINBURGH                    | Scotland         |                   478 | 400-500          |
 | EILEAN SIAR                  | Scotland         |                     2 | 1-10             |
-| ESSEX                        | England          |                  1375 | >500             |
-| FALKIRK                      | Scotland         |                    92 | 50-100           |
-| FERMANAGH                    | Northern Ireland |                     4 | 1-10             |
-| FIFE                         | Scotland         |                    45 | 10-50            |
-| FLINTSHIRE                   | Wales            |                   120 | 100-150          |
+| ESSEX                        | England          |                  1432 | >500             |
+| FALKIRK                      | Scotland         |                   102 | 100-150          |
+| FERMANAGH                    | Northern Ireland |                     5 | 1-10             |
+| FIFE                         | Scotland         |                    51 | 50-100           |
+| FLINTSHIRE                   | Wales            |                   131 | 100-150          |
 | GATESHEAD                    | England          |                     0 | 0                |
-| GLASGOW                      | Scotland         |                   988 | >500             |
-| GLOUCESTERSHIRE              | England          |                   626 | >500             |
-| GREATER LONDON               | England          |                  2368 | >500             |
+| GLASGOW                      | Scotland         |                  1246 | >500             |
+| GLOUCESTERSHIRE              | England          |                   708 | >500             |
+| GREATER LONDON               | England          |                  2654 | >500             |
 | GUERNSEY                     | Channel_islands  |                    41 | 10-50            |
-| GWYNEDD                      | Wales            |                   115 | 100-150          |
+| GWYNEDD                      | Wales            |                   125 | 100-150          |
 | HALTON                       | England          |                     0 | 0                |
-| HAMPSHIRE                    | England          |                   226 | 200-250          |
+| HAMPSHIRE                    | England          |                   347 | 300-400          |
 | HARTLEPOOL                   | England          |                     0 | 0                |
-| HEREFORDSHIRE                | England          |                    39 | 10-50            |
-| HERTFORDSHIRE                | England          |                  1003 | >500             |
-| HIGHLAND                     | Scotland         |                     9 | 1-10             |
-| INVERCLYDE                   | Scotland         |                    15 | 10-50            |
-| ISLE OF WIGHT                | England          |                     0 | 0                |
+| HEREFORDSHIRE                | England          |                    59 | 50-100           |
+| HERTFORDSHIRE                | England          |                  1031 | >500             |
+| HIGHLAND                     | Scotland         |                    10 | 10-50            |
+| INVERCLYDE                   | Scotland         |                    42 | 10-50            |
+| ISLE OF WIGHT                | England          |                     1 | 1-10             |
 | ISLES OF SCILLY              | England          |                     0 | 0                |
 | JERSEY                       | Channel_islands  |                    77 | 50-100           |
-| KENT                         | England          |                    29 | 10-50            |
+| KENT                         | England          |                    38 | 10-50            |
 | KINGSTON UPON HULL           | England          |                     0 | 0                |
 | LANCASHIRE                   | England          |                    53 | 50-100           |
 | LEICESTER                    | England          |                     0 | 0                |
-| LEICESTERSHIRE               | England          |                     5 | 1-10             |
-| LINCOLNSHIRE                 | England          |                    37 | 10-50            |
-| LONDONDERRY                  | Northern Ireland |                    22 | 10-50            |
+| LEICESTERSHIRE               | England          |                   109 | 100-150          |
+| LINCOLNSHIRE                 | England          |                    73 | 50-100           |
+| LONDONDERRY                  | Northern Ireland |                    32 | 10-50            |
 | LUTON                        | England          |                     0 | 0                |
 | MANCHESTER                   | England          |                    30 | 10-50            |
 | MEDWAY                       | England          |                     0 | 0                |
-| MERSEYSIDE                   | England          |                   541 | >500             |
-| MERTHYR TYDFIL               | Wales            |                    91 | 50-100           |
+| MERSEYSIDE                   | England          |                   549 | >500             |
+| MERTHYR TYDFIL               | Wales            |                   103 | 100-150          |
 | MIDDLESBROUGH                | England          |                     0 | 0                |
-| MIDLOTHIAN                   | Scotland         |                   134 | 100-150          |
+| MIDLOTHIAN                   | Scotland         |                   146 | 100-150          |
 | MILTON KEYNES                | England          |                     0 | 0                |
-| MONMOUTHSHIRE                | Wales            |                    77 | 50-100           |
-| MORAY                        | Scotland         |                     6 | 1-10             |
-| NEATH PORT TALBOT            | Wales            |                   114 | 100-150          |
-| NEWPORT                      | Wales            |                   164 | 150-200          |
-| NORFOLK                      | England          |                   607 | >500             |
-| NORTH AYRSHIRE               | Scotland         |                     5 | 1-10             |
-| NORTH LANARKSHIRE            | Scotland         |                   200 | 200-250          |
+| MONMOUTHSHIRE                | Wales            |                    88 | 50-100           |
+| MORAY                        | Scotland         |                    10 | 10-50            |
+| NEATH PORT TALBOT            | Wales            |                   119 | 100-150          |
+| NEWPORT                      | Wales            |                   165 | 150-200          |
+| NORFOLK                      | England          |                   626 | >500             |
+| NORTH AYRSHIRE               | Scotland         |                    18 | 10-50            |
+| NORTH LANARKSHIRE            | Scotland         |                   273 | 250-300          |
 | NORTH LINCOLNSHIRE           | England          |                     0 | 0                |
 | NORTH SOMERSET               | England          |                     0 | 0                |
-| NORTH YORKSHIRE              | England          |                    96 | 50-100           |
-| NORTHAMPTONSHIRE             | England          |                    24 | 10-50            |
-| NORTHUMBERLAND               | England          |                    12 | 10-50            |
-| NOTTINGHAM                   | England          |                   662 | >500             |
-| NOTTINGHAMSHIRE              | England          |                    58 | 50-100           |
+| NORTH YORKSHIRE              | England          |                   123 | 100-150          |
+| NORTHAMPTONSHIRE             | England          |                    28 | 10-50            |
+| NORTHUMBERLAND               | England          |                   172 | 150-200          |
+| NOTTINGHAM                   | England          |                   685 | >500             |
+| NOTTINGHAMSHIRE              | England          |                    59 | 50-100           |
 | OLDHAM                       | England          |                     0 | 0                |
 | ORKNEY ISLANDS               | Scotland         |                     1 | 1-10             |
 | OXFORDSHIRE                  | England          |                    98 | 50-100           |
-| PEMBROKESHIRE                | Wales            |                    70 | 50-100           |
-| PERTHSHIRE AND KINROSS       | Scotland         |                    57 | 50-100           |
+| PEMBROKESHIRE                | Wales            |                    73 | 50-100           |
+| PERTHSHIRE AND KINROSS       | Scotland         |                   118 | 100-150          |
 | PETERBOROUGH                 | England          |                     0 | 0                |
 | PLYMOUTH                     | England          |                     1 | 1-10             |
 | POOLE                        | England          |                     0 | 0                |
 | PORTSMOUTH                   | England          |                     0 | 0                |
 | POWYS                        | Wales            |                    77 | 50-100           |
 | REDCAR AND CLEVELAND         | England          |                     0 | 0                |
-| RENFREWSHIRE                 | Scotland         |                   272 | 250-300          |
+| RENFREWSHIRE                 | Scotland         |                   317 | 300-400          |
 | RHONDDA, CYNON, TAFF         | Wales            |                     0 | 0                |
 | ROCHDALE                     | England          |                     0 | 0                |
 | RUTLAND                      | England          |                     0 | 0                |
@@ -873,22 +911,22 @@ Below are the raw data tables for each of the figures in the report.
 | SCOTTISH BORDERS             | Scotland         |                   143 | 100-150          |
 | SHETLAND ISLANDS             | Scotland         |                    14 | 10-50            |
 | SHROPSHIRE                   | England          |                     6 | 1-10             |
-| SOMERSET                     | England          |                   602 | >500             |
-| SOUTH AYRSHIRE               | Scotland         |                     3 | 1-10             |
+| SOMERSET                     | England          |                   652 | >500             |
+| SOUTH AYRSHIRE               | Scotland         |                     7 | 1-10             |
 | SOUTH GLOUCESTERSHIRE        | England          |                     0 | 0                |
-| SOUTH LANARKSHIRE            | Scotland         |                    28 | 10-50            |
-| SOUTH YORKSHIRE              | England          |                  1425 | >500             |
+| SOUTH LANARKSHIRE            | Scotland         |                    70 | 50-100           |
+| SOUTH YORKSHIRE              | England          |                  1594 | >500             |
 | SOUTHAMPTON                  | England          |                     0 | 0                |
 | SOUTHEND-ON-SEA              | England          |                     0 | 0                |
-| STAFFORDSHIRE                | England          |                    59 | 50-100           |
-| STIRLING                     | Scotland         |                    11 | 10-50            |
+| STAFFORDSHIRE                | England          |                    62 | 50-100           |
+| STIRLING                     | Scotland         |                    18 | 10-50            |
 | STOCKPORT                    | England          |                     0 | 0                |
 | STOCKTON-ON-TEES             | England          |                     0 | 0                |
 | STOKE-ON-TRENT               | England          |                     0 | 0                |
-| SUFFOLK                      | England          |                   569 | >500             |
-| SURREY                       | England          |                    65 | 50-100           |
+| SUFFOLK                      | England          |                   596 | >500             |
+| SURREY                       | England          |                    73 | 50-100           |
 | SUSSEX                       | England          |                     1 | 1-10             |
-| SWANSEA                      | Wales            |                   269 | 250-300          |
+| SWANSEA                      | Wales            |                   276 | 250-300          |
 | SWINDON                      | England          |                     0 | 0                |
 | TAMESIDE                     | England          |                     0 | 0                |
 | TELFORD AND WREKIN           | England          |                     0 | 0                |
@@ -896,19 +934,19 @@ Below are the raw data tables for each of the figures in the report.
 | TORBAY                       | England          |                     0 | 0                |
 | TORFAEN                      | Wales            |                    91 | 50-100           |
 | TRAFFORD                     | England          |                     0 | 0                |
-| TYNE AND WEAR                | England          |                   106 | 100-150          |
-| TYRONE                       | Northern Ireland |                    19 | 10-50            |
-| VALE OF GLAMORGAN            | Wales            |                   187 | 150-200          |
+| TYNE AND WEAR                | England          |                   496 | 400-500          |
+| TYRONE                       | Northern Ireland |                    25 | 10-50            |
+| VALE OF GLAMORGAN            | Wales            |                   191 | 150-200          |
 | WARRINGTON                   | England          |                     0 | 0                |
-| WARWICKSHIRE                 | England          |                    10 | 10-50            |
-| WEST DUNBARTONSHIRE          | Scotland         |                    20 | 10-50            |
-| WEST LOTHIAN                 | Scotland         |                   119 | 100-150          |
-| WEST MIDLANDS                | England          |                   120 | 100-150          |
-| WEST YORKSHIRE               | England          |                    20 | 10-50            |
+| WARWICKSHIRE                 | England          |                    11 | 10-50            |
+| WEST DUNBARTONSHIRE          | Scotland         |                    49 | 10-50            |
+| WEST LOTHIAN                 | Scotland         |                   131 | 100-150          |
+| WEST MIDLANDS                | England          |                   167 | 150-200          |
+| WEST YORKSHIRE               | England          |                    22 | 10-50            |
 | WIGAN                        | England          |                     0 | 0                |
-| WILTSHIRE                    | England          |                   348 | 300-400          |
-| WORCESTERSHIRE               | England          |                    12 | 10-50            |
-| WREXHAM                      | Wales            |                   149 | 100-150          |
+| WILTSHIRE                    | England          |                   386 | 300-400          |
+| WORCESTERSHIRE               | England          |                    13 | 10-50            |
+| WREXHAM                      | Wales            |                   166 | 150-200          |
 | YORK                         | England          |                     0 | 0                |
 
 \pagebreak

@@ -1,13 +1,17 @@
 Lineage name	Date range	Number of sequences	Global lineage	Time since last sample (days)	Activity score
-UK5	Mar-10, May-02	210	B.1.1, B.1.1.1	0	active today
-UK601	Mar-11, Apr-29	64	B.10	3	0.1957
-UK167	Mar-14, May-02	17	B.1	0	active today
-UK2735	Mar-26, May-02	15	B.1.1	0	active today
-UK706	Mar-28, Apr-29	13	B.1.1	3	0.7556
-UK72	Mar-11, May-01	12	B	1	0.3478
-UK107	Mar-17, May-02	11	B.2.1	0	active today
-UK2913	Apr-06, May-02	11	B.1.p11	0	active today
-UK2916	Mar-20, May-01	9	B.1	1	0.3673
-UK370	Mar-24, May-01	8	B.1.1.10	1	0.5057
-UK187	Mar-26, Apr-30	7	B.1	2	0.413
-UK581	Apr-06, May-01	6	B.1.1	1	4.1667
+UK5	Mar-10, Jun-01	359	B.1.1.1, B.1.1	0	active today
+UK601	Mar-11, May-11	66	B.10	21	0.0299
+UK482	Apr-10, May-05	27	B.1.1	27	0.0423
+UK167	Mar-14, Jun-01	26	B.1	0	active today
+UK2913	Apr-06, Jun-01	17	B.1.p11	0	active today
+UK2735	Mar-26, May-31	14	B.1.1	1	0.31
+UK107	Mar-17, May-19	14	B.2.1	13	0.0062
+UK706	Mar-28, Apr-29	14	B.1.1	33	0.0644
+UK72	Mar-11, May-27	12	B	5	0.0694
+UK2916	Mar-20, Jun-01	9	B.1	0	active today
+UK187	Mar-26, Apr-30	9	B.1	32	0.0245
+UK581	Apr-06, May-01	9	B.1.1	31	0.0896
+UK109	Apr-13, May-31	8	B.1.5	1	0.2317
+UK370	Mar-24, May-30	8	B.1.1.10	2	0.2684
+UK320	Mar-22, May-16	7	B.1	16	0.375
+UK2200	Mar-23, May-05	6	B.1.5	27	0.0343

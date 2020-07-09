@@ -11,7 +11,7 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by NIRE for week 2020-06-19. 
+This report gives summaries of UK specific lineages sequenced by NIRE for week 2020-07-03. 
 There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-03-31. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
 171 sequences in the UK from the sequencing centre NIRE have been included in this analysis.
@@ -22,14 +22,14 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 22 and the maximum is 100
+The minimum number of introductions is 45 and the maximum is 100
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-46 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+43 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
@@ -62,8 +62,8 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | Northern Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
+| UK5            | 47 (100.0%)        | Mar-10, Mar-31 |                47 | B.1.1.1, B.1.1   |                               0 | active today     |
 | UK601          | 45 (100.0%)        | Mar-11, Mar-29 |                45 | B.10             |                               2 | 0.2045           |
-| UK5            | 40 (100.0%)        | Mar-10, Mar-31 |                40 | B.1.1.1, B.1.1   |                               0 | active today     |
 | UK72           | 10 (100.0%)        | Mar-11, Mar-24 |                10 | B                |                               7 | 0.2063           |
 | UK2916         | 8 (100.0%)         | Mar-20, Mar-29 |                 8 | B.1              |                               2 | 0.6429           |
 
@@ -73,7 +73,7 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
@@ -81,7 +81,7 @@ This will affect all of the figures shown after this if lineages have geographic
 
 
 ```
-The lag for this sequencing centre is 80 days
+The lag for this sequencing centre is 94 days
 ```
 
 
@@ -90,7 +90,7 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 
 
 
-![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_geog_plot_1.png){#geog_plot }
 
 
 
@@ -108,7 +108,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -118,12 +118,12 @@ The date of first sequence in the cluster is shown in figure five for every clus
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -136,7 +136,7 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 All sequences have been assigned clean adm2 data this week.
 ```
 
-![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/NIRE/figures/report_NIRE_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/NIRE/figures/report_NIRE_map_1.png){#map }
 
 
 
@@ -170,8 +170,8 @@ Below are the raw data tables for each of the figures in the report.
 
 | Lineage name   | Northern Ireland   | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:-------------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
+| UK5            | 47 (100.0%)        | Mar-10, Mar-31 |                47 | B.1.1.1, B.1.1   |                               0 | active today     |
 | UK601          | 45 (100.0%)        | Mar-11, Mar-29 |                45 | B.10             |                               2 | 0.2045           |
-| UK5            | 40 (100.0%)        | Mar-10, Mar-31 |                40 | B.1.1.1, B.1.1   |                               0 | active today     |
 | UK72           | 10 (100.0%)        | Mar-11, Mar-24 |                10 | B                |                               7 | 0.2063           |
 | UK2916         | 8 (100.0%)         | Mar-20, Mar-29 |                 8 | B.1              |                               2 | 0.6429           |
 
@@ -182,19 +182,19 @@ Below are the raw data tables for each of the figures in the report.
 
 |    | Centre   |   Lag in days |
 |---:|:---------|--------------:|
-|  0 | NIRE     |            80 |
+|  0 | NIRE     |            94 |
 
 \pagebreak
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK601 |   UK5 |   UK72 |   UK2916 |
-|:------------------|--------:|------:|-------:|---------:|
-| 2020-03-08        |       1 |     2 |      1 |        0 |
-| 2020-03-15        |       3 |     3 |      2 |        1 |
-| 2020-03-22        |       5 |     4 |      3 |        4 |
-| 2020-03-29        |       2 |     2 |      0 |        1 |
+| Week commencing   |   UK5 |   UK601 |   UK72 |   UK2916 |
+|:------------------|------:|--------:|-------:|---------:|
+| 2020-03-08        |     2 |       1 |      1 |        0 |
+| 2020-03-15        |     3 |       3 |      2 |        1 |
+| 2020-03-22        |     4 |       5 |      3 |        4 |
+| 2020-03-29        |     3 |       2 |      0 |        1 |
 
 \pagebreak
 
@@ -214,19 +214,18 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-03-10 |                            1 |                                1 |       2 |
 | 2020-03-11 |                            0 |                                2 |       2 |
 | 2020-03-13 |                            1 |                                0 |       1 |
-| 2020-03-14 |                            2 |                                1 |       3 |
+| 2020-03-14 |                            3 |                                1 |       4 |
 | 2020-03-16 |                            0 |                                1 |       1 |
 | 2020-03-17 |                            1 |                                1 |       2 |
 | 2020-03-18 |                            2 |                                0 |       2 |
-| 2020-03-19 |                            1 |                                0 |       1 |
-| 2020-03-20 |                            2 |                                1 |       3 |
+| 2020-03-20 |                            1 |                                1 |       2 |
 | 2020-03-21 |                            1 |                                0 |       1 |
-| 2020-03-22 |                            2 |                                1 |       3 |
-| 2020-03-23 |                            5 |                                2 |       7 |
-| 2020-03-24 |                            5 |                                1 |       6 |
+| 2020-03-22 |                            1 |                                1 |       2 |
+| 2020-03-23 |                            4 |                                3 |       7 |
+| 2020-03-24 |                            4 |                                2 |       6 |
 | 2020-03-25 |                            5 |                                0 |       5 |
-| 2020-03-26 |                            5 |                                2 |       7 |
-| 2020-03-28 |                            2 |                                0 |       2 |
+| 2020-03-26 |                            4 |                                1 |       5 |
+| 2020-03-28 |                            3 |                                0 |       3 |
 | 2020-03-29 |                            2 |                                0 |       2 |
 
 \pagebreak

@@ -11,10 +11,10 @@
 
 
 
-This report gives summaries of UK specific lineages sequenced by BIRM for week 2020-06-19. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-08. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of UK specific lineages sequenced by BIRM for week 2020-07-03. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-25. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-225 sequences in the UK from the sequencing centre BIRM have been included in this analysis.
+309 sequences in the UK from the sequencing centre BIRM have been included in this analysis.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -22,23 +22,22 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 20 and the maximum is 85
+The minimum number of introductions is 47 and the maximum is 96
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-37 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
+46 are lineages which only contained five sequences or fewer, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 4 that remain:
+Of the 3 that remain:
 2 are pending extinction, ie last seen three weeks ago.
-1 has reactivated.
 1 lineage has been continuously circulating.
 
 
@@ -63,10 +62,10 @@ It is written to "summary_files" as "lineage_summary.tsv" for further use, and t
 
 | Lineage name   | England      | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:-------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK5            | 141 (100.0%) | Mar-24, Jun-08 |               141 | B.1.1.1, B.1.1   |                               0 | active today     |
-| UK5446         | 12 (100.0%)  | May-05, May-16 |                12 | B.1.1            |                              23 | 0.0435           |
-| UK408          | 12 (100.0%)  | Apr-13, Jun-08 |                12 | B.1.1            |                               0 | active today     |
-| UK167          | 6 (100.0%)   | Mar-23, May-19 |                 6 | B.1              |                              20 | 0.57             |
+| UK5            | 185 (100.0%) | Mar-24, Jun-25 |               185 | B.1.1.1, B.1.1   |                               0 | active today     |
+| UK623          | 40 (100.0%)  | May-10, Jun-11 |                40 | B.1.1            |                              14 | 0.0586           |
+| UK467          | 7 (100.0%)   | May-25, Jun-05 |                 7 | B.1.1            |                              20 | 0.0917           |
+| UK167          | 6 (100.0%)   | Mar-23, May-19 |                 6 | B.1              |                              37 | 0.3081           |
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -74,7 +73,7 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
@@ -82,7 +81,7 @@ This will affect all of the figures shown after this if lineages have geographic
 
 
 ```
-The lag for this sequencing centre is 11 days
+The lag for this sequencing centre is 8 days
 ```
 
 
@@ -91,7 +90,7 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 
 
 
-![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_geog_plot_1.png){#geog_plot }
+![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_geog_plot_1.png){#geog_plot }
 
 
 
@@ -109,7 +108,7 @@ The raw data has been written to a summary file.
 
 
 
-![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_make_timeline_1.png){#make_timeline }
+![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_make_timeline_1.png){#make_timeline }
 
 
 The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
@@ -119,12 +118,12 @@ The date of first sequence in the cluster is shown in figure five for every clus
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -134,11 +133,11 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 
 
 ```
-There are 11 sequences without enough geographical information to map
+There are 14 sequences without enough geographical information to map
 from this centre.
 ```
 
-![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-06-19/analysis/7/regional_reports/BIRM/figures/report_BIRM_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/regional_reports/BIRM/figures/report_BIRM_map_1.png){#map }
 
 
 
@@ -173,10 +172,10 @@ Below are the raw data tables for each of the figures in the report.
 
 | Lineage name   | England      | Date range     |   Total sequences | Global lineage   |   Time since last sample (days) | Activity score   |
 |:---------------|:-------------|:---------------|------------------:|:-----------------|--------------------------------:|:-----------------|
-| UK5            | 141 (100.0%) | Mar-24, Jun-08 |               141 | B.1.1.1, B.1.1   |                               0 | active today     |
-| UK5446         | 12 (100.0%)  | May-05, May-16 |                12 | B.1.1            |                              23 | 0.0435           |
-| UK408          | 12 (100.0%)  | Apr-13, Jun-08 |                12 | B.1.1            |                               0 | active today     |
-| UK167          | 6 (100.0%)   | Mar-23, May-19 |                 6 | B.1              |                              20 | 0.57             |
+| UK5            | 185 (100.0%) | Mar-24, Jun-25 |               185 | B.1.1.1, B.1.1   |                               0 | active today     |
+| UK623          | 40 (100.0%)  | May-10, Jun-11 |                40 | B.1.1            |                              14 | 0.0586           |
+| UK467          | 7 (100.0%)   | May-25, Jun-05 |                 7 | B.1.1            |                              20 | 0.0917           |
+| UK167          | 6 (100.0%)   | Mar-23, May-19 |                 6 | B.1              |                              37 | 0.3081           |
 
 \pagebreak
 
@@ -185,24 +184,27 @@ Below are the raw data tables for each of the figures in the report.
 
 |    | Centre   |   Lag in days |
 |---:|:---------|--------------:|
-|  0 | BIRM     |            11 |
+|  0 | BIRM     |             8 |
 
 \pagebreak
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK5 |   UK5446 |   UK408 |   UK167 |
-|:------------------|------:|---------:|--------:|--------:|
-| 2020-03-22        |     1 |        0 |       0 |       1 |
-| 2020-04-12        |     1 |        0 |       1 |       0 |
-| 2020-04-26        |     2 |        0 |       1 |       0 |
-| 2020-05-03        |    10 |        4 |       2 |       0 |
-| 2020-05-10        |    14 |        6 |       2 |       1 |
-| 2020-05-17        |    13 |        0 |       0 |       2 |
-| 2020-05-24        |     9 |        0 |       0 |       0 |
-| 2020-05-31        |    10 |        0 |       0 |       0 |
-| 2020-06-07        |     3 |        0 |       1 |       0 |
+| Week commencing   |   UK5 |   UK623 |   UK467 |
+|:------------------|------:|--------:|--------:|
+| 2020-03-22        |     1 |       0 |       0 |
+| 2020-04-12        |     1 |       0 |       0 |
+| 2020-04-19        |     6 |       0 |       0 |
+| 2020-04-26        |    10 |       0 |       0 |
+| 2020-05-03        |    16 |       0 |       0 |
+| 2020-05-10        |    19 |       3 |       0 |
+| 2020-05-17        |    13 |       1 |       0 |
+| 2020-05-24        |     6 |       4 |       2 |
+| 2020-05-31        |     7 |       5 |       2 |
+| 2020-06-07        |     7 |       1 |       0 |
+| 2020-06-14        |     1 |       0 |       0 |
+| 2020-06-21        |     1 |       0 |       0 |
 
 \pagebreak
 
@@ -221,20 +223,20 @@ Table S4 is not appropriate for this report and so has been omitted.
 |:-----------|-----------------------------:|---------------------------------:|--------:|
 | 2020-03-22 |                            0 |                                1 |       1 |
 | 2020-03-23 |                            1 |                                1 |       2 |
-| 2020-03-24 |                            3 |                                2 |       5 |
+| 2020-03-24 |                            2 |                                3 |       5 |
 | 2020-03-25 |                            1 |                                0 |       1 |
-| 2020-04-13 |                            0 |                                1 |       1 |
 | 2020-04-16 |                            2 |                                0 |       2 |
+| 2020-04-23 |                            0 |                                1 |       1 |
 | 2020-04-26 |                            1 |                                0 |       1 |
 | 2020-04-27 |                            1 |                                0 |       1 |
+| 2020-04-28 |                            3 |                                1 |       4 |
+| 2020-04-29 |                            3 |                                1 |       4 |
 | 2020-05-01 |                            1 |                                1 |       2 |
-| 2020-05-02 |                            0 |                                2 |       2 |
 | 2020-05-03 |                            1 |                                0 |       1 |
 | 2020-05-04 |                            2 |                                1 |       3 |
-| 2020-05-05 |                            3 |                                2 |       5 |
+| 2020-05-05 |                            2 |                                1 |       3 |
 | 2020-05-06 |                            1 |                                0 |       1 |
-| 2020-05-08 |                            1 |                                0 |       1 |
-| 2020-05-10 |                            1 |                                1 |       2 |
+| 2020-05-10 |                            1 |                                2 |       3 |
 | 2020-05-11 |                            1 |                                0 |       1 |
 | 2020-05-12 |                            1 |                                0 |       1 |
 | 2020-05-13 |                            1 |                                0 |       1 |
@@ -242,6 +244,11 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-05-19 |                            0 |                                1 |       1 |
 | 2020-05-20 |                            1 |                                0 |       1 |
 | 2020-05-22 |                            1 |                                0 |       1 |
+| 2020-05-25 |                            0 |                                1 |       1 |
+| 2020-05-27 |                            0 |                                1 |       1 |
+| 2020-06-09 |                            1 |                                0 |       1 |
+| 2020-06-12 |                            1 |                                0 |       1 |
+| 2020-06-15 |                            1 |                                0 |       1 |
 
 \pagebreak
 
@@ -258,9 +265,11 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-04-14 |         3 |
 | 2020-04-15 |         4 |
 | 2020-04-16 |         7 |
+| 2020-04-23 |         9 |
 | 2020-04-26 |         5 |
 | 2020-04-27 |         2 |
-| 2020-04-29 |         2 |
+| 2020-04-28 |         9 |
+| 2020-04-29 |        13 |
 | 2020-05-01 |         2 |
 | 2020-05-02 |         4 |
 | 2020-05-03 |         4 |
@@ -287,16 +296,29 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-05-24 |        12 |
 | 2020-05-25 |         7 |
 | 2020-05-26 |         8 |
-| 2020-05-27 |         7 |
-| 2020-05-28 |         1 |
-| 2020-05-29 |         4 |
+| 2020-05-27 |        10 |
+| 2020-05-28 |         5 |
+| 2020-05-29 |         7 |
+| 2020-05-30 |         1 |
 | 2020-05-31 |         1 |
-| 2020-06-02 |         3 |
+| 2020-06-01 |         3 |
+| 2020-06-02 |         8 |
 | 2020-06-03 |         2 |
-| 2020-06-05 |         3 |
-| 2020-06-06 |         3 |
-| 2020-06-07 |         2 |
-| 2020-06-08 |         3 |
+| 2020-06-04 |         3 |
+| 2020-06-05 |         7 |
+| 2020-06-06 |         5 |
+| 2020-06-07 |         5 |
+| 2020-06-08 |         6 |
+| 2020-06-09 |         7 |
+| 2020-06-10 |         2 |
+| 2020-06-11 |         2 |
+| 2020-06-12 |         2 |
+| 2020-06-13 |         2 |
+| 2020-06-15 |         2 |
+| 2020-06-16 |         1 |
+| 2020-06-18 |         1 |
+| 2020-06-19 |         1 |
+| 2020-06-25 |         1 |
 
 \pagebreak
 
@@ -305,11 +327,11 @@ Table S4 is not appropriate for this report and so has been omitted.
 
 | Admin2         | Country   |   Number of sequences | Sequence group   |
 |:---------------|:----------|----------------------:|:-----------------|
-| EDINBURGH      | Scotland  |                     8 | 1-10             |
+| EDINBURGH      | Scotland  |                    11 | 10-50            |
 | HEREFORDSHIRE  | England   |                     5 | 1-10             |
 | SHROPSHIRE     | England   |                     2 | 1-10             |
-| STAFFORDSHIRE  | England   |                    31 | 10-50            |
-| WEST MIDLANDS  | England   |                    70 | 50-100           |
+| STAFFORDSHIRE  | England   |                    32 | 10-50            |
+| WEST MIDLANDS  | England   |                   117 | 100-150          |
 | WORCESTERSHIRE | England   |                     5 | 1-10             |
 
 \pagebreak

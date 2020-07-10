@@ -229,7 +229,7 @@ else:
     intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
     dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
 
-print(dataframe.head(10).to_markdown())
+print(dataframe.head(10).to_markdown(tablefmt='grid'))
 ```
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 

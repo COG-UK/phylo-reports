@@ -365,7 +365,7 @@ Below are the raw data tables for each of the figures in the report.
 
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
 ```python, name="summary_table", echo=False, results='tex'
-print(dataframe.to_markdown())
+print(dataframe.to_markdown(tablefmt='grid'))
 ```
 \pagebreak
 

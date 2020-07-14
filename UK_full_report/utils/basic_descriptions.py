@@ -96,8 +96,8 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	df_together["Date range"] = date_ranges
 	df_together["Total sequences"] = totals
 	df_together["Global lineage"] = global_lins
-	df_together["Time since last sample (days)"] = last_sampled
-	df_together["Activity score"] = activity_scores
+	#df_together["Time since last sample (days)"] = last_sampled
+	#df_together["Activity score"] = activity_scores
 
 	non_country_list = ["Date range", "Total sequences", "Global lineage", "Time since last sample (days)", "Activity score"]
 
@@ -137,7 +137,6 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 			
 			new_country.append(new)
 		
-    
 		df_together[country] = new_country
 
 	new_header_list = []

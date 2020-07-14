@@ -4,7 +4,8 @@ pandoc "$1" \
     -V geometry:margin=2cm \
     -V mainfont="Helvetica Neue" \
     -V monofont="Helvetica Neue" \
-    -V fontsize=12pt \
+    -V fontsize=10pt \
     --template="$2" \
-    --latex-engine=xelatex \
+    --latex-engine=pdflatex \
+    --columns=10000\
     -o "$3"

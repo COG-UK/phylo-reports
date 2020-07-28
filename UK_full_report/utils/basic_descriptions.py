@@ -180,7 +180,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 			for tax in lin.country_specific_taxa:
 				global_lineages.add(tax.global_lineage)
 			
-			totals.append(len(lin.country_specific_taxa))
+			totals.append(str(len(lin.country_specific_taxa)))
 			global_lins.append(global_lineages)
 
 			if lin.country_specific_dates != []:

@@ -120,6 +120,12 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 		new_dates.append(new_date)
 	df_together["Date range"] = new_dates
 
+	new_totals = []
+	for i in df_together["Total sequences"]:
+		new_total = str(i)
+		new_totals.append(new_total)
+	df_together["Total sequences"] = new_totals
+
 
 	for country in countries:
 		new_country = []

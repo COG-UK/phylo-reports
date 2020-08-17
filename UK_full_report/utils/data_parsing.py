@@ -13,8 +13,10 @@ def sortkey2(taxon):
     return taxon.date_dt
 
 
-def parse_metadata(metadata_file, sequencing_centre, filter_country):
-    count = 0
+def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
+
+    pillar_2s = ["ALDP", "QEUH", "MILK"]
+
     taxa_list = []
     tax_with_dates = []
     introductions = set()
@@ -53,7 +55,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
         in_data = [r for r in reader]
         for sequence in in_data:
             if sequence['country'] == "UK":
-                count += 1
+                
                 seq_name = sequence['sequence_name']
                 adm1 = sequence["adm1"]
                 adm2 = sequence['adm2']
@@ -87,8 +89,14 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                 
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
-                # if filter_country is not None and filter_country != "" and filter_country != country:
-                #     continue
+                
+                if pillar_2:
+                    this_seq = False
+                    for place in pillar_2s:
+                        if place in seq_name:
+                            this_seq = True
+                    if not this_seq:
+                        continue
 
                 min_intros.add(acctrans)
                 max_intros.add(del_intros)
@@ -134,7 +142,6 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
     for intro, taxa in intros_to_taxa.items():
         
         i_o = case_def.introduction(intro, taxa, most_recent_sample, filter_country, sequencing_centre)
-        #i_o.overall_lineage = taxa[0].overall_lineage
         i_o.acctrans_designations = intro_acctrans[i_o.id]
 
         if len(i_o.acctrans_designations) > 1:
@@ -172,4 +179,4 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country):
                     specific_smalls.append(intro)
 
 
-    return intro_bigs, intro_smalls, intro_alls, count, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons
+    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons

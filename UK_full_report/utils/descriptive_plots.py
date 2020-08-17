@@ -111,7 +111,6 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
         ytick_list.append(intro.id)
         
         if point_one != point_two:
-            #for x_point, y_point, colour, order, size in zip(x2, y2, colours, orders, sizes2):
             plt.scatter(x2,y2, c=colours, zorder=2, s=sizes2)
             plt.plot(x,y, color='black', zorder=1)
             
@@ -247,7 +246,6 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
 
 
     if sequencing_centre == "":
-        #ax.set_title('Sequences after introduction by country', size=50, fontweight='bold')
         ax.legend(fontsize=40)
    
 def top_ten_sort(lineage):
@@ -345,17 +343,14 @@ def stacked_geog_plot(y_dict, x,normed, totals, labels):
     ax.stackplot(x,y,labels=labels, colors=colors, alpha=0.8)
 
     if normed:
-        #ax.set_title("Lineages by number of adm2 regions present by epiweek normalised")
         plt.ylabel("Number of adm2 regions present in lineage normalised")
     else:
-        #ax.set_title("Lineages by number of adm2 regions present by epiweek")
         plt.ylabel("Number of adm2 regions present in lineage")
    
     handles, labels = ax.get_legend_handles_labels()
     plt.legend(handles[::-1], labels[::-1], title = "Lineage", bbox_to_anchor=(1.2,1.05))
     plt.xticks(rotation=45)
     plt.xlabel("Week commencing")
-    #plt.show()
 
 def plot_ridge_plot(weeks, count_dict):
     
@@ -391,7 +386,6 @@ def make_raw_data_geog_plot(y_dict, weeks):
 
     raw_df = pd.DataFrame(raw_data)
     raw_df.set_index("Week commencing", inplace=True)
-    # raw_df.index.name = "Week commencing"
 
     return raw_df
 
@@ -431,8 +425,6 @@ def plot_starts(lineages_of_interest):
     y2 = np.array(list(single_ordered.values()))
 
     fig,ax = plt.subplots(1,1,figsize=(30,15), dpi= 80)
-
-    # ax.bar(x,y)
     
     ax.bar(x, y, label='non-singletons', color='midnightblue')
     ax.bar(x2, y2, label='singletons', color='goldenrod', bottom = y)
@@ -440,7 +432,6 @@ def plot_starts(lineages_of_interest):
     plt.xticks(rotation=45, size=25, fontweight='heavy')
     plt.yticks(size=25, fontweight='heavy')
     
-    #ax.set_title("Lineage starts per week", size=45)
     plt.xlabel("Week commencing", size=30)
     plt.ylabel("Number of earliest sequences", size=30)
     plt.legend()
@@ -464,7 +455,6 @@ def raw_data_starts(singles, non_singles):
     raw_df = pd.DataFrame(raw_dict)
 
     raw_df.set_index("Day", inplace=True)
-    #raw_df.index.name = "Day"
 
     return raw_df
 
@@ -578,154 +568,146 @@ def sdi(data):
     
     return -sum(p(n, N) for n in data.values() if n is not 0)
 
-def make_diversity_plot(intro_alls, taxa_list, country, sequencing_centre):
+def make_diversity_plot(intro_alls, taxa_list):
     
-    if country == "" and sequencing_centre == "":
-        England_div = defaultdict(dict)
-        Wales_div = defaultdict(dict)
-        Scotland_div = defaultdict(dict)
-        NI_div = defaultdict(dict)
+    England_div = defaultdict(dict)
+    Wales_div = defaultdict(dict)
+    Scotland_div = defaultdict(dict)
+    NI_div = defaultdict(dict)
 
-        total_epiweeks = set()
-        for lin in intro_alls:
-            for j in lin.epiweeks:
-                total_epiweeks.add(j)
-                
-        total_epiweeks = sorted(total_epiweeks)
-        week_labels = []
+    total_epiweeks = set()
+    for lin in intro_alls:
+        for j in lin.epiweeks:
+            total_epiweeks.add(j)
+            
+    total_epiweeks = sorted(total_epiweeks)
+    week_labels = []
 
-        for i in total_epiweeks:
-            week_labels.append(i.startdate())
+    for i in total_epiweeks:
+        week_labels.append(i.startdate())
 
-        countries = ["England","Scotland", "Wales", "Northern_Ireland"]
+    countries = ["England","Scotland", "Wales", "Northern_Ireland"]
 
-        for country in countries:
-            if country == "England":
-                outer_dict = England_div
-            elif country == "Wales":
-                outer_dict = Wales_div
-            elif country == "Scotland":
-                outer_dict = Scotland_div
-            elif country == "Northern_Ireland":
-                outer_dict = NI_div
+    for country in countries:
+        if country == "England":
+            outer_dict = England_div
+        elif country == "Wales":
+            outer_dict = Wales_div
+        elif country == "Scotland":
+            outer_dict = Scotland_div
+        elif country == "Northern_Ireland":
+            outer_dict = NI_div
+    
+        for week in total_epiweeks:
+            inner_dict = {}
+            for tax in taxa_list:
+                if tax.epiweek == week and tax.country == country:
+
+                    outer_key = week
+                    inner_key = tax.introduction
+
+                    if inner_key in inner_dict.keys():
+                        inner_dict[inner_key] += 1
+                    else:
+                        inner_dict[inner_key] = 0
+                        inner_dict[inner_key] += 1
+
+
+                    outer_dict[outer_key] = inner_dict
+
+    england_sorted = OrderedDict(sorted(England_div.items()))
+    wales_sorted = OrderedDict(sorted(Wales_div.items()))
+    scotland_sorted = OrderedDict(sorted(Scotland_div.items()))
+    ni_sorted = OrderedDict(sorted(NI_div.items()))
+
+    df_dict = defaultdict(list)
+
+    eng_dict = defaultdict(list)
+    wales_dict = defaultdict(list)
+    ni_dict = defaultdict(list)
+    scot_dict = defaultdict(list)
+
+    for date, inner_dict in england_sorted.items():
+        new_date = date.startdate()
+        div = sdi(inner_dict)
+
+        eng_dict["Date"].append(new_date)
+        eng_dict["Diversity"].append(div)
         
-            for week in total_epiweeks:
-                inner_dict = {}
-                for tax in taxa_list:
-                    if tax.epiweek == week and tax.country == country:
+        df_dict["Adm1"].append("England")
+        df_dict["Dates"].append(new_date)
+        df_dict["Shannon_diversity"].append(div)
+        
+    for date, inner_dict in scotland_sorted.items():
+        new_date = date.startdate()
+        div = sdi(inner_dict)
 
-                        outer_key = week
-                        inner_key = tax.introduction
+        scot_dict["Date"].append(new_date)
+        scot_dict["Diversity"].append(div)
 
-                        if inner_key in inner_dict.keys():
-                            inner_dict[inner_key] += 1
-                        else:
-                            inner_dict[inner_key] = 0
-                            inner_dict[inner_key] += 1
+        df_dict["Adm1"].append("Scotland")
+        df_dict["Dates"].append(new_date)
+        df_dict["Shannon_diversity"].append(div)
+        
+    for date, inner_dict in wales_sorted.items():
+        new_date = date.startdate()
+        div = sdi(inner_dict)
 
+        wales_dict["Date"].append(new_date)
+        wales_dict["Diversity"].append(div)
 
-                        outer_dict[outer_key] = inner_dict
+        df_dict["Adm1"].append("Wales")
+        df_dict["Dates"].append(new_date)
+        df_dict["Shannon_diversity"].append(div)
 
-        england_sorted = OrderedDict(sorted(England_div.items()))
-        wales_sorted = OrderedDict(sorted(Wales_div.items()))
-        scotland_sorted = OrderedDict(sorted(Scotland_div.items()))
-        ni_sorted = OrderedDict(sorted(NI_div.items()))
+    for date, inner_dict in ni_sorted.items():
+        new_date = date.startdate()
+        div = sdi(inner_dict)
+        
+        ni_dict["Date"].append(new_date)
+        ni_dict["Diversity"].append(div)
 
-        df_dict = defaultdict(list)
+        df_dict["Adm1"].append("Northern_Ireland")
+        df_dict["Dates"].append(new_date)
+        df_dict["Shannon_diversity"].append(div)
 
-        eng_dict = defaultdict(list)
-        wales_dict = defaultdict(list)
-        ni_dict = defaultdict(list)
-        scot_dict = defaultdict(list)
+    df = pd.DataFrame(df_dict)
 
-        for date, inner_dict in england_sorted.items():
-            new_date = date.startdate()
-            div = sdi(inner_dict)
+    x1 = eng_dict["Date"]
+    y1 = eng_dict["Diversity"]
 
-            eng_dict["Date"].append(new_date)
-            eng_dict["Diversity"].append(div)
-            
-            df_dict["Adm1"].append("England")
-            df_dict["Dates"].append(new_date)
-            df_dict["Shannon_diversity"].append(div)
-            
-        for date, inner_dict in scotland_sorted.items():
-            new_date = date.startdate()
-            div = sdi(inner_dict)
+    x2 = wales_dict["Date"]
+    y2 = wales_dict["Diversity"]
 
-            scot_dict["Date"].append(new_date)
-            scot_dict["Diversity"].append(div)
+    x3 = ni_dict["Date"]
+    y3 = ni_dict["Diversity"]
 
-            df_dict["Adm1"].append("Scotland")
-            df_dict["Dates"].append(new_date)
-            df_dict["Shannon_diversity"].append(div)
-            
-        for date, inner_dict in wales_sorted.items():
-            new_date = date.startdate()
-            div = sdi(inner_dict)
-
-            wales_dict["Date"].append(new_date)
-            wales_dict["Diversity"].append(div)
-
-            df_dict["Adm1"].append("Wales")
-            df_dict["Dates"].append(new_date)
-            df_dict["Shannon_diversity"].append(div)
-
-        for date, inner_dict in ni_sorted.items():
-            new_date = date.startdate()
-            div = sdi(inner_dict)
-            
-            ni_dict["Date"].append(new_date)
-            ni_dict["Diversity"].append(div)
-
-            df_dict["Adm1"].append("Northern_Ireland")
-            df_dict["Dates"].append(new_date)
-            df_dict["Shannon_diversity"].append(div)
-
-        df = pd.DataFrame(df_dict)
-
-        # cmap = cm.get_cmap('GnBu')
-        # fig, axes = joypy.joyplot(df, by="Adm1", column="Shannon_diversity", figsize=(10,7), kind="values",
-        #                     ylim='own', x_range=(0,len(week_labels)), colormap=cmap)
-
-        # axes[-1].set_xticks(range(len(week_labels)))
-        # axes[-1].set_xticklabels(week_labels, rotation=90)
-
-        x1 = eng_dict["Date"]
-        y1 = eng_dict["Diversity"]
-
-        x2 = wales_dict["Date"]
-        y2 = wales_dict["Diversity"]
-
-        x3 = ni_dict["Date"]
-        y3 = ni_dict["Diversity"]
-
-        x4 = scot_dict["Date"]
-        y4 = scot_dict["Diversity"]
+    x4 = scot_dict["Date"]
+    y4 = scot_dict["Diversity"]
 
 
-        fig, ax = plt.subplots(4,sharex='all',sharey='all', figsize=(15,15))
+    fig, ax = plt.subplots(4,sharex='all',sharey='all', figsize=(15,15))
 
-        ax[0].fill_between(x1,y1=y1, alpha=0.5, color="indianred")
-        ax[0].plot(x1,y1, color="indianred")
-        ax[0].set_title("England")
+    ax[0].fill_between(x1,y1=y1, alpha=0.5, color="indianred")
+    ax[0].plot(x1,y1, color="indianred")
+    ax[0].set_title("England")
 
-        ax[1].fill_between(x2,y1=y2, alpha=0.5, color="seagreen")
-        ax[1].plot(x2,y2, color="seagreen")
-        ax[1].set_title("Wales")
+    ax[1].fill_between(x2,y1=y2, alpha=0.5, color="seagreen")
+    ax[1].plot(x2,y2, color="seagreen")
+    ax[1].set_title("Wales")
 
-        ax[2].fill_between(x3,y1=y3, alpha=0.5, color="lightblue")
-        ax[2].plot(x3,y3, color="lightblue")
-        ax[2].set_title("Northern Ireland")
+    ax[2].fill_between(x3,y1=y3, alpha=0.5, color="lightblue")
+    ax[2].plot(x3,y3, color="lightblue")
+    ax[2].set_title("Northern Ireland")
 
-        ax[3].fill_between(x4,y1=y4, alpha=0.5, color="steelblue")
-        ax[3].plot(x4,y4, color="steelblue")
-        ax[3].set_title("Scotland")
+    ax[3].fill_between(x4,y1=y4, alpha=0.5, color="steelblue")
+    ax[3].plot(x4,y4, color="steelblue")
+    ax[3].set_title("Scotland")
 
-        plt.xticks(rotation=90)
+    plt.xticks(rotation=90)
 
 
-        return df
+    return df
 
 def tidy_div_df(div_df):
 
@@ -768,7 +750,7 @@ def tidy_div_df(div_df):
     return new3
 
 
-def sequencing_centre_lags(taxa_list, sc_dict, submission_date, country, sequencing_centre):
+def sequencing_centre_lags(taxa_list, sc_dict, submission_date, country):
 
     colour_dict = {"England":'indianred', "Wales":'darkseagreen', "Northern_Ireland":"skyblue", "Scotland": "steelblue"}
 
@@ -808,12 +790,11 @@ def sequencing_centre_lags(taxa_list, sc_dict, submission_date, country, sequenc
     for sc in x:
         colours.append(colour_dict[sc_dict[sc]])
 
-    if sequencing_centre == "" and country != "Wales" and country != "Northern_Ireland":
-        plt.xticks(rotation=45, size=15)
-        plt.ylabel("Days since most recent sequence", size=15)
-        plt.xlabel("Sequencing centre", size=15)
+    plt.xticks(rotation=45, size=15)
+    plt.ylabel("Days since most recent sequence", size=15)
+    plt.xlabel("Sequencing centre", size=15)
 
-        plt.bar(x, y, color = colours)
+    plt.bar(x, y, color = colours)
 
     for k,v in ordered_lags.items():
         lag_dict["Centre"].append(k)

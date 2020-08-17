@@ -9,7 +9,7 @@ class Error (Exception): pass
 
 scripts_directory = os.path.dirname(__file__)
 
-def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, scripts_directory):
+def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, pillar2, scripts_directory):
     fd = os.path.join(output_directory, "figures")
     sd = os.path.join(output_directory, "summary_files")
 
@@ -41,6 +41,9 @@ def make_report(input_directory, metadata_file, name_stem, output_directory, wee
                     new_l = 'sequencing_centre = "' + str(sequencing_centre) + '"\n'
                 elif "adm1" in l:
                     new_l = 'adm1 = "' + str(adm1) + '"\n'
+                elif "pillar2 "in l:
+                    new_l = 'pillar2 = "' + str(pillar2) + '"\n'
+
             else:
                 new_l = l
 
@@ -81,12 +84,13 @@ def main():
     parser.add_argument("--od", default="./", help="output directory, default is working directory")
     parser.add_argument("--sc", default="", type=str, help="Optional filter by sequencing centre, e.g. CAMB/NORW/PHWC, default all centres")
     parser.add_argument("--adm", default="", type=str, help="Optional filter by adm1 region")
+    parser.add_argument("--p2", required=False, default=False, help="Optional filter by pillar2 sequences")
 
     parser.add_argument("--pdf", action="store_true", help="tries to run pandoc conversion to pdf")
 
     args = parser.parse_args()
 
-    make_report(args.i, args.m, args.s, args.od, args.w, args.sc, args.adm, scripts_directory)
+    make_report(args.i, args.m, args.s, args.od, args.w, args.sc, args.adm, args.p2, scripts_directory)
     if args.pdf:
         convert_report_to_pdf(args.s, scripts_directory)
 

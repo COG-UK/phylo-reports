@@ -76,7 +76,9 @@ def clean_locs(clean_locs_file, all_uk):
 
     return merged_locs, multi_loc_dict, straight_map
 
-def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, present_in_shape_file, output_dir):
+def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, present_in_shape_file, output_dir, pillar_2):
+
+    pillar_2s = ["ALDP", "QEUH", "MILK"]
 
     seq_dict = defaultdict(list)
     missing_adm2 = {}
@@ -106,6 +108,13 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
 
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
+                if pillar_2:
+                    this_seq = False
+                    for place in pillar_2s:
+                        if place in seq_name:
+                            this_seq = True
+                    if not this_seq:
+                        continue
 
                 if adm2 != "" and adm2 not in not_mappable:
                     if adm2 in straight_map.keys():
@@ -341,12 +350,16 @@ def plot_whole_map(england, scotland, wales, n_i, channels, plot_dict, country):
         
     new_labels.append("No sequences yet")
 
-    legend = ax.get_legend()
-    legend.set_bbox_to_anchor((0.1,0.5,0.2,0.2))
-    legend.set_title("Number of sequences")
+    try:
+        legend = ax.get_legend()
+        legend.set_bbox_to_anchor((0.1,0.5,0.2,0.2))
+        legend.set_title("Number of sequences")
+    
+        for text, label in zip(legend.get_texts(), new_labels):
+            text.set_text(label)
 
-    for text, label in zip(legend.get_texts(), new_labels):
-        text.set_text(label)
+    except AttributeError:
+        pass
 
     ax.axis("off")
 
@@ -396,7 +409,6 @@ def plot_individual(england, scotland, wales, n_i, country):
         text.set_text(label)
 
     ax.axis("off")
-    #ax.set_title('COVID-19 sequences from each Admn2 region in ' + country, fontdict={'fontsize': '25', 'fontweight' : '3'})
 
 
 def plot_missing_sequences(missing_df):
@@ -472,7 +484,7 @@ def sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, cou
         print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
 
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country):
+def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country, pillar2):
 
     not_mappable = ["WALES", "OTHER", "UNKNOWN", "UNKNOWN SOURCE", "NOT FOUND", "GIBRALTAR", "FALKLAND ISLANDS", "CITY CENTRE"]
 
@@ -482,7 +494,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_d
 
     merged_locs, multi_loc_dict, straight_map = clean_locs(adm2_cleaning_file, all_uk)
 
-    parsing_output = parse_metadata(metadata_file, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, locations_in_shape_file, output_dir)
+    parsing_output = parse_metadata(metadata_file, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, locations_in_shape_file, output_dir, pillar2)
 
     if type(parsing_output) != bool:
         with_seq_counts, missing_df, missing_sequences, new_unclean_locs = parsing_output

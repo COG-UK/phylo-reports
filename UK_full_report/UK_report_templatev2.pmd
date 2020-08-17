@@ -90,7 +90,6 @@ if pillar2 == "True":
 else:
     pillar2 = False
 
-
 current_date = time.make_current_week(week)
 
 intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons = parse.parse_metadata(metadata_file, sequencing_centre, country, pillar2)

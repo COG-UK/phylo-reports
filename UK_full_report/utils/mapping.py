@@ -118,7 +118,7 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
                     elif adm2 in multi_loc_dict.keys():
                         new = multi_loc_dict[adm2]
 
-                    elif adm2 not in present_in_shape_file:
+                    elif adm2 not in present_in_shape_file and adm2 not in multi_loc_dict.values():
                         new_unclean_locs = True
                         unclean_file.write(adm2 + "\n")
                         new = "NA"

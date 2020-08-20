@@ -146,8 +146,6 @@ Furthermore, those sequences which haven't been sampled in the last month are no
 
 ```python, echo=False, name='status description', results='tex'
 
-#split = lin_exp.find_splits(intro_alls)
-
 if sequencing_centre == "" and country != "":
     status_counts, reactivated_lineages, continuining_lineages = lin_exp.describe_lineages(specific_bigs)
 else:
@@ -221,8 +219,8 @@ if sequencing_centre == "" and country != "":
     dataframe,tree_order = descrip.make_country_specific_dataframe(country_specific_lineages,country, most_recent_sample)
 
 else:
-    intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers = descrip.prep_dicts(intro_countries)
-    dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict)
+    intro_country_counts, intro_country_percentages, intro_country_together = descrip.prep_dicts(intro_countries)
+    dataframe, tree_order = descrip.make_dataframe(intro_country_together, intro_object_dict)
 
 print(dataframe.head(10).to_markdown(tablefmt='grid'))
 ```
@@ -370,24 +368,30 @@ print(dataframe.to_markdown(tablefmt='grid'))
 
 **Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
 ```python, name="raw", echo=False, results='tex'
-lag_df = pd.DataFrame(lag_dict)
-print(lag_df.to_markdown())
+if not pillar2:
+    lag_df = pd.DataFrame(lag_dict)
+    print(lag_df.to_markdown())
+else:
+    print("Table S2 is not appropriate for this report and so has been omitted.")
 ```
 \pagebreak
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 ```python, name="raw", echo=False,results='tex'
-print(raw_geog.to_markdown())
+if not pillar2:
+    print(raw_geog.to_markdown())
+else:
+    print("Table S3 is not appropriate for this report and so has been omitted.")
 ```
 \pagebreak
 ```python, name="is there shannon", echo=False, results='raw'
-if sequencing_centre == "" and country=="":
+if sequencing_centre == "" and country=="" and not pillar2:
     print("**Table S4** Raw data for figure four showing the Shannon diversity per admin1 region over time")
 else:
     print("Table S4 is not appropriate for this report and so has been omitted.")
 ```
 ```python,name="div_data", echo=False, results="tex"
-if sequencing_centre == "" and country=="":
+if sequencing_centre == "" and country=="" and not pillar2:
     tidy_div = dp.tidy_div_df(div_df)
     
     print(tidy_div.to_markdown())

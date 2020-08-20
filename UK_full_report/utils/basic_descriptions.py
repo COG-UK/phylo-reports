@@ -23,7 +23,6 @@ def get_preliminary_info(intro_countries):
 
 
 def prep_dicts(intro_countries):
-	intro_total_numbers = {}
 
 	intro_country_counts = defaultdict(dict)
 
@@ -32,15 +31,10 @@ def prep_dicts(intro_countries):
 
 	for key, value in intro_countries.items():
 	
-
-		total = len(value)
-		
-		intro_total_numbers[key] = total 
-		
+		total = len(value)	
 		counts = Counter(value)
 		
 		intro_country_counts[key] = counts 
-		
 		
 		individual_freqs = {}
 		individuals_together = defaultdict(tuple)
@@ -51,18 +45,15 @@ def prep_dicts(intro_countries):
 			
 			individual_freqs[key2] = perc
 			
-			individuals_together[key2] = (str(value2), str(perc) + "%")
-				
+			individuals_together[key2] = (str(value2), str(perc) + "%")		
 			
 		intro_country_percentages[key] = individual_freqs 
-		
-		
 		intro_country_together[key] = individuals_together
 
-	return(intro_country_counts, intro_country_percentages, intro_country_together, intro_total_numbers)
+	return(intro_country_counts, intro_country_percentages, intro_country_together)
 
 
-def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dict):
+def make_dataframe(intro_country_together, intro_object_dict):
 
 	#intro_country_together is a dict which has dicts of tuples as its values
 	#Can add in extra columns of stuff by keying the dictionary that holds the lineage objects
@@ -71,10 +62,12 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	date_ranges = []
 	last_sampled = []
 	activity_scores = []
+	totals = []
 
 	for key, value in intro_country_together.items():
 		intro_object = intro_object_dict[key]
 		global_lins.append(intro_object.global_lineages)
+		totals.append(len(intro_object.taxa))
 		
 		if intro_object.dates != []:
 			date_ranges.append((intro_object.pretty_oldest, intro_object.pretty_mrd))
@@ -91,19 +84,17 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 
 	df_together.fillna(0, inplace=True, )
 
-	totals = pd.Series(intro_total_numbers)
-
 	df_together["Date range"] = date_ranges
-	df_together["Total sequences"] = totals
+	df_together["Total"] = totals
 	df_together["Global lineage"] = global_lins
 	#df_together["Time since last sample (days)"] = last_sampled
 	#df_together["Activity score"] = activity_scores
 
-	non_country_list = ["Date range", "Total sequences", "Global lineage", "Time since last sample (days)", "Activity score"]
+	non_country_list = ["Date range", "Total", "Global lineage", "Time since last sample (days)", "Activity score"]
 
-	df_together.sort_values(by=["Total sequences"], ascending=False, inplace=True)
+	df_together.sort_values(by=["Total"], ascending=False, inplace=True)
 
-	df_together = df_together[df_together["Total sequences"] > 5]
+	df_together = df_together[df_together["Total"] > 5]
 	
 	countries = [i for i in df_together.columns if i not in non_country_list] 
 
@@ -121,10 +112,10 @@ def make_dataframe(intro_country_together, intro_total_numbers, intro_object_dic
 	df_together["Date range"] = new_dates
 
 	new_totals = []
-	for i in df_together["Total sequences"]:
-		new_total = str(i)
+	for i in df_together["Total"]:
+		new_total = str(i) + " taxa"
 		new_totals.append(new_total)
-	df_together["Total sequences"] = new_totals
+	df_together["Total"] = new_totals
 
 
 	for country in countries:
@@ -197,7 +188,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 				pretty_oldest = oldest.strftime('%b-%d')
 				
 				date_ranges.append((pretty_oldest, pretty_mrd))
-				last_sampled_list.append(lin.last_sampled)
+				last_sampled_list.append(str(lin.last_sampled) + " days")
 
 				activity_scores.append(lin.activity_score)
 
@@ -210,7 +201,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	df_dict["Date range"] = date_ranges
 	df_dict["Number of sequences"] = totals
 	df_dict["Global lineage"] = global_lins
-	df_dict["Time since last sample (days)"] = last_sampled_list
+	df_dict["Time since last sample"] = last_sampled_list
 	df_dict["Activity score"] = activity_scores
 
 	df = pd.DataFrame(df_dict)

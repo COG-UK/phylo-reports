@@ -85,12 +85,12 @@ def make_dataframe(intro_country_together, intro_object_dict):
 	df_together.fillna(0, inplace=True, )
 
 	df_together["Date range"] = date_ranges
-	df_together["Total"] = totals
 	df_together["Global lineage"] = global_lins
-	#df_together["Time since last sample (days)"] = last_sampled
+	df_together["Total"] = totals
+	# df_together["Time since last sample"] = last_sampled
 	#df_together["Activity score"] = activity_scores
 
-	non_country_list = ["Date range", "Total", "Global lineage", "Time since last sample (days)", "Activity score"]
+	non_country_list = ["Date range", "Total", "Global lineage", "Time since last sample", "Activity score"]
 
 	df_together.sort_values(by=["Total"], ascending=False, inplace=True)
 
@@ -116,7 +116,6 @@ def make_dataframe(intro_country_together, intro_object_dict):
 		new_total = str(i) + " taxa"
 		new_totals.append(new_total)
 	df_together["Total"] = new_totals
-
 
 	for country in countries:
 		new_country = []
@@ -177,7 +176,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 			for tax in lin.country_specific_taxa:
 				global_lineages.add(tax.global_lineage)
 			
-			totals.append(str(len(lin.country_specific_taxa)))
+			totals.append(len(lin.country_specific_taxa))
 			global_lins.append(global_lineages)
 
 			if lin.country_specific_dates != []:
@@ -199,7 +198,7 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 
 	df_dict["Lineage name"] = names	
 	df_dict["Date range"] = date_ranges
-	df_dict["Number of sequences"] = totals
+	df_dict["Total"] = totals
 	df_dict["Global lineage"] = global_lins
 	df_dict["Time since last sample"] = last_sampled_list
 	df_dict["Activity score"] = activity_scores
@@ -221,7 +220,14 @@ def make_country_specific_dataframe(lineages, filter_country, most_recent_sample
 	df["Date range"] = new_dates
 
 	df.set_index('Lineage name', inplace=True)
-	df.sort_values(by=["Number of sequences"], ascending=False, inplace=True)
+	df.sort_values(by=["Total"], ascending=False, inplace=True)
+
+
+	new_totals = []
+	for i in df["Total"]:
+		new_total = str(i) + " taxa"
+		new_totals.append(new_total)
+	df["Total"] = new_totals
 
 
 	tree_order = list(df.index)

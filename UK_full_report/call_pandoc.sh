@@ -7,5 +7,4 @@ pandoc "$1" \
     -V fontsize=10pt \
     --template="$2" \
     --latex-engine=pdflatex \
-    --columns=10000\
     -o "$3"

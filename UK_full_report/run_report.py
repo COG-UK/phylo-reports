@@ -10,11 +10,11 @@ class Error (Exception): pass
 scripts_directory = os.path.dirname(__file__)
 
 def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, pillar2, scripts_directory):
-    fd = os.path.join(output_directory, "figures")
+    
+    fd = "figures"
     sd = os.path.join(output_directory, "summary_files")
 
-    Path(fd).mkdir(parents=True, exist_ok=True)
-
+    #Path(fd).mkdir(parents=True, exist_ok=True)
     Path(sd).mkdir(parents=True, exist_ok=True)
 
 
@@ -22,33 +22,27 @@ def make_report(input_directory, metadata_file, name_stem, output_directory, wee
     pmd_file = open(pmd_string, 'w')
 
     md_template = os.path.join(scripts_directory, 'UK_report_templatev2.pmd')
+
+    change_line_dict = {"summary_output": f'summary_output = "{sd}"\n',
+                        "input_directory": f'input_directory = "{input_directory}"\n',
+                        "name_stem": f'name_stem = "{name_stem}"\n',
+                        "metadata_file": f'metadata_file = "{metadata_file}"\n',
+                        "week": f'week = "{week}"\n',
+                        "scripts_directory": f'scripts_directory = "{scripts_directory}"\n',
+                        "sequencing_centre": f'sequencing_centre = "{sequencing_centre}"\n',
+                        "adm1": f'adm1 = "{adm1}"\n',
+                        "pillar2": f'pillar2 = "{pillar2}"\n'}
+
     with open(md_template) as f:
-        for l in f:
-            if "##CHANGE" in l:
-                if "output_directory" in l:
-                    new_l = 'output_directory = "' + str(output_directory) + '"\n'
-                elif "input_directory" in l:
-                    new_l = 'input_directory = "' + str(input_directory) + '"\n'
-                elif "name_stem" in l:
-                    new_l = 'name_stem = "' + str(name_stem) + '"\n'
-                elif "week" in l:
-                    new_l = 'week = "' + str(week) + '"\n'
-                elif "metadata_file" in l:
-                    new_l = 'metadata_file = "' + str(metadata_file) + '"\n'
-                elif "scripts_directory" in l:
-                    new_l = 'scripts_directory = "' + str(scripts_directory) + '"\n'
-                elif "sequencing_centre" in l:
-                    new_l = 'sequencing_centre = "' + str(sequencing_centre) + '"\n'
-                elif "adm1" in l:
-                    new_l = 'adm1 = "' + str(adm1) + '"\n'
-                elif "pillar2 "in l:
-                    new_l = 'pillar2 = "' + str(pillar2) + '"\n'
+            for l in f:
+                if "##CHANGE" in l:
+                    for key in change_line_dict:
+                        if key in l:
+                            new_l = change_line_dict[key]
+                else:
+                    new_l = l
 
-            else:
-                new_l = l
-
-            pmd_file.write(new_l)
-
+                pmd_file.write(new_l)
 
     pmd_file.close()
 

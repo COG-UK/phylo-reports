@@ -484,17 +484,15 @@ def sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, cou
         print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
 
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, overall_output_dir,week, sequencing_centre, country, pillar2):
+def make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output,week, sequencing_centre, country, pillar2):
 
     not_mappable = ["WALES", "OTHER", "UNKNOWN", "UNKNOWN SOURCE", "NOT FOUND", "GIBRALTAR", "FALKLAND ISLANDS", "CITY CENTRE"]
-
-    output_dir = overall_output_dir + "summary_files/"
 
     all_uk, locations_in_shape_file = prep_data(input_geojsons, adm2_cleaning_file)
 
     merged_locs, multi_loc_dict, straight_map = clean_locs(adm2_cleaning_file, all_uk)
 
-    parsing_output = parse_metadata(metadata_file, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, locations_in_shape_file, output_dir, pillar2)
+    parsing_output = parse_metadata(metadata_file, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, locations_in_shape_file, summary_output, pillar2)
 
     if type(parsing_output) != bool:
         with_seq_counts, missing_df, missing_sequences, new_unclean_locs = parsing_output

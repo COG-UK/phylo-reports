@@ -17,7 +17,7 @@ adm1 = "" ##CHANGE
 
 pillar2 = "" ##CHANGE
 
-fd = "figures"
+figdir = "" ##CHANGE
 summary_output = "" ##CHANGE
 scripts_directory = "" ##CHANGE
 
@@ -352,7 +352,7 @@ if sequencing_centre == "" and country == "":
 
 ```python, name="hack4", echo=False, results='raw'
 if sequencing_centre == "" and country == "":
-    print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
+    print("![](" + figdir + "/" + name_stem + "_map_2.png)\\")
 ```
 
 Below are the raw data tables for each of the figures in the report.

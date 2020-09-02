@@ -11,10 +11,10 @@ scripts_directory = os.path.dirname(__file__)
 
 def make_report(input_directory, metadata_file, name_stem, output_directory, week, sequencing_centre, adm1, pillar2, scripts_directory):
     
-    fd = "figures"
+    fd = os.path.join(output_directory, "figures")
     sd = os.path.join(output_directory, "summary_files")
 
-    #Path(fd).mkdir(parents=True, exist_ok=True)
+    Path(fd).mkdir(parents=True, exist_ok=True)
     Path(sd).mkdir(parents=True, exist_ok=True)
 
 
@@ -24,6 +24,7 @@ def make_report(input_directory, metadata_file, name_stem, output_directory, wee
     md_template = os.path.join(scripts_directory, 'UK_report_templatev2.pmd')
 
     change_line_dict = {"summary_output": f'summary_output = "{sd}"\n',
+                        "figdir": f'figdir = "{fd}"\n',
                         "input_directory": f'input_directory = "{input_directory}"\n',
                         "name_stem": f'name_stem = "{name_stem}"\n',
                         "metadata_file": f'metadata_file = "{metadata_file}"\n',

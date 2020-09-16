@@ -3,8 +3,6 @@ import os
 
 #default is current working directory
 #this will come in here and also in the pweave call
-output_directory ="" ##CHANGE
-
 input_directory = "" ##CHANGE
 
 metadata_file = "" ##CHANGE
@@ -19,9 +17,8 @@ adm1 = "" ##CHANGE
 
 pillar2 = "" ##CHANGE
 
-fd = os.path.join(output_directory, "figures")
-summary_output = os.path.join(output_directory, "summary_files")
-
+figdir = "" ##CHANGE
+summary_output = "" ##CHANGE
 scripts_directory = "" ##CHANGE
 
 adm2_cleaning_file = "%s/utils/mapping_files/adm2_cleaning.csv" % scripts_directory
@@ -322,7 +319,7 @@ input_geojsons = [uk_json, channels, NI_json]
 ```
 
 ```python, name="map", include=True, echo=False, figure=True, caption="Map showing the number of sequences sampled by adm2 region"
-map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, output_directory, week, sequencing_centre, country, pillar2)
+map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output, week, sequencing_centre, country, pillar2)
 ```
 
 ```python, name="finishing map", echo=False
@@ -344,7 +341,7 @@ if not no_seqs:
 
 Other results modules for UK lineage analysis can be added in here if required.
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 ## Appendix
 
@@ -355,7 +352,7 @@ if sequencing_centre == "" and country == "":
 
 ```python, name="hack4", echo=False, results='raw'
 if sequencing_centre == "" and country == "":
-    print("![](" + fd + "/" + name_stem + "_map_2.png)\\")
+    print("![](" + figdir + "/" + name_stem + "_map_2.png)\\")
 ```
 
 Below are the raw data tables for each of the figures in the report.
@@ -364,7 +361,7 @@ Below are the raw data tables for each of the figures in the report.
 ```python, name="summary_table", echo=False, results='tex'
 print(dataframe.to_markdown(tablefmt='grid'))
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
 ```python, name="raw", echo=False, results='tex'
@@ -374,7 +371,7 @@ if not pillar2:
 else:
     print("Table S2 is not appropriate for this report and so has been omitted.")
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 ```python, name="raw", echo=False,results='tex'
@@ -383,7 +380,8 @@ if not pillar2:
 else:
     print("Table S3 is not appropriate for this report and so has been omitted.")
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
+
 ```python, name="is there shannon", echo=False, results='raw'
 if sequencing_centre == "" and country=="" and not pillar2:
     print("**Table S4** Raw data for figure four showing the Shannon diversity per admin1 region over time")
@@ -396,26 +394,27 @@ if sequencing_centre == "" and country=="" and not pillar2:
     
     print(tidy_div.to_markdown())
 ```
-\pagebreak
+
+<div style="page-break-after: always"></div>
 
 **Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 ```python, name="raw", echo=False,results='tex'
 print(starts_raw.to_markdown())
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S6** Raw data for figure six showing the number of sequences taken over time.
 ```python, name="raw", echo=False,results='tex'
 print(raw_seqs_over_time.to_markdown())
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 ```python, name="raw", echo=False,results='tex'
 if not no_seqs:
     print(mapping_data.to_markdown())
 ```
-\pagebreak
+<div style="page-break-after: always"></div>
 
 ```python, echo=False, fig=False, name="trees", include=True 
 

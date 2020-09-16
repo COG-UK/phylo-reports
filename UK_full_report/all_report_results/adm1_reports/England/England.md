@@ -11,11 +11,11 @@
 
 
 
-This report gives summaries of lineages sampled in England for week 2020-07-03. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-27. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of lineages sampled in England for week 2020-09-13. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-09-10. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-18644 sequences from England have been included in this analysis.
-950 lineages have been recorded, 463 of which only contain one sequence.
+39331 sequences from England have been included in this analysis.
+1908 lineages have been recorded, 873 of which only contain one sequence.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -23,23 +23,23 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 751 and the maximum is 8279
+The minimum number of introductions is 139 and the maximum is 14346
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-891 are lineages which were sampled less than five times in England, and so have been left out of visualisation in the interests of clarity
+1815 are lineages which were sampled less than five times in England, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
 
 
 
-Of the 59 that remain:
-37 are pending extinction, ie last seen three weeks ago.
-15 lineages have gone quiet, ie haven't been seen this week.
+Of the 93 that remain:
+68 are pending extinction, ie last seen three weeks ago.
+18 lineages have gone quiet, ie haven't been seen this week.
 3 lineages have reactivated.
 4 lineages have been continuously circulating.
 
@@ -52,29 +52,40 @@ Each entry is the count of sequences from each lineage in each country, with the
 
 "Activity score" is calculated by taking the average gap between sampling for each lineage, and dividing it by the number of days since the lineage was last sampled. Therefore the higher the number, the more active the lineage is.
 If the score is above 1, then it has been sampled *more* recently than expected given its average gap size. We might interpret this as an increase in activity.
-If the score is below 1, it has been sampled *less* recently than expect given its average gap size, so we might interpret this as a decrease in activity.
+If the score is below 1, it has been sampled *less* recently than expected given its average gap size, so we might interpret this as a decrease in activity.
 
 
 
-The global lineages are correct as of the data release on 2020-05-19
+The global lineages are correct as of the data release on 2020-07-20
 
 
 It is written to "summary_files" as "lineage_summary.tsv" for further use, and the full list of lineages is available in the same directory as "all_lineages.csv"
 
 
 
-| Lineage name   | Date range     |   Number of sequences | Global lineage                                                                               |   Time since last sample (days) | Activity score   |
-|:---------------|:---------------|----------------------:|:---------------------------------------------------------------------------------------------|--------------------------------:|:-----------------|
-| UK5            | Feb-16, Jun-27 |                  6696 | B.1.1.1, B.1.1.4, B.1.1.13, B.1.1.5, B.1.1, B.1.1.3, B.1.1.10, B.1.1.p11, B.1.1.p15, B.1.1.2 |                               0 | active today     |
-| UK107          | Feb-09, Jun-02 |                  1293 | B.2.5, B.2, B.2.1, B                                                                         |                              25 | 0.0032           |
-| UK42           | Feb-24, Jun-21 |                   794 | B.1.72, B.1.5, B.1.35, B.1                                                                   |                               6 | 0.0144           |
-| UK2913         | Mar-07, Jun-16 |                   387 | B.1.p11, B.1                                                                                 |                              11 | 0.0173           |
-| UK5676         | Feb-26, May-27 |                   362 | B.2                                                                                          |                              31 | 0.0051           |
-| UK2916         | Feb-03, Jun-10 |                   301 | B.1                                                                                          |                              17 | 0.02             |
-| UK2464         | Mar-09, Jun-18 |                   298 | B.1.p11, B.1                                                                                 |                               9 | 0.0202           |
-| UK72           | Feb-05, Jun-02 |                   265 | B.2.2, B                                                                                     |                              25 | 0.0139           |
-| UK199          | Feb-26, Jun-22 |                   260 | B.1.5, B.1.5.5, B.1                                                                          |                               5 | 0.0429           |
-| UK167          | Mar-06, Jun-07 |                   240 | B.1.66, B.1                                                                                  |                              20 | 0.0146           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| Lineage name   | Date range     | Total     | Global lineage                                                                                             | Time since last sample   |   Activity score |
++================+================+===========+============================================================================================================+==========================+==================+
+| UK5            | Feb-16, Sep-05 | 9354 taxa | B.1.1.10, B.1.1.1, B.1.1, B.1.1.13                                                                         | 5 days                   |           0.0036 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1951         | Mar-02, Aug-20 | 1994 taxa | B.1.1.1, B.1.1                                                                                             | 21 days                  |           0.0038 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK107          | Feb-09, Jul-20 | 1650 taxa | B.2.1, B, B.2                                                                                              | 52 days                  |           0.0017 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK175          | Feb-24, Aug-21 | 1306 taxa | B.1.82, B.1.35, B.1.81, B.1.105, B.1.79, B.1.8, B.1.88, B.1.93, B.1, B.1.13, B.1.11, B.1.5, B.1.77, B.1.76 | 20 days                  |           0.0034 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1205         | Mar-03, Aug-25 | 1047 taxa | B.1.1.3, B.1.1.1, B.1.1                                                                                    | 16 days                  |           0.0101 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1271         | Apr-08, Aug-26 | 666 taxa  | B.1.1                                                                                                      | 15 days                  |           0.0139 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1683         | Mar-08, Aug-21 | 624 taxa  | B.1.1.10, B.1.1.1, B.1.1                                                                                   | 20 days                  |           0.0102 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK109          | Mar-12, Aug-21 | 555 taxa  | B.1.79, B.1.99, B.1, B.1.5, B.1.77                                                                         | 20 days                  |           0.0085 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK199          | Feb-26, Aug-26 | 515 taxa  | B.1.104, B.1, B.1.11, B.1.5, B.1.5.10                                                                      | 15 days                  |           0.0149 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2913         | Mar-07, Jul-15 | 514 taxa  | B.1, B.1.11, B.1.5                                                                                         | 57 days                  |           0.0032 |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -82,22 +93,21 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](figures/England_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
 This will affect all of the figures shown after this if lineages have geographical variation, as some regions have less up to date data.
 
 
-![Lag since the most recent sequence from each sequencing centre to most current date](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_lag_fig_1.png){#lag_fig }
+![Lag since the most recent sequence from each sequencing centre to most current date](figures/England_lag_fig_1.png){#lag_fig }
 
 
 The relative growth and decline of the ten most sampled lineages in terms of number of counties they are present in is shown in figure three. 
 
 
 
-![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_geog_plot_1.png){#geog_plot }
-
+![Lineages by number of adm2 regions present by epiweek](figures/England_geog_plot_1.png){#geog_plot }
 
 
 
@@ -113,24 +123,22 @@ The raw data has been written to a summary file.
 
 
 
-
-![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_make_timeline_1.png){#make_timeline }
-
-
-The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
+![Timeline of lineages, sized by number of sequences from each country.](figures/England_make_timeline_1.png){#make_timeline }
 
 
 
+
+The date of first sequence in the cluster is shown in figure five for every cluster with date information.
 NB the lineage may have started anywhere in the UK, but has been recorded at least once in England
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](figures/England_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](figures/England_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -139,7 +147,7 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 
 
 
-![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/England/figures/England_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](figures/England_map_1.png){#map }
 
 
 
@@ -155,7 +163,7 @@ There are some sequences with locations that are not matched to real Admin2 regi
 
 Other results modules for UK lineage analysis can be added in here if required.
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 ## Appendix
 
@@ -172,276 +180,1002 @@ Below are the raw data tables for each of the figures in the report.
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
 
 
-| Lineage name   | Date range     |   Number of sequences | Global lineage                                                                               |   Time since last sample (days) | Activity score   |
-|:---------------|:---------------|----------------------:|:---------------------------------------------------------------------------------------------|--------------------------------:|:-----------------|
-| UK5            | Feb-16, Jun-27 |                  6696 | B.1.1.1, B.1.1.4, B.1.1.13, B.1.1.5, B.1.1, B.1.1.3, B.1.1.10, B.1.1.p11, B.1.1.p15, B.1.1.2 |                               0 | active today     |
-| UK107          | Feb-09, Jun-02 |                  1293 | B.2.5, B.2, B.2.1, B                                                                         |                              25 | 0.0032           |
-| UK42           | Feb-24, Jun-21 |                   794 | B.1.72, B.1.5, B.1.35, B.1                                                                   |                               6 | 0.0144           |
-| UK2913         | Mar-07, Jun-16 |                   387 | B.1.p11, B.1                                                                                 |                              11 | 0.0173           |
-| UK5676         | Feb-26, May-27 |                   362 | B.2                                                                                          |                              31 | 0.0051           |
-| UK2916         | Feb-03, Jun-10 |                   301 | B.1                                                                                          |                              17 | 0.02             |
-| UK2464         | Mar-09, Jun-18 |                   298 | B.1.p11, B.1                                                                                 |                               9 | 0.0202           |
-| UK72           | Feb-05, Jun-02 |                   265 | B.2.2, B                                                                                     |                              25 | 0.0139           |
-| UK199          | Feb-26, Jun-22 |                   260 | B.1.5, B.1.5.5, B.1                                                                          |                               5 | 0.0429           |
-| UK167          | Mar-06, Jun-07 |                   240 | B.1.66, B.1                                                                                  |                              20 | 0.0146           |
-| UK9            | Mar-09, May-15 |                   226 | B.1.13                                                                                       |                              43 | 0.0069           |
-| UK5741         | Mar-09, Jun-12 |                   191 | B.1                                                                                          |                              15 | 0.0215           |
-| UK240          | Feb-25, May-27 |                   169 | B, B.2, B.2.1, B.2.5                                                                         |                              31 | 0.0162           |
-| UK5561         | Feb-25, May-24 |                   169 | B.2, B.2.2                                                                                   |                              34 | 0.0132           |
-| UK2735         | Mar-18, Jun-10 |                   150 | B.1.1                                                                                        |                              17 | 0.0182           |
-| UK15           | Feb-27, May-06 |                   141 | B.1.1                                                                                        |                              52 | 0.007            |
-| UK6            | Mar-06, Jun-16 |                   135 | B.1                                                                                          |                              11 | 0.0667           |
-| UK63           | Mar-18, May-10 |                   128 | B.1.1                                                                                        |                              48 | 0.0083           |
-| UK494          | Mar-19, May-05 |                   125 | B.1.p11, B.1                                                                                 |                              53 | 0.007            |
-| UK4            | Feb-28, Apr-29 |                   124 | B                                                                                            |                              59 | 0.008            |
-| UK109          | Mar-12, Jun-12 |                   111 | B.1.5                                                                                        |                              15 | 0.0154           |
-| UK61           | Feb-23, May-27 |                   107 | B.3                                                                                          |                              31 | 0.0057           |
-| UK66           | Mar-18, May-20 |                   105 | B.1.1.8                                                                                      |                              38 | 0.0136           |
-| UK28           | Mar-13, May-08 |                    99 | B.1.1.10                                                                                     |                              50 | 0.0114           |
-| UK5180         | Mar-07, May-09 |                    93 | B.1.1.7                                                                                      |                              49 | 0.0129           |
-| UK370          | Mar-06, Jun-16 |                    93 | B.1.1.10                                                                                     |                              11 | 0.0488           |
-| UK51           | Mar-25, Jun-20 |                    88 | B.1.36                                                                                       |                               7 | 0.1368           |
-| UK77           | Mar-11, May-20 |                    88 | B.2                                                                                          |                              38 | 0.0202           |
-| UK829          | Mar-03, Apr-29 |                    84 | B.2.5                                                                                        |                              59 | 0.0115           |
-| UK31           | Mar-12, Jun-27 |                    78 | B.3                                                                                          |                               0 | active today     |
-| UK319          | Mar-28, Jun-03 |                    77 | B.1                                                                                          |                              24 | 0.0367           |
-| UK5498         | Mar-06, May-28 |                    72 | B.2, B                                                                                       |                              30 | 0.0307           |
-| UK2906         | Mar-03, Jun-02 |                    72 | B.1                                                                                          |                              25 | 0.0473           |
-| UK384          | Feb-28, Apr-23 |                    70 | B.2, B.2.1                                                                                   |                              65 | 0.0118           |
-| UK339          | Mar-09, Jun-18 |                    70 | B.3                                                                                          |                               9 | 0.1496           |
-| UK36           | Mar-19, Jun-06 |                    68 | B.1                                                                                          |                              21 | 0.0063           |
-| UK37           | Mar-17, May-04 |                    67 | B.1.30, B.1                                                                                  |                              54 | 0.0131           |
-| UK501          | Mar-11, Jun-18 |                    66 | B.1                                                                                          |                               9 | 0.1279           |
-| UK13           | Mar-13, May-21 |                    64 | B.1.1                                                                                        |                              37 | 0.0296           |
-| UK274          | Mar-06, May-19 |                    63 | B, B.3                                                                                       |                              39 | 0.0292           |
-| UK509          | Apr-07, May-29 |                    63 | B.1.1                                                                                        |                              29 | 0.0289           |
-| UK607          | Mar-02, May-18 |                    58 | B                                                                                            |                              40 | 0.0279           |
-| UK120          | Feb-27, Jun-07 |                    58 | B.14, B                                                                                      |                              20 | 0.0701           |
-| UK89           | Mar-21, Jun-22 |                    58 | B.1.1.9, B.1.1                                                                               |                               5 | 0.2696           |
-| UK335          | Mar-07, Jun-22 |                    58 | B.1.1                                                                                        |                               5 | 0.3057           |
-| UK476          | Mar-14, May-06 |                    56 | B.1.1                                                                                        |                              52 | 0.0185           |
-| UK376          | Mar-11, May-03 |                    55 | B.1.1.9                                                                                      |                              55 | 0.0178           |
-| UK371          | Mar-12, May-06 |                    54 | B.1.1                                                                                        |                              52 | 0.0196           |
-| UK5523         | Apr-16, Jun-01 |                    51 | B.1                                                                                          |                              26 | 0.0354           |
-| UK448          | Apr-04, May-26 |                    50 | B.1.1                                                                                        |                              32 | 0.0325           |
-| UK641          | Mar-25, Jun-17 |                    47 | B.1.1                                                                                        |                              10 | 0.1826           |
-| UK517          | Mar-02, Apr-30 |                    47 | B.1.1                                                                                        |                              58 | 0.0208           |
-| UK276          | Mar-15, May-13 |                    46 | B.1.1                                                                                        |                              45 | 0.0285           |
-| UK478          | Mar-20, May-19 |                    46 | B.1.1                                                                                        |                              39 | 0.0342           |
-| UK275          | Mar-09, Apr-27 |                    44 | B.1.13                                                                                       |                              61 | 0.0154           |
-| UK632          | Mar-23, Jun-10 |                    42 | B.1.1                                                                                        |                              17 | 0.017            |
-| UK3126         | Apr-06, May-19 |                    41 | B.1.1                                                                                        |                              39 | 0.0276           |
-| UK623          | May-10, Jun-11 |                    40 | B.1.1                                                                                        |                              16 | 0.0513           |
-| UK497          | Mar-13, Jun-03 |                    39 | A.2                                                                                          |                              24 | 0.0795           |
-| UK12           | Mar-12, May-07 |                    39 | B.1.p11, B.1                                                                                 |                              51 | 0.0282           |
-| UK5309         | Mar-20, Jun-18 |                    38 | B.1.1.10, B.1.1                                                                              |                               9 | 0.25             |
-| UK1207         | Mar-23, Jun-01 |                    37 | B.1.1                                                                                        |                              26 | 0.0748           |
-| UK2200         | Feb-28, Jun-06 |                    37 | B.1.5, B.1.5.6                                                                               |                              21 | 0.0441           |
-| UK79           | Mar-24, May-05 |                    35 | B.1                                                                                          |                              53 | 0.0233           |
-| UK636          | Mar-16, May-25 |                    34 | B.1.1                                                                                        |                              33 | 0.0643           |
-| UK131          | Mar-11, Apr-14 |                    34 | B.15                                                                                         |                              74 | 0.0124           |
-| UK404          | Mar-01, Apr-19 |                    32 | B.1                                                                                          |                              69 | 0.0229           |
-| UK5549         | Mar-04, May-18 |                    31 | B.2.2                                                                                        |                              40 | 0.0536           |
-| UK27           | Mar-05, May-21 |                    31 | B.1.1                                                                                        |                              37 | 0.0595           |
-| UK18           | Mar-11, Apr-14 |                    31 | B.1.1.7                                                                                      |                              74 | 0.0153           |
-| UK64           | Mar-12, May-05 |                    31 | B.1                                                                                          |                              53 | 0.0243           |
-| UK241          | Mar-22, Apr-16 |                    31 | B.1.5.3                                                                                      |                              72 | 0.0116           |
-| UK23           | Mar-18, May-09 |                    30 | B.9                                                                                          |                              49 | 0.0366           |
-| UK119          | Mar-11, Apr-24 |                    29 | B.2.5                                                                                        |                              64 | 0.0191           |
-| UK158          | Mar-23, Apr-24 |                    29 | B.1.1                                                                                        |                              64 | 0.0179           |
-| UK5649         | Mar-15, May-04 |                    29 | B.2.6                                                                                        |                              54 | 0.0299           |
-| UK668          | Mar-21, Jun-10 |                    28 | B.1                                                                                          |                              17 | 0.0419           |
-| UK1721         | Mar-19, May-08 |                    27 | B.1                                                                                          |                              50 | 0.037            |
-| UK101          | Mar-21, Apr-25 |                    26 | B.1.5                                                                                        |                              63 | 0.0214           |
-| UK94           | Mar-12, Apr-19 |                    26 | B.2, B.2.1                                                                                   |                              69 | 0.022            |
-| UK173          | Mar-14, Apr-20 |                    26 | B                                                                                            |                              68 | 0.0218           |
-| UK615          | Mar-15, May-15 |                    26 | B.1.1                                                                                        |                              43 | 0.0567           |
-| UK462          | May-01, Jun-09 |                    25 | B.1                                                                                          |                              18 | 0.1237           |
-| UK46           | Mar-02, May-08 |                    25 | B.2.1                                                                                        |                              50 | 0.0515           |
-| UK1177         | Apr-22, Jun-09 |                    25 | B.1.1                                                                                        |                              18 | 0.1111           |
-| UK617          | Mar-29, Apr-28 |                    25 | B.1.1                                                                                        |                              60 | 0.0208           |
-| UK326          | Mar-22, May-22 |                    24 | B.1.1.10                                                                                     |                              36 | 0.0706           |
-| UK712          | Apr-08, Jun-18 |                    24 | B.1.5, B.1                                                                                   |                               9 | 0.343            |
-| UK684          | Apr-11, May-21 |                    24 | B.1                                                                                          |                              37 | 0.0484           |
-| UK605          | Mar-20, May-24 |                    24 | B.1.1                                                                                        |                              34 | 0.0187           |
-| UK2045         | Mar-17, May-09 |                    23 | B.1                                                                                          |                              49 | 0.0492           |
-| UK3021         | Mar-12, Jun-09 |                    23 | B.1                                                                                          |                              18 | 0.02             |
-| UK601          | Mar-13, May-11 |                    23 | B.10                                                                                         |                              47 | 0.0134           |
-| UK2787         | Apr-07, Jun-26 |                    23 | B.1.1                                                                                        |                               1 | 3.6364           |
-| UK4237         | Mar-28, Jun-10 |                    22 | B.1.1                                                                                        |                              17 | 0.2073           |
-| UK5300         | Apr-17, Jun-16 |                    22 | B.1.1                                                                                        |                              11 | 0.2479           |
-| UK5503         | Mar-20, Jun-12 |                    21 | B.1                                                                                          |                              15 | 0.28             |
-| UK24           | Mar-14, Apr-10 |                    21 | B.2.1                                                                                        |                              78 | 0.0173           |
-| UK329          | Mar-17, Apr-26 |                    21 | B.1.34, B.1                                                                                  |                              62 | 0.0323           |
-| UK174          | Mar-19, May-22 |                    21 | B.1.5                                                                                        |                              36 | 0.0889           |
-| UK161          | Mar-10, May-25 |                    21 | B.1.1                                                                                        |                              33 | 0.096            |
-| UK233          | May-25, Jun-15 |                    21 | B.1                                                                                          |                              12 | 0.0875           |
-| UK47           | Mar-17, May-18 |                    20 | B.1.1                                                                                        |                              40 | 0.0646           |
-| UK203          | Mar-22, Jun-03 |                    20 | B.1.1                                                                                        |                              24 | 0.1521           |
-| UK1703         | Mar-16, May-01 |                    20 | B.1                                                                                          |                              57 | 0.0425           |
-| UK125          | Apr-03, May-29 |                    19 | B.1.1                                                                                        |                              29 | 0.1089           |
-| UK146          | Mar-24, May-07 |                    18 | B.1.1                                                                                        |                              51 | 0.0479           |
-| UK179          | Mar-26, May-07 |                    17 | B.1.1, B.1.1.p11                                                                             |                              51 | 0.0278           |
-| UK71           | Mar-08, May-06 |                    16 | B                                                                                            |                              52 | 0.0709           |
-| UK5660         | Apr-25, May-08 |                    16 | B.1.1                                                                                        |                              50 | 0.0173           |
-| UK70           | Mar-06, Apr-22 |                    16 | B.2                                                                                          |                              66 | 0.0396           |
-| UK134          | Mar-04, Apr-07 |                    16 | B.1                                                                                          |                              81 | 0.0221           |
-| UK569          | Mar-23, Jun-16 |                    16 | B.1.1                                                                                        |                              11 | 0.5152           |
-| UK186          | Apr-08, Jun-09 |                    15 | B                                                                                            |                              18 | 0.2741           |
-| UK153          | Mar-13, Apr-14 |                    15 | B.2, B.3                                                                                     |                              74 | 0.0309           |
-| UK3692         | Mar-27, May-19 |                    15 | B.1.1                                                                                        |                              39 | 0.0969           |
-| UK604          | Mar-09, Mar-17 |                    15 | B.1.1                                                                                        |                             102 | 0.0057           |
-| UK38           | Mar-04, Apr-20 |                    14 | B.2.1                                                                                        |                              68 | 0.0494           |
-| UK565          | Apr-14, May-14 |                    14 | B.1.1                                                                                        |                              44 | 0.0524           |
-| UK32           | Mar-29, May-03 |                    14 | B.1.1                                                                                        |                              55 | 0.049            |
-| UK832          | Mar-09, May-10 |                    14 | A.5                                                                                          |                              48 | 0.0923           |
-| UK328          | Apr-13, Apr-23 |                    13 | B.1                                                                                          |                              65 | 0.0128           |
-| UK268          | Mar-23, Jun-03 |                    13 | B.1.1                                                                                        |                              24 | 0.1875           |
-| UK5663         | Mar-23, May-02 |                    13 | B.2                                                                                          |                              56 | 0.0595           |
-| UK141          | Mar-22, Apr-24 |                    13 | B.1.1                                                                                        |                              64 | 0.043            |
-| UK83           | Feb-29, Apr-13 |                    13 | B.1.1                                                                                        |                              75 | 0.0391           |
-| UK5715         | Feb-29, Apr-22 |                    13 | B.2                                                                                          |                              66 | 0.0618           |
-| UK602          | Mar-20, Apr-02 |                    13 | B.1.1                                                                                        |                              86 | 0.0126           |
-| UK34           | Feb-27, Apr-02 |                    13 | B.4                                                                                          |                              86 | 0.0339           |
-| UK165          | Apr-13, May-19 |                    13 | B                                                                                            |                              39 | 0.0769           |
-| UK49           | Mar-12, May-01 |                    12 | B.9                                                                                          |                              57 | 0.0675           |
-| UK132          | Mar-27, Apr-30 |                    12 | B.1                                                                                          |                              58 | 0.0489           |
-| UK291          | Mar-29, May-14 |                    12 | B.1.5                                                                                        |                              44 | 0.095            |
-| UK507          | Mar-18, Apr-30 |                    12 | B.1.1.10                                                                                     |                              58 | 0.0674           |
-| UK22           | Mar-02, Apr-21 |                    11 | B                                                                                            |                              67 | 0.0746           |
-| UK566          | Apr-02, Apr-21 |                    11 | B.1.1.10, B.1.1                                                                              |                              67 | 0.0258           |
-| UK2888         | Apr-09, May-14 |                    11 | B.1.1                                                                                        |                              44 | 0.0795           |
-| UK653          | Apr-07, May-19 |                    11 | B.1.1                                                                                        |                              39 | 0.1077           |
-| UK193          | Mar-30, May-01 |                    11 | B.1.1                                                                                        |                              57 | 0.051            |
-| UK287          | Mar-28, Apr-24 |                    11 | B.1                                                                                          |                              64 | 0.0384           |
-| UK266          | Apr-06, Apr-30 |                    11 | B.1                                                                                          |                              58 | 0.0414           |
-| UK215          | Mar-16, Apr-11 |                    11 | B.2                                                                                          |                              77 | 0.0338           |
-| UK467          | Mar-23, Jun-05 |                    11 | B.1.1                                                                                        |                              22 | 0.3364           |
-| UK759          | Mar-28, Apr-04 |                    11 | B.1.1                                                                                        |                              84 | 0.0083           |
-| UK178          | Mar-14, Apr-13 |                    11 | B.1.1                                                                                        |                              75 | 0.04             |
-| UK317          | Mar-13, Apr-20 |                    11 | B.3                                                                                          |                              68 | 0.0224           |
-| UK415          | Apr-19, May-06 |                    11 | B.1                                                                                          |                              52 | 0.0327           |
-| UK527          | Mar-22, Apr-18 |                    10 | B.1                                                                                          |                              70 | 0.0297           |
-| UK5307         | Mar-10, May-12 |                    10 | B.1.1                                                                                        |                              46 | 0.1178           |
-| UK5525         | Mar-31, Apr-29 |                    10 | B.1                                                                                          |                              59 | 0.0546           |
-| UK340          | Mar-17, May-17 |                    10 | B.1.1                                                                                        |                              41 | 0.1488           |
-| UK202          | Mar-10, Jun-04 |                    10 | B.1.1                                                                                        |                              23 | 0.1558           |
-| UK5084         | Mar-28, Apr-16 |                    10 | B.1                                                                                          |                              72 | 0.024            |
-| UK788          | Feb-28, Mar-05 |                    10 | B.4                                                                                          |                             114 | 0.0058           |
-| UK819          | Apr-01, May-15 |                     9 | B.1                                                                                          |                              43 | 0.1279           |
-| UK575          | Mar-14, Apr-16 |                     9 | B.2.1                                                                                        |                              72 | 0.0573           |
-| UK284          | Apr-02, Apr-25 |                     9 | B.1.1                                                                                        |                              63 | 0.0456           |
-| UK454          | Mar-22, Apr-29 |                     9 | B.1.1                                                                                        |                              59 | 0.0805           |
-| UK491          | Mar-03, Apr-03 |                     9 | B.2, B                                                                                       |                              85 | 0.0456           |
-| UK86           | Mar-05, May-30 |                     9 | B.1                                                                                          |                              28 | 0.0439           |
-| UK5501         | Apr-16, Jun-01 |                     9 | B.1.12                                                                                       |                              26 | 0.2212           |
-| UK756          | Feb-27, Mar-05 |                     9 | B.1.1                                                                                        |                             114 | 0.0077           |
-| UK563          | Mar-11, May-01 |                     9 | B.1.1                                                                                        |                              57 | 0.1118           |
-| UK5653         | Mar-10, Apr-01 |                     9 | B.2.6                                                                                        |                              87 | 0.0281           |
-| UK263          | Mar-20, Apr-13 |                     9 | B.1.p11                                                                                      |                              75 | 0.04             |
-| UK116          | Mar-24, Jun-02 |                     9 | B.1                                                                                          |                              25 | 0.1167           |
-| UK113          | Mar-22, Jun-02 |                     9 | B.1.1                                                                                        |                              25 | 0.36             |
-| UK629          | Mar-23, May-05 |                     9 | B.1                                                                                          |                              53 | 0.1014           |
-| UK584          | Mar-21, Apr-02 |                     9 | B.2, B.2.1                                                                                   |                              86 | 0.0207           |
-| UK3509         | Mar-23, Apr-21 |                     9 | B.1.1.10                                                                                     |                              67 | 0.0333           |
-| UK121          | Apr-21, May-27 |                     9 | B.1.1.7                                                                                      |                              31 | 0.1452           |
-| UK1810         | Mar-21, Apr-20 |                     8 | B.1.5, B.1                                                                                   |                              68 | 0.0551           |
-| UK5308         | Apr-29, May-01 |                     8 | B.1.1                                                                                        |                              57 | 0.005            |
-| UK698          | Mar-23, Apr-12 |                     8 | B.1                                                                                          |                              76 | 0.0329           |
-| UK739          | Mar-01, Mar-08 |                     8 | B.4                                                                                          |                             111 | 0.009            |
-| UK342          | Apr-02, Apr-22 |                     8 | B.1.1                                                                                        |                              66 | 0.0433           |
-| UK65           | Mar-07, Apr-21 |                     8 | B.1.1                                                                                        |                              67 | 0.084            |
-| UK4658         | Mar-13, Apr-10 |                     8 | B.2.1                                                                                        |                              78 | 0.0513           |
-| UK570          | Mar-24, Apr-29 |                     8 | B.1.1                                                                                        |                              59 | 0.0872           |
-| UK91           | Mar-01, Apr-01 |                     8 | B.1                                                                                          |                              87 | 0.0445           |
-| UK244          | Mar-10, Apr-06 |                     8 | B.1.1                                                                                        |                              82 | 0.0412           |
-| UK755          | Mar-06, May-21 |                     8 | B.1.1                                                                                        |                              37 | 0.2934           |
-| UK767          | Apr-05, Apr-19 |                     7 | B.1                                                                                          |                              69 | 0.0338           |
-| UK490          | Apr-03, May-02 |                     7 | B.1.1                                                                                        |                              56 | 0.0863           |
-| UK195          | May-19, Jun-15 |                     7 | B.1                                                                                          |                              12 | 0.3214           |
-| UK390          | Mar-27, May-01 |                     7 | B.1.5                                                                                        |                              57 | 0.1023           |
-| UK799          | Mar-01, Mar-07 |                     7 | B.1                                                                                          |                             112 | 0.0089           |
-| UK232          | Mar-04, Mar-30 |                     7 | B.1.1                                                                                        |                              89 | 0.0487           |
-| UK54           | Mar-11, Apr-02 |                     7 | B.2.4                                                                                        |                              86 | 0.0426           |
-| UK520          | Mar-14, Apr-08 |                     7 | B.2.1                                                                                        |                              80 | 0.0521           |
-| UK269          | Mar-25, Jun-02 |                     7 | B.1.1                                                                                        |                              25 | 0.46             |
-| UK1003         | Apr-02, Apr-22 |                     7 | B.1.1                                                                                        |                              66 | 0.0505           |
-| UK728          | Mar-19, Apr-01 |                     7 | B.2, B.2.1                                                                                   |                              87 | 0.0249           |
-| UK369          | Mar-22, Apr-11 |                     7 | B.1.1                                                                                        |                              77 | 0.0371           |
-| UK98           | Mar-24, Jun-08 |                     7 | B.6                                                                                          |                              19 | 0.6667           |
-| UK598          | Mar-22, Apr-14 |                     7 | B.1.1                                                                                        |                              74 | 0.0444           |
-| UK60           | Mar-21, Mar-30 |                     6 | B                                                                                            |                              89 | 0.0202           |
-| UK55           | Mar-13, May-06 |                     6 | B.1.1                                                                                        |                              52 | 0.1154           |
-| UK654          | Feb-27, Mar-08 |                     6 | B.2.5                                                                                        |                             111 | 0.018            |
-| UK293          | Mar-13, Apr-16 |                     6 | B.3                                                                                          |                              72 | 0.0944           |
-| UK40           | Mar-31, Jun-08 |                     6 | B.16                                                                                         |                              19 | 0.0206           |
-| UK75           | Mar-28, Apr-12 |                     6 | B                                                                                            |                              76 | 0.0329           |
-| UK403          | Mar-23, Apr-14 |                     6 | B.1.1                                                                                        |                              74 | 0.0595           |
-| UK270          | Mar-04, Apr-03 |                     6 | B                                                                                            |                              85 | 0.0588           |
-| UK456          | Apr-03, Apr-23 |                     6 | B.1.1                                                                                        |                              65 | 0.0615           |
-| UK479          | Apr-05, Jun-12 |                     6 | B.1.1                                                                                        |                              15 | 0.1374           |
-| UK5098         | Mar-16, Jun-05 |                     6 | B.1.p73, B.1.8, B.1                                                                          |                              22 | 0.0099           |
-| UK5648         | Mar-08, Apr-02 |                     6 | B.2                                                                                          |                              86 | 0.0581           |
-| UK777          | Apr-01, Apr-14 |                     6 | B.1                                                                                          |                              74 | 0.0351           |
-| UK521          | Mar-31, May-01 |                     6 | B.1.1                                                                                        |                              57 | 0.1088           |
-| UK1867         | Mar-18, Apr-30 |                     6 | B.1.1                                                                                        |                              58 | 0.1483           |
-| UK957          | Mar-24, May-26 |                     6 | B.1.1                                                                                        |                              32 | 0.3281           |
-| UK320          | Apr-11, Jun-02 |                     6 | B.1                                                                                          |                              25 | 0.24             |
-| UK196          | Mar-15, Mar-31 |                     6 | B.2.1                                                                                        |                              88 | 0.0364           |
-| UK58           | Mar-13, Apr-24 |                     6 | B.1                                                                                          |                              64 | 0.0305           |
-| UK743          | Feb-24, Jun-14 |                     6 | B.1.5.1                                                                                      |                              13 | 1.7077           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| Lineage name   | Date range     | Total     | Global lineage                                                                                             | Time since last sample   | Activity score   |
++================+================+===========+============================================================================================================+==========================+==================+
+| UK5            | Feb-16, Sep-05 | 9354 taxa | B.1.1.10, B.1.1.1, B.1.1, B.1.1.13                                                                         | 5 days                   | 0.0036           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1951         | Mar-02, Aug-20 | 1994 taxa | B.1.1.1, B.1.1                                                                                             | 21 days                  | 0.0038           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK107          | Feb-09, Jul-20 | 1650 taxa | B.2.1, B, B.2                                                                                              | 52 days                  | 0.0017           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK175          | Feb-24, Aug-21 | 1306 taxa | B.1.82, B.1.35, B.1.81, B.1.105, B.1.79, B.1.8, B.1.88, B.1.93, B.1, B.1.13, B.1.11, B.1.5, B.1.77, B.1.76 | 20 days                  | 0.0034           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1205         | Mar-03, Aug-25 | 1047 taxa | B.1.1.3, B.1.1.1, B.1.1                                                                                    | 16 days                  | 0.0101           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1271         | Apr-08, Aug-26 | 666 taxa  | B.1.1                                                                                                      | 15 days                  | 0.0139           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1683         | Mar-08, Aug-21 | 624 taxa  | B.1.1.10, B.1.1.1, B.1.1                                                                                   | 20 days                  | 0.0102           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK109          | Mar-12, Aug-21 | 555 taxa  | B.1.79, B.1.99, B.1, B.1.5, B.1.77                                                                         | 20 days                  | 0.0085           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK199          | Feb-26, Aug-26 | 515 taxa  | B.1.104, B.1, B.1.11, B.1.5, B.1.5.10                                                                      | 15 days                  | 0.0149           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2913         | Mar-07, Jul-15 | 514 taxa  | B.1, B.1.11, B.1.5                                                                                         | 57 days                  | 0.0032           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2916         | Feb-03, Aug-11 | 472 taxa  | B.1.98, B.1, B.1.11                                                                                        | 30 days                  | 0.0107           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5676         | Feb-26, Jul-22 | 446 taxa  | B.2, B.2.2, B.2.4, B.2.1, B.2.9                                                                            | 50 days                  | 0.0041           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2068         | Mar-26, Aug-18 | 423 taxa  | B.1.1, B.1.1.4                                                                                             | 23 days                  | 0.0131           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2464         | Mar-09, Jun-29 | 395 taxa  | B.1.81, B.1, B.1.11                                                                                        | 73 days                  | 0.0022           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK72           | Feb-05, Jun-23 | 373 taxa  | B.2.1, B.2, B                                                                                              | 79 days                  | 0.0038           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK167          | Mar-11, Jul-15 | 324 taxa  | B.1.2, B.1, B.1.117, B.1.5                                                                                 | 57 days                  | 0.0052           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1145         | Mar-23, Aug-26 | 323 taxa  | B.1.1                                                                                                      | 15 days                  | 0.0317           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK9            | Mar-09, May-18 | 301 taxa  | B.1, B.1.5, B.1.13                                                                                         | 115 days                 | 0.002            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1153         | Mar-15, Aug-21 | 296 taxa  | B.1.1                                                                                                      | 20 days                  | 0.0264           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1855         | Apr-08, Aug-26 | 285 taxa  | B.1.1.3, B.1.1                                                                                             | 15 days                  | 0.0213           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1684         | Mar-14, Jul-04 | 279 taxa  | B.1.1.1, B.1.1                                                                                             | 68 days                  | 0.005            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK945          | Mar-17, Aug-30 | 279 taxa  | B.1.1, B.1.1.28                                                                                            | 11 days                  | 0.0402           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5741         | Mar-11, Jul-15 | 271 taxa  | B.1, B.1.5                                                                                                 | 57 days                  | 0.0051           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1037         | Mar-12, Aug-19 | 264 taxa  | B.1.1.30, B.1.1                                                                                            | 22 days                  | 0.0108           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1060         | Mar-03, Aug-14 | 257 taxa  | B.1.1.10, B.1.1                                                                                            | 27 days                  | 0.0185           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1278         | Mar-23, Jul-27 | 255 taxa  | B.1.1                                                                                                      | 45 days                  | 0.0109           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK600          | Feb-29, Jul-13 | 247 taxa  | B.1, B.1.1                                                                                                 | 59 days                  | 0.0075           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK698          | Mar-20, Aug-26 | 228 taxa  | B.1.1                                                                                                      | 15 days                  | 0.0444           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1535         | Mar-02, Aug-26 | 218 taxa  | B.1.1.3, B.1.1                                                                                             | 15 days                  | 0.0279           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK267          | Feb-25, Jul-15 | 207 taxa  | B.2.1, B.2, B                                                                                              | 57 days                  | 0.0106           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK315          | Feb-25, Aug-02 | 198 taxa  | B.2.1, B.2.2, B.2                                                                                          | 39 days                  | 0.0176           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK494          | Mar-19, Jul-16 | 193 taxa  | B.1, B.1.104, B.1.11, B.1.5                                                                                | 56 days                  | 0.0108           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1126         | Mar-11, Aug-17 | 191 taxa  | B.1.1                                                                                                      | 24 days                  | 0.0326           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK917          | Mar-15, Jul-23 | 187 taxa  | B.1.1                                                                                                      | 49 days                  | 0.0135           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2022         | Mar-24, Aug-31 | 167 taxa  | B.1.1                                                                                                      | 10 days                  | 0.0909           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK4            | Feb-28, Apr-29 | 167 taxa  | B.2, B                                                                                                     | 134 days                 | 0.0025           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK336          | Mar-11, Jul-22 | 158 taxa  | B.1.93, B.1, B.1.77                                                                                        | 50 days                  | 0.0028           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK6            | Mar-06, Jul-17 | 157 taxa  | B.1.93, B.1, B.1.75, B.1.5                                                                                 | 55 days                  | 0.0144           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5498         | Mar-06, Jul-19 | 150 taxa  | B.2                                                                                                        | 53 days                  | 0.0152           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK719          | Mar-20, Aug-28 | 149 taxa  | B.1.1                                                                                                      | 13 days                  | 0.0559           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1323         | Mar-19, Aug-19 | 147 taxa  | B.1.1                                                                                                      | 22 days                  | 0.0429           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK51           | Mar-25, Jul-15 | 147 taxa  | B.1.36, B.1                                                                                                | 57 days                  | 0.0132           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK740          | Mar-18, Jun-13 | 146 taxa  | B.1.1                                                                                                      | 89 days                  | 0.0059           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2039         | Mar-13, Jun-25 | 144 taxa  | B.1.1                                                                                                      | 77 days                  | 0.0093           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK387          | Mar-06, Jul-31 | 137 taxa  | B.1.86, B.1, B.1.11, B.1.5, B.1.21                                                                         | 41 days                  | 0.0194           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1157         | Mar-07, Jul-23 | 129 taxa  | B.1.1.7, B.1.1                                                                                             | 49 days                  | 0.02             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK678          | Mar-12, Aug-14 | 127 taxa  | B.1.1                                                                                                      | 27 days                  | 0.0435           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK31           | Mar-10, Jul-23 | 118 taxa  | B.3, B.2, B                                                                                                | 49 days                  | 0.0228           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1076         | Mar-17, Aug-22 | 118 taxa  | B.1.1                                                                                                      | 19 days                  | 0.0338           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2200         | Feb-28, Aug-26 | 115 taxa  | B.1, B.1.5, B.1.35                                                                                         | 15 days                  | 0.0702           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK274          | Mar-06, May-20 | 108 taxa  | B.3, B                                                                                                     | 113 days                 | 0.006            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK829          | Mar-03, Jun-14 | 105 taxa  | B.2.1, B.2                                                                                                 | 88 days                  | 0.0111           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK319          | Mar-28, Aug-11 | 98 taxa   | B.1, B.1.79                                                                                                | 30 days                  | 0.0463           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1215         | Mar-16, Jun-10 | 97 taxa   | B.1.1.1, B.1.1                                                                                             | 92 days                  | 0.0097           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK501          | Mar-07, Aug-20 | 96 taxa   | B.1.86, B.1                                                                                                | 21 days                  | 0.059            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1134         | Apr-28, Aug-06 | 94 taxa   | B.1.1                                                                                                      | 35 days                  | 0.0386           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK491          | Mar-11, May-20 | 93 taxa   | B.2, B.2.4, B.6, B.2.1, B                                                                                  | 113 days                 | 0.0065           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK847          | Mar-23, Aug-31 | 89 taxa   | B.1.36, B.1                                                                                                | 10 days                  | 0.1425           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK902          | Mar-11, Jul-22 | 89 taxa   | B.1.1                                                                                                      | 50 days                  | 0.0302           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1155         | Mar-05, Jun-26 | 88 taxa   | B.1.1                                                                                                      | 76 days                  | 0.0152           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK384          | Feb-28, May-16 | 87 taxa   | B.2.1                                                                                                      | 117 days                 | 0.0073           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK37           | Mar-17, May-05 | 86 taxa   | B.1, B.1.30, B.1.5                                                                                         | 128 days                 | 0.0044           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK597          | Mar-25, Aug-31 | 84 taxa   | B.1, B.1.117, B.1.5                                                                                        | 10 days                  | 0.1314           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK607          | Mar-02, Jun-16 | 79 taxa   | B.2, B                                                                                                     | 86 days                  | 0.012            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK352          | Jul-05, Sep-02 | 78 taxa   | B.1, B.1.113, B.1.36                                                                                       | 8 days                   | 0.0889           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK55           | Mar-10, Jun-23 | 78 taxa   | B.3                                                                                                        | 79 days                  | 0.0158           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK669          | Mar-07, Aug-03 | 74 taxa   | B.1.1                                                                                                      | 38 days                  | 0.0436           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1051         | Mar-30, Jul-25 | 73 taxa   | B.1.1                                                                                                      | 47 days                  | 0.0346           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2906         | Mar-06, Jun-30 | 72 taxa   | B.1                                                                                                        | 72 days                  | 0.0219           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2111         | Apr-04, Sep-04 | 72 taxa   | B.1.1                                                                                                      | 6 days                   | 0.3542           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK59           | Feb-23, Apr-28 | 71 taxa   | B.3                                                                                                        | 135 days                 | 0.0048           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1195         | Apr-04, Sep-06 | 71 taxa   | B.1.1, B.1.1.25                                                                                            | 4 days                   | 0.0907           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK510          | Jul-18, Aug-31 | 70 taxa   | B.1.106, B.1                                                                                               | 10 days                  | 0.0595           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK312          | Jul-23, Sep-02 | 70 taxa   | B.1                                                                                                        | 8 days                   | 0.0381           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK899          | Mar-12, Jun-26 | 69 taxa   | B.1, B.1.11, B.1.5                                                                                         | 76 days                  | 0.0202           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK709          | Mar-25, Jun-29 | 69 taxa   | B.1.1                                                                                                      | 73 days                  | 0.0193           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1904         | Mar-31, Aug-18 | 68 taxa   | B.1.1                                                                                                      | 23 days                  | 0.0909           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1297         | Apr-09, Jun-11 | 68 taxa   | B.1                                                                                                        | 91 days                  | 0.0103           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK928          | Mar-10, May-25 | 64 taxa   | B.1.1                                                                                                      | 108 days                 | 0.0103           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK619          | Mar-02, Apr-30 | 62 taxa   | B.1.1                                                                                                      | 133 days                 | 0.0069           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1264         | Mar-18, Jul-02 | 61 taxa   | B.1.1                                                                                                      | 70 days                  | 0.0248           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1091         | Mar-13, Jul-15 | 61 taxa   | B.1.1, B.1.1.2                                                                                             | 57 days                  | 0.0037           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1819         | Apr-06, Aug-18 | 60 taxa   | B.1.1                                                                                                      | 23 days                  | 0.0987           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK275          | Mar-09, Jun-02 | 60 taxa   | B.1, B.1.13                                                                                                | 100 days                 | 0.0123           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK983          | Apr-21, Aug-18 | 59 taxa   | B.1.5.5, B.1                                                                                               | 23 days                  | 0.0892           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK596          | Mar-16, Apr-24 | 59 taxa   | B.1.106, B.1, B.1.5, B.1.72                                                                                | 139 days                 | 0.0048           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK120          | Feb-27, Jun-07 | 59 taxa   | B                                                                                                          | 95 days                  | 0.0142           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1447         | Mar-30, May-06 | 59 taxa   | B.1.1                                                                                                      | 127 days                 | 0.0049           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK61           | Mar-12, Aug-03 | 56 taxa   | B.3, B                                                                                                     | 38 days                  | 0.0064           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK369          | Apr-30, Aug-27 | 53 taxa   | B.1, B.1.113                                                                                               | 14 days                  | 0.1518           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1186         | Aug-09, Sep-07 | 51 taxa   | B.1, B.1.79                                                                                                | 3 days                   | 0.0674           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK173          | Mar-11, May-19 | 51 taxa   | B.2, B.21, B                                                                                               | 114 days                 | 0.0121           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1140         | Apr-04, Jun-17 | 51 taxa   | B.1.1                                                                                                      | 85 days                  | 0.0174           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK402          | Mar-01, Jul-15 | 50 taxa   | B.1                                                                                                        | 57 days                  | 0.0362           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK131          | Mar-11, Sep-07 | 50 taxa   | B.15, B                                                                                                    | 3 days                   | 1.1111           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK461          | Aug-02, Aug-30 | 50 taxa   | B.1                                                                                                        | 11 days                  | 0.0326           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK515          | Mar-01, Apr-27 | 49 taxa   | B.1, B.1.5                                                                                                 | 136 days                 | 0.0087           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK800          | Jul-15, Sep-10 | 48 taxa   | B.1                                                                                                        | 0 days                   | active today     |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK718          | Apr-15, Sep-05 | 48 taxa   | B.1.1                                                                                                      | 5 days                   | 0.5158           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK348          | May-13, Aug-19 | 48 taxa   | B.1                                                                                                        | 22 days                  | 0.0948           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1212         | Mar-15, Jul-04 | 47 taxa   | B.1.1                                                                                                      | 68 days                  | 0.0281           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1800         | Apr-09, Aug-17 | 47 taxa   | B.1.1                                                                                                      | 24 days                  | 0.1128           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK701          | Apr-13, Jun-14 | 46 taxa   | B.1.1                                                                                                      | 88 days                  | 0.0153           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK119          | Mar-11, May-12 | 45 taxa   | B.2, B                                                                                                     | 121 days                 | 0.0097           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK497          | Mar-13, Jun-09 | 45 taxa   | A.2                                                                                                        | 93 days                  | 0.0193           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK12           | Mar-11, Aug-14 | 44 taxa   | B.1.88, B.1, B.1.84, B.1.11                                                                                | 27 days                  | 0.1051           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1279         | Apr-04, May-16 | 44 taxa   | B.1.1                                                                                                      | 117 days                 | 0.0083           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1225         | Apr-28, Aug-23 | 43 taxa   | B.1.1.1, B.1.1                                                                                             | 18 days                  | 0.1477           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1542         | Mar-27, Apr-20 | 42 taxa   | B.1.1                                                                                                      | 143 days                 | 0.0041           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK357          | Jun-01, Aug-29 | 42 taxa   | B.1                                                                                                        | 12 days                  | 0.1686           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1850         | Apr-02, Aug-07 | 41 taxa   | B.1.1                                                                                                      | 34 days                  | 0.0934           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1158         | Mar-11, May-04 | 41 taxa   | B.1.1.7, B.1.1                                                                                             | 129 days                 | 0.0102           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1312         | Jul-11, Aug-10 | 41 taxa   | B.1.1                                                                                                      | 31 days                  | 0.0242           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1148         | Mar-06, Aug-06 | 40 taxa   | B.1.1                                                                                                      | 35 days                  | 0.1121           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK360          | Mar-04, May-18 | 40 taxa   | B.2.1, B.2.2, B.2                                                                                          | 115 days                 | 0.0142           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1603         | Mar-30, Jul-27 | 40 taxa   | B.1.1                                                                                                      | 45 days                  | 0.0678           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK528          | Jul-22, Aug-31 | 39 taxa   | B.1                                                                                                        | 10 days                  | 0.0784           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK79           | Mar-24, Jun-06 | 39 taxa   | B.1.97, B.1, B.1.5                                                                                         | 96 days                  | 0.0203           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK893          | Mar-12, May-05 | 39 taxa   | B.1, B.1.5                                                                                                 | 128 days                 | 0.0081           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1717         | Apr-07, Jun-16 | 38 taxa   | B.1.1                                                                                                      | 86 days                  | 0.022            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1645         | Aug-10, Aug-31 | 38 taxa   | B.1.1.10, B.1.1, B.1.1.2, B.1.1.15                                                                         | 10 days                  | 0.0568           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1242         | Mar-11, Jun-17 | 38 taxa   | B.1.1                                                                                                      | 85 days                  | 0.0235           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK968          | Mar-28, Jul-18 | 37 taxa   | B.1.1                                                                                                      | 54 days                  | 0.0576           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK254          | Aug-03, Aug-28 | 37 taxa   | B.1                                                                                                        | 13 days                  | 0.0437           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1644         | May-03, Jul-21 | 37 taxa   | B.1.1                                                                                                      | 51 days                  | 0.0556           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1721         | Mar-19, Jul-03 | 37 taxa   | B.1, B.1.13                                                                                                | 69 days                  | 0.0394           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK23           | Mar-18, May-09 | 37 taxa   | B.2.1, B, B.9                                                                                              | 124 days                 | 0.0116           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1130         | Apr-04, May-17 | 37 taxa   | B.1.1                                                                                                      | 116 days                 | 0.0103           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK46           | Mar-02, May-08 | 36 taxa   | B.2.1, B.2                                                                                                 | 125 days                 | 0.0141           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK738          | Mar-18, Jun-09 | 36 taxa   | B.1.1                                                                                                      | 93 days                  | 0.0255           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2045         | Mar-17, May-25 | 36 taxa   | B.1.1, B.1, B.1.5                                                                                          | 108 days                 | 0.0183           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK241          | Mar-22, Apr-16 | 35 taxa   | B.1, B.1.5, B.1.5.3                                                                                        | 147 days                 | 0.0047           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK527          | Mar-16, Jun-20 | 35 taxa   | B.1                                                                                                        | 82 days                  | 0.0272           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1211         | Jun-01, Aug-29 | 35 taxa   | B.1.1                                                                                                      | 12 days                  | 0.0617           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK667          | Mar-20, Jun-10 | 35 taxa   | B.1, B.1.77                                                                                                | 92 days                  | 0.0217           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK994          | Mar-26, May-18 | 35 taxa   | B.1, B.1.5                                                                                                 | 115 days                 | 0.0136           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK215          | Mar-12, Apr-19 | 34 taxa   | B.2.1                                                                                                      | 144 days                 | 0.008            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK331          | Jul-02, Aug-21 | 34 taxa   | B.1.36, B.1                                                                                                | 20 days                  | 0.0758           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK507          | Mar-15, May-12 | 34 taxa   | B.2.6, B.2, B.2.9                                                                                          | 121 days                 | 0.0126           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1218         | May-07, Jul-22 | 33 taxa   | B.1.1.1, B.1.1                                                                                             | 50 days                  | 0.0447           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1307         | Mar-17, Jun-08 | 33 taxa   | B.1, B.1.34, B.1.5                                                                                         | 94 days                  | 0.0276           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK646          | Mar-12, Jun-16 | 32 taxa   | B.1.1                                                                                                      | 86 days                  | 0.0319           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1223         | Mar-21, May-15 | 32 taxa   | B.1.1.1                                                                                                    | 118 days                 | 0.015            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK439          | Mar-29, May-20 | 32 taxa   | B.1.66, B.1                                                                                                | 113 days                 | 0.0148           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1097         | Jul-06, Aug-31 | 32 taxa   | B.1, B.1.5                                                                                                 | 10 days                  | 0.1514           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2014         | Apr-08, Jun-03 | 31 taxa   | B.1.1                                                                                                      | 99 days                  | 0.0182           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1274         | Jun-22, Jul-16 | 31 taxa   | B.1.1                                                                                                      | 56 days                  | 0.0143           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1911         | Mar-26, Apr-29 | 31 taxa   | B.1.1                                                                                                      | 134 days                 | 0.0079           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK601          | Mar-12, May-15 | 31 taxa   | B, B.10                                                                                                    | 118 days                 | 0.0048           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK174          | Mar-19, Aug-04 | 31 taxa   | B.1, B.1.5                                                                                                 | 37 days                  | 0.1243           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5501         | Apr-05, Jun-24 | 31 taxa   | B.1, B.1.12                                                                                                | 78 days                  | 0.0342           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1769         | Mar-30, Aug-21 | 31 taxa   | B.1.1                                                                                                      | 20 days                  | 0.2323           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK298          | Jul-13, Aug-05 | 30 taxa   | B.1, B.1.5                                                                                                 | 36 days                  | 0.022            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2062         | Mar-11, Jun-04 | 30 taxa   | B.1.1                                                                                                      | 98 days                  | 0.0299           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK108          | Apr-22, Jul-16 | 29 taxa   | B.1                                                                                                        | 56 days                  | 0.0523           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK218          | Mar-21, Jun-02 | 29 taxa   | B.1                                                                                                        | 100 days                 | 0.0261           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1843         | Mar-21, Aug-08 | 29 taxa   | B.1.1                                                                                                      | 33 days                  | 0.1414           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1865         | Mar-28, Aug-17 | 29 taxa   | B.1.1                                                                                                      | 24 days                  | 0.1972           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1029         | Apr-04, Aug-09 | 29 taxa   | B.1                                                                                                        | 32 days                  | 0.124            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK881          | Mar-10, May-16 | 29 taxa   | B.1.1                                                                                                      | 117 days                 | 0.0197           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK712          | Apr-08, Jun-21 | 29 taxa   | B.1.5                                                                                                      | 81 days                  | 0.0326           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1065         | Mar-21, Jul-22 | 28 taxa   | B.1.1                                                                                                      | 50 days                  | 0.0155           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1233         | Mar-23, Aug-26 | 28 taxa   | B.1.1                                                                                                      | 15 days                  | 0.3852           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2028         | Mar-21, May-04 | 28 taxa   | B.1.1                                                                                                      | 129 days                 | 0.0122           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK101          | Mar-21, Apr-25 | 28 taxa   | B.1, B.1.5                                                                                                 | 138 days                 | 0.0087           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2007         | Apr-03, Jun-24 | 28 taxa   | B.1.1                                                                                                      | 78 days                  | 0.0375           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1282         | Mar-15, Apr-18 | 28 taxa   | B.1.1                                                                                                      | 145 days                 | 0.0081           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK49           | Mar-12, Aug-06 | 28 taxa   | B.2, B, B.9                                                                                                | 35 days                  | 0.14             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1270         | Mar-17, Jun-24 | 28 taxa   | B.1.1                                                                                                      | 78 days                  | 0.0397           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1703         | Mar-16, May-01 | 27 taxa   | B.1                                                                                                        | 132 days                 | 0.0134           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1663         | Mar-17, May-02 | 27 taxa   | B.1.1                                                                                                      | 131 days                 | 0.013            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK741          | Jun-27, Aug-21 | 26 taxa   | B.1.1                                                                                                      | 20 days                  | 0.1058           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK462          | May-01, Jun-09 | 26 taxa   | B.1                                                                                                        | 93 days                  | 0.0232           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1479         | Jun-09, Aug-17 | 26 taxa   | B.1.1                                                                                                      | 24 days                  | 0.115            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2003         | Mar-19, Apr-27 | 26 taxa   | B.1.1                                                                                                      | 136 days                 | 0.0106           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1388         | Mar-18, Jul-06 | 25 taxa   | B.1.1                                                                                                      | 66 days                  | 0.0667           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1232         | May-18, Jul-03 | 25 taxa   | B.1.1                                                                                                      | 69 days                  | 0.0278           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5503         | Mar-20, Jun-12 | 25 taxa   | B.1                                                                                                        | 90 days                  | 0.0389           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK916          | Mar-24, Jul-24 | 24 taxa   | B.1.1                                                                                                      | 48 days                  | 0.1105           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1857         | Mar-26, Jul-17 | 24 taxa   | B.1.1.7, B.1.1                                                                                             | 55 days                  | 0.0893           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK134          | Mar-04, Apr-13 | 24 taxa   | B.1, B.1.5                                                                                                 | 150 days                 | 0.0095           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1619         | Mar-20, Jul-24 | 24 taxa   | B.1.1                                                                                                      | 48 days                  | 0.1141           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1219         | Apr-01, May-14 | 24 taxa   | B.1.1                                                                                                      | 119 days                 | 0.0157           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1099         | Mar-24, May-14 | 23 taxa   | B.1.1, B.1.1.5                                                                                             | 119 days                 | 0.0195           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK231          | Mar-29, Jul-02 | 23 taxa   | B.1                                                                                                        | 70 days                  | 0.0617           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK699          | Mar-12, Jun-30 | 23 taxa   | B.1.5.9                                                                                                    | 72 days                  | 0.0046           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1030         | Apr-08, May-14 | 23 taxa   | B.1.5.5, B.1, B.1.5                                                                                        | 119 days                 | 0.0138           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK86           | Mar-05, May-28 | 23 taxa   | B.1                                                                                                        | 105 days                 | 0.0123           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1266         | Mar-24, Jun-17 | 23 taxa   | B.1.1                                                                                                      | 85 days                  | 0.025            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1129         | Mar-27, Jul-23 | 22 taxa   | B.1.1                                                                                                      | 49 days                  | 0.1147           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1152         | Jul-16, Aug-21 | 22 taxa   | B.1.1                                                                                                      | 20 days                  | 0.0217           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1263         | Mar-09, Apr-14 | 21 taxa   | B.1.1                                                                                                      | 149 days                 | 0.0105           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1075         | Mar-24, May-29 | 21 taxa   | B.1.1                                                                                                      | 104 days                 | 0.0302           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK213          | Mar-14, Apr-10 | 21 taxa   | B.2.1                                                                                                      | 153 days                 | 0.0088           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1926         | Mar-17, Jul-01 | 21 taxa   | B.1.1                                                                                                      | 71 days                  | 0.0711           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1455         | Aug-04, Aug-19 | 21 taxa   | B.1.1.1, B.1.1                                                                                             | 22 days                  | 0.0325           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1213         | Jun-08, Jul-27 | 21 taxa   | B.1.1.1                                                                                                    | 45 days                  | 0.0519           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1317         | Apr-08, Aug-21 | 20 taxa   | B.1.1                                                                                                      | 20 days                  | 0.3214           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1230         | Mar-18, Jun-02 | 20 taxa   | B.1.1                                                                                                      | 100 days                 | 0.0238           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1861         | Mar-27, Jul-15 | 20 taxa   | B.1.1                                                                                                      | 57 days                  | 0.0965           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1300         | May-20, Jul-02 | 19 taxa   | B.1.1                                                                                                      | 70 days                  | 0.0341           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1151         | Aug-06, Aug-25 | 19 taxa   | B.1                                                                                                        | 16 days                  | 0.0347           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1163         | Apr-23, Jul-14 | 19 taxa   | B.1.1                                                                                                      | 58 days                  | 0.0785           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1487         | Mar-19, Jun-24 | 19 taxa   | B.1, B.1.5                                                                                                 | 78 days                  | 0.0118           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1375         | Apr-15, Jun-25 | 19 taxa   | B.1.1                                                                                                      | 77 days                  | 0.0512           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK630          | Jun-06, Jul-03 | 19 taxa   | B.1.1                                                                                                      | 69 days                  | 0.0217           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK39           | Mar-22, May-29 | 19 taxa   | A.2                                                                                                        | 104 days                 | 0.0036           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK345          | Mar-19, May-15 | 19 taxa   | B.2.2, B.2                                                                                                 | 118 days                 | 0.0088           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1061         | Apr-30, Aug-20 | 19 taxa   | B.1                                                                                                        | 21 days                  | 0.1984           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1630         | Mar-20, Apr-30 | 19 taxa   | B.1.1                                                                                                      | 133 days                 | 0.0171           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK201          | Apr-07, Jun-09 | 18 taxa   | B.2, B.18, B                                                                                               | 93 days                  | 0.043            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1344         | Apr-05, Jun-23 | 18 taxa   | B.1.1                                                                                                      | 79 days                  | 0.0577           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1234         | Mar-26, Apr-23 | 18 taxa   | B.1.1                                                                                                      | 140 days                 | 0.0118           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1725         | Mar-30, Apr-30 | 18 taxa   | B.1.1.1                                                                                                    | 133 days                 | 0.0137           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1202         | Mar-26, Jun-26 | 18 taxa   | B.1.1                                                                                                      | 76 days                  | 0.0605           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1577         | Apr-27, Jun-30 | 18 taxa   | B.1.1                                                                                                      | 72 days                  | 0.0494           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2046         | Jun-09, Jul-01 | 18 taxa   | B.1.1                                                                                                      | 71 days                  | 0.0182           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK70           | Mar-06, Apr-22 | 18 taxa   | B.2, B                                                                                                     | 141 days                 | 0.0175           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK183          | Mar-03, Apr-03 | 18 taxa   | B.2, B                                                                                                     | 160 days                 | 0.0102           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1709         | Aug-07, Aug-26 | 17 taxa   | B.1.1                                                                                                      | 15 days                  | 0.0507           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1968         | Apr-19, Jun-29 | 17 taxa   | B.1.1                                                                                                      | 73 days                  | 0.0608           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1790         | Mar-20, Aug-21 | 17 taxa   | B.1.1.10, B.1.1.1, B.1.1                                                                                   | 20 days                  | 0.4278           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1942         | Apr-03, Aug-18 | 17 taxa   | B.1.1                                                                                                      | 23 days                  | 0.2899           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK629          | Mar-25, Jun-29 | 17 taxa   | B.1                                                                                                        | 73 days                  | 0.0731           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1908         | Mar-26, Jun-08 | 17 taxa   | B.1.1                                                                                                      | 94 days                  | 0.0492           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1228         | Mar-20, May-11 | 16 taxa   | B.1.1                                                                                                      | 122 days                 | 0.0284           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1176         | Jul-14, Aug-04 | 16 taxa   | B.1.1.1, B.1.1                                                                                             | 37 days                  | 0.0334           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK263          | Mar-13, Apr-13 | 16 taxa   | B.1                                                                                                        | 150 days                 | 0.0138           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK595          | Mar-22, Apr-18 | 16 taxa   | B.2.9                                                                                                      | 145 days                 | 0.0109           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1884         | Mar-08, Aug-15 | 16 taxa   | B.1.1                                                                                                      | 26 days                  | 0.3419           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK153          | Mar-13, Apr-14 | 16 taxa   | B.2                                                                                                        | 149 days                 | 0.0143           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK422          | Mar-22, Apr-30 | 16 taxa   | B.1                                                                                                        | 133 days                 | 0.0183           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1759         | Apr-09, Aug-11 | 16 taxa   | B.1                                                                                                        | 30 days                  | 0.2048           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK973          | Jun-12, Aug-05 | 16 taxa   | B.1.36, B.1                                                                                                | 36 days                  | 0.1              |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1838         | Mar-24, Jul-23 | 16 taxa   | B.1.1                                                                                                      | 49 days                  | 0.1646           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK349          | Mar-11, May-24 | 16 taxa   | B.2.2                                                                                                      | 109 days                 | 0.0328           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2094         | Mar-31, Jun-24 | 16 taxa   | B.1.1                                                                                                      | 78 days                  | 0.0681           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK334          | Mar-13, Jun-16 | 16 taxa   | B.3                                                                                                        | 86 days                  | 0.0736           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK38           | Mar-04, Apr-20 | 16 taxa   | B.2.1                                                                                                      | 143 days                 | 0.0193           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK832          | Mar-09, Apr-26 | 15 taxa   | A.5                                                                                                        | 137 days                 | 0.0175           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1998         | Mar-11, May-01 | 15 taxa   | B.1.1                                                                                                      | 132 days                 | 0.0276           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK200          | Mar-26, Apr-19 | 15 taxa   | B.2.1                                                                                                      | 144 days                 | 0.0119           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1301         | Apr-06, Jun-18 | 15 taxa   | B.1                                                                                                        | 84 days                  | 0.0579           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK71           | Mar-08, May-06 | 15 taxa   | B.2, B                                                                                                     | 127 days                 | 0.031            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK191          | Apr-15, Aug-21 | 15 taxa   | B.1, B.1.5                                                                                                 | 20 days                  | 0.0618           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1981         | Apr-11, Apr-30 | 15 taxa   | B.1, B.1.1                                                                                                 | 133 days                 | 0.0102           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1380         | Mar-06, Jun-18 | 15 taxa   | B.1.1                                                                                                      | 84 days                  | 0.0884           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2087         | Mar-29, Jul-11 | 14 taxa   | B.1.1                                                                                                      | 61 days                  | 0.1218           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK151          | Mar-09, Apr-20 | 14 taxa   | B.3                                                                                                        | 143 days                 | 0.0084           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK894          | Apr-03, May-30 | 14 taxa   | B.1.1                                                                                                      | 103 days                 | 0.0426           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK132          | Mar-27, May-13 | 14 taxa   | B.1                                                                                                        | 120 days                 | 0.028            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK592          | Apr-23, Jul-07 | 14 taxa   | B.1                                                                                                        | 65 days                  | 0.0932           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1723         | Mar-20, Aug-24 | 14 taxa   | B.1, B.1.30, B.1.5                                                                                         | 17 days                  | 0.5131           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2063         | Mar-21, May-06 | 14 taxa   | B.1.1                                                                                                      | 127 days                 | 0.0241           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK478          | Apr-10, Jul-15 | 14 taxa   | B.1, B.1.5                                                                                                 | 57 days                  | 0.1296           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK780          | Jul-05, Aug-20 | 14 taxa   | B.1.3                                                                                                      | 21 days                  | 0.1685           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK620          | Mar-23, May-01 | 14 taxa   | B.1                                                                                                        | 132 days                 | 0.0227           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK399          | Aug-14, Sep-01 | 14 taxa   | B.1                                                                                                        | 9 days                   | 0.0905           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1141         | Mar-14, Jun-10 | 14 taxa   | B.1.1                                                                                                      | 92 days                  | 0.0638           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1919         | Mar-30, May-01 | 14 taxa   | B.1.1                                                                                                      | 132 days                 | 0.0162           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK193          | Mar-17, Jul-24 | 14 taxa   | B.2.1                                                                                                      | 48 days                  | 0.2067           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2061         | Mar-17, Jul-18 | 13 taxa   | B.1.1                                                                                                      | 54 days                  | 0.1898           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1114         | Mar-20, Apr-02 | 13 taxa   | B.1.1                                                                                                      | 161 days                 | 0.0067           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK568          | Mar-23, May-02 | 13 taxa   | B.2                                                                                                        | 131 days                 | 0.0254           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK499          | Mar-05, Apr-13 | 13 taxa   | B.2.6, B.2, B.2.1                                                                                          | 150 days                 | 0.02             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1497         | Mar-23, May-05 | 13 taxa   | B.1.1.1, B.1.1                                                                                             | 128 days                 | 0.028            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1559         | Mar-20, Apr-25 | 13 taxa   | B.1.11                                                                                                     | 138 days                 | 0.0217           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2097         | Mar-08, Apr-30 | 13 taxa   | B.1.1                                                                                                      | 133 days                 | 0.0332           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK34           | Feb-27, Aug-19 | 13 taxa   | B.2.1, B.4                                                                                                 | 22 days                  | 0.6591           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1803         | Mar-26, Jul-02 | 13 taxa   | B.1.1                                                                                                      | 70 days                  | 0.1167           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1207         | Mar-26, May-04 | 13 taxa   | B.1                                                                                                        | 129 days                 | 0.0233           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1216         | Mar-29, May-14 | 13 taxa   | B.1, B.1.5                                                                                                 | 119 days                 | 0.0322           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2030         | Apr-22, Jul-22 | 13 taxa   | B.1.1                                                                                                      | 50 days                  | 0.1738           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1295         | Mar-29, May-03 | 13 taxa   | B.1.1                                                                                                      | 130 days                 | 0.0224           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1362         | Mar-09, Aug-12 | 13 taxa   | B.1.1, B.1.1.15                                                                                            | 29 days                  | 0.4483           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK160          | Apr-23, Jul-01 | 12 taxa   | B.1                                                                                                        | 71 days                  | 0.0883           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1852         | Mar-17, Jul-18 | 12 taxa   | B.1.1.1, B.1.1                                                                                             | 54 days                  | 0.1898           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1528         | Jul-20, Aug-20 | 12 taxa   | B.1.1                                                                                                      | 21 days                  | 0.1136           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK962          | Apr-02, Jun-12 | 12 taxa   | B.1.1                                                                                                      | 90 days                  | 0.0717           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1026         | Mar-31, May-15 | 12 taxa   | B.1.1                                                                                                      | 118 days                 | 0.0127           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1050         | Mar-24, Aug-26 | 12 taxa   | B.1.1                                                                                                      | 15 days                  | 0.9394           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK967          | Jul-14, Aug-20 | 12 taxa   | B.1.1                                                                                                      | 21 days                  | 0.1602           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1124         | Mar-26, Jul-26 | 12 taxa   | B.1.1, B.1.1.32                                                                                            | 46 days                  | 0.204            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1681         | Apr-14, Jun-16 | 12 taxa   | B.1.1.1, B.1.1                                                                                             | 86 days                  | 0.0666           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1570         | Mar-18, Jun-23 | 12 taxa   | B.1.1                                                                                                      | 79 days                  | 0.1116           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1314         | Mar-31, Aug-02 | 12 taxa   | B.1.1                                                                                                      | 39 days                  | 0.289            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK713          | Mar-28, Apr-04 | 12 taxa   | B.1.1                                                                                                      | 159 days                 | 0.004            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK826          | Jun-12, Aug-21 | 12 taxa   | B.1.36, B.1                                                                                                | 20 days                  | 0.3182           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1336         | Apr-09, Jul-26 | 12 taxa   | B.1, B.1.77                                                                                                | 46 days                  | 0.2134           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK256          | Mar-15, May-07 | 12 taxa   | B.2, B.2.4                                                                                                 | 126 days                 | 0.0382           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5525         | Mar-31, Apr-29 | 12 taxa   | B.1                                                                                                        | 134 days                 | 0.0197           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK819          | Aug-02, Aug-13 | 12 taxa   | B.1, B.1.113                                                                                               | 28 days                  | 0.0357           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK266          | Apr-06, Apr-30 | 11 taxa   | B.1                                                                                                        | 133 days                 | 0.018            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1088         | Mar-22, Jun-25 | 11 taxa   | B.1.1                                                                                                      | 77 days                  | 0.1234           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK415          | Apr-19, May-06 | 11 taxa   | B.1.111                                                                                                    | 127 days                 | 0.0134           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK934          | Mar-25, Apr-13 | 11 taxa   | B.1.1                                                                                                      | 150 days                 | 0.0127           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK561          | Mar-01, Apr-15 | 11 taxa   | B.1                                                                                                        | 148 days                 | 0.0276           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1488         | Mar-26, Apr-20 | 11 taxa   | B.1.5                                                                                                      | 143 days                 | 0.0175           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1359         | Apr-09, May-18 | 11 taxa   | B.1.1                                                                                                      | 115 days                 | 0.0339           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2053         | Mar-21, Apr-27 | 11 taxa   | B.1.1                                                                                                      | 136 days                 | 0.0272           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1161         | Jul-06, Aug-21 | 11 taxa   | B.1.1                                                                                                      | 20 days                  | 0.23             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1979         | Apr-05, Jun-13 | 11 taxa   | B.1.1                                                                                                      | 89 days                  | 0.0775           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK696          | Apr-05, Jun-23 | 11 taxa   | B.1.1                                                                                                      | 79 days                  | 0.1              |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1844         | Mar-24, Aug-18 | 11 taxa   | B.1.1                                                                                                      | 23 days                  | 0.5797           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1830         | Apr-03, Jul-02 | 11 taxa   | B.1.1                                                                                                      | 70 days                  | 0.1208           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1178         | Apr-03, Apr-27 | 11 taxa   | B.1.1, B.1.1.15                                                                                            | 136 days                 | 0.0126           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1135         | Apr-02, Apr-21 | 11 taxa   | B.1.1.10, B.1.1                                                                                            | 142 days                 | 0.0111           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1960         | Mar-31, May-19 | 11 taxa   | B.1.1                                                                                                      | 114 days                 | 0.043            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1881         | Apr-14, May-18 | 11 taxa   | B.1.1                                                                                                      | 115 days                 | 0.0296           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK22           | Mar-02, Apr-21 | 11 taxa   | B                                                                                                          | 142 days                 | 0.0352           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1411         | Jun-13, Jul-15 | 11 taxa   | B.1.1                                                                                                      | 57 days                  | 0.0561           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1827         | Mar-24, Aug-18 | 10 taxa   | B.1.1                                                                                                      | 23 days                  | 0.7101           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK390          | Mar-26, May-01 | 10 taxa   | B.1                                                                                                        | 132 days                 | 0.0303           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1817         | Apr-04, Jun-23 | 10 taxa   | B.1.1                                                                                                      | 79 days                  | 0.1013           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK693          | Mar-14, Mar-26 | 10 taxa   | A.2                                                                                                        | 168 days                 | 0.0079           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1612         | Aug-09, Aug-21 | 10 taxa   | B.1.1                                                                                                      | 20 days                  | 0.0667           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1525         | Apr-21, Jun-12 | 10 taxa   | B.1.1                                                                                                      | 90 days                  | 0.0642           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1247         | Aug-04, Aug-21 | 10 taxa   | B.1                                                                                                        | 20 days                  | 0.0944           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK842          | Apr-02, Jun-15 | 10 taxa   | B.1                                                                                                        | 87 days                  | 0.0636           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK558          | Feb-29, Apr-22 | 10 taxa   | B.2                                                                                                        | 141 days                 | 0.0376           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK788          | Feb-28, Mar-05 | 10 taxa   | B.4                                                                                                        | 189 days                 | 0.0035           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2095         | Jul-03, Aug-10 | 10 taxa   | B.1.1                                                                                                      | 31 days                  | 0.1362           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK176          | Mar-13, Apr-16 | 10 taxa   | B.3                                                                                                        | 147 days                 | 0.0257           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1982         | Apr-03, Jun-17 | 10 taxa   | B.1.1                                                                                                      | 85 days                  | 0.0697           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK786          | Mar-07, May-14 | 10 taxa   | B.1.1                                                                                                      | 119 days                 | 0.0571           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1244         | Jul-15, Jul-25 | 10 taxa   | B.1, B.1.115                                                                                               | 47 days                  | 0.0236           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1273         | Jul-15, Jul-27 | 9 taxa    | B.1.1                                                                                                      | 45 days                  | 0.0333           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1715         | Apr-28, May-22 | 9 taxa    | B.1.1                                                                                                      | 111 days                 | 0.027            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK874          | Feb-27, Mar-05 | 9 taxa    | B.1.1                                                                                                      | 189 days                 | 0.0046           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK584          | Mar-21, Apr-02 | 9 taxa    | B.2.1                                                                                                      | 161 days                 | 0.011            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK760          | Apr-09, May-28 | 9 taxa    | B.1.1                                                                                                      | 105 days                 | 0.0583           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK230          | Mar-10, Apr-07 | 9 taxa    | B.2.1                                                                                                      | 156 days                 | 0.0224           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1369         | Mar-18, May-11 | 9 taxa    | B.1.1                                                                                                      | 122 days                 | 0.0553           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK809          | May-25, Jun-29 | 9 taxa    | B.1.36                                                                                                     | 73 days                  | 0.0599           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK351          | Apr-04, May-13 | 9 taxa    | B.1                                                                                                        | 120 days                 | 0.0406           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1332         | Mar-28, May-19 | 9 taxa    | B.1                                                                                                        | 114 days                 | 0.0182           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1200         | Mar-18, Jul-18 | 9 taxa    | B.1.1                                                                                                      | 54 days                  | 0.251            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2051         | Jun-01, Jul-28 | 9 taxa    | B.1.1                                                                                                      | 44 days                  | 0.1619           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1974         | Mar-23, Aug-16 | 9 taxa    | B.1.1                                                                                                      | 25 days                  | 0.6489           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1899         | May-05, May-29 | 9 taxa    | B.1.1                                                                                                      | 104 days                 | 0.0652           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK58           | Mar-13, Apr-24 | 9 taxa    | B.1                                                                                                        | 139 days                 | 0.0119           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK450          | Mar-30, Jun-17 | 9 taxa    | B.1                                                                                                        | 85 days                  | 0.1162           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1780         | Mar-11, Jun-03 | 9 taxa    | B.1.1                                                                                                      | 99 days                  | 0.1061           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK575          | Mar-14, Apr-16 | 9 taxa    | B.2.1                                                                                                      | 147 days                 | 0.0281           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1617         | Apr-02, Aug-18 | 9 taxa    | B.1.1                                                                                                      | 23 days                  | 0.75             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK609          | Mar-08, Apr-29 | 9 taxa    | B.2                                                                                                        | 134 days                 | 0.0485           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1361         | Jul-15, Aug-02 | 9 taxa    | B.1.1, B.1.1.15                                                                                            | 39 days                  | 0.0577           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1199         | Mar-04, Apr-14 | 9 taxa    | B.1, B.1.5                                                                                                 | 149 days                 | 0.0344           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1641         | Mar-29, Jun-05 | 9 taxa    | B.1.1                                                                                                      | 97 days                  | 0.0836           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK366          | Apr-04, Apr-24 | 9 taxa    | B.1                                                                                                        | 139 days                 | 0.018            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1860         | Mar-30, Jun-14 | 9 taxa    | B.1.1                                                                                                      | 88 days                  | 0.108            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1946         | Apr-17, May-19 | 8 taxa    | B.1.1                                                                                                      | 114 days                 | 0.0401           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK743          | Feb-24, Jun-14 | 8 taxa    | B.1.102, B.1.5                                                                                             | 88 days                  | 0.1802           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2065         | Mar-29, May-14 | 8 taxa    | B.1.1                                                                                                      | 119 days                 | 0.0552           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK941          | Apr-02, Apr-22 | 8 taxa    | B.1.1                                                                                                      | 141 days                 | 0.0203           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK520          | Mar-14, Apr-08 | 8 taxa    | B.2.1                                                                                                      | 155 days                 | 0.023            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1767         | Mar-26, Apr-10 | 8 taxa    | B.1.1                                                                                                      | 153 days                 | 0.0123           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK437          | Mar-23, May-14 | 8 taxa    | B.1                                                                                                        | 119 days                 | 0.0437           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK799          | Mar-01, Mar-07 | 8 taxa    | B.1                                                                                                        | 187 days                 | 0.0046           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK739          | Mar-01, Mar-08 | 8 taxa    | B.4                                                                                                        | 186 days                 | 0.0054           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1996         | Apr-02, Jul-20 | 8 taxa    | B.1.1.1, B.1.1                                                                                             | 52 days                  | 0.2329           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK288          | Mar-12, Apr-04 | 8 taxa    | B.2.1                                                                                                      | 159 days                 | 0.0132           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK870          | Mar-16, Apr-23 | 8 taxa    | B.1.1                                                                                                      | 140 days                 | 0.0339           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1398         | Mar-30, Jun-07 | 8 taxa    | B.1.1                                                                                                      | 95 days                  | 0.083            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK40           | Mar-27, Jun-23 | 8 taxa    | B, B.16                                                                                                    | 79 days                  | 0.0049           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK5084         | Mar-29, Jun-18 | 8 taxa    | B.1                                                                                                        | 84 days                  | 0.0898           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK343          | Mar-21, Apr-28 | 8 taxa    | B.1.105                                                                                                    | 135 days                 | 0.0402           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1609         | Mar-11, Jun-14 | 8 taxa    | B.1.1                                                                                                      | 88 days                  | 0.1542           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1366         | Mar-24, Jun-11 | 8 taxa    | B.1.1                                                                                                      | 91 days                  | 0.124            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1932         | Mar-23, Jul-13 | 8 taxa    | B.1.1                                                                                                      | 59 days                  | 0.2712           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1515         | Apr-04, Jun-15 | 8 taxa    | B.1.1                                                                                                      | 87 days                  | 0.1182           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1120         | Apr-13, Aug-10 | 8 taxa    | B.1.1                                                                                                      | 31 days                  | 0.5484           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK946          | Mar-25, Apr-23 | 8 taxa    | B.1                                                                                                        | 140 days                 | 0.0259           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1262         | Apr-02, Jun-16 | 8 taxa    | B.1.1                                                                                                      | 86 days                  | 0.1246           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK747          | Mar-19, Apr-18 | 8 taxa    | B.1                                                                                                        | 145 days                 | 0.0296           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2010         | Mar-17, Apr-15 | 8 taxa    | B.1.1                                                                                                      | 148 days                 | 0.028            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1893         | May-10, Aug-17 | 8 taxa    | B.1.1                                                                                                      | 24 days                  | 0.5893           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1346         | Mar-10, Jul-10 | 8 taxa    | B.1.1                                                                                                      | 62 days                  | 0.0833           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK158          | Mar-11, Apr-02 | 7 taxa    | B.2.4                                                                                                      | 161 days                 | 0.0228           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1064         | Apr-05, Apr-19 | 7 taxa    | B.1                                                                                                        | 144 days                 | 0.0162           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK197          | Mar-10, Apr-06 | 7 taxa    | B.2.1                                                                                                      | 157 days                 | 0.0287           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK728          | Mar-19, Apr-01 | 7 taxa    | B.2.1                                                                                                      | 162 days                 | 0.0134           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK856          | Mar-21, Apr-20 | 7 taxa    | B.1.5                                                                                                      | 143 days                 | 0.03             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2082         | Mar-14, Aug-11 | 7 taxa    | B.1.1                                                                                                      | 30 days                  | 0.7143           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1119         | Apr-04, Jul-16 | 7 taxa    | B.1.1                                                                                                      | 56 days                  | 0.0145           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK311          | Mar-25, Apr-18 | 7 taxa    | B.2                                                                                                        | 145 days                 | 0.0236           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1191         | Mar-29, Aug-14 | 7 taxa    | B.1.1                                                                                                      | 27 days                  | 0.7302           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK697          | Jun-08, Jul-02 | 7 taxa    | B.1                                                                                                        | 70 days                  | 0.0571           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK689          | Jul-15, Aug-21 | 7 taxa    | B.1.1                                                                                                      | 20 days                  | 0.3083           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK247          | Mar-17, Apr-23 | 7 taxa    | B.1                                                                                                        | 140 days                 | 0.044            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1967         | Mar-30, Apr-21 | 7 taxa    | B.1.1                                                                                                      | 142 days                 | 0.0221           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK889          | Apr-19, Aug-18 | 7 taxa    | B.1                                                                                                        | 23 days                  | 0.587            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1583         | Aug-09, Aug-18 | 7 taxa    | B.1.1                                                                                                      | 23 days                  | 0.0652           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1105         | Jul-03, Aug-20 | 7 taxa    | B.1                                                                                                        | 21 days                  | 0.1203           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1347         | May-18, Jun-04 | 7 taxa    | B.1.1                                                                                                      | 98 days                  | 0.0255           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1275         | Mar-22, Apr-10 | 7 taxa    | B.1.1                                                                                                      | 153 days                 | 0.0207           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK401          | Mar-02, Jul-10 | 7 taxa    | B.6, B.2.1, B                                                                                              | 62 days                  | 0.3495           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK901          | Apr-14, Apr-23 | 7 taxa    | B.1.1                                                                                                      | 140 days                 | 0.0107           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1090         | May-04, Aug-17 | 7 taxa    | B.1                                                                                                        | 24 days                  | 0.625            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1005         | Mar-31, Apr-19 | 7 taxa    | B.1.1                                                                                                      | 144 days                 | 0.022            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1667         | Apr-17, Jun-02 | 7 taxa    | B.1, B.1.9                                                                                                 | 100 days                 | 0.017            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK930          | Mar-04, Mar-30 | 7 taxa    | B.1.1                                                                                                      | 164 days                 | 0.0264           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK638          | Mar-02, Apr-04 | 7 taxa    | B.1.1                                                                                                      | 159 days                 | 0.0231           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK330          | Apr-02, Jul-02 | 7 taxa    | B.1, B.1.5                                                                                                 | 70 days                  | 0.0693           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2034         | Apr-08, Jun-28 | 7 taxa    | B.1.1                                                                                                      | 74 days                  | 0.1564           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2098         | Mar-28, Jun-24 | 7 taxa    | B.1.1                                                                                                      | 78 days                  | 0.188            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1224         | Jul-12, Jul-27 | 7 taxa    | B.1.1.1                                                                                                    | 45 days                  | 0.0556           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK240          | Mar-27, Aug-06 | 7 taxa    | B.1                                                                                                        | 35 days                  | 0.4222           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK703          | Mar-29, Apr-17 | 7 taxa    | B.1.1                                                                                                      | 146 days                 | 0.0163           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1992         | Apr-02, May-05 | 7 taxa    | B.1.1                                                                                                      | 128 days                 | 0.0247           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK98           | Mar-23, Jun-04 | 7 taxa    | B.6                                                                                                        | 98 days                  | 0.1241           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1743         | Apr-27, Jun-30 | 7 taxa    | B.1.1                                                                                                      | 72 days                  | 0.142            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1325         | Mar-31, May-17 | 7 taxa    | B.1.1                                                                                                      | 116 days                 | 0.0675           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK14           | Mar-02, May-21 | 7 taxa    | B                                                                                                          | 112 days                 | 0.0119           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK164          | Mar-24, Apr-16 | 7 taxa    | B.2.1                                                                                                      | 147 days                 | 0.0261           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK464          | Mar-17, May-04 | 7 taxa    | B.1.5                                                                                                      | 129 days                 | 0.0413           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK508          | Mar-20, Apr-30 | 7 taxa    | B.1.5.6                                                                                                    | 133 days                 | 0.0096           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK67           | Mar-03, Jul-19 | 6 taxa    | B.4                                                                                                        | 53 days                  | 0.5208           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK705          | Mar-16, Mar-26 | 6 taxa    | B.1                                                                                                        | 168 days                 | 0.0119           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1975         | Mar-16, Aug-17 | 6 taxa    | B.1.1                                                                                                      | 24 days                  | 1.2833           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK654          | Feb-27, Mar-08 | 6 taxa    | B.2                                                                                                        | 186 days                 | 0.0108           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK552          | Mar-23, Apr-04 | 6 taxa    | A.1                                                                                                        | 159 days                 | 0.0107           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK635          | Mar-17, Apr-15 | 6 taxa    | B.2                                                                                                        | 148 days                 | 0.0327           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK236          | Mar-12, Mar-27 | 6 taxa    | B.2.1, B.2                                                                                                 | 167 days                 | 0.018            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK650          | May-24, Aug-29 | 6 taxa    | B.1.1                                                                                                      | 12 days                  | 1.6167           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK187          | Mar-28, Jun-05 | 6 taxa    | B.1                                                                                                        | 97 days                  | 0.0094           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1174         | Mar-16, Apr-11 | 6 taxa    | B.1                                                                                                        | 152 days                 | 0.0342           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1269         | Jun-21, Aug-31 | 6 taxa    | B.1.1.1, B.1.1                                                                                             | 10 days                  | 0.8875           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1833         | Mar-17, Jul-14 | 6 taxa    | B.1.1                                                                                                      | 58 days                  | 0.2931           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1700         | Apr-01, Apr-14 | 6 taxa    | B.1                                                                                                        | 149 days                 | 0.0174           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK177          | Mar-11, Jun-17 | 6 taxa    | B                                                                                                          | 85 days                  | 0.1471           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK797          | Mar-25, Apr-08 | 6 taxa    | B.1.11                                                                                                     | 155 days                 | 0.0181           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1971         | Mar-23, Jul-01 | 6 taxa    | B.1.1                                                                                                      | 71 days                  | 0.2817           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1208         | Jul-04, Aug-21 | 6 taxa    | B.1.1.1                                                                                                    | 20 days                  | 0.48             |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1598         | Apr-05, Apr-21 | 6 taxa    | B.1.1                                                                                                      | 142 days                 | 0.0225           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK783          | Mar-12, Apr-20 | 6 taxa    | B.1                                                                                                        | 143 days                 | 0.0455           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1640         | Apr-16, Apr-21 | 6 taxa    | B.1.1                                                                                                      | 142 days                 | 0.007            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK787          | Mar-12, May-18 | 6 taxa    | B.1.1.33, B.1.1                                                                                            | 115 days                 | 0.0971           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2049         | Mar-28, Apr-25 | 6 taxa    | B.1.1                                                                                                      | 138 days                 | 0.0338           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK943          | Mar-29, Jun-24 | 6 taxa    | B.1.1                                                                                                      | 78 days                  | 0.2231           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK621          | Mar-23, Apr-02 | 6 taxa    | A.1                                                                                                        | 161 days                 | 0.0124           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1791         | Mar-23, May-11 | 6 taxa    | B.1.1                                                                                                      | 122 days                 | 0.0803           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1822         | Mar-27, Jul-04 | 6 taxa    | B.1.1                                                                                                      | 68 days                  | 0.2912           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1081         | Apr-07, May-05 | 6 taxa    | B.1.1                                                                                                      | 128 days                 | 0.0446           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK805          | Apr-15, Jul-21 | 6 taxa    | B.1.1                                                                                                      | 51 days                  | 0.0229           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK778          | May-01, Jun-20 | 6 taxa    | B.1.1                                                                                                      | 82 days                  | 0.122            |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK270          | Mar-04, Apr-03 | 6 taxa    | B                                                                                                          | 160 days                 | 0.0312           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1836         | Mar-29, Jun-13 | 6 taxa    | B.1.1                                                                                                      | 89 days                  | 0.1477           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK105          | Mar-23, Apr-21 | 6 taxa    | B.3                                                                                                        | 142 days                 | 0.0408           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1596         | Apr-16, Jun-16 | 6 taxa    | B.1                                                                                                        | 86 days                  | 0.1419           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK526          | Mar-23, May-18 | 6 taxa    | B.1                                                                                                        | 115 days                 | 0.0974           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK887          | Apr-21, Jul-04 | 6 taxa    | B.1.1                                                                                                      | 68 days                  | 0.2176           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK161          | Mar-18, Apr-04 | 6 taxa    | B.2.4                                                                                                      | 159 days                 | 0.0153           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1961         | Apr-08, Jun-11 | 6 taxa    | B.1.1                                                                                                      | 91 days                  | 0.1407           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK564          | Jun-07, Jun-25 | 6 taxa    | B.1                                                                                                        | 77 days                  | 0.0468           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1412         | Mar-25, Apr-29 | 6 taxa    | B.1.1                                                                                                      | 134 days                 | 0.0522           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1923         | Apr-04, Jul-01 | 6 taxa    | B.1.1                                                                                                      | 71 days                  | 0.2479           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1898         | Mar-18, Apr-11 | 6 taxa    | B.1.1                                                                                                      | 152 days                 | 0.0263           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1083         | Mar-22, Aug-12 | 6 taxa    | B.1.1                                                                                                      | 29 days                  | 0.9862           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK2004         | Mar-26, Jun-14 | 6 taxa    | B.1.1                                                                                                      | 88 days                  | 0.1515           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK947          | Jul-16, Jul-18 | 6 taxa    | B.1.1                                                                                                      | 54 days                  | 0.0074           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK590          | Mar-14, Apr-01 | 6 taxa    | B.2.1                                                                                                      | 162 days                 | 0.0222           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK643          | Mar-24, Apr-22 | 6 taxa    | B.2.1                                                                                                      | 141 days                 | 0.0411           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1285         | May-05, Jul-15 | 6 taxa    | B.1, B.1.5                                                                                                 | 57 days                  | 0.2491           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1139         | Mar-26, Apr-27 | 6 taxa    | B.1.1                                                                                                      | 136 days                 | 0.0471           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
+| UK1082         | May-02, Jun-10 | 6 taxa    | B.1                                                                                                        | 92 days                  | 0.0848           |
++----------------+----------------+-----------+------------------------------------------------------------------------------------------------------------+--------------------------+------------------+
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
 
 
 |    | Centre   |   Lag in days |
 |---:|:---------|--------------:|
-|  0 | NOTT     |             6 |
-|  1 | BIRM     |             8 |
-|  2 | SHEF     |             9 |
-|  3 | CAMB     |            10 |
-|  4 | NORW     |            15 |
-|  5 | PHEC     |            16 |
-|  6 | LIVE     |            17 |
-|  7 | SANG     |            24 |
-|  8 | PORT     |            24 |
-|  9 | EXET     |            30 |
-| 10 | NORT     |            33 |
-| 11 | OXON     |            45 |
-| 12 | LOND     |            50 |
+|  0 | NOTT     |             3 |
+|  1 | BIRM     |            11 |
+|  2 | LIVE     |            13 |
+|  3 | NORW     |            13 |
+|  4 | SANG     |            14 |
+|  5 | SHEF     |            19 |
+|  6 | PHEC     |            20 |
+|  7 | CAMB     |            25 |
+|  8 | PORT     |            26 |
+|  9 | NORT     |            59 |
+| 10 | OXON     |            95 |
+| 11 | EXET     |            96 |
+| 12 | LOND     |           122 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK5 |   UK107 |   UK42 |   UK2913 |   UK2916 |   UK2464 |   UK72 |   UK199 |   UK167 |   UK5741 |
-|:------------------|------:|--------:|-------:|---------:|---------:|---------:|-------:|--------:|--------:|---------:|
-| 2020-02-02        |     0 |       0 |      0 |        0 |        1 |        0 |      1 |       0 |       0 |        0 |
-| 2020-02-09        |     0 |       1 |      0 |        0 |        0 |        0 |      0 |       0 |       0 |        0 |
-| 2020-02-16        |     1 |       0 |      0 |        0 |        0 |        0 |      0 |       0 |       0 |        0 |
-| 2020-02-23        |     1 |       5 |      4 |        0 |       10 |        0 |      2 |       1 |       0 |        0 |
-| 2020-03-01        |     9 |       6 |     14 |        1 |       14 |        0 |      8 |       1 |       1 |        0 |
-| 2020-03-08        |    22 |      17 |     11 |        4 |        8 |        4 |     12 |       3 |       6 |        2 |
-| 2020-03-15        |    25 |      22 |     16 |        6 |        9 |        7 |     17 |       7 |       4 |        4 |
-| 2020-03-22        |    33 |      25 |     21 |       16 |        9 |       13 |     18 |      14 |      11 |        7 |
-| 2020-03-29        |    36 |      27 |     24 |       19 |       14 |       17 |     17 |      18 |      12 |       12 |
-| 2020-04-05        |    36 |      21 |     23 |       17 |       11 |       13 |     13 |      17 |      14 |       11 |
-| 2020-04-12        |    39 |      19 |     17 |       13 |        9 |       13 |      4 |      11 |      14 |        7 |
-| 2020-04-19        |    50 |      15 |     18 |       10 |       10 |       11 |      9 |      10 |      11 |       12 |
-| 2020-04-26        |    47 |      10 |     14 |        7 |        6 |        8 |      2 |      10 |       5 |        6 |
-| 2020-05-03        |    49 |       4 |     12 |        2 |        3 |        4 |      3 |       6 |       6 |        4 |
-| 2020-05-10        |    44 |       1 |      5 |        3 |        2 |        3 |      1 |       5 |       5 |        2 |
-| 2020-05-17        |    35 |       1 |      2 |        2 |        0 |        2 |      0 |       2 |       6 |        0 |
-| 2020-05-24        |    24 |       0 |      2 |        3 |        0 |        1 |      3 |       3 |       2 |        0 |
-| 2020-05-31        |    26 |       1 |      5 |        4 |        2 |        2 |      1 |       1 |       3 |        0 |
-| 2020-06-07        |    21 |       0 |      0 |        0 |        1 |        1 |      0 |       1 |       1 |        1 |
-| 2020-06-14        |    10 |       0 |      0 |        1 |        0 |        2 |      0 |       0 |       0 |        0 |
-| 2020-06-21        |     5 |       0 |      1 |        0 |        0 |        0 |      0 |       0 |       0 |        0 |
+| Week commencing   |   UK5 |   UK1951 |   UK175 |   UK1205 |   UK1271 |   UK1683 |   UK109 |   UK199 |   UK2068 |   UK1145 |
+|:------------------|------:|---------:|--------:|---------:|---------:|---------:|--------:|--------:|---------:|---------:|
+| 2020-02-16        |     1 |        0 |       0 |        0 |        0 |        0 |       0 |       0 |        0 |        0 |
+| 2020-02-23        |     1 |        0 |       4 |        0 |        0 |        0 |       0 |       1 |        0 |        0 |
+| 2020-03-01        |    10 |        1 |      11 |        5 |        0 |        0 |       0 |       2 |        0 |        0 |
+| 2020-03-08        |    19 |        4 |      11 |       15 |        0 |        2 |       2 |       7 |        0 |        0 |
+| 2020-03-15        |    27 |       12 |      21 |        8 |        0 |        5 |       6 |      12 |        0 |        0 |
+| 2020-03-22        |    39 |       18 |      24 |       10 |        0 |       13 |      11 |      16 |        3 |        4 |
+| 2020-03-29        |    38 |       19 |      26 |       18 |        0 |       11 |      11 |      22 |        8 |        6 |
+| 2020-04-05        |    40 |       20 |      29 |       15 |        1 |        7 |      13 |      15 |        6 |        5 |
+| 2020-04-12        |    46 |       20 |      23 |       13 |        0 |        9 |       7 |      18 |        6 |        3 |
+| 2020-04-19        |    46 |       26 |      21 |       15 |        0 |       12 |       8 |      16 |        4 |        5 |
+| 2020-04-26        |    47 |       24 |      18 |        9 |        0 |       12 |       6 |      11 |        2 |        0 |
+| 2020-05-03        |    44 |       16 |      13 |       10 |        0 |        7 |       5 |       7 |        2 |        3 |
+| 2020-05-10        |    42 |       23 |      11 |        9 |        1 |        8 |       7 |       6 |        1 |        2 |
+| 2020-05-17        |    32 |       28 |      11 |       11 |        1 |        8 |       5 |       7 |        3 |        0 |
+| 2020-05-24        |    18 |       14 |       5 |        9 |        1 |        2 |       1 |       1 |        1 |        0 |
+| 2020-05-31        |    34 |       16 |      12 |       13 |        3 |        4 |       8 |       5 |        2 |        1 |
+| 2020-06-07        |    33 |       21 |      20 |       19 |        6 |        6 |      11 |      10 |        6 |        6 |
+| 2020-06-14        |    30 |       19 |      12 |       17 |        7 |        5 |       8 |       8 |        4 |        6 |
+| 2020-06-21        |    25 |       11 |      14 |       13 |        9 |        4 |      10 |       8 |        3 |        4 |
+| 2020-06-28        |    27 |       12 |      12 |        7 |        7 |        4 |       6 |       7 |        5 |        7 |
+| 2020-07-05        |    18 |        2 |       3 |        5 |        2 |        0 |       5 |       5 |        2 |        1 |
+| 2020-07-12        |    25 |        8 |       6 |        8 |        4 |        4 |       9 |       5 |        6 |        3 |
+| 2020-07-19        |    20 |        8 |      10 |        7 |        2 |        4 |       5 |       7 |        5 |        3 |
+| 2020-07-26        |    13 |        2 |       4 |        4 |        2 |        5 |       2 |       2 |        1 |        5 |
+| 2020-08-02        |    17 |        2 |       8 |        8 |        3 |        4 |       3 |       7 |        3 |        6 |
+| 2020-08-09        |    25 |        4 |       8 |        8 |        6 |        6 |       5 |       7 |        2 |        7 |
+| 2020-08-16        |    25 |        5 |       7 |        2 |        4 |        4 |       4 |       6 |        1 |        3 |
+| 2020-08-23        |    11 |        0 |       0 |        0 |        1 |        0 |       0 |       1 |        0 |        1 |
+| 2020-08-30        |     2 |        0 |       0 |        0 |        0 |        0 |       0 |       0 |        0 |        0 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
+
 
 
 Table S4 is not appropriate for this report and so has been omitted.
@@ -449,116 +1183,198 @@ Table S4 is not appropriate for this report and so has been omitted.
 
 
 
-\pagebreak
+
+<div style="page-break-after: always"></div>
 
 **Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 
 
 | Day        |   Number of singleton starts |   Number of non-singleton starts |   Total |
 |:-----------|-----------------------------:|---------------------------------:|--------:|
+| 2020-01-29 |                            0 |                                1 |       1 |
 | 2020-02-03 |                            0 |                                1 |       1 |
 | 2020-02-05 |                            0 |                                1 |       1 |
 | 2020-02-09 |                            0 |                                1 |       1 |
 | 2020-02-16 |                            0 |                                1 |       1 |
 | 2020-02-23 |                            0 |                                1 |       1 |
-| 2020-02-24 |                            0 |                                2 |       2 |
+| 2020-02-24 |                            0 |                                3 |       3 |
 | 2020-02-25 |                            0 |                                2 |       2 |
-| 2020-02-26 |                            1 |                                2 |       3 |
+| 2020-02-26 |                            1 |                                3 |       4 |
 | 2020-02-27 |                            1 |                                5 |       6 |
-| 2020-02-28 |                            0 |                                5 |       5 |
-| 2020-02-29 |                            0 |                                2 |       2 |
-| 2020-03-01 |                            2 |                                5 |       7 |
-| 2020-03-02 |                            1 |                                6 |       7 |
-| 2020-03-03 |                            0 |                                7 |       7 |
-| 2020-03-04 |                            3 |                                8 |      11 |
-| 2020-03-05 |                            0 |                                5 |       5 |
-| 2020-03-06 |                            4 |                                8 |      12 |
-| 2020-03-07 |                            4 |                                6 |      10 |
-| 2020-03-08 |                            1 |                                4 |       5 |
-| 2020-03-09 |                            4 |                               12 |      16 |
-| 2020-03-10 |                            5 |                                8 |      13 |
-| 2020-03-11 |                            7 |                               14 |      21 |
-| 2020-03-12 |                            5 |                               23 |      28 |
-| 2020-03-13 |                            8 |                               11 |      19 |
-| 2020-03-14 |                            3 |                                8 |      11 |
-| 2020-03-15 |                            6 |                                5 |      11 |
-| 2020-03-16 |                            2 |                                5 |       7 |
-| 2020-03-17 |                            4 |                               15 |      19 |
-| 2020-03-18 |                            8 |                               18 |      26 |
-| 2020-03-19 |                            6 |                               10 |      16 |
-| 2020-03-20 |                            6 |                               20 |      26 |
-| 2020-03-21 |                            7 |                               11 |      18 |
-| 2020-03-22 |                            9 |                               17 |      26 |
-| 2020-03-23 |                            8 |                               23 |      31 |
-| 2020-03-24 |                            9 |                               18 |      27 |
-| 2020-03-25 |                           12 |                               15 |      27 |
-| 2020-03-26 |                            7 |                               17 |      24 |
-| 2020-03-27 |                            9 |                               11 |      20 |
-| 2020-03-28 |                           10 |                               15 |      25 |
-| 2020-03-29 |                           15 |                                9 |      24 |
-| 2020-03-30 |                           14 |                               18 |      32 |
-| 2020-03-31 |                           22 |                               19 |      41 |
-| 2020-04-01 |                           12 |                                9 |      21 |
-| 2020-04-02 |                            8 |                               15 |      23 |
-| 2020-04-03 |                           14 |                                9 |      23 |
-| 2020-04-04 |                            8 |                                4 |      12 |
-| 2020-04-05 |                           12 |                                8 |      20 |
-| 2020-04-06 |                            6 |                               12 |      18 |
-| 2020-04-07 |                            6 |                               10 |      16 |
-| 2020-04-08 |                            9 |                                6 |      15 |
-| 2020-04-09 |                            7 |                                2 |       9 |
-| 2020-04-10 |                            8 |                                3 |      11 |
-| 2020-04-11 |                            8 |                                3 |      11 |
-| 2020-04-12 |                            4 |                                2 |       6 |
-| 2020-04-13 |                           10 |                                5 |      15 |
-| 2020-04-14 |                            7 |                                4 |      11 |
-| 2020-04-15 |                            1 |                                4 |       5 |
-| 2020-04-16 |                           13 |                                4 |      17 |
-| 2020-04-17 |                            5 |                                3 |       8 |
-| 2020-04-18 |                            7 |                                3 |      10 |
-| 2020-04-19 |                            4 |                                2 |       6 |
-| 2020-04-20 |                            4 |                                2 |       6 |
-| 2020-04-21 |                           10 |                                2 |      12 |
-| 2020-04-22 |                            3 |                                2 |       5 |
-| 2020-04-23 |                            1 |                                4 |       5 |
-| 2020-04-24 |                            3 |                                2 |       5 |
-| 2020-04-25 |                            1 |                                2 |       3 |
-| 2020-04-26 |                            2 |                                0 |       2 |
-| 2020-04-27 |                            2 |                                2 |       4 |
-| 2020-04-28 |                            6 |                                3 |       9 |
-| 2020-04-29 |                            3 |                                1 |       4 |
-| 2020-04-30 |                            3 |                                0 |       3 |
-| 2020-05-01 |                            2 |                                1 |       3 |
-| 2020-05-03 |                            3 |                                0 |       3 |
-| 2020-05-04 |                            4 |                                2 |       6 |
-| 2020-05-05 |                            1 |                                0 |       1 |
-| 2020-05-06 |                            1 |                                0 |       1 |
-| 2020-05-07 |                            0 |                                2 |       2 |
-| 2020-05-08 |                            1 |                                0 |       1 |
+| 2020-02-28 |                            2 |                                5 |       7 |
+| 2020-02-29 |                            0 |                                4 |       4 |
+| 2020-03-01 |                            1 |                                6 |       7 |
+| 2020-03-02 |                            4 |                               12 |      16 |
+| 2020-03-03 |                            1 |                                8 |       9 |
+| 2020-03-04 |                            1 |                                8 |       9 |
+| 2020-03-05 |                            3 |                                7 |      10 |
+| 2020-03-06 |                            2 |                               15 |      17 |
+| 2020-03-07 |                            2 |                                6 |       8 |
+| 2020-03-08 |                            3 |                               10 |      13 |
+| 2020-03-09 |                            5 |                               11 |      16 |
+| 2020-03-10 |                            4 |                               16 |      20 |
+| 2020-03-11 |                            9 |                               28 |      37 |
+| 2020-03-12 |                            6 |                               31 |      37 |
+| 2020-03-13 |                            9 |                               20 |      29 |
+| 2020-03-14 |                            9 |                               10 |      19 |
+| 2020-03-15 |                            7 |                               10 |      17 |
+| 2020-03-16 |                            2 |                               16 |      18 |
+| 2020-03-17 |                           10 |                               37 |      47 |
+| 2020-03-18 |                            9 |                               20 |      29 |
+| 2020-03-19 |                            9 |                               21 |      30 |
+| 2020-03-20 |                           13 |                               25 |      38 |
+| 2020-03-21 |                           12 |                               23 |      35 |
+| 2020-03-22 |                           13 |                               15 |      28 |
+| 2020-03-23 |                           17 |                               40 |      57 |
+| 2020-03-24 |                           19 |                               33 |      52 |
+| 2020-03-25 |                           18 |                               32 |      50 |
+| 2020-03-26 |                           11 |                               39 |      50 |
+| 2020-03-27 |                           12 |                               32 |      44 |
+| 2020-03-28 |                           23 |                               24 |      47 |
+| 2020-03-29 |                           21 |                               33 |      54 |
+| 2020-03-30 |                           16 |                               30 |      46 |
+| 2020-03-31 |                           18 |                               36 |      54 |
+| 2020-04-01 |                           18 |                               23 |      41 |
+| 2020-04-02 |                           25 |                               17 |      42 |
+| 2020-04-03 |                           14 |                               24 |      38 |
+| 2020-04-04 |                           14 |                               30 |      44 |
+| 2020-04-05 |                            9 |                               17 |      26 |
+| 2020-04-06 |                           12 |                               23 |      35 |
+| 2020-04-07 |                           15 |                               13 |      28 |
+| 2020-04-08 |                           15 |                               19 |      34 |
+| 2020-04-09 |                           16 |                               12 |      28 |
+| 2020-04-10 |                            8 |                                9 |      17 |
+| 2020-04-11 |                            9 |                                6 |      15 |
+| 2020-04-12 |                            8 |                                6 |      14 |
+| 2020-04-13 |                           14 |                                8 |      22 |
+| 2020-04-14 |                           11 |                               14 |      25 |
+| 2020-04-15 |                           10 |                               13 |      23 |
+| 2020-04-16 |                           13 |                                8 |      21 |
+| 2020-04-17 |                            7 |                                7 |      14 |
+| 2020-04-18 |                            5 |                                5 |      10 |
+| 2020-04-19 |                            8 |                                7 |      15 |
+| 2020-04-20 |                           11 |                                4 |      15 |
+| 2020-04-21 |                            7 |                                5 |      12 |
+| 2020-04-22 |                            3 |                                9 |      12 |
+| 2020-04-23 |                            7 |                                6 |      13 |
+| 2020-04-24 |                            4 |                                4 |       8 |
+| 2020-04-25 |                            5 |                                1 |       6 |
+| 2020-04-26 |                            2 |                                1 |       3 |
+| 2020-04-27 |                            9 |                                4 |      13 |
+| 2020-04-28 |                            2 |                                5 |       7 |
+| 2020-04-29 |                            0 |                                3 |       3 |
+| 2020-04-30 |                            8 |                                2 |      10 |
+| 2020-05-01 |                            5 |                                3 |       8 |
+| 2020-05-02 |                            5 |                                2 |       7 |
+| 2020-05-04 |                            6 |                                2 |       8 |
+| 2020-05-05 |                            2 |                                3 |       5 |
+| 2020-05-06 |                            1 |                                2 |       3 |
+| 2020-05-07 |                            1 |                                4 |       5 |
+| 2020-05-09 |                            0 |                                1 |       1 |
 | 2020-05-10 |                            0 |                                1 |       1 |
-| 2020-05-11 |                            2 |                                0 |       2 |
-| 2020-05-12 |                            2 |                                0 |       2 |
-| 2020-05-14 |                            2 |                                1 |       3 |
-| 2020-05-17 |                            2 |                                0 |       2 |
-| 2020-05-19 |                            0 |                                1 |       1 |
-| 2020-05-20 |                            0 |                                1 |       1 |
-| 2020-05-22 |                            1 |                                0 |       1 |
-| 2020-05-25 |                            0 |                                1 |       1 |
+| 2020-05-11 |                            2 |                                2 |       4 |
+| 2020-05-12 |                            4 |                                2 |       6 |
+| 2020-05-13 |                            1 |                                2 |       3 |
+| 2020-05-14 |                            5 |                                3 |       8 |
+| 2020-05-15 |                            1 |                                0 |       1 |
+| 2020-05-16 |                            1 |                                0 |       1 |
+| 2020-05-17 |                            4 |                                0 |       4 |
+| 2020-05-18 |                            3 |                                3 |       6 |
+| 2020-05-19 |                            4 |                                3 |       7 |
+| 2020-05-20 |                            1 |                                1 |       2 |
+| 2020-05-21 |                            0 |                                1 |       1 |
+| 2020-05-22 |                            1 |                                1 |       2 |
+| 2020-05-24 |                            0 |                                1 |       1 |
+| 2020-05-25 |                            1 |                                1 |       2 |
 | 2020-05-26 |                            1 |                                0 |       1 |
+| 2020-05-27 |                            0 |                                1 |       1 |
+| 2020-05-29 |                            1 |                                1 |       2 |
+| 2020-06-01 |                            1 |                                2 |       3 |
+| 2020-06-02 |                            0 |                                1 |       1 |
 | 2020-06-03 |                            1 |                                0 |       1 |
-| 2020-06-04 |                            1 |                                0 |       1 |
-| 2020-06-05 |                            1 |                                0 |       1 |
-| 2020-06-06 |                            0 |                                1 |       1 |
-| 2020-06-08 |                            1 |                                0 |       1 |
-| 2020-06-09 |                            1 |                                0 |       1 |
+| 2020-06-04 |                            2 |                                1 |       3 |
+| 2020-06-05 |                            2 |                                1 |       3 |
+| 2020-06-06 |                            1 |                                1 |       2 |
+| 2020-06-07 |                            4 |                                2 |       6 |
+| 2020-06-08 |                            4 |                                5 |       9 |
+| 2020-06-09 |                            5 |                                3 |       8 |
+| 2020-06-10 |                            1 |                                0 |       1 |
+| 2020-06-11 |                            4 |                                1 |       5 |
+| 2020-06-12 |                            2 |                                5 |       7 |
+| 2020-06-13 |                            3 |                                3 |       6 |
+| 2020-06-14 |                            2 |                                3 |       5 |
+| 2020-06-15 |                            5 |                                0 |       5 |
+| 2020-06-16 |                            6 |                                1 |       7 |
+| 2020-06-17 |                            1 |                                0 |       1 |
+| 2020-06-18 |                            3 |                                0 |       3 |
+| 2020-06-19 |                            1 |                                2 |       3 |
+| 2020-06-20 |                            1 |                                0 |       1 |
+| 2020-06-21 |                            0 |                                2 |       2 |
+| 2020-06-22 |                            0 |                                1 |       1 |
+| 2020-06-23 |                            1 |                                0 |       1 |
+| 2020-06-24 |                            2 |                                0 |       2 |
+| 2020-06-26 |                            1 |                                0 |       1 |
+| 2020-06-27 |                            1 |                                1 |       2 |
+| 2020-06-29 |                            2 |                                2 |       4 |
+| 2020-06-30 |                            1 |                                0 |       1 |
+| 2020-07-01 |                            2 |                                1 |       3 |
+| 2020-07-02 |                            0 |                                1 |       1 |
+| 2020-07-03 |                            4 |                                2 |       6 |
+| 2020-07-04 |                            3 |                                1 |       4 |
+| 2020-07-05 |                            1 |                                3 |       4 |
+| 2020-07-06 |                            0 |                                3 |       3 |
+| 2020-07-10 |                            1 |                                0 |       1 |
+| 2020-07-11 |                            1 |                                1 |       2 |
+| 2020-07-12 |                            0 |                                1 |       1 |
+| 2020-07-13 |                            1 |                                2 |       3 |
+| 2020-07-14 |                            1 |                                3 |       4 |
+| 2020-07-15 |                            3 |                                6 |       9 |
+| 2020-07-16 |                            4 |                                3 |       7 |
+| 2020-07-17 |                            4 |                                3 |       7 |
+| 2020-07-18 |                            3 |                                1 |       4 |
+| 2020-07-19 |                            2 |                                1 |       3 |
+| 2020-07-20 |                            2 |                                4 |       6 |
+| 2020-07-21 |                            1 |                                2 |       3 |
+| 2020-07-22 |                            0 |                                1 |       1 |
+| 2020-07-23 |                            1 |                                1 |       2 |
+| 2020-07-24 |                            1 |                                1 |       2 |
+| 2020-07-28 |                            1 |                                0 |       1 |
+| 2020-07-29 |                            3 |                                0 |       3 |
+| 2020-07-30 |                            1 |                                0 |       1 |
+| 2020-07-31 |                            1 |                                0 |       1 |
+| 2020-08-02 |                            0 |                                2 |       2 |
+| 2020-08-03 |                            1 |                                3 |       4 |
+| 2020-08-04 |                            1 |                                2 |       3 |
+| 2020-08-05 |                            1 |                                3 |       4 |
+| 2020-08-06 |                            1 |                                1 |       2 |
+| 2020-08-07 |                            1 |                                1 |       2 |
+| 2020-08-08 |                            2 |                                1 |       3 |
+| 2020-08-09 |                            4 |                                5 |       9 |
+| 2020-08-10 |                            2 |                                5 |       7 |
+| 2020-08-11 |                            2 |                                3 |       5 |
+| 2020-08-12 |                            2 |                                2 |       4 |
+| 2020-08-13 |                            2 |                                0 |       2 |
+| 2020-08-14 |                            1 |                                0 |       1 |
+| 2020-08-15 |                            0 |                                1 |       1 |
+| 2020-08-17 |                            3 |                                2 |       5 |
+| 2020-08-18 |                            6 |                                3 |       9 |
+| 2020-08-19 |                            0 |                                1 |       1 |
+| 2020-08-20 |                            2 |                                0 |       2 |
+| 2020-08-21 |                            2 |                                0 |       2 |
+| 2020-08-24 |                            1 |                                0 |       1 |
+| 2020-08-26 |                            1 |                                0 |       1 |
+| 2020-08-29 |                            1 |                                0 |       1 |
+| 2020-09-02 |                            1 |                                0 |       1 |
+| 2020-09-07 |                            1 |                                0 |       1 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S6** Raw data for figure six showing the number of sequences taken over time.
 
 
 | Day        |   England |
 |:-----------|----------:|
+| 2020-01-29 |         1 |
 | 2020-02-03 |         1 |
 | 2020-02-05 |         1 |
 | 2020-02-08 |         2 |
@@ -568,231 +1384,287 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-02-23 |         2 |
 | 2020-02-24 |         5 |
 | 2020-02-25 |         7 |
-| 2020-02-26 |         6 |
+| 2020-02-26 |         7 |
 | 2020-02-27 |        19 |
-| 2020-02-28 |        24 |
-| 2020-02-29 |        23 |
-| 2020-03-01 |        51 |
-| 2020-03-02 |        76 |
-| 2020-03-03 |        97 |
-| 2020-03-04 |       107 |
-| 2020-03-05 |        85 |
-| 2020-03-06 |        81 |
-| 2020-03-07 |        46 |
-| 2020-03-08 |        53 |
-| 2020-03-09 |        75 |
-| 2020-03-10 |        98 |
-| 2020-03-11 |       151 |
-| 2020-03-12 |       193 |
-| 2020-03-13 |       113 |
-| 2020-03-14 |        95 |
-| 2020-03-15 |        86 |
-| 2020-03-16 |        95 |
-| 2020-03-17 |       136 |
-| 2020-03-18 |       209 |
-| 2020-03-19 |       172 |
-| 2020-03-20 |       225 |
-| 2020-03-21 |       232 |
-| 2020-03-22 |       213 |
-| 2020-03-23 |       385 |
-| 2020-03-24 |       347 |
-| 2020-03-25 |       341 |
-| 2020-03-26 |       367 |
-| 2020-03-27 |       356 |
-| 2020-03-28 |       372 |
-| 2020-03-29 |       407 |
-| 2020-03-30 |       573 |
-| 2020-03-31 |       562 |
-| 2020-04-01 |       467 |
-| 2020-04-02 |       461 |
-| 2020-04-03 |       507 |
-| 2020-04-04 |       382 |
-| 2020-04-05 |       374 |
-| 2020-04-06 |       447 |
-| 2020-04-07 |       407 |
-| 2020-04-08 |       397 |
-| 2020-04-09 |       372 |
-| 2020-04-10 |       350 |
-| 2020-04-11 |       277 |
-| 2020-04-12 |       233 |
-| 2020-04-13 |       296 |
-| 2020-04-14 |       335 |
-| 2020-04-15 |       336 |
-| 2020-04-16 |       376 |
-| 2020-04-17 |       349 |
-| 2020-04-18 |       262 |
-| 2020-04-19 |       236 |
-| 2020-04-20 |       318 |
-| 2020-04-21 |       272 |
-| 2020-04-22 |       284 |
-| 2020-04-23 |       268 |
-| 2020-04-24 |       175 |
-| 2020-04-25 |       120 |
-| 2020-04-26 |       119 |
-| 2020-04-27 |       193 |
-| 2020-04-28 |       169 |
-| 2020-04-29 |       240 |
-| 2020-04-30 |       202 |
-| 2020-05-01 |       229 |
-| 2020-05-02 |       123 |
-| 2020-05-03 |       104 |
-| 2020-05-04 |       194 |
-| 2020-05-05 |       133 |
-| 2020-05-06 |       158 |
-| 2020-05-07 |       143 |
-| 2020-05-08 |        90 |
-| 2020-05-09 |        66 |
-| 2020-05-10 |        92 |
-| 2020-05-11 |       132 |
-| 2020-05-12 |        92 |
-| 2020-05-13 |        87 |
-| 2020-05-14 |        61 |
-| 2020-05-15 |        70 |
-| 2020-05-16 |        49 |
-| 2020-05-17 |        34 |
-| 2020-05-18 |        76 |
-| 2020-05-19 |        64 |
-| 2020-05-20 |        36 |
-| 2020-05-21 |        47 |
-| 2020-05-22 |        40 |
-| 2020-05-23 |        21 |
-| 2020-05-24 |        21 |
-| 2020-05-25 |        42 |
-| 2020-05-26 |        46 |
-| 2020-05-27 |        34 |
-| 2020-05-28 |        35 |
-| 2020-05-29 |        21 |
-| 2020-05-30 |        29 |
-| 2020-05-31 |        39 |
-| 2020-06-01 |        49 |
-| 2020-06-02 |        51 |
-| 2020-06-03 |        49 |
-| 2020-06-04 |        41 |
-| 2020-06-05 |        30 |
-| 2020-06-06 |        21 |
-| 2020-06-07 |        26 |
-| 2020-06-08 |        32 |
-| 2020-06-09 |        31 |
-| 2020-06-10 |        29 |
-| 2020-06-11 |        19 |
-| 2020-06-12 |        16 |
-| 2020-06-13 |        12 |
-| 2020-06-14 |        11 |
-| 2020-06-15 |        21 |
-| 2020-06-16 |        18 |
-| 2020-06-17 |        14 |
-| 2020-06-18 |        26 |
-| 2020-06-19 |         7 |
-| 2020-06-20 |         4 |
-| 2020-06-21 |         3 |
-| 2020-06-22 |         2 |
-| 2020-06-23 |         4 |
-| 2020-06-24 |         1 |
-| 2020-06-25 |         1 |
-| 2020-06-26 |         1 |
-| 2020-06-27 |         1 |
+| 2020-02-28 |        26 |
+| 2020-02-29 |        25 |
+| 2020-03-01 |        63 |
+| 2020-03-02 |        90 |
+| 2020-03-03 |       108 |
+| 2020-03-04 |       114 |
+| 2020-03-05 |       104 |
+| 2020-03-06 |        92 |
+| 2020-03-07 |        59 |
+| 2020-03-08 |        69 |
+| 2020-03-09 |        91 |
+| 2020-03-10 |       135 |
+| 2020-03-11 |       194 |
+| 2020-03-12 |       258 |
+| 2020-03-13 |       165 |
+| 2020-03-14 |       127 |
+| 2020-03-15 |       122 |
+| 2020-03-16 |       154 |
+| 2020-03-17 |       230 |
+| 2020-03-18 |       308 |
+| 2020-03-19 |       275 |
+| 2020-03-20 |       315 |
+| 2020-03-21 |       343 |
+| 2020-03-22 |       270 |
+| 2020-03-23 |       615 |
+| 2020-03-24 |       568 |
+| 2020-03-25 |       505 |
+| 2020-03-26 |       629 |
+| 2020-03-27 |       501 |
+| 2020-03-28 |       524 |
+| 2020-03-29 |       516 |
+| 2020-03-30 |       695 |
+| 2020-03-31 |       698 |
+| 2020-04-01 |       577 |
+| 2020-04-02 |       621 |
+| 2020-04-03 |       661 |
+| 2020-04-04 |       534 |
+| 2020-04-05 |       489 |
+| 2020-04-06 |       599 |
+| 2020-04-07 |       602 |
+| 2020-04-08 |       617 |
+| 2020-04-09 |       501 |
+| 2020-04-10 |       499 |
+| 2020-04-11 |       437 |
+| 2020-04-12 |       352 |
+| 2020-04-13 |       425 |
+| 2020-04-14 |       532 |
+| 2020-04-15 |       522 |
+| 2020-04-16 |       541 |
+| 2020-04-17 |       503 |
+| 2020-04-18 |       361 |
+| 2020-04-19 |       312 |
+| 2020-04-20 |       450 |
+| 2020-04-21 |       378 |
+| 2020-04-22 |       435 |
+| 2020-04-23 |       389 |
+| 2020-04-24 |       298 |
+| 2020-04-25 |       181 |
+| 2020-04-26 |       168 |
+| 2020-04-27 |       313 |
+| 2020-04-28 |       304 |
+| 2020-04-29 |       356 |
+| 2020-04-30 |       305 |
+| 2020-05-01 |       314 |
+| 2020-05-02 |       182 |
+| 2020-05-03 |       148 |
+| 2020-05-04 |       285 |
+| 2020-05-05 |       210 |
+| 2020-05-06 |       230 |
+| 2020-05-07 |       211 |
+| 2020-05-08 |       131 |
+| 2020-05-09 |        93 |
+| 2020-05-10 |       117 |
+| 2020-05-11 |       239 |
+| 2020-05-12 |       217 |
+| 2020-05-13 |       164 |
+| 2020-05-14 |       157 |
+| 2020-05-15 |       106 |
+| 2020-05-16 |        79 |
+| 2020-05-17 |        86 |
+| 2020-05-18 |       252 |
+| 2020-05-19 |       199 |
+| 2020-05-20 |       148 |
+| 2020-05-21 |        95 |
+| 2020-05-22 |       102 |
+| 2020-05-23 |        33 |
+| 2020-05-24 |        45 |
+| 2020-05-25 |        96 |
+| 2020-05-26 |        91 |
+| 2020-05-27 |       100 |
+| 2020-05-28 |        68 |
+| 2020-05-29 |        43 |
+| 2020-05-30 |        56 |
+| 2020-05-31 |        56 |
+| 2020-06-01 |       122 |
+| 2020-06-02 |       211 |
+| 2020-06-03 |        81 |
+| 2020-06-04 |       115 |
+| 2020-06-05 |        75 |
+| 2020-06-06 |        86 |
+| 2020-06-07 |       240 |
+| 2020-06-08 |       330 |
+| 2020-06-09 |       332 |
+| 2020-06-10 |       338 |
+| 2020-06-11 |       462 |
+| 2020-06-12 |       503 |
+| 2020-06-13 |       353 |
+| 2020-06-14 |       377 |
+| 2020-06-15 |       377 |
+| 2020-06-16 |       354 |
+| 2020-06-17 |       374 |
+| 2020-06-18 |       248 |
+| 2020-06-19 |       344 |
+| 2020-06-20 |       165 |
+| 2020-06-21 |       184 |
+| 2020-06-22 |       202 |
+| 2020-06-23 |       277 |
+| 2020-06-24 |       311 |
+| 2020-06-25 |       243 |
+| 2020-06-26 |        59 |
+| 2020-06-27 |        86 |
+| 2020-06-28 |        23 |
+| 2020-06-29 |       177 |
+| 2020-06-30 |       204 |
+| 2020-07-01 |       225 |
+| 2020-07-02 |       220 |
+| 2020-07-03 |       229 |
+| 2020-07-04 |       155 |
+| 2020-07-05 |        56 |
+| 2020-07-06 |        67 |
+| 2020-07-07 |        13 |
+| 2020-07-08 |         9 |
+| 2020-07-09 |        13 |
+| 2020-07-10 |        26 |
+| 2020-07-11 |        35 |
+| 2020-07-12 |        21 |
+| 2020-07-13 |        78 |
+| 2020-07-14 |       116 |
+| 2020-07-15 |       275 |
+| 2020-07-16 |       190 |
+| 2020-07-17 |       171 |
+| 2020-07-18 |        98 |
+| 2020-07-19 |        63 |
+| 2020-07-20 |       106 |
+| 2020-07-21 |        83 |
+| 2020-07-22 |       113 |
+| 2020-07-23 |       104 |
+| 2020-07-24 |        99 |
+| 2020-07-25 |        55 |
+| 2020-07-26 |        41 |
+| 2020-07-27 |        81 |
+| 2020-07-28 |        28 |
+| 2020-07-29 |        27 |
+| 2020-07-30 |        52 |
+| 2020-07-31 |        36 |
+| 2020-08-01 |        18 |
+| 2020-08-02 |        49 |
+| 2020-08-03 |        62 |
+| 2020-08-04 |        80 |
+| 2020-08-05 |        90 |
+| 2020-08-06 |       127 |
+| 2020-08-07 |        68 |
+| 2020-08-08 |        47 |
+| 2020-08-09 |       134 |
+| 2020-08-10 |       240 |
+| 2020-08-11 |       117 |
+| 2020-08-12 |       144 |
+| 2020-08-13 |       138 |
+| 2020-08-14 |       127 |
+| 2020-08-15 |        62 |
+| 2020-08-16 |        29 |
+| 2020-08-17 |       193 |
+| 2020-08-18 |       243 |
+| 2020-08-19 |        92 |
+| 2020-08-20 |       176 |
+| 2020-08-21 |       162 |
+| 2020-08-22 |         7 |
+| 2020-08-23 |         3 |
+| 2020-08-24 |         6 |
+| 2020-08-25 |        34 |
+| 2020-08-26 |        35 |
+| 2020-08-27 |         3 |
+| 2020-08-28 |         5 |
+| 2020-08-29 |        21 |
+| 2020-08-30 |         2 |
+| 2020-08-31 |        12 |
+| 2020-09-01 |         3 |
+| 2020-09-02 |         6 |
+| 2020-09-07 |         2 |
+| 2020-09-09 |         1 |
+| 2020-09-10 |         4 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 
 
-| Admin2                       | Country   |   Number of sequences | Sequence group   |
-|:-----------------------------|:----------|----------------------:|:-----------------|
-| BATH AND NORTH EAST SOMERSET | England   |                     0 | 0                |
-| BEDFORDSHIRE                 | England   |                   452 | 400-500          |
-| BERKSHIRE                    | England   |                    21 | 10-50            |
-| BLACKBURN WITH DARWEN        | England   |                     0 | 0                |
-| BLACKPOOL                    | England   |                     0 | 0                |
-| BOLTON                       | England   |                     0 | 0                |
-| BOURNEMOUTH                  | England   |                     0 | 0                |
-| BRIGHTON AND HOVE            | England   |                     0 | 0                |
-| BRISTOL                      | England   |                    18 | 10-50            |
-| BUCKINGHAMSHIRE              | England   |                   413 | 400-500          |
-| BURY                         | England   |                     0 | 0                |
-| CAMBRIDGESHIRE               | England   |                   727 | >500             |
-| CENTRAL BEDFORDSHIRE         | England   |                     0 | 0                |
-| CHESHIRE                     | England   |                    44 | 10-50            |
-| CORNWALL                     | England   |                    27 | 10-50            |
-| CUMBRIA                      | England   |                    78 | 50-100           |
-| DARLINGTON                   | England   |                     0 | 0                |
-| DERBY                        | England   |                     0 | 0                |
-| DERBYSHIRE                   | England   |                    30 | 10-50            |
-| DEVON                        | England   |                   421 | 400-500          |
-| DORSET                       | England   |                   192 | 150-200          |
-| DURHAM                       | England   |                   161 | 150-200          |
-| EAST RIDING OF YORKSHIRE     | England   |                    35 | 10-50            |
-| ESSEX                        | England   |                  1432 | >500             |
-| GATESHEAD                    | England   |                     0 | 0                |
-| GLOUCESTERSHIRE              | England   |                   708 | >500             |
-| GREATER LONDON               | England   |                  2654 | >500             |
-| HALTON                       | England   |                     0 | 0                |
-| HAMPSHIRE                    | England   |                   347 | 300-400          |
-| HARTLEPOOL                   | England   |                     0 | 0                |
-| HEREFORDSHIRE                | England   |                    59 | 50-100           |
-| HERTFORDSHIRE                | England   |                  1031 | >500             |
-| ISLE OF WIGHT                | England   |                     1 | 1-10             |
-| ISLES OF SCILLY              | England   |                     0 | 0                |
-| KENT                         | England   |                    38 | 10-50            |
-| KINGSTON UPON HULL           | England   |                     0 | 0                |
-| LANCASHIRE                   | England   |                    53 | 50-100           |
-| LEICESTER                    | England   |                     0 | 0                |
-| LEICESTERSHIRE               | England   |                   109 | 100-150          |
-| LINCOLNSHIRE                 | England   |                    73 | 50-100           |
-| LUTON                        | England   |                     0 | 0                |
-| MANCHESTER                   | England   |                    30 | 10-50            |
-| MEDWAY                       | England   |                     0 | 0                |
-| MERSEYSIDE                   | England   |                   549 | >500             |
-| MIDDLESBROUGH                | England   |                     0 | 0                |
-| MILTON KEYNES                | England   |                     0 | 0                |
-| NORFOLK                      | England   |                   626 | >500             |
-| NORTH LINCOLNSHIRE           | England   |                     0 | 0                |
-| NORTH SOMERSET               | England   |                     0 | 0                |
-| NORTH YORKSHIRE              | England   |                   123 | 100-150          |
-| NORTHAMPTONSHIRE             | England   |                    28 | 10-50            |
-| NORTHUMBERLAND               | England   |                   172 | 150-200          |
-| NOTTINGHAM                   | England   |                   685 | >500             |
-| NOTTINGHAMSHIRE              | England   |                    59 | 50-100           |
-| OLDHAM                       | England   |                     0 | 0                |
-| OXFORDSHIRE                  | England   |                    98 | 50-100           |
-| PETERBOROUGH                 | England   |                     0 | 0                |
-| PLYMOUTH                     | England   |                     1 | 1-10             |
-| POOLE                        | England   |                     0 | 0                |
-| PORTSMOUTH                   | England   |                     0 | 0                |
-| REDCAR AND CLEVELAND         | England   |                     0 | 0                |
-| ROCHDALE                     | England   |                     0 | 0                |
-| RUTLAND                      | England   |                     0 | 0                |
-| SALFORD                      | England   |                     0 | 0                |
-| SHROPSHIRE                   | England   |                     6 | 1-10             |
-| SOMERSET                     | England   |                   652 | >500             |
-| SOUTH GLOUCESTERSHIRE        | England   |                     0 | 0                |
-| SOUTH YORKSHIRE              | England   |                  1594 | >500             |
-| SOUTHAMPTON                  | England   |                     0 | 0                |
-| SOUTHEND-ON-SEA              | England   |                     0 | 0                |
-| STAFFORDSHIRE                | England   |                    62 | 50-100           |
-| STOCKPORT                    | England   |                     0 | 0                |
-| STOCKTON-ON-TEES             | England   |                     0 | 0                |
-| STOKE-ON-TRENT               | England   |                     0 | 0                |
-| SUFFOLK                      | England   |                   596 | >500             |
-| SURREY                       | England   |                    73 | 50-100           |
-| SUSSEX                       | England   |                     1 | 1-10             |
-| SWINDON                      | England   |                     0 | 0                |
-| TAMESIDE                     | England   |                     0 | 0                |
-| TELFORD AND WREKIN           | England   |                     0 | 0                |
-| THURROCK                     | England   |                     0 | 0                |
-| TORBAY                       | England   |                     0 | 0                |
-| TRAFFORD                     | England   |                     0 | 0                |
-| TYNE AND WEAR                | England   |                   496 | 400-500          |
-| WARRINGTON                   | England   |                     0 | 0                |
-| WARWICKSHIRE                 | England   |                    11 | 10-50            |
-| WEST MIDLANDS                | England   |                   167 | 150-200          |
-| WEST YORKSHIRE               | England   |                    22 | 10-50            |
-| WIGAN                        | England   |                     0 | 0                |
-| WILTSHIRE                    | England   |                   386 | 300-400          |
-| WORCESTERSHIRE               | England   |                    13 | 10-50            |
-| YORK                         | England   |                     0 | 0                |
+| Admin2                   | Country   |   Number of sequences | Sequence group   |
+|:-------------------------|:----------|----------------------:|:-----------------|
+| BEDFORDSHIRE             | England   |                   620 | 600-700          |
+| BERKSHIRE                | England   |                    78 | 10-100           |
+| BLACKBURN WITH DARWEN    | England   |                     0 | 0                |
+| BLACKPOOL                | England   |                     0 | 0                |
+| BOURNEMOUTH              | England   |                     0 | 0                |
+| BRIGHTON AND HOVE        | England   |                    18 | 10-100           |
+| BRISTOL                  | England   |                    35 | 10-100           |
+| BUCKINGHAMSHIRE          | England   |                   544 | 500-600          |
+| CAMBRIDGESHIRE           | England   |                   990 | 700-1000         |
+| CHESHIRE                 | England   |                   459 | 400-500          |
+| CORNWALL                 | England   |                    46 | 10-100           |
+| CUMBRIA                  | England   |                   498 | 400-500          |
+| DARLINGTON               | England   |                     0 | 0                |
+| DERBY                    | England   |                     0 | 0                |
+| DERBYSHIRE               | England   |                   214 | 200-300          |
+| DEVON                    | England   |                   534 | 500-600          |
+| DORSET                   | England   |                   273 | 200-300          |
+| DURHAM                   | England   |                   417 | 400-500          |
+| EAST RIDING OF YORKSHIRE | England   |                   144 | 100-200          |
+| ESSEX                    | England   |                  1786 | 1000-2000        |
+| GLOUCESTERSHIRE          | England   |                  1055 | 1000-2000        |
+| GREATER LONDON           | England   |                  3712 | >2000            |
+| GREATER MANCHESTER       | England   |                   746 | 700-1000         |
+| HALTON                   | England   |                     0 | 0                |
+| HAMPSHIRE                | England   |                   839 | 700-1000         |
+| HARTLEPOOL               | England   |                     0 | 0                |
+| HEREFORDSHIRE            | England   |                    99 | 10-100           |
+| HERTFORDSHIRE            | England   |                  1227 | 1000-2000        |
+| ISLE OF WIGHT            | England   |                     5 | 1-10             |
+| ISLES OF SCILLY          | England   |                     0 | 0                |
+| KENT                     | England   |                   154 | 100-200          |
+| KINGSTON UPON HULL       | England   |                     0 | 0                |
+| LANCASHIRE               | England   |                  1043 | 1000-2000        |
+| LEICESTER                | England   |                     0 | 0                |
+| LEICESTERSHIRE           | England   |                  1968 | 1000-2000        |
+| LINCOLNSHIRE             | England   |                   258 | 200-300          |
+| MEDWAY                   | England   |                     0 | 0                |
+| MERSEYSIDE               | England   |                  1563 | 1000-2000        |
+| MIDDLESBROUGH            | England   |                     0 | 0                |
+| MILTON KEYNES            | England   |                     0 | 0                |
+| NORFOLK                  | England   |                   804 | 700-1000         |
+| NORTH LINCOLNSHIRE       | England   |                     0 | 0                |
+| NORTH YORKSHIRE          | England   |                   479 | 400-500          |
+| NORTHAMPTONSHIRE         | England   |                   154 | 100-200          |
+| NORTHUMBERLAND           | England   |                   231 | 200-300          |
+| NOTTINGHAM               | England   |                   927 | 700-1000         |
+| NOTTINGHAMSHIRE          | England   |                   301 | 300-400          |
+| OXFORDSHIRE              | England   |                   169 | 100-200          |
+| PETERBOROUGH             | England   |                     0 | 0                |
+| PLYMOUTH                 | England   |                     2 | 1-10             |
+| POOLE                    | England   |                     0 | 0                |
+| PORTSMOUTH               | England   |                     0 | 0                |
+| REDCAR AND CLEVELAND     | England   |                     0 | 0                |
+| RUTLAND                  | England   |                     5 | 1-10             |
+| SHROPSHIRE               | England   |                    49 | 10-100           |
+| SOMERSET                 | England   |                   903 | 700-1000         |
+| SOUTH GLOUCESTERSHIRE    | England   |                     0 | 0                |
+| SOUTH YORKSHIRE          | England   |                  2717 | >2000            |
+| SOUTHAMPTON              | England   |                     0 | 0                |
+| SOUTHEND-ON-SEA          | England   |                     1 | 1-10             |
+| STAFFORDSHIRE            | England   |                   158 | 100-200          |
+| STOCKTON-ON-TEES         | England   |                     0 | 0                |
+| STOKE-ON-TRENT           | England   |                     1 | 1-10             |
+| SUFFOLK                  | England   |                   728 | 700-1000         |
+| SURREY                   | England   |                   145 | 100-200          |
+| SUSSEX                   | England   |                   170 | 100-200          |
+| SWINDON                  | England   |                     0 | 0                |
+| TELFORD AND WREKIN       | England   |                     0 | 0                |
+| THURROCK                 | England   |                     0 | 0                |
+| TORBAY                   | England   |                     0 | 0                |
+| TYNE AND WEAR            | England   |                   738 | 700-1000         |
+| WARRINGTON               | England   |                     0 | 0                |
+| WARWICKSHIRE             | England   |                    50 | 10-100           |
+| WEST MIDLANDS            | England   |                   746 | 700-1000         |
+| WEST YORKSHIRE           | England   |                  1091 | 1000-2000        |
+| WILTSHIRE                | England   |                   647 | 600-700          |
+| WORCESTERSHIRE           | England   |                    41 | 10-100           |
+| YORK                     | England   |                     0 | 0                |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 
 

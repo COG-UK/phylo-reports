@@ -1,27 +1,35 @@
-Lineage name	Scotland	Date range	Total sequences	Global lineage	Time since last sample (days)	Activity score
-UK109	240 (100.0%)	Mar-21, Jun-12	240	B.1.5, B.1.5.5	10	0.0347
-UK36	182 (100.0%)	Mar-21, May-22	182	B.1	31	0.011
-UK5	157 (100.0%)	Mar-06, Jun-17	157	B.1.1.1, B.1.1.4, B.1.1.p12, B.1.1	5	0.1321
-UK199	137 (100.0%)	Mar-20, Jun-22	137	B.1.5	0	active today
-UK42	125 (100.0%)	Mar-04, May-21	125	B.1.71, B.1	32	0.0197
-UK2464	54 (100.0%)	Mar-20, Jun-06	54	B.1.p11	16	0.092
-UK304	36 (100.0%)	Apr-16, Jun-02	36	B.1.1.14	20	0.0671
-UK72	32 (100.0%)	Mar-11, Apr-25	32	B	58	0.025
-UK2913	31 (100.0%)	Mar-28, May-13	31	B.1.p11	40	0.0383
-UK4493	26 (100.0%)	Apr-23, May-19	26	B.1	34	0.0306
-UK21	26 (100.0%)	Mar-18, May-23	26	B.1.40	30	0.088
-UK1667	25 (100.0%)	Mar-31, May-18	25	B.1.p9	35	0.0571
-UK5676	24 (100.0%)	Mar-17, Apr-27	24	B.2	56	0.0318
-UK2735	19 (100.0%)	Mar-18, May-02	19	B.1.1	51	0.049
-UK107	16 (100.0%)	Mar-21, Apr-24	16	B.2.1	59	0.0384
-UK2200	15 (100.0%)	Mar-25, May-05	15	B.1.5, B.1.5.6	48	0.061
-UK66	14 (100.0%)	Mar-28, May-20	14	B.1.1.8	33	0.1235
-UK43	13 (100.0%)	Mar-26, Apr-18	13	A.5	65	0.0295
-UK44	13 (100.0%)	Mar-25, Apr-19	13	B	64	0.0326
-UK436	12 (100.0%)	Apr-13, May-14	12	B.1.5	39	0.0723
-UK14	10 (100.0%)	Mar-21, May-21	10	B	32	0.2118
-UK167	9 (100.0%)	Mar-22, May-15	9	B.1	38	0.1776
-UK5498	9 (100.0%)	Mar-12, Apr-27	9	B.2, B	56	0.1027
-UK594	8 (100.0%)	Apr-20, May-01	8	B	52	0.0302
-UK2916	7 (100.0%)	Mar-04, May-18	7	B.1	35	0.3571
-UK133	6 (100.0%)	Mar-22, Apr-25	6	B.1	58	0.1172
+Lineage name	Scotland	Date range	Global lineage	Total
+UK109	269 (100.0%)	Mar-21, Jun-12	B.1, B.1.100	269 taxa
+UK336	207 (100.0%)	Mar-21, May-22	B.1.93, B.1	207 taxa
+UK199	157 (100.0%)	Mar-20, Jun-25	B.1.5, B.1, B.1.5.10	157 taxa
+UK5	93 (100.0%)	Mar-11, Aug-21	B.1.1, B.1.1.10, B.1.1.12	93 taxa
+UK1254	74 (100.0%)	Mar-22, May-21	B.1, B.1.89	74 taxa
+UK1195	69 (100.0%)	Aug-01, Aug-24	B.1.1, B.1.1.25	69 taxa
+UK175	67 (100.0%)	Mar-04, Aug-03	B.1.5, B, B.1, B.1.71	67 taxa
+UK2913	59 (100.0%)	Mar-28, Jun-06	B.1, B.1.11	59 taxa
+UK1964	42 (100.0%)	Apr-16, Jun-02	B.1.1.14	42 taxa
+UK1437	41 (100.0%)	Apr-08, May-14	B.1	41 taxa
+UK2068	40 (100.0%)	Apr-16, May-25	B.1.1.4	40 taxa
+UK2464	39 (100.0%)	Mar-20, May-22	B.1	39 taxa
+UK5676	29 (100.0%)	Mar-09, May-07	B.2	29 taxa
+UK72	28 (100.0%)	Mar-11, Apr-09	B	28 taxa
+UK21	28 (100.0%)	Mar-18, May-23	B.1, B.1.40	28 taxa
+UK4493	26 (100.0%)	Apr-23, May-19	B.1	26 taxa
+UK1951	26 (100.0%)	Mar-29, May-27	B.1.1.1	26 taxa
+UK1667	26 (100.0%)	Mar-31, May-18	B.1, B.1.9	26 taxa
+UK1683	25 (100.0%)	Mar-18, May-13	B.1.1, B.1.1.1	25 taxa
+UK44	23 (100.0%)	Mar-25, May-01	B	23 taxa
+UK107	20 (100.0%)	Mar-21, May-05	B.2.1	20 taxa
+UK187	20 (100.0%)	Mar-31, Jun-05	B.1	20 taxa
+UK945	19 (100.0%)	Mar-18, May-02	B.1.1	19 taxa
+UK740	15 (100.0%)	Mar-28, May-20	B.1.1	15 taxa
+UK167	15 (100.0%)	Mar-24, May-15	B.1	15 taxa
+UK43	13 (100.0%)	Mar-26, Apr-18	A.5	13 taxa
+UK436	12 (100.0%)	Apr-13, May-14	B.1.5	12 taxa
+UK512	11 (100.0%)	Apr-07, May-13	B.1.5, B.1.5.6	11 taxa
+UK14	11 (100.0%)	Mar-21, May-21	B	11 taxa
+UK1487	10 (100.0%)	Apr-05, Apr-22	B.1.5	10 taxa
+UK2916	10 (100.0%)	Mar-04, May-18	B.1, B.1.98	10 taxa
+UK719	7 (100.0%)	Mar-30, May-21	B.1.1	7 taxa
+UK6	6 (100.0%)	Mar-23, May-09	B.1.75	6 taxa
+UK133	6 (100.0%)	Mar-22, Apr-25	B.1	6 taxa

@@ -1,17 +1,32 @@
-Lineage name	Date range	Number of sequences	Global lineage	Time since last sample (days)	Activity score
-UK5	Mar-10, Jun-01	359	B.1.1.1, B.1.1	0	active today
-UK601	Mar-11, May-11	66	B.10	21	0.0299
-UK482	Apr-10, May-05	27	B.1.1	27	0.0423
-UK167	Mar-14, Jun-01	26	B.1	0	active today
-UK2913	Apr-06, Jun-01	17	B.1.p11	0	active today
-UK2735	Mar-26, May-31	14	B.1.1	1	0.31
-UK107	Mar-17, May-19	14	B.2.1	13	0.0062
-UK706	Mar-28, Apr-29	14	B.1.1	33	0.0644
-UK72	Mar-11, May-27	12	B	5	0.0694
-UK2916	Mar-20, Jun-01	9	B.1	0	active today
-UK187	Mar-26, Apr-30	9	B.1	32	0.0245
-UK581	Apr-06, May-01	9	B.1.1	31	0.0896
-UK109	Apr-13, May-31	8	B.1.5	1	0.2317
-UK370	Mar-24, May-30	8	B.1.1.10	2	0.2684
-UK320	Mar-22, May-16	7	B.1	16	0.375
-UK2200	Mar-23, May-05	6	B.1.5	27	0.0343
+Lineage name	Date range	Total	Global lineage	Time since last sample	Activity score
+UK5	Mar-10, Aug-26	607 taxa	B.1.1, B.1.1.10	0 days	active today
+UK1535	Mar-25, Aug-26	191 taxa	B.1.1	0 days	active today
+UK1855	Jul-12, Aug-26	147 taxa	B.1.1	0 days	active today
+UK601	Mar-11, May-15	71 taxa	B, B.10	103 days	0.0055
+UK167	Mar-14, Jul-15	31 taxa	B.1	42 days	0.007
+UK2913	Apr-06, Jul-15	19 taxa	B.1.11	42 days	0.0043
+UK175	Mar-22, Aug-21	18 taxa	B.1, B.1.5	5 days	0.0137
+UK107	Mar-17, Jul-20	18 taxa	B.2.1	37 days	0.0024
+UK1266	Mar-25, Jun-17	17 taxa	B.1.1	70 days	0.0304
+UK461	Aug-15, Aug-26	15 taxa	B.1	0 days	active today
+UK187	Mar-26, Jun-05	15 taxa	B.1, B.1.77	82 days	0.0112
+UK945	Apr-06, Aug-19	15 taxa	B.1.1	7 days	0.0632
+UK72	Mar-11, Jun-23	14 taxa	B, B.2	64 days	0.0047
+UK2079	Aug-19, Aug-21	12 taxa	B.1.1, B.1.1.25	5 days	2.1385
+UK1105	Jul-14, Aug-20	12 taxa	B.1	6 days	0.4211
+UK109	Mar-29, Aug-21	11 taxa	B.1	5 days	0.0342
+UK1061	Jul-28, Aug-20	11 taxa	B.1	6 days	0.6944
+UK1179	May-03, May-16	10 taxa	B.1.1	102 days	0.0471
+UK871	Mar-31, May-01	10 taxa	B.1.1	117 days	0.0265
+UK847	Aug-04, Aug-26	10 taxa	B.1.36	0 days	active today
+UK1186	Aug-05, Aug-26	10 taxa	B.1, B.1.79	0 days	active today
+UK1683	Apr-07, Aug-21	9 taxa	B.1.1.1	5 days	0.0408
+UK2916	Mar-20, Aug-11	9 taxa	B.1	15 days	0.0214
+UK1060	Mar-25, Aug-14	8 taxa	B.1.1	12 days	0.0415
+UK1363	Jul-16, Aug-21	8 taxa	B.1	5 days	2.7
+UK1076	Mar-26, Aug-22	8 taxa	B.1.1	4 days	0.1606
+UK1792	Aug-07, Aug-21	6 taxa	B.1.1	5 days	2.35
+UK2204	Apr-11, Jun-10	6 taxa	B.1	77 days	0.0952
+UK312	Jul-21, Aug-26	6 taxa	B.1	0 days	active today
+UK399	Aug-10, Aug-26	6 taxa	B.1	0 days	active today
+UK2200	Mar-23, Aug-26	6 taxa	B.1.5	0 days	active today

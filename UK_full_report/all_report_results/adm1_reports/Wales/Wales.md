@@ -11,11 +11,11 @@
 
 
 
-This report gives summaries of lineages sampled in Wales for week 2020-07-03. 
-There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-06-28. The analysis (eg time since last sample) is therefore undertaken from this date.
+This report gives summaries of lineages sampled in Wales for week 2020-09-13. 
+There are time lags due to batching, curation and analysis, the most recently sampled sequence is 2020-09-07. The analysis (eg time since last sample) is therefore undertaken from this date.
 <br/>
-4129 sequences from Wales have been included in this analysis.
-216 lineages have been recorded, 122 of which only contain one sequence.
+6749 sequences from Wales have been included in this analysis.
+450 lineages have been recorded, 268 of which only contain one sequence.
 
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
@@ -23,14 +23,14 @@ It's also important to realise that these lineages are *estimates* of how we thi
 
 
 
-The minimum number of introductions is 172 and the maximum is 1319
+The minimum number of introductions is 21 and the maximum is 2336
 
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 
 
 
-191 are lineages which were sampled less than five times in Wales, and so have been left out of visualisation in the interests of clarity
+425 are lineages which were sampled less than five times in Wales, and so have been left out of visualisation in the interests of clarity
 
 
 Furthermore, those sequences which haven't been sampled in the last month are not shown.
@@ -38,10 +38,9 @@ Furthermore, those sequences which haven't been sampled in the last month are no
 
 
 Of the 25 that remain:
-17 are pending extinction, ie last seen three weeks ago.
-4 lineages have gone quiet, ie haven't been seen this week.
-2 lineages have reactivated.
-2 lineages have been continuously circulating.
+12 are pending extinction, ie last seen three weeks ago.
+9 lineages have gone quiet, ie haven't been seen this week.
+4 lineages have been continuously circulating.
 
 
 
@@ -52,29 +51,40 @@ Each entry is the count of sequences from each lineage in each country, with the
 
 "Activity score" is calculated by taking the average gap between sampling for each lineage, and dividing it by the number of days since the lineage was last sampled. Therefore the higher the number, the more active the lineage is.
 If the score is above 1, then it has been sampled *more* recently than expected given its average gap size. We might interpret this as an increase in activity.
-If the score is below 1, it has been sampled *less* recently than expect given its average gap size, so we might interpret this as a decrease in activity.
+If the score is below 1, it has been sampled *less* recently than expected given its average gap size, so we might interpret this as a decrease in activity.
 
 
 
-The global lineages are correct as of the data release on 2020-05-19
+The global lineages are correct as of the data release on 2020-07-20
 
 
 It is written to "summary_files" as "lineage_summary.tsv" for further use, and the full list of lineages is available in the same directory as "all_lineages.csv"
 
 
 
-| Lineage name   | Date range     |   Number of sequences | Global lineage                                          |   Time since last sample (days) |   Activity score |
-|:---------------|:---------------|----------------------:|:--------------------------------------------------------|--------------------------------:|-----------------:|
-| UK5            | Mar-01, Jun-27 |                  1168 | B.1.1.16, B.1.1.p16, B.1.1.p11, B.1.1, B.1.1.1, B.1.1.2 |                               1 |           0.0152 |
-| UK61           | Mar-08, May-27 |                   419 | B.3, B                                                  |                              32 |           0.0056 |
-| UK42           | Feb-27, Jun-21 |                   368 | B.1.35, B.1, B.1.p11, B.1.71                            |                               7 |           0.0123 |
-| UK632          | Mar-25, Jun-10 |                   232 | B.1.1                                                   |                              18 |           0.0161 |
-| UK3021         | Mar-29, Jun-09 |                   225 | B.1                                                     |                              19 |           0.019  |
-| UK495          | Apr-01, Jun-03 |                   124 | B.1.p11                                                 |                              25 |           0.0214 |
-| UK5741         | Mar-17, Jun-12 |                   104 | B.1.44, B.1                                             |                              16 |           0.0201 |
-| UK822          | Apr-14, Jun-11 |                   102 | B.1                                                     |                              17 |           0.0334 |
-| UK5322         | Apr-08, Jun-04 |                    86 | B.1.1                                                   |                              24 |           0.0328 |
-| UK605          | Mar-17, May-24 |                    79 | B.1.1, B.1.1.10                                         |                              35 |           0.0182 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| Lineage name   | Date range     | Total    | Global lineage                                         | Time since last sample   |   Activity score |
++================+================+==========+========================================================+==========================+==================+
+| UK5            | Mar-17, Sep-05 | 956 taxa | B.1.1.10, B.1.1, B.1.1.21, B.1.1.16, B.1.1.30, B.1.1.2 | 2 days                   |           0.0089 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK61           | Mar-08, Aug-03 | 553 taxa | B, B.3, B.6                                            | 35 days                  |           0.007  |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK175          | Feb-27, Aug-21 | 547 taxa | B.1.71, B.1, B.1.5, B.1.35                             | 17 days                  |           0.004  |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1091         | Mar-20, Jul-15 | 536 taxa | B.1.1, B.1.1.2                                         | 54 days                  |           0.0039 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1037         | Mar-25, Aug-19 | 411 taxa | B.1.1, B.1.1.30                                        | 19 days                  |           0.0125 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK699          | Mar-24, Jun-30 | 313 taxa | B.1, B.1.5, B.1.5.9                                    | 69 days                  |           0.0048 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK5741         | Mar-17, Jul-15 | 165 taxa | B.1, B.1.5, B.1.122, B.1.44, B.1.35                    | 54 days                  |           0.0054 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK822          | Apr-14, Jun-30 | 146 taxa | B.1, B.1.120                                           | 69 days                  |           0.0077 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1133         | Apr-08, Jun-15 | 136 taxa | B.1.1.29, B.1.1                                        | 84 days                  |           0.0059 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1065         | Apr-04, Jul-22 | 132 taxa | B.1.1                                                  | 47 days                  |           0.0165 |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
 
 
 These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
@@ -82,7 +92,7 @@ These data is represented in the figure one. Note that the number of sequences i
 The raw data for this bar chart are in the table above.
 
 
-![Number of sequences sampled in a lineage by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_stacked_bars_by_country_1.png){#stacked_bars_by_country }
+![Number of sequences sampled in a lineage by country](figures/Wales_stacked_bars_by_country_1.png){#stacked_bars_by_country }
 
 
 Different sequencing centres have different delays in turn around from receipt of samples to submission of sequence data. 
@@ -95,8 +105,7 @@ The relative growth and decline of the ten most sampled lineages in terms of num
 
 
 
-![Lineages by number of adm2 regions present by epiweek](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_geog_plot_1.png){#geog_plot }
-
+![Lineages by number of adm2 regions present by epiweek](figures/Wales_geog_plot_1.png){#geog_plot }
 
 
 
@@ -112,24 +121,22 @@ The raw data has been written to a summary file.
 
 
 
-
-![Timeline of lineages, sized by number of sequences from each country.](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_make_timeline_1.png){#make_timeline }
-
-
-The date of first sequence in the cluster is shown in figure five for every cluster with date information. 
+![Timeline of lineages, sized by number of sequences from each country.](figures/Wales_make_timeline_1.png){#make_timeline }
 
 
 
+
+The date of first sequence in the cluster is shown in figure five for every cluster with date information.
 NB the lineage may have started anywhere in the UK, but has been recorded at least once in Wales
 
 
 
-![Lineage starts per week, split by singletons and non-singletons](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_firsts_plot_1.png){#firsts_plot }
+![Lineage starts per week, split by singletons and non-singletons](figures/Wales_firsts_plot_1.png){#firsts_plot }
 
 For comparison, here is a plot of the day that every sequence was taken, coloured by country. Note that sequences without dates were not included.
 
 
-![Sequences taken on each day by country](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_seqs_over_time_1.png){#seqs_over_time }
+![Sequences taken on each day by country](figures/Wales_seqs_over_time_1.png){#seqs_over_time }
 
 
 The map shows the number of sequences sampled in each admin2 region in the UK. The colour scale is the same for all four countries, but with different underlying base colours.
@@ -138,7 +145,7 @@ The map shows the number of sequences sampled in each admin2 region in the UK. T
 
 
 
-![Map showing the number of sequences sampled by adm2 region](/cephfs/covid/bham/raccoon-dog/2020-07-03/analysis/7/adm1_reports/Wales/figures/Wales_map_1.png){#map }
+![Map showing the number of sequences sampled by adm2 region](figures/Wales_map_1.png){#map }
 
 
 
@@ -154,7 +161,7 @@ There are some sequences with locations that are not matched to real Admin2 regi
 
 Other results modules for UK lineage analysis can be added in here if required.
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 ## Appendix
 
@@ -171,93 +178,227 @@ Below are the raw data tables for each of the figures in the report.
 **Table S1** Description of all lineages that have been circulating in the last month, and have more than 5 sequences.
 
 
-| Lineage name   | Date range     |   Number of sequences | Global lineage                                          |   Time since last sample (days) | Activity score   |
-|:---------------|:---------------|----------------------:|:--------------------------------------------------------|--------------------------------:|:-----------------|
-| UK5            | Mar-01, Jun-27 |                  1168 | B.1.1.16, B.1.1.p16, B.1.1.p11, B.1.1, B.1.1.1, B.1.1.2 |                               1 | 0.0152           |
-| UK61           | Mar-08, May-27 |                   419 | B.3, B                                                  |                              32 | 0.0056           |
-| UK42           | Feb-27, Jun-21 |                   368 | B.1.35, B.1, B.1.p11, B.1.71                            |                               7 | 0.0123           |
-| UK632          | Mar-25, Jun-10 |                   232 | B.1.1                                                   |                              18 | 0.0161           |
-| UK3021         | Mar-29, Jun-09 |                   225 | B.1                                                     |                              19 | 0.019            |
-| UK495          | Apr-01, Jun-03 |                   124 | B.1.p11                                                 |                              25 | 0.0214           |
-| UK5741         | Mar-17, Jun-12 |                   104 | B.1.44, B.1                                             |                              16 | 0.0201           |
-| UK822          | Apr-14, Jun-11 |                   102 | B.1                                                     |                              17 | 0.0334           |
-| UK5322         | Apr-08, Jun-04 |                    86 | B.1.1                                                   |                              24 | 0.0328           |
-| UK605          | Mar-17, May-24 |                    79 | B.1.1, B.1.1.10                                         |                              35 | 0.0182           |
-| UK2464         | Mar-26, Jun-18 |                    78 | B.1.p11                                                 |                              10 | 0.0182           |
-| UK2735         | Mar-27, Jun-10 |                    76 | B.1.1                                                   |                              18 | 0.0172           |
-| UK86           | Mar-30, May-30 |                    61 | B.1                                                     |                              29 | 0.0424           |
-| UK107          | Mar-14, Jun-02 |                    61 | B.2.1, B                                                |                              26 | 0.0031           |
-| UK199          | Mar-18, Jun-22 |                    55 | B.1, B.1.5                                              |                               6 | 0.0358           |
-| UK2916         | Mar-25, Jun-10 |                    54 | B.1                                                     |                              18 | 0.0189           |
-| UK5676         | Mar-15, May-27 |                    54 | B.2                                                     |                              32 | 0.005            |
-| UK370          | Mar-19, Jun-16 |                    50 | B.1.1.10                                                |                              12 | 0.0447           |
-| UK2200         | Mar-15, Jun-06 |                    35 | B.1.5.6, B.1.5                                          |                              22 | 0.0421           |
-| UK109          | Mar-15, Jun-12 |                    35 | B.1.5                                                   |                              16 | 0.0145           |
-| UK187          | Mar-30, Apr-30 |                    29 | B.1                                                     |                              59 | 0.0133           |
-| UK479          | Apr-07, Jun-12 |                    28 | B.1.1                                                   |                              16 | 0.1288           |
-| UK5561         | Mar-18, May-24 |                    23 | B.2.2                                                   |                              35 | 0.0128           |
-| UK600          | Apr-01, May-26 |                    22 | B.1.1                                                   |                              33 | 0.0667           |
-| UK167          | Mar-25, Jun-07 |                    21 | B.1                                                     |                              21 | 0.0139           |
-| UK179          | Mar-17, May-07 |                    20 | B.1.1.p11                                               |                              52 | 0.0272           |
-| UK567          | Mar-30, May-15 |                    20 | B.2.2                                                   |                              44 | 0.0439           |
-| UK206          | Apr-02, May-20 |                    19 | B.1                                                     |                              39 | 0.0684           |
-| UK2913         | Mar-16, Jun-16 |                    18 | B.1, B.1.p11                                            |                              12 | 0.0159           |
-| UK116          | May-08, Jun-02 |                    16 | B.1                                                     |                              26 | 0.1122           |
-| UK695          | Mar-25, Apr-12 |                    16 | B.1.67                                                  |                              77 | 0.0156           |
-| UK72           | Mar-11, Jun-02 |                    15 | B                                                       |                              26 | 0.0133           |
-| UK202          | Apr-24, Jun-04 |                    14 | B.1.1                                                   |                              24 | 0.1493           |
-| UK425          | Mar-28, May-15 |                    14 | B.1.1                                                   |                              44 | 0.0642           |
-| UK3045         | May-15, Jun-28 |                    14 | B.1.1, B.1.1.p11                                        |                               0 | active today     |
-| UK64           | Mar-25, May-05 |                    12 | B.1                                                     |                              54 | 0.0238           |
-| UK89           | Apr-10, Jun-22 |                    12 | B.1.1.9                                                 |                               6 | 0.2246           |
-| UK317          | Mar-19, Apr-20 |                    12 | B.3                                                     |                              69 | 0.022            |
-| UK607          | Mar-11, May-18 |                    12 | B                                                       |                              41 | 0.0272           |
-| UK15           | Mar-17, May-06 |                    11 | B.1.1                                                   |                              53 | 0.0069           |
-| UK327          | Apr-05, May-05 |                    10 | B.1                                                     |                              54 | 0.0617           |
-| UK275          | Mar-31, Apr-27 |                     8 | B.1.13                                                  |                              62 | 0.0152           |
-| UK633          | Apr-03, Apr-28 |                     8 | B.1.1.p16, B.1.1.16                                     |                              61 | 0.0585           |
-| UK696          | Apr-10, May-01 |                     8 | B.1.5, B.1                                              |                              58 | 0.0517           |
-| UK5498         | Apr-01, May-28 |                     7 | B.2                                                     |                              31 | 0.0297           |
-| UK119          | Mar-30, Apr-24 |                     7 | B.2.5                                                   |                              65 | 0.0188           |
-| UK462          | Apr-01, Jun-09 |                     7 | B.1                                                     |                              19 | 0.1171           |
-| UK451          | Mar-25, Apr-05 |                     6 | B.2.1                                                   |                              84 | 0.0317           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| Lineage name   | Date range     | Total    | Global lineage                                         | Time since last sample   | Activity score   |
++================+================+==========+========================================================+==========================+==================+
+| UK5            | Mar-17, Sep-05 | 956 taxa | B.1.1.10, B.1.1, B.1.1.21, B.1.1.16, B.1.1.30, B.1.1.2 | 2 days                   | 0.0089           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK61           | Mar-08, Aug-03 | 553 taxa | B, B.3, B.6                                            | 35 days                  | 0.007            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK175          | Feb-27, Aug-21 | 547 taxa | B.1.71, B.1, B.1.5, B.1.35                             | 17 days                  | 0.004            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1091         | Mar-20, Jul-15 | 536 taxa | B.1.1, B.1.1.2                                         | 54 days                  | 0.0039           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1037         | Mar-25, Aug-19 | 411 taxa | B.1.1, B.1.1.30                                        | 19 days                  | 0.0125           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK699          | Mar-24, Jun-30 | 313 taxa | B.1, B.1.5, B.1.5.9                                    | 69 days                  | 0.0048           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK5741         | Mar-17, Jul-15 | 165 taxa | B.1, B.1.5, B.1.122, B.1.44, B.1.35                    | 54 days                  | 0.0054           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK822          | Apr-14, Jun-30 | 146 taxa | B.1, B.1.120                                           | 69 days                  | 0.0077           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1133         | Apr-08, Jun-15 | 136 taxa | B.1.1.29, B.1.1                                        | 84 days                  | 0.0059           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1065         | Apr-04, Jul-22 | 132 taxa | B.1.1                                                  | 47 days                  | 0.0165           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1119         | Apr-07, Jul-16 | 121 taxa | B.1.1                                                  | 53 days                  | 0.0153           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1683         | Mar-12, Aug-21 | 106 taxa | B.1.1.1, B.1.1                                         | 17 days                  | 0.012            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK992          | Mar-28, Jun-18 | 103 taxa | B.1, B.1.11                                            | 81 days                  | 0.0097           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK2464         | Mar-17, Jun-29 | 102 taxa | B.1                                                    | 70 days                  | 0.0023           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1076         | Mar-17, Aug-22 | 96 taxa  | B.1.1                                                  | 16 days                  | 0.0401           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1951         | Mar-18, Aug-20 | 89 taxa  | B.1.1.1, B.1.1                                         | 18 days                  | 0.0044           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK2916         | Mar-13, Aug-11 | 84 taxa  | B.1, B.1.98                                            | 27 days                  | 0.0119           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK805          | May-14, Jul-21 | 78 taxa  | B.1.1                                                  | 48 days                  | 0.0243           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK107          | Mar-17, Jul-20 | 75 taxa  | B.2, B.2.1                                             | 49 days                  | 0.0018           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK5676         | Mar-15, Jul-22 | 72 taxa  | B.2                                                    | 47 days                  | 0.0044           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1186         | Aug-03, Sep-07 | 71 taxa  | B.1.79, B.1                                            | 0 days                   | active today     |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK199          | Mar-17, Aug-26 | 66 taxa  | B.1, B.1.5                                             | 12 days                  | 0.0186           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK2067         | Mar-23, Aug-21 | 65 taxa  | B.1.1                                                  | 17 days                  | 0.1326           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK356          | Apr-07, Jul-13 | 58 taxa  | B.1, B.1.11                                            | 56 days                  | 0.0354           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK692          | Apr-23, Jun-08 | 49 taxa  | B.1, B.1.5, B.1.35                                     | 91 days                  | 0.0105           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK719          | Mar-25, Aug-28 | 46 taxa  | B.1.1, B.1.1.10                                        | 10 days                  | 0.0727           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK109          | Mar-15, Aug-21 | 43 taxa  | B.1.99, B.1                                            | 17 days                  | 0.0101           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK945          | Mar-23, Aug-30 | 40 taxa  | B.1.1                                                  | 8 days                   | 0.0553           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK86           | Mar-24, May-28 | 39 taxa  | B.1                                                    | 102 days                 | 0.0127           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1205         | Mar-04, Aug-25 | 38 taxa  | B.1.1.1, B.1.1                                         | 13 days                  | 0.0124           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1060         | Mar-12, Aug-14 | 36 taxa  | B.1.1                                                  | 24 days                  | 0.0208           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1913         | Apr-03, May-14 | 35 taxa  | B.1.1                                                  | 116 days                 | 0.0101           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK597          | Mar-27, Aug-31 | 35 taxa  | B.1, B.1.5, B.1.35                                     | 7 days                   | 0.1877           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK187          | Mar-30, Jun-05 | 34 taxa  | B.1                                                    | 94 days                  | 0.0097           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK167          | Mar-24, Jul-15 | 32 taxa  | B.1                                                    | 54 days                  | 0.0055           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK2200         | Mar-15, Aug-26 | 31 taxa  | B.1, B.1.5, B.1.5.6                                    | 12 days                  | 0.0877           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK336          | Mar-29, Jul-22 | 30 taxa  | B.1                                                    | 47 days                  | 0.003            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK387          | Mar-15, Jul-31 | 29 taxa  | B.1                                                    | 38 days                  | 0.0209           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK2913         | Mar-16, Jul-15 | 28 taxa  | B.1, B.1.11                                            | 54 days                  | 0.0033           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK345          | Mar-30, May-15 | 28 taxa  | B.2.2                                                  | 115 days                 | 0.009            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1487         | Mar-24, Jun-24 | 27 taxa  | B.1, B.1.5                                             | 75 days                  | 0.0122           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK315          | Mar-16, Aug-02 | 27 taxa  | B.2, B.2.2                                             | 36 days                  | 0.0191           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK59           | Mar-14, Apr-28 | 26 taxa  | B.3                                                    | 132 days                 | 0.0049           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK607          | Mar-11, Jun-16 | 25 taxa  | B                                                      | 83 days                  | 0.0124           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1195         | Apr-23, Sep-06 | 24 taxa  | B.1.1, B.1.1.25                                        | 1 days                   | 0.363            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK695          | Mar-25, Apr-12 | 22 taxa  | B.1, B.1.67                                            | 148 days                 | 0.0058           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1026         | Mar-28, May-15 | 21 taxa  | B.1.1                                                  | 115 days                 | 0.013            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK508          | Mar-19, Apr-30 | 21 taxa  | B.1, B.1.35, B.1.5.6                                   | 130 days                 | 0.0098           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK72           | Mar-11, Jun-23 | 21 taxa  | B.2.1, B                                               | 76 days                  | 0.004            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1235         | Mar-30, May-07 | 19 taxa  | B.1.1                                                  | 123 days                 | 0.0172           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1044         | Mar-24, May-01 | 17 taxa  | B.1, B.1.5                                             | 129 days                 | 0.0173           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK151          | Mar-19, Apr-20 | 17 taxa  | B.3                                                    | 140 days                 | 0.0086           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK402          | Apr-10, Jul-15 | 17 taxa  | B.1                                                    | 54 days                  | 0.0382           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1323         | Apr-10, Aug-19 | 16 taxa  | B.1.1                                                  | 19 days                  | 0.0497           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK600          | Mar-17, Jul-13 | 15 taxa  | B.1.1, B.1                                             | 56 days                  | 0.0079           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK893          | Mar-25, May-05 | 14 taxa  | B.1                                                    | 125 days                 | 0.0083           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1684         | Apr-08, Jul-04 | 13 taxa  | B.1.1.1                                                | 65 days                  | 0.0052           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1939         | Mar-25, Apr-20 | 13 taxa  | B.1.1                                                  | 140 days                 | 0.0143           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1242         | Apr-22, Jun-17 | 12 taxa  | B.1.1                                                  | 82 days                  | 0.0244           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK461          | Aug-16, Aug-30 | 11 taxa  | B.1                                                    | 8 days                   | 0.0449           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1535         | Mar-27, Aug-26 | 10 taxa  | B.1.1                                                  | 12 days                  | 0.0349           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK718          | Apr-11, Sep-05 | 10 taxa  | B.1.1                                                  | 2 days                   | 1.2895           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK501          | Apr-01, Aug-20 | 10 taxa  | B.1                                                    | 18 days                  | 0.0688           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK275          | Mar-31, Jun-02 | 9 taxa   | B.1, B.1.13                                            | 97 days                  | 0.0127           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK347          | Apr-10, May-01 | 9 taxa   | B.1                                                    | 129 days                 | 0.0203           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK449          | Mar-27, Apr-26 | 8 taxa   | B.1, B.1.5, B.1.120                                    | 134 days                 | 0.032            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK5498         | Mar-27, Jul-19 | 8 taxa   | B.2                                                    | 50 days                  | 0.0161           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK4            | Mar-17, Apr-29 | 8 taxa   | B                                                      | 131 days                 | 0.0026           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK119          | Mar-30, May-12 | 8 taxa   | B.2                                                    | 118 days                 | 0.0099           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1155         | Mar-07, Jun-26 | 8 taxa   | B.1.1                                                  | 73 days                  | 0.0158           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1157         | Mar-17, Jul-23 | 8 taxa   | B.1.1.7, B.1.1                                         | 46 days                  | 0.0213           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK698          | Apr-01, Aug-26 | 8 taxa   | B.1.1                                                  | 12 days                  | 0.0554           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK139          | Mar-14, Mar-26 | 7 taxa   | B.2.1                                                  | 165 days                 | 0.0121           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK527          | Mar-24, Jun-20 | 7 taxa   | B.1                                                    | 79 days                  | 0.0283           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1987         | Mar-20, May-01 | 7 taxa   | B.1.1                                                  | 129 days                 | 0.0326           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK462          | Apr-01, Jun-09 | 7 taxa   | B.1                                                    | 90 days                  | 0.024            |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1636         | Mar-27, Jun-03 | 7 taxa   | B.1.1                                                  | 96 days                  | 0.0885           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK993          | Mar-27, Apr-14 | 7 taxa   | B.1.1                                                  | 146 days                 | 0.0205           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1352         | Mar-25, Apr-05 | 7 taxa   | B.2.1                                                  | 155 days                 | 0.0147           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK184          | Mar-25, Apr-01 | 6 taxa   | B.2.1                                                  | 159 days                 | 0.0178           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1347         | May-05, Jun-04 | 6 taxa   | B.1.1                                                  | 95 days                  | 0.0263           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
+| UK1126         | Mar-19, Aug-17 | 6 taxa   | B.1.1                                                  | 21 days                  | 0.0373           |
++----------------+----------------+----------+--------------------------------------------------------+--------------------------+------------------+
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
 
 
-|    | Centre   |   Lag in days |
-|---:|:---------|--------------:|
-|  0 | PHWC     |             5 |
 
-\pagebreak
+---------------------------------------------------------------------------NameError                                 Traceback (most recent call last)<ipython-input-1-9cc5d2177dab> in <module>
+      1 if not pillar2:
+----> 2     lag_df = pd.DataFrame(lag_dict)
+      3     print(lag_df.to_markdown())
+      4 else:
+      5     print("Table S2 is not appropriate for this report and so has been omitted.")
+NameError: name 'lag_dict' is not defined
+
+<div style="page-break-after: always"></div>
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 
 
-| Week commencing   |   UK5 |   UK42 |   UK632 |   UK3021 |   UK495 |   UK5741 |   UK822 |   UK5322 |   UK2464 |   UK2735 |
-|:------------------|------:|-------:|--------:|---------:|--------:|---------:|--------:|---------:|---------:|---------:|
-| 2020-02-23        |     0 |      1 |       0 |        0 |       0 |        0 |       0 |        0 |        0 |        0 |
-| 2020-03-01        |     2 |      1 |       0 |        0 |       0 |        0 |       0 |        0 |        0 |        0 |
-| 2020-03-08        |     1 |      1 |       0 |        0 |       0 |        0 |       0 |        0 |        0 |        0 |
-| 2020-03-15        |     2 |      2 |       0 |        0 |       0 |        1 |       0 |        0 |        0 |        0 |
-| 2020-03-22        |    11 |      6 |       1 |        0 |       0 |        2 |       0 |        0 |        3 |        1 |
-| 2020-03-29        |    21 |     14 |       8 |        7 |       2 |        7 |       0 |        0 |        8 |        9 |
-| 2020-04-05        |    22 |     19 |       8 |       11 |       6 |        5 |       0 |        1 |        7 |        9 |
-| 2020-04-12        |    21 |     12 |       6 |        4 |       3 |        4 |       2 |        0 |        6 |        4 |
-| 2020-04-19        |    18 |      8 |       5 |        5 |       3 |        5 |       2 |        1 |        5 |        1 |
-| 2020-04-26        |    22 |     11 |       9 |        4 |      12 |        7 |       6 |        7 |        4 |        4 |
-| 2020-05-03        |    19 |      2 |       4 |        6 |       1 |        4 |       5 |        4 |        2 |        4 |
-| 2020-05-10        |    18 |      6 |       6 |        5 |       4 |        1 |       4 |        4 |        1 |        4 |
-| 2020-05-17        |    12 |      4 |       5 |        4 |       3 |        1 |       7 |        6 |        0 |        1 |
-| 2020-05-24        |    16 |      2 |       5 |        4 |       2 |        0 |       3 |        3 |        0 |        3 |
-| 2020-05-31        |     9 |      1 |       5 |        3 |       2 |        1 |       1 |        2 |        0 |        1 |
-| 2020-06-07        |     4 |      0 |       2 |        3 |       0 |        0 |       2 |        0 |        0 |        0 |
-| 2020-06-14        |     2 |      0 |       0 |        0 |       0 |        0 |       0 |        0 |        0 |        0 |
-| 2020-06-21        |     2 |      0 |       0 |        0 |       0 |        0 |       0 |        0 |        0 |        0 |
+| Week commencing   |   UK5 |   UK175 |   UK1037 |   UK1683 |   UK1076 |   UK1951 |   UK2916 |   UK1186 |   UK199 |   UK2067 |
+|:------------------|------:|--------:|---------:|---------:|---------:|---------:|---------:|---------:|--------:|---------:|
+| 2020-02-23        |     0 |       1 |        0 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-03-01        |     0 |       1 |        0 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-03-08        |     0 |       1 |        0 |        1 |        0 |        0 |        1 |        0 |       0 |        0 |
+| 2020-03-15        |     4 |       3 |        0 |        0 |        2 |        1 |        0 |        0 |       1 |        0 |
+| 2020-03-22        |    10 |       7 |        1 |        2 |        4 |        1 |        2 |        0 |       3 |        2 |
+| 2020-03-29        |    22 |      15 |        8 |        8 |       10 |        4 |        5 |        0 |      10 |        4 |
+| 2020-04-05        |    21 |      19 |        7 |       12 |       11 |        5 |        7 |        0 |       7 |        5 |
+| 2020-04-12        |    21 |      17 |        6 |        7 |        3 |        2 |        6 |        0 |       6 |        1 |
+| 2020-04-19        |    19 |       9 |        6 |        3 |        5 |        4 |        5 |        0 |       6 |        1 |
+| 2020-04-26        |    20 |      11 |        6 |        5 |        1 |        7 |        6 |        0 |       1 |        4 |
+| 2020-05-03        |    15 |       6 |        4 |        1 |        1 |        2 |        1 |        0 |       1 |        3 |
+| 2020-05-10        |    17 |       7 |        5 |        1 |        1 |        4 |        1 |        0 |       3 |        2 |
+| 2020-05-17        |    13 |       7 |        5 |        2 |        1 |        4 |        0 |        0 |       1 |        1 |
+| 2020-05-24        |    10 |       6 |        6 |        3 |        1 |        2 |        0 |        0 |       0 |        3 |
+| 2020-05-31        |    11 |       1 |        5 |        1 |        0 |        2 |        2 |        0 |       0 |        1 |
+| 2020-06-07        |     6 |       2 |        6 |        0 |        0 |        3 |        0 |        0 |       1 |        0 |
+| 2020-06-14        |     4 |       2 |        7 |        0 |        0 |        1 |        0 |        0 |       0 |        0 |
+| 2020-06-21        |     3 |       1 |        5 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-06-28        |     1 |       1 |        4 |        0 |        0 |        1 |        0 |        0 |       0 |        0 |
+| 2020-07-05        |     0 |       0 |        3 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-07-12        |     0 |       0 |        4 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-07-19        |     2 |       0 |        4 |        0 |        0 |        0 |        0 |        0 |       0 |        0 |
+| 2020-07-26        |     0 |       0 |        5 |        0 |        1 |        0 |        0 |        0 |       0 |        0 |
+| 2020-08-02        |     1 |       0 |        4 |        0 |        0 |        0 |        0 |        2 |       0 |        0 |
+| 2020-08-09        |     1 |       0 |        2 |        1 |        0 |        0 |        1 |        0 |       0 |        0 |
+| 2020-08-16        |     1 |       0 |        1 |        0 |        1 |        0 |        0 |        6 |       0 |        0 |
+| 2020-08-23        |     0 |       0 |        0 |        0 |        0 |        0 |        0 |        4 |       0 |        0 |
+| 2020-08-30        |     1 |       0 |        0 |        0 |        0 |        0 |        0 |        4 |       0 |        0 |
+| 2020-09-06        |     0 |       0 |        0 |        0 |        0 |        0 |        0 |        2 |       0 |        0 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
+
 
 
 Table S4 is not appropriate for this report and so has been omitted.
@@ -265,7 +406,8 @@ Table S4 is not appropriate for this report and so has been omitted.
 
 
 
-\pagebreak
+
+<div style="page-break-after: always"></div>
 
 **Table S5** Raw data for figure five showing when lineages started per day, divided by singletons and non-singletons
 
@@ -284,66 +426,93 @@ Table S4 is not appropriate for this report and so has been omitted.
 | 2020-02-28 |                            0 |                                3 |       3 |
 | 2020-02-29 |                            0 |                                1 |       1 |
 | 2020-03-01 |                            0 |                                2 |       2 |
-| 2020-03-02 |                            0 |                                3 |       3 |
-| 2020-03-03 |                            0 |                                2 |       2 |
-| 2020-03-04 |                            0 |                                1 |       1 |
+| 2020-03-02 |                            0 |                                6 |       6 |
+| 2020-03-03 |                            0 |                                3 |       3 |
+| 2020-03-04 |                            0 |                                3 |       3 |
 | 2020-03-05 |                            0 |                                2 |       2 |
 | 2020-03-06 |                            0 |                                6 |       6 |
-| 2020-03-07 |                            0 |                                3 |       3 |
-| 2020-03-08 |                            0 |                                2 |       2 |
-| 2020-03-09 |                            0 |                                6 |       6 |
-| 2020-03-10 |                            0 |                                3 |       3 |
-| 2020-03-11 |                            0 |                                5 |       5 |
-| 2020-03-12 |                            0 |                                7 |       7 |
-| 2020-03-13 |                            0 |                                4 |       4 |
-| 2020-03-15 |                            0 |                                1 |       1 |
-| 2020-03-17 |                            2 |                                5 |       7 |
-| 2020-03-18 |                            0 |                                4 |       4 |
-| 2020-03-19 |                            2 |                                4 |       6 |
-| 2020-03-20 |                            2 |                                8 |      10 |
-| 2020-03-21 |                            0 |                                3 |       3 |
-| 2020-03-22 |                            0 |                                4 |       4 |
-| 2020-03-23 |                            0 |                                6 |       6 |
-| 2020-03-24 |                            0 |                                1 |       1 |
-| 2020-03-25 |                            2 |                                3 |       5 |
-| 2020-03-26 |                            0 |                                1 |       1 |
-| 2020-03-27 |                            1 |                                3 |       4 |
-| 2020-03-28 |                            0 |                                7 |       7 |
-| 2020-03-29 |                            1 |                                1 |       2 |
-| 2020-03-30 |                            3 |                                3 |       6 |
-| 2020-03-31 |                            4 |                                6 |      10 |
-| 2020-04-01 |                            5 |                                4 |       9 |
-| 2020-04-02 |                            3 |                                3 |       6 |
-| 2020-04-03 |                            4 |                                2 |       6 |
-| 2020-04-04 |                            4 |                                2 |       6 |
-| 2020-04-05 |                            2 |                                3 |       5 |
-| 2020-04-06 |                            4 |                                3 |       7 |
-| 2020-04-07 |                            2 |                                2 |       4 |
-| 2020-04-08 |                            1 |                                1 |       2 |
-| 2020-04-09 |                            1 |                                1 |       2 |
-| 2020-04-10 |                            1 |                                1 |       2 |
-| 2020-04-12 |                            0 |                                1 |       1 |
-| 2020-04-13 |                            3 |                                0 |       3 |
-| 2020-04-14 |                            2 |                                1 |       3 |
-| 2020-04-15 |                            0 |                                1 |       1 |
-| 2020-04-16 |                            1 |                                0 |       1 |
-| 2020-04-18 |                            1 |                                1 |       2 |
-| 2020-04-21 |                            1 |                                0 |       1 |
-| 2020-04-22 |                            1 |                                1 |       2 |
-| 2020-04-23 |                            0 |                                1 |       1 |
-| 2020-04-25 |                            0 |                                1 |       1 |
-| 2020-04-27 |                            2 |                                0 |       2 |
-| 2020-05-02 |                            1 |                                1 |       2 |
-| 2020-05-04 |                            0 |                                1 |       1 |
-| 2020-05-08 |                            2 |                                0 |       2 |
+| 2020-03-07 |                            0 |                                4 |       4 |
+| 2020-03-08 |                            0 |                                4 |       4 |
+| 2020-03-09 |                            0 |                                5 |       5 |
+| 2020-03-10 |                            0 |                                6 |       6 |
+| 2020-03-11 |                            1 |                               10 |      11 |
+| 2020-03-12 |                            1 |                               14 |      15 |
+| 2020-03-13 |                            2 |                                7 |       9 |
+| 2020-03-14 |                            0 |                                5 |       5 |
+| 2020-03-15 |                            1 |                                5 |       6 |
+| 2020-03-16 |                            0 |                                4 |       4 |
+| 2020-03-17 |                            0 |                               14 |      14 |
+| 2020-03-18 |                            1 |                                8 |       9 |
+| 2020-03-19 |                            2 |                               10 |      12 |
+| 2020-03-20 |                            0 |                                8 |       8 |
+| 2020-03-21 |                            0 |                                6 |       6 |
+| 2020-03-22 |                            1 |                                2 |       3 |
+| 2020-03-23 |                            1 |                               12 |      13 |
+| 2020-03-24 |                            1 |                                7 |       8 |
+| 2020-03-25 |                            2 |                               13 |      15 |
+| 2020-03-26 |                            1 |                               13 |      14 |
+| 2020-03-27 |                            4 |                               11 |      15 |
+| 2020-03-28 |                            4 |                               11 |      15 |
+| 2020-03-29 |                            1 |                                5 |       6 |
+| 2020-03-30 |                            3 |                                7 |      10 |
+| 2020-03-31 |                            5 |                                5 |      10 |
+| 2020-04-01 |                            4 |                               11 |      15 |
+| 2020-04-02 |                            3 |                                4 |       7 |
+| 2020-04-03 |                            4 |                               10 |      14 |
+| 2020-04-04 |                            4 |                               10 |      14 |
+| 2020-04-05 |                            5 |                                4 |       9 |
+| 2020-04-06 |                            7 |                                7 |      14 |
+| 2020-04-07 |                            4 |                                5 |       9 |
+| 2020-04-08 |                            2 |                                5 |       7 |
+| 2020-04-09 |                            2 |                                2 |       4 |
+| 2020-04-10 |                            0 |                                4 |       4 |
+| 2020-04-11 |                            1 |                                1 |       2 |
+| 2020-04-12 |                            1 |                                2 |       3 |
+| 2020-04-13 |                            1 |                                3 |       4 |
+| 2020-04-14 |                            0 |                                5 |       5 |
+| 2020-04-15 |                            1 |                                4 |       5 |
+| 2020-04-16 |                            0 |                                1 |       1 |
+| 2020-04-17 |                            1 |                                1 |       2 |
+| 2020-04-18 |                            0 |                                1 |       1 |
+| 2020-04-19 |                            1 |                                2 |       3 |
+| 2020-04-20 |                            2 |                                2 |       4 |
+| 2020-04-21 |                            1 |                                2 |       3 |
+| 2020-04-22 |                            5 |                                1 |       6 |
+| 2020-04-23 |                            1 |                                3 |       4 |
+| 2020-04-24 |                            3 |                                1 |       4 |
+| 2020-04-25 |                            1 |                                1 |       2 |
+| 2020-04-27 |                            1 |                                1 |       2 |
+| 2020-04-30 |                            1 |                                1 |       2 |
+| 2020-05-01 |                            0 |                                1 |       1 |
+| 2020-05-04 |                            1 |                                2 |       3 |
+| 2020-05-05 |                            2 |                                1 |       3 |
+| 2020-05-06 |                            1 |                                0 |       1 |
+| 2020-05-13 |                            1 |                                0 |       1 |
 | 2020-05-14 |                            1 |                                0 |       1 |
-| 2020-05-18 |                            0 |                                1 |       1 |
-| 2020-05-19 |                            0 |                                1 |       1 |
-| 2020-05-22 |                            1 |                                0 |       1 |
-| 2020-05-23 |                            1 |                                0 |       1 |
-| 2020-05-25 |                            1 |                                0 |       1 |
+| 2020-05-15 |                            1 |                                0 |       1 |
+| 2020-05-17 |                            1 |                                0 |       1 |
+| 2020-05-18 |                            1 |                                0 |       1 |
+| 2020-05-23 |                            2 |                                0 |       2 |
+| 2020-05-29 |                            0 |                                1 |       1 |
+| 2020-06-05 |                            1 |                                0 |       1 |
+| 2020-06-08 |                            0 |                                1 |       1 |
+| 2020-06-11 |                            0 |                                1 |       1 |
+| 2020-06-14 |                            0 |                                1 |       1 |
+| 2020-06-21 |                            0 |                                1 |       1 |
+| 2020-07-03 |                            0 |                                1 |       1 |
+| 2020-07-05 |                            0 |                                1 |       1 |
+| 2020-07-06 |                            0 |                                1 |       1 |
+| 2020-07-14 |                            0 |                                1 |       1 |
+| 2020-07-21 |                            0 |                                1 |       1 |
+| 2020-07-22 |                            0 |                                1 |       1 |
+| 2020-08-02 |                            0 |                                1 |       1 |
+| 2020-08-03 |                            0 |                                2 |       2 |
+| 2020-08-05 |                            0 |                                1 |       1 |
+| 2020-08-10 |                            0 |                                3 |       3 |
+| 2020-08-11 |                            0 |                                1 |       1 |
+| 2020-08-19 |                            0 |                                1 |       1 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S6** Raw data for figure six showing the number of sequences taken over time.
 
@@ -351,141 +520,216 @@ Table S4 is not appropriate for this report and so has been omitted.
 | Day        |   Wales |
 |:-----------|--------:|
 | 2020-02-27 |       1 |
-| 2020-03-01 |       1 |
 | 2020-03-04 |       1 |
 | 2020-03-07 |       2 |
 | 2020-03-08 |       2 |
-| 2020-03-09 |       1 |
-| 2020-03-10 |       5 |
+| 2020-03-09 |       2 |
+| 2020-03-10 |       6 |
 | 2020-03-11 |      10 |
-| 2020-03-12 |       7 |
-| 2020-03-13 |       8 |
-| 2020-03-14 |      10 |
-| 2020-03-15 |      15 |
-| 2020-03-16 |      22 |
-| 2020-03-17 |      32 |
-| 2020-03-18 |      24 |
-| 2020-03-19 |      30 |
-| 2020-03-20 |      12 |
-| 2020-03-23 |       1 |
-| 2020-03-24 |      25 |
-| 2020-03-25 |      91 |
-| 2020-03-26 |      18 |
-| 2020-03-27 |      29 |
-| 2020-03-28 |      17 |
-| 2020-03-29 |      22 |
-| 2020-03-30 |      75 |
-| 2020-03-31 |     141 |
-| 2020-04-01 |     131 |
-| 2020-04-02 |      99 |
-| 2020-04-03 |     111 |
-| 2020-04-04 |     128 |
-| 2020-04-05 |      65 |
-| 2020-04-06 |     167 |
-| 2020-04-07 |     185 |
-| 2020-04-08 |     126 |
-| 2020-04-09 |      83 |
-| 2020-04-10 |     120 |
-| 2020-04-11 |      73 |
-| 2020-04-12 |      87 |
-| 2020-04-13 |      77 |
-| 2020-04-14 |     123 |
-| 2020-04-15 |      80 |
-| 2020-04-16 |      74 |
-| 2020-04-17 |      47 |
-| 2020-04-18 |      43 |
-| 2020-04-19 |      37 |
-| 2020-04-20 |      71 |
-| 2020-04-21 |      41 |
-| 2020-04-22 |      21 |
-| 2020-04-23 |      31 |
-| 2020-04-24 |      70 |
-| 2020-04-25 |      41 |
-| 2020-04-26 |      19 |
-| 2020-04-27 |      75 |
-| 2020-04-28 |      51 |
-| 2020-04-29 |      52 |
-| 2020-04-30 |      56 |
-| 2020-05-01 |      46 |
-| 2020-05-02 |      51 |
-| 2020-05-03 |      20 |
-| 2020-05-04 |      40 |
-| 2020-05-05 |      34 |
-| 2020-05-06 |      53 |
-| 2020-05-07 |      53 |
-| 2020-05-08 |      32 |
-| 2020-05-09 |      41 |
-| 2020-05-10 |      38 |
-| 2020-05-11 |      70 |
-| 2020-05-12 |      44 |
-| 2020-05-13 |      53 |
-| 2020-05-14 |      28 |
-| 2020-05-15 |      33 |
-| 2020-05-16 |      18 |
-| 2020-05-17 |      19 |
-| 2020-05-18 |      36 |
-| 2020-05-19 |      40 |
-| 2020-05-20 |      42 |
-| 2020-05-21 |      26 |
-| 2020-05-22 |      32 |
-| 2020-05-23 |      25 |
-| 2020-05-24 |      18 |
-| 2020-05-25 |      23 |
-| 2020-05-26 |      31 |
-| 2020-05-27 |      35 |
-| 2020-05-28 |      25 |
-| 2020-05-29 |      25 |
-| 2020-05-30 |      15 |
-| 2020-05-31 |      11 |
-| 2020-06-01 |      13 |
-| 2020-06-02 |       6 |
-| 2020-06-03 |      16 |
-| 2020-06-04 |      10 |
-| 2020-06-05 |       3 |
-| 2020-06-06 |       2 |
-| 2020-06-07 |       1 |
-| 2020-06-08 |       3 |
-| 2020-06-09 |       8 |
-| 2020-06-10 |       8 |
-| 2020-06-11 |       4 |
-| 2020-06-12 |       3 |
-| 2020-06-19 |       1 |
-| 2020-06-20 |       1 |
-| 2020-06-26 |       2 |
-| 2020-06-27 |       4 |
-| 2020-06-28 |       1 |
+| 2020-03-12 |      16 |
+| 2020-03-13 |      13 |
+| 2020-03-14 |      13 |
+| 2020-03-15 |      18 |
+| 2020-03-16 |      30 |
+| 2020-03-17 |      40 |
+| 2020-03-18 |      30 |
+| 2020-03-19 |      36 |
+| 2020-03-20 |      16 |
+| 2020-03-21 |       3 |
+| 2020-03-22 |       1 |
+| 2020-03-23 |      12 |
+| 2020-03-24 |      79 |
+| 2020-03-25 |     179 |
+| 2020-03-26 |      60 |
+| 2020-03-27 |     109 |
+| 2020-03-28 |      69 |
+| 2020-03-29 |      68 |
+| 2020-03-30 |     133 |
+| 2020-03-31 |     176 |
+| 2020-04-01 |     179 |
+| 2020-04-02 |     124 |
+| 2020-04-03 |     150 |
+| 2020-04-04 |     179 |
+| 2020-04-05 |     112 |
+| 2020-04-06 |     202 |
+| 2020-04-07 |     197 |
+| 2020-04-08 |     136 |
+| 2020-04-09 |     101 |
+| 2020-04-10 |     143 |
+| 2020-04-11 |      84 |
+| 2020-04-12 |     101 |
+| 2020-04-13 |      84 |
+| 2020-04-14 |     133 |
+| 2020-04-15 |      87 |
+| 2020-04-16 |      81 |
+| 2020-04-17 |      71 |
+| 2020-04-18 |      86 |
+| 2020-04-19 |      88 |
+| 2020-04-20 |     140 |
+| 2020-04-21 |      64 |
+| 2020-04-22 |      44 |
+| 2020-04-23 |      80 |
+| 2020-04-24 |      92 |
+| 2020-04-25 |      60 |
+| 2020-04-26 |      44 |
+| 2020-04-27 |      84 |
+| 2020-04-28 |      57 |
+| 2020-04-29 |      60 |
+| 2020-04-30 |      64 |
+| 2020-05-01 |      55 |
+| 2020-05-02 |      57 |
+| 2020-05-03 |      21 |
+| 2020-05-04 |      54 |
+| 2020-05-05 |      62 |
+| 2020-05-06 |      63 |
+| 2020-05-07 |      57 |
+| 2020-05-08 |      35 |
+| 2020-05-09 |      43 |
+| 2020-05-10 |      43 |
+| 2020-05-11 |      77 |
+| 2020-05-12 |      47 |
+| 2020-05-13 |      61 |
+| 2020-05-14 |      59 |
+| 2020-05-15 |      79 |
+| 2020-05-16 |      46 |
+| 2020-05-17 |      36 |
+| 2020-05-18 |      65 |
+| 2020-05-19 |      77 |
+| 2020-05-20 |      66 |
+| 2020-05-21 |      44 |
+| 2020-05-22 |      48 |
+| 2020-05-23 |      35 |
+| 2020-05-24 |      22 |
+| 2020-05-25 |      41 |
+| 2020-05-26 |      44 |
+| 2020-05-27 |      42 |
+| 2020-05-28 |      42 |
+| 2020-05-29 |      39 |
+| 2020-05-30 |      26 |
+| 2020-05-31 |      20 |
+| 2020-06-01 |      25 |
+| 2020-06-02 |      16 |
+| 2020-06-03 |      27 |
+| 2020-06-04 |      20 |
+| 2020-06-05 |      18 |
+| 2020-06-06 |      14 |
+| 2020-06-07 |      11 |
+| 2020-06-08 |      11 |
+| 2020-06-09 |      22 |
+| 2020-06-10 |      23 |
+| 2020-06-11 |      33 |
+| 2020-06-12 |      34 |
+| 2020-06-13 |      29 |
+| 2020-06-14 |      27 |
+| 2020-06-15 |      37 |
+| 2020-06-16 |      41 |
+| 2020-06-17 |      20 |
+| 2020-06-18 |      21 |
+| 2020-06-19 |      26 |
+| 2020-06-20 |      13 |
+| 2020-06-21 |      25 |
+| 2020-06-22 |      17 |
+| 2020-06-23 |      34 |
+| 2020-06-24 |      11 |
+| 2020-06-25 |      19 |
+| 2020-06-26 |       5 |
+| 2020-06-27 |      50 |
+| 2020-06-28 |       3 |
+| 2020-06-29 |      13 |
+| 2020-06-30 |       8 |
+| 2020-07-01 |      10 |
+| 2020-07-02 |       6 |
+| 2020-07-03 |       4 |
+| 2020-07-04 |       3 |
+| 2020-07-06 |       3 |
+| 2020-07-07 |       2 |
+| 2020-07-08 |       2 |
+| 2020-07-09 |       1 |
+| 2020-07-10 |       5 |
+| 2020-07-11 |       1 |
+| 2020-07-12 |       1 |
+| 2020-07-13 |       7 |
+| 2020-07-14 |       1 |
+| 2020-07-15 |       7 |
+| 2020-07-16 |       4 |
+| 2020-07-17 |       3 |
+| 2020-07-18 |       4 |
+| 2020-07-19 |       5 |
+| 2020-07-20 |      11 |
+| 2020-07-21 |       5 |
+| 2020-07-22 |       8 |
+| 2020-07-23 |       7 |
+| 2020-07-24 |       7 |
+| 2020-07-25 |       7 |
+| 2020-07-26 |       3 |
+| 2020-07-27 |       1 |
+| 2020-07-28 |       5 |
+| 2020-07-29 |      11 |
+| 2020-07-30 |       3 |
+| 2020-07-31 |       1 |
+| 2020-08-01 |       6 |
+| 2020-08-03 |       5 |
+| 2020-08-04 |       1 |
+| 2020-08-05 |       1 |
+| 2020-08-06 |       3 |
+| 2020-08-07 |       3 |
+| 2020-08-09 |       1 |
+| 2020-08-10 |       6 |
+| 2020-08-11 |       6 |
+| 2020-08-12 |       2 |
+| 2020-08-13 |       1 |
+| 2020-08-14 |       6 |
+| 2020-08-15 |       1 |
+| 2020-08-16 |       8 |
+| 2020-08-17 |       3 |
+| 2020-08-18 |      21 |
+| 2020-08-19 |       6 |
+| 2020-08-20 |       9 |
+| 2020-08-21 |       8 |
+| 2020-08-24 |       3 |
+| 2020-08-25 |       6 |
+| 2020-08-26 |       4 |
+| 2020-08-27 |       3 |
+| 2020-08-28 |       3 |
+| 2020-08-29 |       1 |
+| 2020-08-30 |       5 |
+| 2020-08-31 |       4 |
+| 2020-09-01 |       1 |
+| 2020-09-02 |       1 |
+| 2020-09-03 |       4 |
+| 2020-09-04 |      15 |
+| 2020-09-05 |      22 |
+| 2020-09-06 |      22 |
+| 2020-09-07 |       9 |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 **Table S7** Raw data for the figure seven with the number of sequences assigned to each admin2 region.
 
 
 | Admin2               | Country   |   Number of sequences | Sequence group   |
 |:---------------------|:----------|----------------------:|:-----------------|
-| ANGLESEY             | Wales     |                    80 | 50-100           |
-| BLAENAU GWENT        | Wales     |                    59 | 50-100           |
-| BRIDGEND             | Wales     |                   114 | 100-150          |
-| CAERPHILLY           | Wales     |                   142 | 100-150          |
-| CARDIFF              | Wales     |                   586 | >500             |
-| CARMARTHENSHIRE      | Wales     |                   148 | 100-150          |
-| CEREDIGION           | Wales     |                    16 | 10-50            |
-| CONWY                | Wales     |                   162 | 150-200          |
-| DENBIGHSHIRE         | Wales     |                   194 | 150-200          |
-| FLINTSHIRE           | Wales     |                   131 | 100-150          |
-| GWYNEDD              | Wales     |                   125 | 100-150          |
-| MERTHYR TYDFIL       | Wales     |                   103 | 100-150          |
-| MONMOUTHSHIRE        | Wales     |                    88 | 50-100           |
-| NEATH PORT TALBOT    | Wales     |                   119 | 100-150          |
-| NEWPORT              | Wales     |                   165 | 150-200          |
-| PEMBROKESHIRE        | Wales     |                    73 | 50-100           |
-| POWYS                | Wales     |                    77 | 50-100           |
-| RHONDDA, CYNON, TAFF | Wales     |                     0 | 0                |
-| SWANSEA              | Wales     |                   276 | 250-300          |
-| TORFAEN              | Wales     |                    91 | 50-100           |
-| VALE OF GLAMORGAN    | Wales     |                   191 | 150-200          |
-| WREXHAM              | Wales     |                   166 | 150-200          |
+| ANGLESEY             | Wales     |                   165 | 100-200          |
+| BLAENAU GWENT        | Wales     |                   106 | 100-200          |
+| BRIDGEND             | Wales     |                   179 | 100-200          |
+| CAERPHILLY           | Wales     |                   246 | 200-300          |
+| CARDIFF              | Wales     |                   838 | 700-1000         |
+| CARMARTHENSHIRE      | Wales     |                   227 | 200-300          |
+| CEREDIGION           | Wales     |                    21 | 10-100           |
+| CLWYD                | Wales     |                  1207 | 1000-2000        |
+| GWYNEDD              | Wales     |                   182 | 100-200          |
+| MERTHYR TYDFIL       | Wales     |                   192 | 100-200          |
+| MONMOUTHSHIRE        | Wales     |                   108 | 100-200          |
+| NEATH PORT TALBOT    | Wales     |                   189 | 100-200          |
+| NEWPORT              | Wales     |                   218 | 200-300          |
+| PEMBROKESHIRE        | Wales     |                   102 | 100-200          |
+| POWYS                | Wales     |                   117 | 100-200          |
+| RHONDDA, CYNON, TAFF | Wales     |                   627 | 600-700          |
+| SWANSEA              | Wales     |                   429 | 400-500          |
+| TORFAEN              | Wales     |                   114 | 100-200          |
+| VALE OF GLAMORGAN    | Wales     |                   290 | 200-300          |
 
-\pagebreak
+<div style="page-break-after: always"></div>
 
 
 

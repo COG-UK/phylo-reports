@@ -1,8 +1,11 @@
-Lineage name	England	Date range	Total sequences	Global lineage	Time since last sample (days)	Activity score
-UK5	114 (100.0%)	Mar-12, May-13	114	B.1.1, B.1.1.1, B.1.1.2	21	0.0261
-UK476	55 (100.0%)	Mar-30, May-06	55	B.1.1	28	0.0245
-UK2916	21 (100.0%)	Mar-22, May-01	21	B.1	33	0.0606
-UK63	15 (100.0%)	Mar-23, May-10	15	B.1.1	24	0.1429
-UK497	8 (100.0%)	Mar-17, Jun-03	8	A.2	0	active today
-UK5501	6 (100.0%)	Apr-27, Jun-01	6	B.1.12	2	3.5
-UK570	6 (100.0%)	Mar-24, Apr-29	6	B.1.1	35	0.2057
+Lineage name	England	Date range	Global lineage	Total
+UK5	128 (100.0%)	Mar-12, Jun-09	B.1.1, B.1.1.10	128 taxa
+UK1447	59 (100.0%)	Mar-30, May-06	B.1.1	59 taxa
+UK2916	19 (100.0%)	Mar-22, May-01	B.1	19 taxa
+UK917	16 (100.0%)	Mar-23, May-10	B.1.1	16 taxa
+UK5501	8 (100.0%)	Apr-27, Jun-01	B.1.12, B.1	8 taxa
+UK497	8 (100.0%)	Mar-17, Jun-03	A.2	8 taxa
+UK1535	7 (100.0%)	Apr-12, Apr-27	B.1.1	7 taxa
+UK402	6 (100.0%)	Apr-07, Apr-15	B.1	6 taxa
+UK1050	6 (100.0%)	Mar-24, Apr-29	B.1.1	6 taxa
+UK199	6 (100.0%)	Mar-24, Apr-29	B.1.5	6 taxa

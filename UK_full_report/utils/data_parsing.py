@@ -28,6 +28,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     acctrans_to_seqs = defaultdict(list)
     new_acctrans_to_lineage = {}
 
+    pillar_2_seqs = []
+
     unclear_taxa = []
 
     taxon_dictionary = {}
@@ -55,7 +57,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
         in_data = [r for r in reader]
         for sequence in in_data:
             if sequence['country'] == "UK":
-                
+                #so we'll add submission date in here
                 seq_name = sequence['sequence_name']
                 adm1 = sequence["adm1"]
                 adm2 = sequence['adm2']

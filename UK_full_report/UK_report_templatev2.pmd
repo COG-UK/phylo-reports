@@ -350,15 +350,6 @@ print(dataframe.to_markdown(tablefmt='grid'))
 ```
 <div style="page-break-after: always"></div>
 
-**Table S2** Raw data for figure two showing lags between the most recent sequence and current date for each sequencing centre
-```python, name="raw", echo=False, results='tex'
-if not pillar2:
-    lag_df = pd.DataFrame(lag_dict)
-    print(lag_df.to_markdown())
-else:
-    print("Table S2 is not appropriate for this report and so has been omitted.")
-```
-<div style="page-break-after: always"></div>
 
 **Table S3** Raw data for figure three showing the number of admin2 regions a lineage is present in over time
 ```python, name="raw", echo=False,results='tex'

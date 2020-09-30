@@ -15,7 +15,7 @@ def sortkey2(taxon):
 
 def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
 
-    pillar_2s = ["ALDP", "QEUH", "MILK"]
+    pillar_2s = ["ALDP", "QEUH", "MILK", "CAMC"]
 
     taxa_list = []
     tax_with_dates = []
@@ -28,7 +28,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     acctrans_to_seqs = defaultdict(list)
     new_acctrans_to_lineage = {}
 
-    pillar_2_seqs = []
+    pillar2_seqs = []
+    pillar1_seqs = []
 
     unclear_taxa = []
 
@@ -68,6 +69,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 acctrans = sequence['acc_lineage'] #minimum number
                 del_intros = sequence['del_introduction'] #max number
                 extracted_sequencing_centre = sequence['sequencing_org_code']
+                sub_date = sequence["sequencing_submission_date"]
 
 
                 lineage_version = sequence["lineages_version"] 
@@ -92,20 +94,17 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
                 
-                if pillar_2:
-                    this_seq = False
-                    for place in pillar_2s:
-                        if place in seq_name:
-                            this_seq = True
-                    if not this_seq:
-                        continue
+                pillar_2_seq = False
+                for place in pillar_2s:
+                    if place in seq_name:
+                        pillar_2_seq = True
 
                 min_intros.add(acctrans)
                 max_intros.add(del_intros)
                 
                 try:
                     metadata = info_dict[seq_name]
-                    new = case_def.taxon(seq_name, country, intro_name, acctrans, metadata)
+                    new = case_def.taxon(seq_name, country, intro_name, acctrans, metadata, pillar_2_seq, sub_date)
 
                     acctrans_to_seqs[acctrans].append(new)
                     taxon_dictionary[seq_name] = new
@@ -123,6 +122,11 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
 
                     if new.date_dt != "NA":
                         tax_with_dates.append(new)
+
+                    if pillar_2_seq:
+                        pillar2_seqs.append(new)
+                    else:
+                        pillar1_seqs.append(new)
 
                 except KeyError: #if it's not in metadata
                     omitted.append(seq_name)
@@ -181,4 +185,4 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                     specific_smalls.append(intro)
 
 
-    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons
+    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs

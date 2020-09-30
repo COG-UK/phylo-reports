@@ -9,18 +9,19 @@ import numpy as np
 
 class taxon():
     
-    def __init__(self, record_id, country, introduction, acctrans, metadata): #phylotype):
+    def __init__(self, record_id, country, introduction, acctrans, metadata,pillar, sub_date):
     
         self.id = record_id
         self.introduction = introduction
         #self.phylotype = phylotype
         self.country = country
         self.acctrans = acctrans
+        self.pillar2 = pillar
 
         if metadata[0] == "None":
             self.date = "NA"
         else:
-            self.date = metadata[0]
+            date = metadata[0]
 
         self.adm2 = metadata[2]
         self.global_lineage = metadata[3]
@@ -34,24 +35,25 @@ class taxon():
         elif epiweek_prep == "":
             self.epiweek = "NA"
 
-
         self.unclear = False
-
         
-        if "/" in self.date:
+        if "/" in date:
             print("ERROR DATE FORMAT INCORRECT")
-        #     self.date_dt = dateparser.parse(self.date,  settings={"DATE_ORDER":'DMY'}).date()
-        #     date_bits = self.date.split("/")
+        
+        self.date_dt = self.make_date_object(date)
+        self.sub_date = self.make_date_object(sub_date)
+       
 
-        # date_bits = self.date.split("-")
-        # self.date_dt = dateparser.parse(self.date).date()
+    def make_date_object(self,date):
 
-        date_bits = self.date.split("-")
+        date_bits = date.split("-")
 
         if len(date_bits) == 3:
-            self.date_dt = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
+            date = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
         else:
-            self.date_dt = "NA"
+            date = "NA"
+
+        return date
 
             
 class introduction():

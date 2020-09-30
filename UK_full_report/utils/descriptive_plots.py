@@ -802,7 +802,67 @@ def sequencing_centre_lags(taxa_list, sc_dict, submission_date, country):
 
     return lag_dict, lags
 
+def real_time_plot(pillar1_seqs, pillar2_seqs, pillar_2):
+
+    all_lag_dict = defaultdict(list)
+    all_lag_dict2 = defaultdict(list)
+    smallest_lag = {}
+    smallest_lag2 = {}
+
+
+    for seq in pillar1_seqs:
+        lag = (seq.sub_date - seq.date_dt).days
+        if lag > 0:
+            all_lag_dict[seq.sub_date].append(lag)
         
+    for sub_date, lst in all_lag_dict.items():
+        min_lag = min(lst)
+        smallest_lag[sub_date] = min_lag
+
+    for seq in pillar2_seqs:
+        lag = (seq.sub_date - seq.date_dt).days
+        if lag > 0:
+            all_lag_dict2[seq.sub_date].append(lag)
+        
+
+    for sub_date, lst in all_lag_dict2.items():
+        min_lag = min(lst)
+        smallest_lag2[sub_date] = min_lag
+
+    if not pillar_2:
+        fig, axs = plt.subplots(1,2, figsize=(30,15), sharex=True, sharey=True)
+
+        plt.rcParams.update({"font.size":20})
+
+        x = list(smallest_lag.keys())
+        y = list(smallest_lag.values())
+
+        x2 = list(smallest_lag2.keys())
+        y2 = list(smallest_lag2.values())
+
+        axs[0].set_ylabel("Shortest lag (days)")
+        fig.text(0.5, 0.04, "Date of submission", ha='center')
+
+        axs[0].bar(x,y)
+        axs[1].bar(x2,y2)
+
+        axs[0].set_title("Pillar 1")
+        axs[1].set_title("Pillar 2")
+
+    else:
+        
+        fig, axs = plt.subplots(1,1, figsize=(15,15))
+
+        plt.rcParams.update({"font.size":20})
+
+        x2 = list(smallest_lag2.keys())
+        y2 = list(smallest_lag2.values())
+
+        axs.bar(x2,y2)
+
+        axs.set_title("Pillar 2")
+
+
 
     
 

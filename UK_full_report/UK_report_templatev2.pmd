@@ -222,7 +222,7 @@ else:
 print(dataframe.head(10).to_markdown(tablefmt='grid'))
 ```
 
-These data is represented in the figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
+The largest 20 lineages are represented in figure one. Note that the number of sequences is likely to be due more to differing sampling efforts in different regions, rather than genuine differences in numbers of cases. 
 
 The raw data for this bar chart are in the table above.
 

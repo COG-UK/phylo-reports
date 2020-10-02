@@ -185,39 +185,44 @@ def plot_bars(intro_bigs, filter_country, sequencing_centre): #NB the raw data f
     seq_count_list = []
     labels_for_country_specific = []
 
+    count = 0
     for i in intro_bigs[::-1]:
+        count += 1
 
-        if filter_country != "" and sequencing_centre == "":
-            if len(i.country_specific_taxa) > 5:
-                labels_for_country_specific.append(i.id.lstrip("UK"))
-                seq_count = len(i.country_specific_taxa)
-  
+        if count <= 20:
+            if filter_country != "" and sequencing_centre == "":
+                if len(i.country_specific_taxa) > 5:
+                    labels_for_country_specific.append(i.id.lstrip("UK"))
+                    seq_count = len(i.country_specific_taxa)
+    
 
-                seq_count_list.append(seq_count)
+                    seq_count_list.append(seq_count)
+                    
+            else:
+                labels.append(i.id.lstrip("UK"))
                 
-        else:
-            labels.append(i.id.lstrip("UK"))
-            
-            E_c = 0
-            S_c = 0
-            W_c = 0
-            NI_c = 0
+                E_c = 0
+                S_c = 0
+                W_c = 0
+                NI_c = 0
 
-            for tax in i.taxa:
-                if tax.country=="England":
-                    E_c += 1
-                elif tax.country=="Scotland":
-                    S_c += 1
-                elif tax.country=="Wales":
-                    W_c += 1
-                elif tax.country=="Northern_ireland":
-                    NI_c += 1
-        
-        
-            E.append(E_c)
-            S.append(S_c)
-            W.append(W_c)
-            NI.append(NI_c)
+                for tax in i.taxa:
+                    if tax.country=="England":
+                        E_c += 1
+                    elif tax.country=="Scotland":
+                        S_c += 1
+                    elif tax.country=="Wales":
+                        W_c += 1
+                    elif tax.country=="Northern_ireland":
+                        NI_c += 1
+            
+            
+                E.append(E_c)
+                S.append(S_c)
+                W.append(W_c)
+                NI.append(NI_c)
+        else:
+            continue
 
     width = 0.8
 

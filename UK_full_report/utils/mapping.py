@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import warnings
 import csv
+import os
 
 warnings.filterwarnings("ignore")
 
@@ -84,7 +85,7 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
     missing_adm2 = {}
     new_unclean_locs = False
 
-    unclean_file = open(output_dir + "unclean_locations.csv", 'w')
+    unclean_file = open(output_dir + "/unclean_locations.csv", 'w')
 
     missing_adm2["Country"] = ["England", "Wales", "Scotland", "Northern_Ireland"]
     missing_adm2["Colour"] = ["indianred", "darkseagreen", "steelblue", "skyblue"]

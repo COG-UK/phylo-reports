@@ -66,7 +66,7 @@ def make_dataframe(intro_country_together, intro_object_dict):
 
 	for key, value in intro_country_together.items():
 		intro_object = intro_object_dict[key]
-		global_lins.append(intro_object.global_lineages)
+		global_lins.append(intro_object.largest_global_lineages)
 		totals.append(len(intro_object.taxa))
 		
 		if intro_object.dates != []:
@@ -101,7 +101,7 @@ def make_dataframe(intro_country_together, intro_object_dict):
 	#Tidying
 	new_lineages = []
 	for i in df_together["Global lineage"]:
-		new_lin = str(i).strip("{").strip("}").replace("'","")
+		new_lin = str(i).strip("[").strip("]").replace("'","")
 		new_lineages.append(new_lin)
 	df_together["Global lineage"] = new_lineages
 

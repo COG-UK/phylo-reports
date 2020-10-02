@@ -64,7 +64,8 @@ class introduction():
         self.new = False
 
         self.taxa = taxa
-        self.global_lineages = set()
+        self.global_lineages = []
+        self.largest_global_lineages = []
 
         self.acctrans_designations = set()
         
@@ -171,8 +172,21 @@ class introduction():
 
         for tax in self.taxa:
             if tax.global_lineage != "":
-                self.global_lineages.add(tax.global_lineage)
-            
+                self.global_lineages.append(tax.global_lineage)
+
+        global_counts = Counter(self.global_lineages)
+
+        total = len(self.global_lineages)
+
+        most_common_counts = global_counts.most_common(3)
+
+        for i in most_common_counts:
+            lin = i[0]
+            count = i[1]
+            percentage = round((count/total)*100,2)
+            pretty_percentage = " (" + str(percentage) + "%) "
+
+            self.largest_global_lineages.append(lin + pretty_percentage)
                     
         
     def define_status(self, current_date): 

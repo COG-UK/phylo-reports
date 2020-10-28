@@ -310,24 +310,16 @@ input_geojsons = [uk_json, channels, NI_json]
 ```
 
 ```python, name="map", include=True, echo=False, figure=True, caption="Map showing the number of sequences sampled by adm2 region"
-map_output = map.make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output, week, sequencing_centre, country, pillar2)
+map_output = map.make_map(input_geojsons, metadata_file, sequencing_centre, country, pillar2)
 ```
 
 ```python, name="finishing map", echo=False
 if type(map_output) != bool:
-    new_uncleans, mapping_data = map_output
+    mapping_data = map_output
     no_seqs = False
 else:
     no_seqs = map_output
 ```
-
-```python, name="uncleans", echo=False, results='tex'
-if not no_seqs:
-    if new_uncleans:
-        print("There are some sequences with locations that are not matched to real Admin2 regions, some manual curation required.")
-```
-
-
 
 
 Other results modules for UK lineage analysis can be added in here if required.

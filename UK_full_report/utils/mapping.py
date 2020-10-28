@@ -15,7 +15,7 @@ import os
 warnings.filterwarnings("ignore")
 
 
-def prep_data(input_geojsons, adm2_cleaning_file):
+def prep_data(input_geojsons):
 
     uk_input = input_geojsons[0]
     channel_input = input_geojsons[1]
@@ -35,57 +35,20 @@ def prep_data(input_geojsons, adm2_cleaning_file):
 
     all_uk = uk.append(channels).append(NI)
 
-    locations_in_shape_file = []
-    for i in all_uk["NAME_2"]:
-        locations_in_shape_file.append(i.upper())
+    # locations_in_shape_file = []
+    # for i in all_uk["NAME_2"]:
+    #     locations_in_shape_file.append(i.upper().replace(" ","_"))
 
-    return all_uk, locations_in_shape_file
+    return all_uk
 
-def clean_locs(clean_locs_file, all_uk):
 
-    straight_map = {}
-    multi_loc_dict = {}
-    metadata_multi_loc = []
-
-    with open(clean_locs_file) as f:
-        next(f)
-        for l in f:
-            toks = l.strip("\n").split(",")
-            toks [:] = [x for x in toks if x]
-            metadata_loc = toks[0]
-            real_locs = toks[1:]   
-
-            if metadata_loc == 'RHONDDA CYNON TAF':
-                straight_map[metadata_loc] = "RHONDDA, CYNON, TAFF" 
-            else:
-                if len(real_locs) == 1:
-                    straight_map[metadata_loc] = real_locs[0].upper()
-                else:
-                    for i in real_locs:
-                        multi_loc_dict[i.upper()] = metadata_loc.upper()
-                    
-
-    for location in all_uk["NAME_2"]:
-        if location.upper() in multi_loc_dict.keys():
-            metadata_multi_loc.append(multi_loc_dict[location.upper()])
-        else:
-            metadata_multi_loc.append(location.upper())
-        
-    all_uk["Multi_loc"] = metadata_multi_loc
-
-    merged_locs = all_uk.dissolve(by="Multi_loc")
-
-    return merged_locs, multi_loc_dict, straight_map
-
-def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, present_in_shape_file, output_dir, pillar_2):
+def parse_metadata(metadata,sequencing_centre, not_mappable, pillar_2):
 
     pillar_2s = ["ALDP", "QEUH", "MILK"]
 
     seq_dict = defaultdict(list)
     missing_adm2 = {}
-    new_unclean_locs = False
-
-    unclean_file = open(output_dir + "/unclean_locations.csv", 'w')
+    adm2s = set()
 
     missing_adm2["Country"] = ["England", "Wales", "Scotland", "Northern_Ireland"]
     missing_adm2["Colour"] = ["indianred", "darkseagreen", "steelblue", "skyblue"]
@@ -102,7 +65,7 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
         for sequence in in_data:
             if sequence['country'] == "UK":
                 seq_name = sequence['sequence_name']
-                adm2 = sequence['adm2']
+                adm2 = sequence['processed_adm2']
 
                 uk_country = sequence['adm1'].split("-")[1]
                 extracted_sequencing_centre = sequence["sequencing_org_code"]
@@ -118,25 +81,13 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
                         continue
 
                 if adm2 != "" and adm2 not in not_mappable:
-                    if adm2 in straight_map.keys():
-                        
-                        new = straight_map[adm2]
-                        
-                        if new in multi_loc_dict.keys():
-                            new = multi_loc_dict[new]
-
-                    elif adm2 in multi_loc_dict.keys():
-                        new = multi_loc_dict[adm2]
-
-                    elif adm2 not in present_in_shape_file and adm2 not in multi_loc_dict.values():
-                        new_unclean_locs = True
-                        unclean_file.write(adm2 + "\n")
-                        new = "NA"
-                    
+                    if "|" in adm2:
+                        new_adm2 = "|".join(sorted(adm2.split("|")))
                     else:
-                        new = adm2
-                
-                    seq_dict[new].append(seq_name)
+                        new_adm2 = adm2
+                    
+                    seq_dict[new_adm2].append(seq_name)
+                    adm2s.add(new_adm2)
                 
                 else:
                     
@@ -158,7 +109,50 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
 
                     missing_adm2["Number of missing sequences"] = [E,W,S,NI]
 
-    unclean_file.close()
+    missing_df = pd.DataFrame(missing_adm2)
+
+    return seq_dict, adm2s, missing_df, missing_sequences
+
+def find_ambiguities(adm2s):
+    
+    ambiguous = set()
+    ambiguous_dict_prep = defaultdict(set)
+    ambiguous_dict = {}
+    
+    for adm2 in adm2s:
+        if "|" in adm2:
+            ambiguous.add(adm2)
+            
+    for amb in ambiguous:
+        for element in amb.split("|"):
+            to_add_list = [i for i in amb.split("|")]
+            for i in to_add_list:
+                ambiguous_dict_prep[element].add(i)
+                
+    for key, value in ambiguous_dict_prep.items():
+        ambiguous_dict[key] = "|".join(sorted([i for i in value]))
+        
+    return ambiguous_dict
+
+
+
+def match_to_dataframe(all_uk, seq_dict, adm2s, ambiguous_dict):
+
+    count = 0
+    
+    multi_loc_dict = {}
+    metadata_multi_loc = []
+
+    for location in all_uk["NAME_2"]:
+        location = location.upper().replace(" ","_")
+        if location in ambiguous_dict:
+            metadata_multi_loc.append(ambiguous_dict[location])
+        else:
+            metadata_multi_loc.append(location)
+        
+    all_uk["Multi_loc"] = metadata_multi_loc
+
+    merged_locs = all_uk.dissolve(by="Multi_loc")
 
     seq_counts = {}
     df_dict = defaultdict(list)
@@ -166,7 +160,24 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
     if len(seq_dict) != 0:
 
         for k,v in seq_dict.items():
-            seq_counts[k] = len(v)
+            if k in ambiguous_dict:
+                testing = ambiguous_dict[k]
+                for location in seq_dict.keys():
+                    if "|" in location:
+                        if any([i for i in testing.split("|") if i in location.split("|")]):
+                            if location in seq_counts.keys():
+                                seq_counts[location] += len(v)
+                            else:
+                                seq_counts[location] = len(v)
+                            break
+            elif "|" in k:
+                if k in seq_counts.keys():
+                    seq_counts[k] += len(v)
+                else:
+                    seq_counts[k] = len(v)
+            
+            else:
+                seq_counts[k] = len(v)
             
         for k,v in seq_counts.items():
             df_dict["Multi_loc"].append(k)
@@ -175,14 +186,11 @@ def parse_metadata(metadata, merged_locs, multi_loc_dict, straight_map, sequenci
         seq_count_df = pd.DataFrame(df_dict)
 
         with_seq_counts = merged_locs.merge(seq_count_df, how='left', left_index=True, right_on="Multi_loc")
-
-        missing_df = pd.DataFrame(missing_adm2)
-
-        return with_seq_counts, missing_df, missing_sequences, new_unclean_locs
+        
+        return with_seq_counts
     
     else:
         no_loc_data = True
-        return no_loc_data
 
     
 
@@ -424,7 +432,23 @@ def plot_missing_sequences(missing_df):
 
 def clean_df(df, sequencing_centre, country):
 
+    nice_names = commonly_used_names()
+
     first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
+
+    aka_list = []
+    new_names = []
+    for i in first_step["Multi_loc"]:
+        new_name = i.replace("|","/")
+        new_names.append(new_name)
+        if i in nice_names:
+            aka_list.append(nice_names[i])
+        else:
+            aka_list.append(" ")
+
+    first_step["Also known as"] = aka_list
+    first_step["Multi_loc"] = new_names
+
     second_step = first_step.reset_index(drop=True)
 
     drop_labels = []
@@ -446,9 +470,10 @@ def clean_df(df, sequencing_centre, country):
 
     fourth_step = third_step.drop(["NAME_1"], axis=1)
 
-    headers = ["Admin2", "Number of sequences", "Sequence group", "Country"]
+    headers = ["Admin2", "Number of sequences", "Sequence group", "Also known as", "Country"]
+
     fourth_step.columns = headers
-    fourth_step = fourth_step[["Admin2","Country", "Number of sequences", "Sequence group"]]
+    fourth_step = fourth_step[["Admin2","Also known as", "Country", "Number of sequences", "Sequence group"]]
 
     final = fourth_step.fillna(0)
 
@@ -485,18 +510,19 @@ def sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, cou
         print("There are " + str(missing_number) + " sequences without enough geographical information to map from this centre.")
 
 
-def make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output,week, sequencing_centre, country, pillar2):
+def make_map(input_geojsons, metadata_file, sequencing_centre, country, pillar2):
 
-    not_mappable = ["WALES", "OTHER", "UNKNOWN", "UNKNOWN SOURCE", "NOT FOUND", "GIBRALTAR", "FALKLAND ISLANDS", "CITY CENTRE"]
+    not_mappable = ["WALES", "OTHER", "UNKNOWN", "UNKNOWN_SOURCE", "NOT_FOUND", "GIBRALTAR", "FALKLAND_ISLANDS", "CITY_CENTRE"]
 
-    all_uk, locations_in_shape_file = prep_data(input_geojsons, adm2_cleaning_file)
+    all_uk = prep_data(input_geojsons)
 
-    merged_locs, multi_loc_dict, straight_map = clean_locs(adm2_cleaning_file, all_uk)
+    seq_dict, adm2s, missing_df, missing_sequences = parse_metadata(metadata_file,sequencing_centre, not_mappable, pillar2)
+    ambiguous_dict = find_ambiguities(adm2s)
 
-    parsing_output = parse_metadata(metadata_file, merged_locs, multi_loc_dict, straight_map, sequencing_centre, not_mappable, locations_in_shape_file, summary_output, pillar2)
+    parsing_output = match_to_dataframe(all_uk,seq_dict,adm2s,ambiguous_dict)
 
     if type(parsing_output) != bool:
-        with_seq_counts, missing_df, missing_sequences, new_unclean_locs = parsing_output
+        with_seq_counts = parsing_output
     
         with_seq_counts = make_sequence_groups(with_seq_counts)
         
@@ -511,7 +537,7 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output,w
 
         sort_missing_sequences(missing_df, missing_sequences, sequencing_centre, country)       
         
-        return new_unclean_locs, cleaned
+        return cleaned
 
     else:
         print("There are no sequences with geographical information for this sequencing centre")
@@ -521,4 +547,19 @@ def make_map(input_geojsons, adm2_cleaning_file, metadata_file, summary_output,w
 
 
 
+def commonly_used_names():
 
+    nice_names = {
+        "BIRMINGHAM|COVENTRY|DUDLEY|SANDWELL|SOLIHULL|WALSALL|WOLVERHAMPTON":"West Midlands",
+        "DERBY|DERBYSHIRE|LEICESTER|LEICESTERSHIRE|LINCOLNSHIRE|NORTHAMPTONSHIRE|NOTTINGHAM|NOTTINGHAMSHIRE|RUTLAND":"East Midlands",
+        "BOLTON|BURY|MANCHESTER|OLDHAM|ROCHDALE|SALFORD|STOCKPORT|TAMESIDE|TRAFFORD|WIGAN":"Greater Manchester",
+        "EAST_SUSSEX|WEST_SUSSEX":"Sussex",
+        "BRADFORD|CALDERDALE|KIRKLEES|LEEDS|WAKEFIELD":"West Yorkshire",
+        "GATESHEAD|NEWCASTLE_UPON_TYNE|NORTH_TYNESIDE|SOUTH_TYNESIDE|SUNDERLAND": "Tyne & Wear",
+        "BARNSLEY|DONCASTER|ROTHERHAM|SHEFFIELD": "South Yorkshire",
+        "BRACKNELL_FOREST|READING|SLOUGH|WEST_BERKSHIRE|WINDSOR_AND_MAIDENHEAD|WOKINGHAM":"Berkshire",
+        'KNOWSLEY|SAINT_HELENS|SEFTON|WIRRAL':"Merseyside",
+        "CHESHIRE_EAST|CHESHIRE_WEST_AND_CHESTER":"Chester"
+    }
+
+    return nice_names

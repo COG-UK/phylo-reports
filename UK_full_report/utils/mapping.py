@@ -4,6 +4,7 @@ from geopandas import GeoSeries,GeoDataFrame
 import pandas as pd
 from collections import defaultdict
 from collections import Counter
+from collections import OrderedDict
 from shapely.geometry import Point, Polygon
 from shapely.ops import cascaded_union
 import matplotlib.pyplot as plt
@@ -44,7 +45,7 @@ def prep_data(input_geojsons):
 
 def parse_metadata(metadata,sequencing_centre, not_mappable, pillar_2):
 
-    pillar_2s = ["ALDP", "QEUH", "MILK"]
+    pillar_2s = ["ALDP", "QEUH", "MILK", "CAMC"]
 
     seq_dict = defaultdict(list)
     missing_adm2 = {}
@@ -65,7 +66,7 @@ def parse_metadata(metadata,sequencing_centre, not_mappable, pillar_2):
         for sequence in in_data:
             if sequence['country'] == "UK":
                 seq_name = sequence['sequence_name']
-                adm2 = sequence['processed_adm2']
+                adm2 = sequence['adm2']
 
                 uk_country = sequence['adm1'].split("-")[1]
                 extracted_sequencing_centre = sequence["sequencing_org_code"]
@@ -114,24 +115,27 @@ def parse_metadata(metadata,sequencing_centre, not_mappable, pillar_2):
     return seq_dict, adm2s, missing_df, missing_sequences
 
 def find_ambiguities(adm2s):
-    
-    ambiguous = set()
-    ambiguous_dict_prep = defaultdict(set)
-    ambiguous_dict = {}
-    
+
+    ambiguous = []
+    ambiguous_dict = defaultdict(set)
+    clusters = []
+
     for adm2 in adm2s:
         if "|" in adm2:
-            ambiguous.add(adm2)
-            
-    for amb in ambiguous:
-        for element in amb.split("|"):
-            to_add_list = [i for i in amb.split("|")]
-            for i in to_add_list:
-                ambiguous_dict_prep[element].add(i)
-                
-    for key, value in ambiguous_dict_prep.items():
-        ambiguous_dict[key] = "|".join(sorted([i for i in value]))
-        
+            ambiguous.append(set(adm2.split("|")))
+
+    for group in ambiguous:
+        for group2 in ambiguous:
+            if group & group2:
+                group |= group2
+
+        clusters.append(group)
+
+    for cluster in clusters:
+        for place in cluster:
+            ambiguous_dict[place] = "|".join(sorted(cluster))
+
+
     return ambiguous_dict
 
 
@@ -140,7 +144,6 @@ def match_to_dataframe(all_uk, seq_dict, adm2s, ambiguous_dict):
 
     count = 0
     
-    multi_loc_dict = {}
     metadata_multi_loc = []
 
     for location in all_uk["NAME_2"]:
@@ -171,10 +174,13 @@ def match_to_dataframe(all_uk, seq_dict, adm2s, ambiguous_dict):
                                 seq_counts[location] = len(v)
                             break
             elif "|" in k:
-                if k in seq_counts.keys():
-                    seq_counts[k] += len(v)
-                else:
-                    seq_counts[k] = len(v)
+                for location in ambiguous_dict.values():
+                    if any([i for i in k.split("|") if i in location.split("|")]):
+                        if location in seq_counts.keys():
+                            seq_counts[location] += len(v)
+                        else:
+                            seq_counts[location] = len(v)
+                        break
             
             else:
                 seq_counts[k] = len(v)
@@ -430,21 +436,36 @@ def plot_missing_sequences(missing_df):
     plt.xlabel("Country")
     plt.ylabel("Number of sequences")
 
-def clean_df(df, sequencing_centre, country):
+def sort_nice_names(df):
 
     nice_names = commonly_used_names()
 
-    first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
-
     aka_list = []
     new_names = []
-    for i in first_step["Multi_loc"]:
+    for i in df["Multi_loc"]:
         new_name = i.replace("|","/")
         new_names.append(new_name)
         if i in nice_names:
             aka_list.append(nice_names[i])
         else:
-            aka_list.append(" ")
+            for key, value in nice_names.items():
+                if all(item in value for item in i.split("|")):
+                    name = key
+                    for ele in i.split("|"):
+                        if ele not in value.split("|"):
+                            name += f'and {ele}'
+
+                else:
+                    name = ""
+            aka_list.append(name)
+
+    return aka_list, new_names
+
+def clean_df(df, sequencing_centre, country):
+
+    first_step = df[["Multi_loc", "NAME_1","Seq_count", "Seq_group"]]
+
+    aka_list, new_names = sort_nice_names(first_step)
 
     first_step["Also known as"] = aka_list
     first_step["Multi_loc"] = new_names
@@ -558,8 +579,9 @@ def commonly_used_names():
         "GATESHEAD|NEWCASTLE_UPON_TYNE|NORTH_TYNESIDE|SOUTH_TYNESIDE|SUNDERLAND": "Tyne & Wear",
         "BARNSLEY|DONCASTER|ROTHERHAM|SHEFFIELD": "South Yorkshire",
         "BRACKNELL_FOREST|READING|SLOUGH|WEST_BERKSHIRE|WINDSOR_AND_MAIDENHEAD|WOKINGHAM":"Berkshire",
+        "BRACKNELL_FOREST|BUCKINGHAMSHIRE|READING|SLOUGH|WEST_BERKSHIRE|WINDSOR_AND_MAIDENHEAD|WOKINGHAM":"Berkshire and Buckinghamshire",
         'KNOWSLEY|SAINT_HELENS|SEFTON|WIRRAL':"Merseyside",
-        "CHESHIRE_EAST|CHESHIRE_WEST_AND_CHESTER":"Chester"
+        "CHESHIRE_EAST|CHESHIRE_WEST_AND_CHESTER":"Cheshire"
     }
 
     return nice_names

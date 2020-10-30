@@ -165,14 +165,11 @@ def match_to_dataframe(all_uk, seq_dict, adm2s, ambiguous_dict):
         for k,v in seq_dict.items():
             if k in ambiguous_dict:
                 testing = ambiguous_dict[k]
-                for location in seq_dict.keys():
-                    if "|" in location:
-                        if any([i for i in testing.split("|") if i in location.split("|")]):
-                            if location in seq_counts.keys():
-                                seq_counts[location] += len(v)
-                            else:
-                                seq_counts[location] = len(v)
-                            break
+                if testing in seq_counts.keys():
+                    seq_counts[testing] += len(v)
+                else:
+                    seq_counts[testing] = len(v)
+            
             elif "|" in k:
                 for location in ambiguous_dict.values():
                     if any([i for i in k.split("|") if i in location.split("|")]):

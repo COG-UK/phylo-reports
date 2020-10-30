@@ -182,4 +182,4 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                     specific_smalls.append(intro)
 
 
-    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, taxon_dictionary, most_recent_sample, introduction_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs
+    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, taxon_dictionary, most_recent_sample, introduction_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs

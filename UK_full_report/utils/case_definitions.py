@@ -9,13 +9,12 @@ import numpy as np
 
 class taxon():
     
-    def __init__(self, record_id, country, introduction, acctrans, metadata,pillar, sub_date):
+    def __init__(self, record_id, country, introduction, metadata,pillar, sub_date):
     
         self.id = record_id
         self.introduction = introduction
         #self.phylotype = phylotype
         self.country = country
-        self.acctrans = acctrans
         self.pillar2 = pillar
 
         if metadata[0] == "None":

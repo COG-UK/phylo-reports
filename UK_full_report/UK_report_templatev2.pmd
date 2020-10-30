@@ -89,7 +89,7 @@ else:
 
 current_date = time.make_current_week(week)
 
-intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa, new_lineages, taxon_dictionary, most_recent_sample, intro_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs = parse.parse_metadata(metadata_file, sequencing_centre, country, pillar2)
+intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa, taxon_dictionary, most_recent_sample, intro_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs = parse.parse_metadata(metadata_file, sequencing_centre, country, pillar2)
 singletons_count, smalls_count = descrip.get_preliminary_info(intro_countries)
 
 
@@ -122,13 +122,6 @@ else:
 
 A few notes: the size of a lineage may be due to a low amount of transmission of this lineage, but it is likely also that it just hasn't been sampled as frequently, especially for newer lineages.
 It's also important to realise that these lineages are *estimates* of how we think the virus is spreading in the UK after being introduced from abroad, as the low evolutionary rate of the virus makes it difficult to separate lineages with certainty.
-
-```python, name="min and max bounds", echo=False, results='tex'
-if sequencing_centre == "" and country != "":
-     print("The minimum number of introductions is " + str(len(specific_min)) + " and the maximum is " + str(len(specific_max)))
-else:
-    print("The minimum number of introductions is " + str(len(min_intros)) + " and the maximum is " + str(len(max_intros)))
-```
 
 Sequences which were replicates or too error-prone were removed from this analysis.
 

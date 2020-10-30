@@ -26,12 +26,9 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     acctrans_to_intro = defaultdict(set)
     omitted = []
     acctrans_to_seqs = defaultdict(list)
-    new_acctrans_to_lineage = {}
 
     pillar2_seqs = []
     pillar1_seqs = []
-
-    unclear_taxa = []
 
     taxon_dictionary = {}
     introduction_int_list = []
@@ -66,8 +63,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 epiweek = sequence['epi_week']
                 glob_lin = sequence['lineage']
                 intro_name = sequence['uk_lineage']
-                acctrans = sequence['acc_lineage'] #minimum number
-                del_intros = sequence['del_introduction'] #max number
+                #acctrans = sequence['acc_lineage'] #minimum number
+                #del_intros = sequence['del_introduction'] #max number
                 extracted_sequencing_centre = sequence['sequencing_org_code']
                 sub_date = sequence["sequencing_submission_date"]
 
@@ -86,10 +83,10 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 elif country_prep == "NIR":
                     country = "Northern_Ireland"
 
-                if sequencing_centre == "" and filter_country != "":
-                    if country == filter_country:
-                        specific_min.add(acctrans)
-                        specific_max.add(del_intros)
+                # if sequencing_centre == "" and filter_country != "":
+                #     if country == filter_country:
+                #         specific_min.add(acctrans)
+                #         specific_max.add(del_intros)
                 
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
@@ -99,14 +96,14 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                     if place in seq_name:
                         pillar_2_seq = True
 
-                min_intros.add(acctrans)
-                max_intros.add(del_intros)
+                # min_intros.add(acctrans)
+                # max_intros.add(del_intros)
                 
                 try:
                     metadata = info_dict[seq_name]
-                    new = case_def.taxon(seq_name, country, intro_name, acctrans, metadata, pillar_2_seq, sub_date)
+                    new = case_def.taxon(seq_name, country, intro_name, metadata, pillar_2_seq, sub_date)
 
-                    acctrans_to_seqs[acctrans].append(new)
+                    # acctrans_to_seqs[acctrans].append(new)
                     taxon_dictionary[seq_name] = new
             
                     taxa_list.append(new)
@@ -114,8 +111,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                     if intro_name != "":
                         introductions.add(intro_name)
                         intro_countries[intro_name].append(country)
-                        intro_acctrans[intro_name].add(acctrans)
-                        acctrans_to_intro[acctrans].add(intro_name)
+                        # intro_acctrans[intro_name].add(acctrans)
+                        # acctrans_to_intro[acctrans].add(intro_name)
                         intros_to_taxa[intro_name].append(new)
 
                         introduction_int_list.append(int(intro_name.lstrip("UK")))
@@ -185,4 +182,4 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                     specific_smalls.append(intro)
 
 
-    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, new_acctrans_to_lineage, taxon_dictionary, most_recent_sample, introduction_int_list, unclear_taxa, max_intros, min_intros, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs
+    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, taxon_dictionary, most_recent_sample, introduction_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_min, specific_max, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs

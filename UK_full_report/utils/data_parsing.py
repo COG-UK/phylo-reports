@@ -1,5 +1,5 @@
 
-from collections import defaultdict 
+from collections import defaultdict
 from epiweeks import Week,Year
 import os
 import csv
@@ -11,6 +11,9 @@ def sort_key(obj):
     return obj.mrd
 def sortkey2(taxon):
     return taxon.date_dt
+
+def sort_on_taxa_len(obj):
+    return len(obj.taxa)
 
 
 def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
@@ -69,8 +72,8 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 sub_date = sequence["sequencing_submission_date"]
 
 
-                lineage_version = sequence["lineages_version"] 
-            
+                lineage_version = sequence["lineages_version"]
+
                 info_dict[seq_name] = [date, epiweek, adm2, glob_lin, extracted_sequencing_centre]
 
                 country_prep = adm1.split("-")[1]
@@ -87,10 +90,10 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 #     if country == filter_country:
                 #         specific_min.add(acctrans)
                 #         specific_max.add(del_intros)
-                
+
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
-                
+
                 pillar_2_seq = False
                 for place in pillar_2s:
                     if place in seq_name:
@@ -105,7 +108,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
 
                     # acctrans_to_seqs[acctrans].append(new)
                     taxon_dictionary[seq_name] = new
-            
+
                     taxa_list.append(new)
 
                     if intro_name != "":
@@ -135,7 +138,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
         most_recent_sample = sorted(specific_taxa, key=sortkey2, reverse = True)[0].date_dt
     else:
         most_recent_sample = sorted(tax_with_dates, key=sortkey2, reverse = True)[0].date_dt
-    
+
     introduction_int_list = sorted(introduction_int_list)
 
     intro_alls = []
@@ -143,23 +146,23 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     intro_bigs = []
 
     for intro, taxa in intros_to_taxa.items():
-        
+
         i_o = case_def.introduction(intro, taxa, most_recent_sample, filter_country, sequencing_centre)
         i_o.acctrans_designations = intro_acctrans[i_o.id]
 
         if len(i_o.acctrans_designations) > 1:
             i_o.split = True
-        
+
         if len(i_o.taxa) > 5 and i_o.last_sampled < 28:
             intro_bigs.append(i_o)
         else:
             intro_smalls.append(i_o)
-        
+
         intro_alls.append(i_o)
 
         intro_object_dict[intro] = i_o
 
-    intro_bigs = sorted(intro_bigs, key=sort_key, reverse=False)
+    intro_bigs = sorted(intro_bigs, key=sort_on_taxa_len, reverse=False)
 
     specific_singletons = 0
 
@@ -173,7 +176,7 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
 
                 for i in intro.country_specific_taxa:
                     country_specific_taxa.append(i)
-                
+
                 if len(intro.country_specific_taxa) == 1:
                     specific_singletons += 1
                 if len(intro.country_specific_taxa) > 5 and intro.last_sampled < 28:

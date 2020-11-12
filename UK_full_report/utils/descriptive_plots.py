@@ -123,12 +123,8 @@ def make_timeline(intro_bigs, sequencing_centre, filter_country):
             else:
                 plt.scatter(x,y, color=colour_dict[list(country_set)[0]], s=sizes)
     
-
-    text_size = 1/len(intro_bigs)*1500
-    if text_size > 20:
-        text_size = 20
     
-    plt.yticks(height, ytick_list, size=text_size)
+    plt.yticks(height, ytick_list, size=20)
     plt.ylim(1, count+1)
     plt.xticks(rotation=45)
 

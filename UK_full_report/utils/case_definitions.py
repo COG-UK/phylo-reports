@@ -25,13 +25,15 @@ class taxon():
         self.global_lineage = metadata[3]
         self.sequencing_centre = metadata[4]
 
-        #this bit needs changing
-        epiweek_prep = metadata[1]
-        if epiweek_prep != "0" and epiweek_prep != "":
-            self.epiweek = Week(2020, int(float(epiweek_prep)))
-        elif epiweek_prep == "0":
-            self.epiweek = Week(2019, 52)
-        elif epiweek_prep == "":
+        if metadata[1] != "":
+            epiweek = int(metadata[1])
+            if epiweek > 0 and epiweek < 54:
+                self.epiweek = Week(2020, epiweek)
+            elif epiweek >= 53:
+                self.epiweek = Week(2021, epiweek - 53)
+            elif epiweek == 0:
+                self.epiweek = Week(2019, 52)
+        else:
             self.epiweek = "NA"
         
         if "/" in date:
@@ -45,21 +47,6 @@ class taxon():
             self.sub_date = dt.datetime.strptime(sub_date, "%Y-%m-%d").date()
         except:
             self.sub_date = "NA"
-        
-
-       
-
-    # def make_date_object(self,date):
-
-    #     date_bits = date.split("-")
-
-    #     if len(date_bits) == 3:
-    #         date = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
-    #     else:
-    #         date = "NA"
-
-    #     return date
-
             
 class lineage():
     

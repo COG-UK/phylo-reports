@@ -1,6 +1,5 @@
 
 from collections import defaultdict
-from epiweeks import Week,Year
 import os
 import csv
 
@@ -22,29 +21,18 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
 
     taxa_list = []
     tax_with_dates = []
-    introductions = set()
-    intro_countries = defaultdict(list)
-    intro_object_dict = {}
-    intro_acctrans = defaultdict(set)
-    acctrans_to_intro = defaultdict(set)
-    omitted = []
-    acctrans_to_seqs = defaultdict(list)
-
-    pillar2_seqs = []
-    pillar1_seqs = []
+    lineages = set()
+    lineage_to_countries = defaultdict(list)
+    lineage_object_dict = {}
+    lineage_to_taxa = defaultdict(list)
 
     taxon_dictionary = {}
-    introduction_int_list = []
-    new_lineages = set()
+    lineage_int_list = []
 
     info_dict = defaultdict(list)
 
-    epiweeks = time.make_epiweeks()
-
-    intros_to_taxa = defaultdict(list)
-
-    min_intros = set()
-    max_intros = set()
+    pillar2_seqs = []
+    pillar1_seqs = []
 
     country_specific_lineages = []
     country_specific_taxa = []
@@ -53,10 +41,11 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     specific_smalls = []
     specific_bigs = []
 
+    omitted = []
+
     with open(metadata_file, "r") as f:
-        reader = csv.DictReader(f)
-        in_data = [r for r in reader]
-        for sequence in in_data:
+        data = csv.DictReader(f)
+        for sequence in data:
             if sequence['country'] == "UK":
                 seq_name = sequence['sequence_name']
                 adm1 = sequence["adm1"]
@@ -64,12 +53,10 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 date = sequence['sample_date']
                 epiweek = sequence['epi_week']
                 glob_lin = sequence['lineage']
-                intro_name = sequence['uk_lineage']
-                #acctrans = sequence['acc_lineage'] #minimum number
-                #del_intros = sequence['del_introduction'] #max number
+                lineage_name = sequence['uk_lineage']
+
                 extracted_sequencing_centre = sequence['sequencing_org_code']
                 sub_date = sequence["sequencing_submission_date"]
-
 
                 lineage_version = sequence["lineages_version"]
 
@@ -85,11 +72,6 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 elif country_prep == "NIR":
                     country = "Northern_Ireland"
 
-                # if sequencing_centre == "" and filter_country != "":
-                #     if country == filter_country:
-                #         specific_min.add(acctrans)
-                #         specific_max.add(del_intros)
-
                 if sequencing_centre is not None and sequencing_centre != "" and sequencing_centre != extracted_sequencing_centre:
                     continue
 
@@ -97,35 +79,29 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
                 for place in pillar_2s:
                     if place in seq_name:
                         pillar_2_seq = True
-
-                # min_intros.add(acctrans)
-                # max_intros.add(del_intros)
                 
                 try:
                     metadata = info_dict[seq_name]
-                    new = case_def.taxon(seq_name, country, intro_name, metadata, pillar_2_seq, sub_date)
+                    new_taxon = case_def.taxon(seq_name, country, lineage_name, metadata, pillar_2_seq, sub_date)
 
-                    # acctrans_to_seqs[acctrans].append(new)
-                    taxon_dictionary[seq_name] = new
+                    taxon_dictionary[seq_name] = new_taxon
 
-                    taxa_list.append(new)
+                    taxa_list.append(new_taxon)
 
-                    if intro_name != "":
-                        introductions.add(intro_name)
-                        intro_countries[intro_name].append(country)
-                        # intro_acctrans[intro_name].add(acctrans)
-                        # acctrans_to_intro[acctrans].add(intro_name)
-                        intros_to_taxa[intro_name].append(new)
+                    if lineage_name != "":
+                        lineages.add(lineage_name)
+                        lineage_to_countries[lineage_name].append(country)
+                        lineage_to_taxa[lineage_name].append(new_taxon)
 
-                        introduction_int_list.append(int(intro_name.lstrip("UK")))
+                        lineage_int_list.append(int(lineage_name.lstrip("UK"))) #do we use this?
 
-                    if new.date_dt != "NA":
-                        tax_with_dates.append(new)
+                    if new_taxon.date_dt != "NA":
+                        tax_with_dates.append(new_taxon)
 
                     if pillar_2_seq:
-                        pillar2_seqs.append(new)
+                        pillar2_seqs.append(new_taxon)
                     else:
-                        pillar1_seqs.append(new)
+                        pillar1_seqs.append(new_taxon)
 
                 except KeyError: #if it's not in metadata
                     omitted.append(seq_name)
@@ -138,50 +114,46 @@ def parse_metadata(metadata_file, sequencing_centre, filter_country, pillar_2):
     else:
         most_recent_sample = sorted(tax_with_dates, key=sortkey2, reverse = True)[0].date_dt
 
-    introduction_int_list = sorted(introduction_int_list)
+    lineage_int_list = sorted(lineage_int_list)
 
-    intro_alls = []
-    intro_smalls = []
-    intro_bigs = []
+    all_lineages = []
+    small_lineages = []
+    big_lineages = []
 
-    for intro, taxa in intros_to_taxa.items():
+    for lineage, taxa in lineage_to_taxa.items():
 
-        i_o = case_def.introduction(intro, taxa, most_recent_sample, filter_country, sequencing_centre)
-        i_o.acctrans_designations = intro_acctrans[i_o.id]
+        lineage_object = case_def.lineage(lineage, taxa, most_recent_sample, filter_country, sequencing_centre)
 
-        if len(i_o.acctrans_designations) > 1:
-            i_o.split = True
-
-        if len(i_o.taxa) > 5 and i_o.last_sampled < 28:
-            intro_bigs.append(i_o)
+        if len(lineage_object.taxa) > 5 and lineage_object.last_sampled < 28:
+            big_lineages.append(lineage_object)
         else:
-            intro_smalls.append(i_o)
+            small_lineages.append(lineage_object)
 
-        intro_alls.append(i_o)
+        all_lineages.append(lineage_object)
 
-        intro_object_dict[intro] = i_o
+        lineage_object_dict[lineage] = lineage_object
 
-    intro_bigs = sorted(intro_bigs, key=sort_on_taxa_len, reverse=False)
+    big_lineages = sorted(big_lineages, key=sort_on_taxa_len, reverse=False)
 
     specific_singletons = 0
 
     if sequencing_centre == "" and filter_country != "":
 
-        for intro in intro_alls:
+        for lineage in all_lineages:
 
-            if len(intro.country_specific_taxa) != 0:
+            if len(lineage.country_specific_taxa) != 0:
 
-                country_specific_lineages.append(intro)
+                country_specific_lineages.append(lineage)
 
-                for i in intro.country_specific_taxa:
+                for i in lineage.country_specific_taxa:
                     country_specific_taxa.append(i)
 
-                if len(intro.country_specific_taxa) == 1:
+                if len(lineage.country_specific_taxa) == 1:
                     specific_singletons += 1
-                if len(intro.country_specific_taxa) > 5 and intro.last_sampled < 28:
-                    specific_bigs.append(intro)
+                if len(lineage.country_specific_taxa) > 5 and lineage.last_sampled < 28:
+                    specific_bigs.append(lineage)
                 else:
-                    specific_smalls.append(intro)
+                    specific_smalls.append(lineage)
 
 
-    return intro_bigs, intro_smalls, intro_alls, intro_countries, intro_object_dict, omitted, taxa_list, taxon_dictionary, most_recent_sample, introduction_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs
+    return big_lineages, small_lineages, all_lineages, lineage_to_countries, lineage_object_dict, omitted, taxa_list, taxon_dictionary, most_recent_sample, lineage_int_list, lineage_version, country_specific_lineages, country_specific_taxa, specific_smalls, specific_bigs, specific_singletons, pillar1_seqs, pillar2_seqs

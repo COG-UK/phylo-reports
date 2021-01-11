@@ -9,11 +9,10 @@ import numpy as np
 
 class taxon():
     
-    def __init__(self, record_id, country, introduction, metadata,pillar, sub_date):
+    def __init__(self, record_id, country, lineage, metadata,pillar, sub_date):
     
         self.id = record_id
-        self.introduction = introduction
-        #self.phylotype = phylotype
+        self.lineage = lineage
         self.country = country
         self.pillar2 = pillar
 
@@ -26,6 +25,7 @@ class taxon():
         self.global_lineage = metadata[3]
         self.sequencing_centre = metadata[4]
 
+        #this bit needs changing
         epiweek_prep = metadata[1]
         if epiweek_prep != "0" and epiweek_prep != "":
             self.epiweek = Week(2020, int(float(epiweek_prep)))
@@ -33,59 +33,58 @@ class taxon():
             self.epiweek = Week(2019, 52)
         elif epiweek_prep == "":
             self.epiweek = "NA"
-
-        self.unclear = False
         
         if "/" in date:
             print("ERROR DATE FORMAT INCORRECT")
         
-        self.date_dt = self.make_date_object(date)
-        self.sub_date = self.make_date_object(sub_date)
+        try:
+            self.date_dt = dt.datetime.strptime(date, "%Y-%m-%d").date()
+        except:
+            self.date_dt = "NA"   
+        try:
+            self.sub_date = dt.datetime.strptime(sub_date, "%Y-%m-%d").date()
+        except:
+            self.sub_date = "NA"
+        
+
        
 
-    def make_date_object(self,date):
+    # def make_date_object(self,date):
 
-        date_bits = date.split("-")
+    #     date_bits = date.split("-")
 
-        if len(date_bits) == 3:
-            date = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
-        else:
-            date = "NA"
+    #     if len(date_bits) == 3:
+    #         date = dt.date(int(date_bits[0]), int(date_bits[1]), int(date_bits[2]))
+    #     else:
+    #         date = "NA"
 
-        return date
+    #     return date
 
             
-class introduction():
+class lineage():
     
     def __init__(self, name, taxa, current_day, filter_country, sequencing_centre):
         
         self.id = name
-        self.new = False
 
         self.taxa = taxa
         self.global_lineages = []
         self.largest_global_lineages = []
-
-        self.acctrans_designations = set()
         
         self.dates = []
         self.epiweeks = []
         self.gaps = []
 
         self.week_to_adm2 = defaultdict(set)
-        #self.adm2_to_week = defaultdict(set)
         
         self.locations = set()
         self.adm1 = []
 
-        #self.weeks_to_locs = defaultdict(set)
         self.always_active = False
         self.newly_active = False
         self.pending = False
         self.extinct = False
         self.quiet = False
-
-        self.split = False
 
         self.get_global_lineages()
         self.get_date_loc_info(current_day, filter_country, sequencing_centre)
@@ -116,14 +115,12 @@ class introduction():
                 self.dates.append(tax.date_dt)
                 self.epiweeks.append(tax.epiweek)
                 self.locations.add(tax.adm2)
-                #self.adm2_to_week[tax.adm2].add(tax.adm2)
                 self.adm1.append(tax.country)
 
         self.epiweek_counts = Counter(self.epiweeks)
         self.date_counts = Counter(self.dates)
                 
         if self.dates == []:
-            #print(self.id)
             pass
         else:   
             self.mrd = max(self.dates)

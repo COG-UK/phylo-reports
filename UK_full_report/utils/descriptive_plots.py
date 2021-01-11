@@ -605,7 +605,7 @@ def make_diversity_plot(intro_alls, taxa_list):
                 if tax.epiweek == week and tax.country == country:
 
                     outer_key = week
-                    inner_key = tax.introduction
+                    inner_key = tax.lineage
 
                     if inner_key in inner_dict.keys():
                         inner_dict[inner_key] += 1
